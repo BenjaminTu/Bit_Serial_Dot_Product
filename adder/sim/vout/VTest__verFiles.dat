@@ -1,0 +1,13 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "--cc --exe -Mdir /home/bentu/chisel-crash-course/adder/sim/vout --top-module Test /home/bentu/chisel-crash-course/adder/sim/vout/Test.v /home/bentu/chisel-crash-course/adder/src/test/resources/csrc/main.cc -Wno-STMTDLY -Wno-WIDTH -Wno-CASEINCOMPLETE --output-split 20000 --output-split-cfuncs 20000 --x-assign unique +define+RANDOMIZE_GARBAGE_ASSIGN +define+RANDOMIZE_REG_INIT +define+RANDOMIZE_MEM_INIT -CFLAGS -I/home/bentu/chisel-crash-course/adder/src/test/resources/csrc -include VTest.h -DVNAME=VTest -o /home/bentu/chisel-crash-course/adder/sim/vout/Test"
+S      1677 42206181  1561483511   862897259  1561483511   862897259 "/home/bentu/chisel-crash-course/adder/sim/vout/Test.v"
+T      3940 42206185  1561483512    82901653  1561483512    82901653 "/home/bentu/chisel-crash-course/adder/sim/vout/VTest.cpp"
+T      2470 42206184  1561483512    82901653  1561483512    82901653 "/home/bentu/chisel-crash-course/adder/sim/vout/VTest.h"
+T      2058 42206188  1561483512    82901653  1561483512    82901653 "/home/bentu/chisel-crash-course/adder/sim/vout/VTest.mk"
+T      1572 42206186  1561483512    82901653  1561483512    82901653 "/home/bentu/chisel-crash-course/adder/sim/vout/VTest__Slow.cpp"
+T       520 42206183  1561483512    82901653  1561483512    82901653 "/home/bentu/chisel-crash-course/adder/sim/vout/VTest__Syms.cpp"
+T       703 42206182  1561483512    82901653  1561483512    82901653 "/home/bentu/chisel-crash-course/adder/sim/vout/VTest__Syms.h"
+T       597 42206189  1561483512    82901653  1561483512    82901653 "/home/bentu/chisel-crash-course/adder/sim/vout/VTest__ver.d"
+T         0        0  1561483512    82901653  1561483512    82901653 "/home/bentu/chisel-crash-course/adder/sim/vout/VTest__verFiles.dat"
+T      1168 42206187  1561483512    82901653  1561483512    82901653 "/home/bentu/chisel-crash-course/adder/sim/vout/VTest_classes.mk"
+S   6619528 15730091  1556424481   372840019  1556424481   372840019 "/usr/local/bin/verilator_bin"
