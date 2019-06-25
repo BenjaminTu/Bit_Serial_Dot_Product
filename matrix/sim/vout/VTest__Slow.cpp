@@ -33,11 +33,39 @@ VTest::~VTest() {
 //--------------------
 // Internal Methods
 
+void VTest::_initial__TOP__2(VTest__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTest::_initial__TOP__2\n"); );
+    VTest* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:107
+    vlTOPp->Test__DOT__Dot__DOT___RAND_0 = VL_RANDOM_I(32);
+    vlTOPp->Test__DOT__Dot__DOT__accum_0 = vlTOPp->Test__DOT__Dot__DOT___RAND_0;
+    vlTOPp->Test__DOT__Dot__DOT___RAND_1 = VL_RANDOM_I(32);
+    vlTOPp->Test__DOT__Dot__DOT__accum_1 = vlTOPp->Test__DOT__Dot__DOT___RAND_1;
+    vlTOPp->Test__DOT__Dot__DOT___RAND_2 = VL_RANDOM_I(32);
+    vlTOPp->Test__DOT__Dot__DOT__accum_2 = vlTOPp->Test__DOT__Dot__DOT___RAND_2;
+    vlTOPp->Test__DOT__Dot__DOT___RAND_3 = VL_RANDOM_I(32);
+    vlTOPp->Test__DOT__Dot__DOT__accum_3 = vlTOPp->Test__DOT__Dot__DOT___RAND_3;
+    vlTOPp->Test__DOT__Dot__DOT___RAND_4 = VL_RANDOM_I(32);
+    vlTOPp->Test__DOT__Dot__DOT__accum_4 = vlTOPp->Test__DOT__Dot__DOT___RAND_4;
+    vlTOPp->Test__DOT__Dot__DOT___RAND_5 = VL_RANDOM_I(32);
+    vlTOPp->Test__DOT__Dot__DOT__accum_5 = vlTOPp->Test__DOT__Dot__DOT___RAND_5;
+    vlTOPp->Test__DOT__Dot__DOT___RAND_6 = VL_RANDOM_I(32);
+    vlTOPp->Test__DOT__Dot__DOT__accum_6 = vlTOPp->Test__DOT__Dot__DOT___RAND_6;
+    vlTOPp->Test__DOT__Dot__DOT___RAND_7 = VL_RANDOM_I(32);
+    vlTOPp->Test__DOT__Dot__DOT__accum_7 = vlTOPp->Test__DOT__Dot__DOT___RAND_7;
+    vlTOPp->Test__DOT__Dot__DOT___RAND_8 = VL_RANDOM_I(32);
+    vlTOPp->Test__DOT__Dot__DOT__accum_8 = vlTOPp->Test__DOT__Dot__DOT___RAND_8;
+    vlTOPp->Test__DOT__Dot__DOT___RAND_9 = VL_RANDOM_I(32);
+    vlTOPp->Test__DOT__Dot__DOT__accum_9 = vlTOPp->Test__DOT__Dot__DOT___RAND_9;
+}
+
 void VTest::_eval_initial(VTest__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VTest::_eval_initial\n"); );
     VTest* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->__Vclklast__TOP__clock = vlTOPp->clock;
+    vlTOPp->_initial__TOP__2(vlSymsp);
 }
 
 void VTest::final() {
@@ -57,4 +85,24 @@ void VTest::_ctor_var_reset() {
     // Body
     clock = VL_RAND_RESET_I(1);
     reset = VL_RAND_RESET_I(1);
+    Test__DOT__Dot__DOT__accum_0 = VL_RAND_RESET_I(32);
+    Test__DOT__Dot__DOT___RAND_0 = VL_RAND_RESET_I(32);
+    Test__DOT__Dot__DOT__accum_1 = VL_RAND_RESET_I(32);
+    Test__DOT__Dot__DOT___RAND_1 = VL_RAND_RESET_I(32);
+    Test__DOT__Dot__DOT__accum_2 = VL_RAND_RESET_I(32);
+    Test__DOT__Dot__DOT___RAND_2 = VL_RAND_RESET_I(32);
+    Test__DOT__Dot__DOT__accum_3 = VL_RAND_RESET_I(32);
+    Test__DOT__Dot__DOT___RAND_3 = VL_RAND_RESET_I(32);
+    Test__DOT__Dot__DOT__accum_4 = VL_RAND_RESET_I(32);
+    Test__DOT__Dot__DOT___RAND_4 = VL_RAND_RESET_I(32);
+    Test__DOT__Dot__DOT__accum_5 = VL_RAND_RESET_I(32);
+    Test__DOT__Dot__DOT___RAND_5 = VL_RAND_RESET_I(32);
+    Test__DOT__Dot__DOT__accum_6 = VL_RAND_RESET_I(32);
+    Test__DOT__Dot__DOT___RAND_6 = VL_RAND_RESET_I(32);
+    Test__DOT__Dot__DOT__accum_7 = VL_RAND_RESET_I(32);
+    Test__DOT__Dot__DOT___RAND_7 = VL_RAND_RESET_I(32);
+    Test__DOT__Dot__DOT__accum_8 = VL_RAND_RESET_I(32);
+    Test__DOT__Dot__DOT___RAND_8 = VL_RAND_RESET_I(32);
+    Test__DOT__Dot__DOT__accum_9 = VL_RAND_RESET_I(32);
+    Test__DOT__Dot__DOT___RAND_9 = VL_RAND_RESET_I(32);
 }

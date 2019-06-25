@@ -5,7 +5,6 @@ import chisel3.util._
 
 import example._
 
-/*
 class NumGen(dataBits: Int = 8) extends Module {
   val io = IO(new Bundle {
     val a = Output(SInt(dataBits.W))
@@ -13,42 +12,29 @@ class NumGen(dataBits: Int = 8) extends Module {
     val y = Input(SInt(dataBits.W))
   })  
 
-	for (i <- -128 until 128) {
-		io.a := i.S 
-		for (j <- -128 until 128) {
-			io.b := j.S
-		}
-	}
+	io.a := -10.S
+	io.b := -20.S
 
   when(true.B) {
     printf("a:%d b:%d y:%d\n", io.a, io.b, io.y)
   }
 }
-*/
 
 class VectorGen(dataBits: Int = 8, vectorLength: Int = 1) extends Module {
   val io = IO(new Bundle {
     val a = Output(Vec(vectorLength, SInt(dataBits.W)))
     val b = Output(Vec(vectorLength, SInt(dataBits.W)))
-  	val y = Input(Vec(vectorLength, SInt(dataBits.W)))
+  	val y = Input(Vec(vectorLength, SInt((2*dataBits).W)))
 	})
   val rand = scala.util.Random
   // random value : randInt(255) - 128 = -128 ~ 255
   val max = (1 << dataBits)
   val offset = max >> 1;
 	// fill vector with random generated numbers
-  io.a := VecInit(Seq.fill(vectorLength)((rand.nextInt(max) - offset).S))
-  io.b := VecInit(Seq.fill(vectorLength)((rand.nextInt(max) - offset).S)) 
+  io.a := VecInit(Seq.fill(vectorLength)(10.S))
+  io.b := VecInit(Seq.fill(vectorLength)(-12.S)) 
   		
   when(true.B) {
-    printf("a: ")
-    for (i <- 0 until vectorLength) {
-      printf("%d ,", io.a(i))
-    }
-    printf("\nb: ")
-    for (j <- 0 until vectorLength) {
-       printf("%d ,", io.b(j))
-    }
     printf("\ny: ")
 		for (k <- 0 until vectorLength) {
        printf("%d ,", io.y(k))
@@ -57,25 +43,49 @@ class VectorGen(dataBits: Int = 8, vectorLength: Int = 1) extends Module {
   }
 }
 
-class Test extends Module {
+class DotGen(dataBits: Int = 8, vectorLength: Int = 1) extends Module {
+  val io = IO(new Bundle {
+    val a = Output(Vec(vectorLength, SInt(dataBits.W)))
+    val b = Output(Vec(vectorLength, SInt(dataBits.W)))
+    val y = Input(SInt((2*dataBits + vectorLength-1).W))
+  })  
+  val rand = scala.util.Random
+  // random value : randInt(255) - 128 = -128 ~ 255
+  val max = (1 << dataBits)
+  val offset = max >> 1;
+  // fill vector with random generated numbers
+  io.a := VecInit(Seq.fill(vectorLength)(10.S))
+  io.b := VecInit(Seq.fill(vectorLength)(12.S)) 
+          
+  when(true.B) {
+    printf("y: %d\n", io.y)
+  }
+}
+
+class Test (sel: Int = 1) extends Module {
   val io = IO(new Bundle {})
   // val numGen = Module(new NumGen)
-  val vecMul = Module(new VectorMult)
-	val vGen = Module(new VectorGen)
-	//val dot = Module(new Dot)
-
-
-	// Test selection
-	// 1 = Vector Multiplication
-
-	val sel = 1; 
-	if (sel == 1) {
+	
+	/* 
+	 * Test selection
+	 * 1 = Vector Multiplication
+	 * 2 = Dot Product
+	 */
+  if (sel == 1) {
+		val vGen = Module(new VectorGen)
+  	val vecMul = Module(new VectorMult)
   	vecMul.io.a := vGen.io.a
   	vecMul.io.b := vGen.io.b
   	vGen.io.y := vecMul.io.y
+	} else /*if (sel == 2)*/ {
+		val dGen = Module(new DotGen(8, 10))
+		val dot = Module(new Dot(8, 10))
+		dot.io.a := dGen.io.a
+		dot.io.b := dGen.io.b
+		dGen.io.y := dot.io.y
 	}
 }
 
 object Elaborate extends App {
-  chisel3.Driver.execute(args, () => new Test)
+  chisel3.Driver.execute(args, () => new Test(2))
 }

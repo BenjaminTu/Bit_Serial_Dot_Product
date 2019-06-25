@@ -69,28 +69,77 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VTest::_sequent__TOP__1\n"); );
     VTest* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:17
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:8
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"a: ");
+	VL_FWRITEF(0x80000002U,"y: %8#\n",25,(0x1ffffffU 
+					      & vlTOPp->Test__DOT__Dot__DOT__accum_9));
     }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," 26 ,");
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"\nb: ");
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," 74 ,");
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"\ny: ");
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"132 ,");
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"\n\n");
-    }
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:156
+    vlTOPp->Test__DOT__Dot__DOT__accum_9 = ((IData)(vlTOPp->reset)
+					     ? 0U : 
+					    ((IData)(0x78U) 
+					     + (IData)(
+						       (VL_ULL(0x1ffffffff) 
+							& VL_EXTENDS_QI(33,32, vlTOPp->Test__DOT__Dot__DOT__accum_8)))));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:156
+    vlTOPp->Test__DOT__Dot__DOT__accum_8 = ((IData)(vlTOPp->reset)
+					     ? 0U : 
+					    ((IData)(0x78U) 
+					     + (IData)(
+						       (VL_ULL(0x1ffffffff) 
+							& VL_EXTENDS_QI(33,32, vlTOPp->Test__DOT__Dot__DOT__accum_7)))));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:156
+    vlTOPp->Test__DOT__Dot__DOT__accum_7 = ((IData)(vlTOPp->reset)
+					     ? 0U : 
+					    ((IData)(0x78U) 
+					     + (IData)(
+						       (VL_ULL(0x1ffffffff) 
+							& VL_EXTENDS_QI(33,32, vlTOPp->Test__DOT__Dot__DOT__accum_6)))));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:156
+    vlTOPp->Test__DOT__Dot__DOT__accum_6 = ((IData)(vlTOPp->reset)
+					     ? 0U : 
+					    ((IData)(0x78U) 
+					     + (IData)(
+						       (VL_ULL(0x1ffffffff) 
+							& VL_EXTENDS_QI(33,32, vlTOPp->Test__DOT__Dot__DOT__accum_5)))));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:156
+    vlTOPp->Test__DOT__Dot__DOT__accum_5 = ((IData)(vlTOPp->reset)
+					     ? 0U : 
+					    ((IData)(0x78U) 
+					     + (IData)(
+						       (VL_ULL(0x1ffffffff) 
+							& VL_EXTENDS_QI(33,32, vlTOPp->Test__DOT__Dot__DOT__accum_4)))));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:156
+    vlTOPp->Test__DOT__Dot__DOT__accum_4 = ((IData)(vlTOPp->reset)
+					     ? 0U : 
+					    ((IData)(0x78U) 
+					     + (IData)(
+						       (VL_ULL(0x1ffffffff) 
+							& VL_EXTENDS_QI(33,32, vlTOPp->Test__DOT__Dot__DOT__accum_3)))));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:156
+    vlTOPp->Test__DOT__Dot__DOT__accum_3 = ((IData)(vlTOPp->reset)
+					     ? 0U : 
+					    ((IData)(0x78U) 
+					     + (IData)(
+						       (VL_ULL(0x1ffffffff) 
+							& VL_EXTENDS_QI(33,32, vlTOPp->Test__DOT__Dot__DOT__accum_2)))));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:156
+    vlTOPp->Test__DOT__Dot__DOT__accum_2 = ((IData)(vlTOPp->reset)
+					     ? 0U : 
+					    ((IData)(0x78U) 
+					     + (IData)(
+						       (VL_ULL(0x1ffffffff) 
+							& VL_EXTENDS_QI(33,32, vlTOPp->Test__DOT__Dot__DOT__accum_1)))));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:156
+    vlTOPp->Test__DOT__Dot__DOT__accum_1 = ((IData)(vlTOPp->reset)
+					     ? 0U : 
+					    ((IData)(0x78U) 
+					     + (IData)(
+						       (VL_ULL(0x1ffffffff) 
+							& VL_EXTENDS_QI(33,32, vlTOPp->Test__DOT__Dot__DOT__accum_0)))));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:156
+    vlTOPp->Test__DOT__Dot__DOT__accum_0 = ((IData)(vlTOPp->reset)
+					     ? 0U : 0x78U);
 }
 
 void VTest::_eval(VTest__Syms* __restrict vlSymsp) {
