@@ -26,7 +26,6 @@ class NumGen(dataBits: Int = 8) extends Module {
 }
 */
 
-// TODO: not done
 class VectorGen(dataBits: Int = 8, vectorLength: Int = 1) extends Module {
   val io = IO(new Bundle {
     val a = Output(Vec(vectorLength, SInt(dataBits.W)))
@@ -37,9 +36,8 @@ class VectorGen(dataBits: Int = 8, vectorLength: Int = 1) extends Module {
   // random value : randInt(255) * pow(-1,randInt(1))
   val max = (1 << dataBits)
   val offset = max >> 1;
-  // fill the vector with the same random generated value : -2^(n-1) ~ 2^(n-1) 
-  io.a := VecInit(Seq.fill(vectorLength)((rand.nextInt(max) - offset).S))
-  io.b := VecInit(Seq.fill(vectorLength)((rand.nextInt(max) - offset).S)) 
+    io.a := VecInit(Seq.fill(vectorLength)((rand.nextInt(max) - offset).S))
+    io.b := VecInit(Seq.fill(vectorLength)((rand.nextInt(max) - offset).S)) 
   		
   when(true.B) {
     printf("a: ")
@@ -60,10 +58,11 @@ class VectorGen(dataBits: Int = 8, vectorLength: Int = 1) extends Module {
 
 class Test extends Module {
   val io = IO(new Bundle {})
-  //val numGen = Module(new NumGen)
+  // val numGen = Module(new NumGen)
   val vecMul = Module(new VectorMult)
 	val vGen = Module(new VectorGen)
 	//val dot = Module(new Dot)
+
 
 	// Test selection
 	// 1 = Matrix Multiplication
