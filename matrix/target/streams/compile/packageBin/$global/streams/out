@@ -1,1 +1,41 @@
-[0m[[0m[0mdebug[0m] [0m[0mJar uptodate: /home/bentu/chisel-crash-course/matrix/target/scala-2.11/chisel-module-template_2.11-3.1.1.jar[0m
+[0m[[0m[0minfo[0m] [0m[0mPackaging /home/bentu/Bit_Serial_Dot_Product/matrix/target/scala-2.11/chisel-module-template_2.11-3.1.1.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/Multiplier$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bentu/Bit_Serial_Dot_Product/matrix/target/scala-2.11/classes/example/Multiplier$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/Multiplier.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bentu/Bit_Serial_Dot_Product/matrix/target/scala-2.11/classes/example/Multiplier.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/Dot$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bentu/Bit_Serial_Dot_Product/matrix/target/scala-2.11/classes/example/Dot$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/VectorMult$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bentu/Bit_Serial_Dot_Product/matrix/target/scala-2.11/classes/example/VectorMult$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/Elaborate.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bentu/Bit_Serial_Dot_Product/matrix/target/scala-2.11/classes/example/Elaborate.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/Elaborate$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bentu/Bit_Serial_Dot_Product/matrix/target/scala-2.11/classes/example/Elaborate$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/Dot.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bentu/Bit_Serial_Dot_Product/matrix/target/scala-2.11/classes/example/Dot.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/Adder.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bentu/Bit_Serial_Dot_Product/matrix/target/scala-2.11/classes/example/Adder.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/VectorMult$$anon$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bentu/Bit_Serial_Dot_Product/matrix/target/scala-2.11/classes/example/VectorMult$$anon$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bentu/Bit_Serial_Dot_Product/matrix/target/scala-2.11/classes/example[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/Adder$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bentu/Bit_Serial_Dot_Product/matrix/target/scala-2.11/classes/example/Adder$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/Elaborate$$anonfun$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bentu/Bit_Serial_Dot_Product/matrix/target/scala-2.11/classes/example/Elaborate$$anonfun$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/Adder$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bentu/Bit_Serial_Dot_Product/matrix/target/scala-2.11/classes/example/Adder$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/VectorMult.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bentu/Bit_Serial_Dot_Product/matrix/target/scala-2.11/classes/example/VectorMult.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/VectorMult$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bentu/Bit_Serial_Dot_Product/matrix/target/scala-2.11/classes/example/VectorMult$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/Elaborate$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bentu/Bit_Serial_Dot_Product/matrix/target/scala-2.11/classes/example/Elaborate$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/Dot$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bentu/Bit_Serial_Dot_Product/matrix/target/scala-2.11/classes/example/Dot$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/Multiplier$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bentu/Bit_Serial_Dot_Product/matrix/target/scala-2.11/classes/example/Multiplier$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/Dot$$anon$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bentu/Bit_Serial_Dot_Product/matrix/target/scala-2.11/classes/example/Dot$$anon$4.class[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m
