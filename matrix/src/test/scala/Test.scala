@@ -1,5 +1,6 @@
 package example.test
 
+import scala.util.Random
 import chisel3._
 import chisel3.util._
 
@@ -15,7 +16,7 @@ class NumGen(dataBits: Int = 8) extends Module {
 	io.a := -10.S
 	io.b := -20.S
 
-  when(true.B) {
+  when (true.B) {
     printf("a:%d b:%d y:%d\n", io.a, io.b, io.y)
   }
 }
@@ -34,7 +35,7 @@ class VectorGen(dataBits: Int = 8, vectorLength: Int = 1) extends Module {
   io.a := VecInit(Seq.fill(vectorLength)(10.S))
   io.b := VecInit(Seq.fill(vectorLength)(-12.S)) 
   		
-  when(true.B) {
+  when (true.B) {
     printf("\ny: ")
 		for (k <- 0 until vectorLength) {
        printf("%d ,", io.y(k))
@@ -57,12 +58,51 @@ class DotGen(dataBits: Int = 8, vectorLength: Int = 1) extends Module {
   io.a := VecInit(Seq.fill(vectorLength)(10.S))
   io.b := VecInit(Seq.fill(vectorLength)(12.S)) 
           
-  when(true.B) {
+  when (true.B) {
     printf("y: %d\n", io.y)
   }
 }
 
-class Test (sel: Int = 1) extends Module {
+class OneNumGen extends Module {
+	val io = IO(new Bundle {
+		val num = Output(UInt(32.W))
+		val count = Input(UInt(32.W))
+	})
+	val (cnt, _) = Counter(true.B, 256)	
+	io.num := cnt
+	when (true.B) {
+		printf("num:%d count:%d\n", io.num, io.count)
+	}
+}
+
+class OneVecGen (vectorLength: Int = 1, maxBit: Int = 1) extends Module {
+  val io = IO(new Bundle {
+    val arr = Output(Vec(vectorLength, UInt(maxBit.W)))
+    val out = Input(Vec(maxBit, UInt(vectorLength.W)))
+  })
+
+	// randomly fill 1s and 0s
+ 	io.arr := VecInit(Seq.fill(vectorLength)((Random.nextInt(0x1 << maxBit)).U))
+	//	io.arr := VecInit(Seq.fill(vectorLength)(2.U))
+	// val (cnt, _) = Counter(true.B, 256)
+  // io.arr := VecInit(Seq.fill(vectorLength)(cnt%2.U))
+
+  when (true.B) {
+    printf("arr:")
+    for (i <- 0 until vectorLength) {
+       printf("%d, ", io.arr(i))
+    }
+		printf("packed result")
+		for (i <- 0 until maxBit) {
+			printf("%d, ", io.out(i))
+    }
+		printf("\n")
+	}
+}
+
+
+
+class Test (sel: Int = 1, dataBits: Int = 8, vectorLength: Int = 1, maxBit: Int = 2) extends Module {
   val io = IO(new Bundle {})
   // val numGen = Module(new NumGen)
 	
@@ -70,22 +110,33 @@ class Test (sel: Int = 1) extends Module {
 	 * Test selection
 	 * 1 = Vector Multiplication
 	 * 2 = Dot Product
+	 * 3 = Pop Count
 	 */
   if (sel == 1) {
-		val vGen = Module(new VectorGen)
-  	val vecMul = Module(new VectorMult)
+		val vGen = Module(new VectorGen(dataBits, vectorLength))
+  	val vecMul = Module(new VectorMult(dataBits, vectorLength))
   	vecMul.io.a := vGen.io.a
   	vecMul.io.b := vGen.io.b
   	vGen.io.y := vecMul.io.y
-	} else /*if (sel == 2)*/ {
-		val dGen = Module(new DotGen(8, 10))
-		val dot = Module(new Dot(8, 10))
+	} else if (sel == 2) {
+		val dGen = Module(new DotGen(dataBits, vectorLength))
+		val dot = Module(new Dot(dataBits, vectorLength))
 		dot.io.a := dGen.io.a
 		dot.io.b := dGen.io.b
 		dGen.io.y := dot.io.y
+	} else if (sel == 3) {
+		val oneNumGen = Module(new OneNumGen)
+		val pop = Module(new Pop(dataBits))
+		pop.io.num := oneNumGen.io.num
+		oneNumGen.io.count := pop.io.count
+	} else /*if (sel == 4)*/ {
+		val oneVecGen = Module(new OneVecGen(vectorLength, maxBit))
+		val bitpack = Module(new BitPack(vectorLength, maxBit))
+		bitpack.io.arr := oneVecGen.io.arr
+		oneVecGen.io.out := bitpack.io.out
 	}
 }
 
 object Elaborate extends App {
-  chisel3.Driver.execute(args, () => new Test(2))
+  chisel3.Driver.execute(args, () => new Test(4, 8, 10))
 }
