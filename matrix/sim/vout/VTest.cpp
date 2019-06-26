@@ -69,52 +69,111 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VTest::_sequent__TOP__1\n"); );
     VTest* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:29
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:759
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"activation: \n");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"weight: \n");
+    }
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:17
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
 	VL_FWRITEF(0x80000002U,"arr:");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"3, ");
+	VL_FWRITEF(0x80000002U,"1, ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"2, ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
 	VL_FWRITEF(0x80000002U,"0, ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"1, ");
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
 	VL_FWRITEF(0x80000002U,"2, ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"1, ");
+	VL_FWRITEF(0x80000002U,"packed result: ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"3, ");
+	VL_FWRITEF(0x80000002U," 1, ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"3, ");
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"2, ");
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"3, ");
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"2, ");
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"packed result");
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," 373, ");
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"1001, ");
+	VL_FWRITEF(0x80000002U,"10, ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
 	VL_FWRITEF(0x80000002U,"\n");
     }
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:280
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"arr:");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"2, ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"6, ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"3, ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"5, ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"packed result: ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"12, ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U," 7, ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"10, ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"\n");
+    }
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:642
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"result: %10#\n",32,
+		   vlTOPp->Test__DOT__BitSerial__DOT__sum_5);
+    }
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:602
+    vlTOPp->Test__DOT__BitSerial__DOT__sum_5 = (0xffU 
+						& ((IData)(vlTOPp->reset)
+						    ? 0U
+						    : 
+						   ((IData)(0x10U) 
+						    + (IData)(vlTOPp->Test__DOT__BitSerial__DOT__sum_4))));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:602
+    vlTOPp->Test__DOT__BitSerial__DOT__sum_4 = ((IData)(vlTOPp->reset)
+						 ? 0U
+						 : (IData)(vlTOPp->Test__DOT__BitSerial__DOT__sum_3));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:602
+    vlTOPp->Test__DOT__BitSerial__DOT__sum_3 = (0xffU 
+						& ((IData)(vlTOPp->reset)
+						    ? 0U
+						    : 
+						   ((IData)(4U) 
+						    + (IData)(vlTOPp->Test__DOT__BitSerial__DOT__sum_2))));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:602
+    vlTOPp->Test__DOT__BitSerial__DOT__sum_2 = (0xffU 
+						& ((IData)(vlTOPp->reset)
+						    ? 0U
+						    : 
+						   ((IData)(2U) 
+						    + (IData)(vlTOPp->Test__DOT__BitSerial__DOT__sum_1))));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:602
+    vlTOPp->Test__DOT__BitSerial__DOT__sum_1 = (0xffU 
+						& ((IData)(vlTOPp->reset)
+						    ? 0U
+						    : 
+						   ((IData)(2U) 
+						    + (IData)(vlTOPp->Test__DOT__BitSerial__DOT__sum_0))));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:602
+    vlTOPp->Test__DOT__BitSerial__DOT__sum_0 = 0U;
 }
 
 void VTest::_eval(VTest__Syms* __restrict vlSymsp) {

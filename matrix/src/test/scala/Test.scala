@@ -75,15 +75,15 @@ class OneNumGen extends Module {
 	}
 }
 
-class OneVecGen (vectorLength: Int = 1, maxBit: Int = 1) extends Module {
+class OneVecGen (dataBits: Int = 2, vectorLength: Int = 1) extends Module {
   val io = IO(new Bundle {
-    val arr = Output(Vec(vectorLength, UInt(maxBit.W)))
-    val out = Input(Vec(maxBit, UInt(vectorLength.W)))
+    val arr = Output(Vec(vectorLength, UInt(dataBits.W)))
+    val out = Input(Vec(dataBits, UInt(vectorLength.W)))
   })
 
 	// randomly fill 1s and 0s
- 	io.arr := VecInit(Seq.fill(vectorLength)((Random.nextInt(0x1 << maxBit)).U))
-	//	io.arr := VecInit(Seq.fill(vectorLength)(2.U))
+ 	io.arr := VecInit(Seq.fill(vectorLength)((Random.nextInt(0x1 << dataBits)).U))
+  //	io.arr := VecInit(Seq.fill(vectorLength)(1.U))
 	// val (cnt, _) = Counter(true.B, 256)
   // io.arr := VecInit(Seq.fill(vectorLength)(cnt%2.U))
 
@@ -92,17 +92,25 @@ class OneVecGen (vectorLength: Int = 1, maxBit: Int = 1) extends Module {
     for (i <- 0 until vectorLength) {
        printf("%d, ", io.arr(i))
     }
-		printf("packed result")
-		for (i <- 0 until maxBit) {
+		printf("packed result: ")
+		for (i <- 0 until dataBits) {
 			printf("%d, ", io.out(i))
     }
 		printf("\n")
 	}
 }
 
+class PrintNum() extends Module {
+	val io = IO(new Bundle {
+		val num = Input(UInt(32.W))
+	})
+	printf("result: %d\n", io.num)
+}
 
 
-class Test (sel: Int = 1, dataBits: Int = 8, vectorLength: Int = 1, maxBit: Int = 2) extends Module {
+
+class Test (sel: Int = 1, dataBits: Int = 8, vectorLength: Int = 1, 
+	wBits: Int = 1, aBits: Int = 1) extends Module {
   val io = IO(new Bundle {})
   // val numGen = Module(new NumGen)
 	
@@ -111,32 +119,53 @@ class Test (sel: Int = 1, dataBits: Int = 8, vectorLength: Int = 1, maxBit: Int 
 	 * 1 = Vector Multiplication
 	 * 2 = Dot Product
 	 * 3 = Pop Count
+	 * 4 = BitPacking
+	 * 5 = BitPacking + Bit Serial Dot Product
 	 */
   if (sel == 1) {
-		val vGen = Module(new VectorGen(dataBits, vectorLength))
-  	val vecMul = Module(new VectorMult(dataBits, vectorLength))
-  	vecMul.io.a := vGen.io.a
-  	vecMul.io.b := vGen.io.b
-  	vGen.io.y := vecMul.io.y
+			val vGen = Module(new VectorGen(dataBits, vectorLength))
+  		val vecMul = Module(new VectorMult(dataBits, vectorLength))
+  		vecMul.io.a := vGen.io.a
+  		vecMul.io.b := vGen.io.b
+  		vGen.io.y := vecMul.io.y
 	} else if (sel == 2) {
-		val dGen = Module(new DotGen(dataBits, vectorLength))
-		val dot = Module(new Dot(dataBits, vectorLength))
-		dot.io.a := dGen.io.a
-		dot.io.b := dGen.io.b
-		dGen.io.y := dot.io.y
+			val dGen = Module(new DotGen(dataBits, vectorLength))
+			val dot = Module(new Dot(dataBits, vectorLength))
+			dot.io.a := dGen.io.a
+			dot.io.b := dGen.io.b
+			dGen.io.y := dot.io.y
 	} else if (sel == 3) {
-		val oneNumGen = Module(new OneNumGen)
-		val pop = Module(new Pop(dataBits))
-		pop.io.num := oneNumGen.io.num
-		oneNumGen.io.count := pop.io.count
-	} else /*if (sel == 4)*/ {
-		val oneVecGen = Module(new OneVecGen(vectorLength, maxBit))
-		val bitpack = Module(new BitPack(vectorLength, maxBit))
-		bitpack.io.arr := oneVecGen.io.arr
-		oneVecGen.io.out := bitpack.io.out
+			val oneNumGen = Module(new OneNumGen)
+			val pop = Module(new Pop(dataBits))
+			pop.io.num := oneNumGen.io.num
+			oneNumGen.io.count := pop.io.count
+	} else if (sel == 4) {
+			val oneVecGen = Module(new OneVecGen(dataBits, vectorLength))
+			val bitpack = Module(new BitPack(dataBits, vectorLength))
+			bitpack.io.arr := oneVecGen.io.arr
+			oneVecGen.io.out := bitpack.io.out
+	} else /*if (sel == 5)*/ {
+    	printf("activation: \n")
+			val aVecGen = Module(new OneVecGen(aBits, vectorLength))
+    	val aBitpack = Module(new BitPack(aBits, vectorLength))
+			aBitpack.io.arr := aVecGen.io.arr
+    	aVecGen.io.out := aBitpack.io.out
+
+			printf("weight: \n")
+      val wBitpack = Module(new BitPack(wBits, vectorLength))
+      val wVecGen = Module(new OneVecGen(wBits, vectorLength))
+
+			wBitpack.io.arr := wVecGen.io.arr
+			wVecGen.io.out := wBitpack.io.out
+			
+			val bitSerial = Module(new BitSerial(wBits, aBits, vectorLength))
+			val printNum = Module(new PrintNum)
+			bitSerial.io.weight := wBitpack.io.out
+			bitSerial.io.activation := aBitpack.io.out
+			printNum.io.num := bitSerial.io.product
 	}
 }
 
 object Elaborate extends App {
-  chisel3.Driver.execute(args, () => new Test(4, 8, 10))
+  chisel3.Driver.execute(args, () => new Test(5, 3, 4, 3, 2))
 }
