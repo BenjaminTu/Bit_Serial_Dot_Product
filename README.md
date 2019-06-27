@@ -17,6 +17,7 @@ object Elaborate extends App {
 }
 ```
 modify the Module name to before generating the verilog file for the module you want
+You can see the generated verilog file in the `generated` folder
 
 2. `make -C sim` which outputs a simulation result to the `sim` folder as well as on the terminal
 
@@ -24,7 +25,7 @@ Make sure to delete the `sim/vout` folder if it is not your first time running t
 `rm -r sim/vout` before you run the next test, since the command will search within `sim/vout` for already outputed simluation results
 
 There are more than one module that can be tested, but the most important module is the bitpacking and bit serial module
-Simiar to above, in the last few lines of `src/test/scala/Test.scala` you'll see 
+Similar to above, in the last few lines of `src/test/scala/Test.scala` you'll see 
 ```
 object Elaborate extends App {
   chisel3.Driver.execute(args, () => new Test(5, 3, 4, 3, 2)) 
