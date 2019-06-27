@@ -43,7 +43,7 @@ class BitSerial(wBits: Int = 2,
 	for (i <- 0 until wBits) {
 		for (j <- 0 until aBits) {
 			if (i != 0 || j != 0) {
-				sum(i*aBits+j) := sum(i*aBits+j-1) +& (PopCount(io.weight(i) & io.activation(j)) << (i+j).U)
+				sum(i*aBits+j) := sum(i*aBits+j-1) +& (PopCount(io.weight(i) & io.activation(j)) << (i+j).S)
 			}
 		}
 	}
