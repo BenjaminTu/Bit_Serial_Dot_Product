@@ -32,7 +32,7 @@ object Elaborate extends App {
 ```
 Modify the input parameters to change the test you want to run
 ```
-	/* 
+  /* 
    * Test selection
    * 1 = Vector Multiplication
    * 2 = Dot Product
@@ -50,8 +50,7 @@ dataBits will be ignored while runing test 5, the user will have the option to c
 The test will randomly generate vectors for the program to compute the dot product in a bit serial fashion
 You'll see something like this repeated many times
 ```
-activation:
- 
+activation: 
 weight: 
 arr:4, 0, 1, 2, packed result:  4,  8,  1, 
 arr:6, 3, 5, 4, packed result:  6,  3, 13, 
