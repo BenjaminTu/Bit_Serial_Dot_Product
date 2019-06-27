@@ -3,15 +3,31 @@ package example
 import chisel3._
 import chisel3.util._
 
+class ConvertUS(dataBits: Int = 8) extends Module {
+	val io = IO(new Bundle {
+		val num = Input(UInt(dataBits.W))
+		val out = Output(SInt(dataBits.W))
+	})
+		io.out := io.num.asSInt
+}
+
+class ConvertSU(dataBits: Int = 8) extends Module {
+  val io = IO(new Bundle {
+    val num = Input(SInt(dataBits.W))
+    val out = Output(UInt(dataBits.W))
+  })  
+    io.out := io.num.asUInt
+}
+
 class Pop(dataBits: Int = 8) extends Module {
 	val io = IO(new Bundle {
 		val num = Input(SInt(dataBits.W))
 		val count = Output(SInt(dataBits.W))	
 	})	
 		io.count := PopCount(io.num)
-		printf("input number: %d", num)
+		printf("input number: %d",io.num)
 }
-
+/*
 class BitPack(dataBits: Int = 2, vectorLength: Int = 1) extends Module{
 	require(vectorLength > 0)
 	val io = IO(new Bundle {
@@ -60,7 +76,7 @@ class BitSerial(wBits: Int = 2,
 
 }
 
-
+*/
 object Elaborate extends App {
   chisel3.Driver.execute(args, () => new BitSerial(2,2,4))
 }

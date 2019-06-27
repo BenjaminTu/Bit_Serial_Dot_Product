@@ -6,18 +6,23 @@ import chisel3.util._
 
 import example._
 
-class OneNumGen extends Module {
+class OneNumGen(dataBits: Int = 8) extends Module {
 	val io = IO(new Bundle {
-		val num = Output(SInt(32.W))
-		val count = Input(SInt(32.W))
+		val uNum = Output(UInt(dataBits.W))
+		val sNum = Output(SInt(dataBits.W))
+		val uOut = Input(UInt(dataBits.W))
+		val sOut = Input(SInt(dataBits.W))
 	})
 	//val (cnt, _) = Counter(true.B, 256)	
-	io.num := -3.S
+	io.uNum := 10.U
+	io.sNum := -3.S
 	when (true.B) {
-		printf("num:%d count:%d\n", io.num, io.count)
+		printf(p"Unum:${Binary(io.uNum)} Sout:${Binary(io.sOut)}\n")
+		printf(p"Snum:${Binary(io.sNum)} Uout:${Binary(io.uOut)}\n")
 	}
 }
 
+/*
 class OneVecGen (dataBits: Int = 2, vectorLength: Int = 1) extends Module {
   val io = IO(new Bundle {
     val arr = Output(Vec(vectorLength, SInt(dataBits.W)))
@@ -42,7 +47,7 @@ class OneVecGen (dataBits: Int = 2, vectorLength: Int = 1) extends Module {
 		printf("\n")
 	}
 }
-
+*/
 class PrintNum(dataBits: Int = 8) extends Module {
 	val io = IO(new Bundle {
 		val num = Input(SInt(8.W))
@@ -56,9 +61,17 @@ class Test (sel: Int = 1, vectorLength: Int = 1,
   val io = IO(new Bundle {})
 	
 		if (sel == 1) {
+			val numGen = Module(new OneNumGen(4))
+			val convertUS = Module(new ConvertUS(4))
+			val convertSU = Module(new ConvertSU(4))
 
-
+			convertUS.io.num := numGen.io.uNum
+			numGen.io.sOut := convertUS.io.out
+			convertSU.io.num := numGen.io.sNum
+			numGen.io.uOut := convertSU.io.out 	
+			
 		} else {
+/*
 			printf("activation: \n")
 			val aVecGen = Module(new OneVecGen(aBits, vectorLength))
 	  	val aBitpack = Module(new BitPack(aBits, vectorLength))
@@ -77,9 +90,9 @@ class Test (sel: Int = 1, vectorLength: Int = 1,
 			bitSerial.io.weight := wBitpack.io.out
 			bitSerial.io.activation := aBitpack.io.out
 			printNum.io.num := bitSerial.io.product
+*/
 		}
     	
-	}
 }
 
 object Elaborate extends App {

@@ -4,7 +4,7 @@
 # Execute this makefile from the object directory:
 #    make -f VTest.mk
 
-default: /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test
+default: /home/bentu/Bit_Serial_Dot_Product/signed/sim/vout/Test
 
 ### Constants...
 # Perl executable (from $PERL)
@@ -33,7 +33,7 @@ VM_PREFIX = VTest
 VM_MODPREFIX = VTest
 # User CFLAGS (from -CFLAGS on Verilator command line)
 VM_USER_CFLAGS = \
-	-I/home/bentu/Bit_Serial_Dot_Product/matrix/src/test/resources/csrc -include VTest.h -DVNAME=VTest \
+	-I/home/bentu/Bit_Serial_Dot_Product/signed/src/test/resources/csrc -include VTest.h -DVNAME=VTest \
 
 # User LDLIBS (from -LDFLAGS on Verilator command line)
 VM_USER_LDLIBS = \
@@ -44,7 +44,7 @@ VM_USER_CLASSES = \
 
 # User .cpp directories (from .cpp's on Verilator command line)
 VM_USER_DIR = \
-	/home/bentu/Bit_Serial_Dot_Product/matrix/src/test/resources/csrc \
+	/home/bentu/Bit_Serial_Dot_Product/signed/src/test/resources/csrc \
 
 
 ### Default rules...
@@ -56,11 +56,11 @@ include $(VERILATOR_ROOT)/include/verilated.mk
 ### Executable rules... (from --exe)
 VPATH += $(VM_USER_DIR)
 
-main.o: /home/bentu/Bit_Serial_Dot_Product/matrix/src/test/resources/csrc/main.cc
+main.o: /home/bentu/Bit_Serial_Dot_Product/signed/src/test/resources/csrc/main.cc
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 
 ### Link rules... (from --exe)
-/home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test: $(VK_USER_OBJS) $(VK_GLOBAL_OBJS) $(VM_PREFIX)__ALL.a
+/home/bentu/Bit_Serial_Dot_Product/signed/sim/vout/Test: $(VK_USER_OBJS) $(VK_GLOBAL_OBJS) $(VM_PREFIX)__ALL.a
 	$(LINK) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) -o $@ $(LIBS) $(SC_LIBS)
 
 

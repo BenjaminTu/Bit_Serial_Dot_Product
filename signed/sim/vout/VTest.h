@@ -26,25 +26,6 @@ VL_MODULE(VTest) {
     
     // LOCAL SIGNALS
     // Internals; generally not touched by application code
-    // Begin mtask footprint  all: 
-    VL_SIG16(Test__DOT__BitSerial__DOT__sum_0,8,0);
-    VL_SIG16(Test__DOT__BitSerial__DOT__sum_1,8,0);
-    VL_SIG16(Test__DOT__BitSerial__DOT__sum_2,8,0);
-    VL_SIG16(Test__DOT__BitSerial__DOT__sum_3,8,0);
-    VL_SIG16(Test__DOT__BitSerial__DOT__sum_4,8,0);
-    VL_SIG16(Test__DOT__BitSerial__DOT__sum_5,8,0);
-    VL_SIG16(Test__DOT__BitSerial__DOT__sum_6,8,0);
-    VL_SIG16(Test__DOT__BitSerial__DOT__sum_7,8,0);
-    VL_SIG16(Test__DOT__BitSerial__DOT__sum_8,8,0);
-    VL_SIG(Test__DOT__BitSerial__DOT___RAND_0,31,0);
-    VL_SIG(Test__DOT__BitSerial__DOT___RAND_1,31,0);
-    VL_SIG(Test__DOT__BitSerial__DOT___RAND_2,31,0);
-    VL_SIG(Test__DOT__BitSerial__DOT___RAND_3,31,0);
-    VL_SIG(Test__DOT__BitSerial__DOT___RAND_4,31,0);
-    VL_SIG(Test__DOT__BitSerial__DOT___RAND_5,31,0);
-    VL_SIG(Test__DOT__BitSerial__DOT___RAND_6,31,0);
-    VL_SIG(Test__DOT__BitSerial__DOT___RAND_7,31,0);
-    VL_SIG(Test__DOT__BitSerial__DOT___RAND_8,31,0);
     
     // LOCAL VARIABLES
     // Internals; generally not touched by application code
@@ -93,7 +74,6 @@ VL_MODULE(VTest) {
   public:
     static void _eval_initial(VTest__Syms* __restrict vlSymsp);
     static void _eval_settle(VTest__Syms* __restrict vlSymsp);
-    static void _initial__TOP__2(VTest__Syms* __restrict vlSymsp);
     static void _sequent__TOP__1(VTest__Syms* __restrict vlSymsp);
 } VL_ATTR_ALIGNED(128);
 
