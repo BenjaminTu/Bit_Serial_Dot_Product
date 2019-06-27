@@ -27,18 +27,24 @@ VL_MODULE(VTest) {
     // LOCAL SIGNALS
     // Internals; generally not touched by application code
     // Begin mtask footprint  all: 
-    VL_SIG8(Test__DOT__BitSerial__DOT__sum_0,7,0);
-    VL_SIG8(Test__DOT__BitSerial__DOT__sum_1,7,0);
-    VL_SIG8(Test__DOT__BitSerial__DOT__sum_2,7,0);
-    VL_SIG8(Test__DOT__BitSerial__DOT__sum_3,7,0);
-    VL_SIG8(Test__DOT__BitSerial__DOT__sum_4,7,0);
-    VL_SIG8(Test__DOT__BitSerial__DOT__sum_5,7,0);
+    VL_SIG16(Test__DOT__BitSerial__DOT__sum_0,8,0);
+    VL_SIG16(Test__DOT__BitSerial__DOT__sum_1,8,0);
+    VL_SIG16(Test__DOT__BitSerial__DOT__sum_2,8,0);
+    VL_SIG16(Test__DOT__BitSerial__DOT__sum_3,8,0);
+    VL_SIG16(Test__DOT__BitSerial__DOT__sum_4,8,0);
+    VL_SIG16(Test__DOT__BitSerial__DOT__sum_5,8,0);
+    VL_SIG16(Test__DOT__BitSerial__DOT__sum_6,8,0);
+    VL_SIG16(Test__DOT__BitSerial__DOT__sum_7,8,0);
+    VL_SIG16(Test__DOT__BitSerial__DOT__sum_8,8,0);
     VL_SIG(Test__DOT__BitSerial__DOT___RAND_0,31,0);
     VL_SIG(Test__DOT__BitSerial__DOT___RAND_1,31,0);
     VL_SIG(Test__DOT__BitSerial__DOT___RAND_2,31,0);
     VL_SIG(Test__DOT__BitSerial__DOT___RAND_3,31,0);
     VL_SIG(Test__DOT__BitSerial__DOT___RAND_4,31,0);
     VL_SIG(Test__DOT__BitSerial__DOT___RAND_5,31,0);
+    VL_SIG(Test__DOT__BitSerial__DOT___RAND_6,31,0);
+    VL_SIG(Test__DOT__BitSerial__DOT___RAND_7,31,0);
+    VL_SIG(Test__DOT__BitSerial__DOT___RAND_8,31,0);
     
     // LOCAL VARIABLES
     // Internals; generally not touched by application code

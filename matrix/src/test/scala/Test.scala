@@ -167,5 +167,5 @@ class Test (sel: Int = 1, dataBits: Int = 8, vectorLength: Int = 1,
 }
 
 object Elaborate extends App {
-  chisel3.Driver.execute(args, () => new Test(5, 3, 4, 3, 2))
+  chisel3.Driver.execute(args, () => new Test(5, 3, 4, 3, 3))
 }
