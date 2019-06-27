@@ -3,6 +3,15 @@ package example
 import chisel3._
 import chisel3.util._
 
+class Pop(dataBits: Int = 8) extends Module {
+	val io = IO(new Bundle {
+		val num = Input(SInt(dataBits.W))
+		val count = Output(SInt(dataBits.W))	
+	})	
+		io.count := PopCount(io.num)
+		printf("input number: %d", num)
+}
+
 class BitPack(dataBits: Int = 2, vectorLength: Int = 1) extends Module{
 	require(vectorLength > 0)
 	val io = IO(new Bundle {
@@ -50,8 +59,6 @@ class BitSerial(wBits: Int = 2,
 	io.product := sum(wBits * aBits-1)
 
 }
-
-
 
 
 object Elaborate extends App {

@@ -6,6 +6,18 @@ import chisel3.util._
 
 import example._
 
+class OneNumGen extends Module {
+	val io = IO(new Bundle {
+		val num = Output(SInt(32.W))
+		val count = Input(SInt(32.W))
+	})
+	//val (cnt, _) = Counter(true.B, 256)	
+	io.num := -3.S
+	when (true.B) {
+		printf("num:%d count:%d\n", io.num, io.count)
+	}
+}
+
 class OneVecGen (dataBits: Int = 2, vectorLength: Int = 1) extends Module {
   val io = IO(new Bundle {
     val arr = Output(Vec(vectorLength, SInt(dataBits.W)))
@@ -31,29 +43,31 @@ class OneVecGen (dataBits: Int = 2, vectorLength: Int = 1) extends Module {
 	}
 }
 
-class PrintNum() extends Module {
+class PrintNum(dataBits: Int = 8) extends Module {
 	val io = IO(new Bundle {
-		val num = Input(SInt(32.W))
+		val num = Input(SInt(8.W))
 	})
 	printf("result: %d\n", io.num)
 }
 
 
-
-class Test (vectorLength: Int = 1, 
+class Test (sel: Int = 1, vectorLength: Int = 1, 
 	wBits: Int = 1, aBits: Int = 1) extends Module {
   val io = IO(new Bundle {})
-  // val numGen = Module(new NumGen)
 	
-    	printf("activation: \n")
+		if (sel == 1) {
+
+
+		} else {
+			printf("activation: \n")
 			val aVecGen = Module(new OneVecGen(aBits, vectorLength))
-    	val aBitpack = Module(new BitPack(aBits, vectorLength))
+	  	val aBitpack = Module(new BitPack(aBits, vectorLength))
 			aBitpack.io.arr := aVecGen.io.arr
-    	aVecGen.io.out := aBitpack.io.out
+	  	aVecGen.io.out := aBitpack.io.out
 
 			printf("weight: \n")
-      val wBitpack = Module(new BitPack(wBits, vectorLength))
-      val wVecGen = Module(new OneVecGen(wBits, vectorLength))
+	    val wBitpack = Module(new BitPack(wBits, vectorLength))
+	    val wVecGen = Module(new OneVecGen(wBits, vectorLength))
 
 			wBitpack.io.arr := wVecGen.io.arr
 			wVecGen.io.out := wBitpack.io.out
@@ -63,9 +77,11 @@ class Test (vectorLength: Int = 1,
 			bitSerial.io.weight := wBitpack.io.out
 			bitSerial.io.activation := aBitpack.io.out
 			printNum.io.num := bitSerial.io.product
+		}
+    	
 	}
 }
 
 object Elaborate extends App {
-  chisel3.Driver.execute(args, () => new Test(4, 3, 3))
+  chisel3.Driver.execute(args, () => new Test(1, 4, 3, 3))
 }
