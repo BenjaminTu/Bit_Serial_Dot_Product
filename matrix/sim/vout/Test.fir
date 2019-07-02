@@ -6,10 +6,10 @@ circuit Test :
     output io : {arr : UInt<3>[4], flip out : UInt<4>[3]}
     
     wire _T_46 : UInt<3>[4] @[Test.scala 85:26]
-    _T_46[0] <= UInt<3>("h04") @[Test.scala 85:26]
-    _T_46[1] <= UInt<1>("h00") @[Test.scala 85:26]
+    _T_46[0] <= UInt<1>("h00") @[Test.scala 85:26]
+    _T_46[1] <= UInt<3>("h06") @[Test.scala 85:26]
     _T_46[2] <= UInt<1>("h01") @[Test.scala 85:26]
-    _T_46[3] <= UInt<2>("h02") @[Test.scala 85:26]
+    _T_46[3] <= UInt<2>("h03") @[Test.scala 85:26]
     io.arr[0] <= _T_46[0] @[Test.scala 85:16]
     io.arr[1] <= _T_46[1] @[Test.scala 85:16]
     io.arr[2] <= _T_46[2] @[Test.scala 85:16]
@@ -237,9 +237,9 @@ circuit Test :
     output io : {arr : UInt<3>[4], flip out : UInt<4>[3]}
     
     wire _T_46 : UInt<3>[4] @[Test.scala 85:26]
-    _T_46[0] <= UInt<3>("h06") @[Test.scala 85:26]
-    _T_46[1] <= UInt<2>("h03") @[Test.scala 85:26]
-    _T_46[2] <= UInt<3>("h05") @[Test.scala 85:26]
+    _T_46[0] <= UInt<3>("h07") @[Test.scala 85:26]
+    _T_46[1] <= UInt<1>("h00") @[Test.scala 85:26]
+    _T_46[2] <= UInt<3>("h04") @[Test.scala 85:26]
     _T_46[3] <= UInt<3>("h04") @[Test.scala 85:26]
     io.arr[0] <= _T_46[0] @[Test.scala 85:16]
     io.arr[1] <= _T_46[1] @[Test.scala 85:16]

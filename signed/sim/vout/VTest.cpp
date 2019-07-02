@@ -69,13 +69,100 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VTest::_sequent__TOP__1\n"); );
     VTest* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/signed/sim/vout/Test.v:11
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/signed/sim/vout/Test.v:637
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"Unum:1010 Sout:1010\n");
+	VL_FWRITEF(0x80000002U,"activation: \n");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"Snum:1101 Uout:1101\n");
+	VL_FWRITEF(0x80000002U,"weight: \n");
     }
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/signed/sim/vout/Test.v:25
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"arr:");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"00 ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"01 ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"10 ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"00 ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"packed result: ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U," 2, ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U," 4, ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"\n");
+    }
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/signed/sim/vout/Test.v:217
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"arr:");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"10 ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"10 ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"10 ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"01 ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"packed result: ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U," 8, ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U," 7, ");
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"\n");
+    }
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/signed/sim/vout/Test.v:499
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"Unsigned result: %3#, Signed result: %3#\n",
+		   8,vlTOPp->Test__DOT__bitSerial__DOT__sum_3,
+		   8,(IData)(vlTOPp->Test__DOT__bitSerial__DOT__sum_3));
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+	VL_FWRITEF(0x80000002U,"Binary: Unsigned result: %b, Signed result: %b\n",
+		   8,vlTOPp->Test__DOT__bitSerial__DOT__sum_3,
+		   8,(IData)(vlTOPp->Test__DOT__bitSerial__DOT__sum_3));
+    }
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/signed/sim/vout/Test.v:467
+    vlTOPp->Test__DOT__bitSerial__DOT__sum_3 = (0x7fU 
+						& ((IData)(vlTOPp->reset)
+						    ? 0U
+						    : 
+						   ((IData)(4U) 
+						    + (IData)(vlTOPp->Test__DOT__bitSerial__DOT__sum_2))));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/signed/sim/vout/Test.v:467
+    vlTOPp->Test__DOT__bitSerial__DOT__sum_2 = (0x7fU 
+						& ((IData)(vlTOPp->reset)
+						    ? 0U
+						    : 
+						   ((IData)(2U) 
+						    + (IData)(vlTOPp->Test__DOT__bitSerial__DOT__sum_1))));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/signed/sim/vout/Test.v:467
+    vlTOPp->Test__DOT__bitSerial__DOT__sum_1 = ((IData)(vlTOPp->reset)
+						 ? 0U
+						 : (IData)(vlTOPp->Test__DOT__bitSerial__DOT__sum_0));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/signed/sim/vout/Test.v:467
+    vlTOPp->Test__DOT__bitSerial__DOT__sum_0 = 0U;
 }
 
 void VTest::_eval(VTest__Syms* __restrict vlSymsp) {

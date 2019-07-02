@@ -22,10 +22,11 @@ class ConvertSU(dataBits: Int = 8) extends Module {
 class Pop(dataBits: Int = 8) extends Module {
 	val io = IO(new Bundle {
 		val num = Input(SInt(dataBits.W))
-		val count = Output(SInt(dataBits.W))	
+		val count = Output(UInt(dataBits.W))	
 	})	
 		io.count := PopCount(io.num)
-		printf("input number: %d",io.num)
+		printf(p"input number: ${Binary(io.num)}")
+		printf("popcount: %d", io.count)
 }
 
 class BitPack(dataBits: Int = 2, vectorLength: Int = 1) extends Module {

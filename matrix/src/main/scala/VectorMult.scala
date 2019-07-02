@@ -121,6 +121,15 @@ class BitSerial(wBits: Int = 1,
 
 }
 
+class Compute extends Module{ 
+	val io = IO(new Bundle {
+		val w = Input(UInt(1.W))
+		val a = Input(UInt(1.W))
+		val shift = Input(UInt(8.W))
+		val product = Output(UInt(9.W))
+	})
+		io.product := PopCount(io.w & io.a) << io.shift
+}
 
 
 

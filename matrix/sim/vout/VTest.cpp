@@ -81,28 +81,28 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 	VL_FWRITEF(0x80000002U,"arr:");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"4, ");
+	VL_FWRITEF(0x80000002U,"0, ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"0, ");
+	VL_FWRITEF(0x80000002U,"6, ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
 	VL_FWRITEF(0x80000002U,"1, ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"2, ");
+	VL_FWRITEF(0x80000002U,"3, ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
 	VL_FWRITEF(0x80000002U,"packed result: ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," 4, ");
+	VL_FWRITEF(0x80000002U,"12, ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," 8, ");
+	VL_FWRITEF(0x80000002U,"10, ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," 1, ");
+	VL_FWRITEF(0x80000002U," 2, ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
 	VL_FWRITEF(0x80000002U,"\n");
@@ -112,13 +112,13 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 	VL_FWRITEF(0x80000002U,"arr:");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"6, ");
+	VL_FWRITEF(0x80000002U,"7, ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"3, ");
+	VL_FWRITEF(0x80000002U,"0, ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"5, ");
+	VL_FWRITEF(0x80000002U,"4, ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
 	VL_FWRITEF(0x80000002U,"4, ");
@@ -127,10 +127,10 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 	VL_FWRITEF(0x80000002U,"packed result: ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," 6, ");
+	VL_FWRITEF(0x80000002U," 1, ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," 3, ");
+	VL_FWRITEF(0x80000002U," 1, ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
 	VL_FWRITEF(0x80000002U,"13, ");
@@ -144,12 +144,9 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 		   vlTOPp->Test__DOT__BitSerial__DOT__sum_8);
     }
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:658
-    vlTOPp->Test__DOT__BitSerial__DOT__sum_8 = (0x1ffU 
-						& ((IData)(vlTOPp->reset)
-						    ? 0U
-						    : 
-						   ((IData)(0x10U) 
-						    + (IData)(vlTOPp->Test__DOT__BitSerial__DOT__sum_7))));
+    vlTOPp->Test__DOT__BitSerial__DOT__sum_8 = ((IData)(vlTOPp->reset)
+						 ? 0U
+						 : (IData)(vlTOPp->Test__DOT__BitSerial__DOT__sum_7));
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:658
     vlTOPp->Test__DOT__BitSerial__DOT__sum_7 = (0x1ffU 
 						& ((IData)(vlTOPp->reset)
@@ -162,15 +159,12 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 						& ((IData)(vlTOPp->reset)
 						    ? 0U
 						    : 
-						   ((IData)(4U) 
+						   ((IData)(8U) 
 						    + (IData)(vlTOPp->Test__DOT__BitSerial__DOT__sum_5))));
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:658
-    vlTOPp->Test__DOT__BitSerial__DOT__sum_5 = (0x1ffU 
-						& ((IData)(vlTOPp->reset)
-						    ? 0U
-						    : 
-						   ((IData)(8U) 
-						    + (IData)(vlTOPp->Test__DOT__BitSerial__DOT__sum_4))));
+    vlTOPp->Test__DOT__BitSerial__DOT__sum_5 = ((IData)(vlTOPp->reset)
+						 ? 0U
+						 : (IData)(vlTOPp->Test__DOT__BitSerial__DOT__sum_4));
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:658
     vlTOPp->Test__DOT__BitSerial__DOT__sum_4 = ((IData)(vlTOPp->reset)
 						 ? 0U
@@ -188,9 +182,7 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 						 ? 0U
 						 : (IData)(vlTOPp->Test__DOT__BitSerial__DOT__sum_0));
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/matrix/sim/vout/Test.v:658
-    vlTOPp->Test__DOT__BitSerial__DOT__sum_0 = ((IData)(vlTOPp->reset)
-						 ? 0U
-						 : 1U);
+    vlTOPp->Test__DOT__BitSerial__DOT__sum_0 = 0U;
 }
 
 void VTest::_eval(VTest__Syms* __restrict vlSymsp) {

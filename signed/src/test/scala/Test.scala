@@ -15,7 +15,7 @@ class OneNumGen(dataBits: Int = 8) extends Module {
 	})
 	//val (cnt, _) = Counter(true.B, 256)	
 	io.uNum := 10.U
-	io.sNum := -3.S
+	io.sNum := -100.S
 	when (true.B) {
 		printf(p"Unum:${Binary(io.uNum)} Sout:${Binary(io.sOut)}\n")
 		printf(p"Snum:${Binary(io.sNum)} Uout:${Binary(io.uOut)}\n")
@@ -29,13 +29,15 @@ class OneVecGen (dataBits: Int = 2, vectorLength: Int = 1) extends Module {
   })
 
 	// randomly fill 1s and 0s
- 	//io.arr := VecInit(Seq.fill(vectorLength) (((Random.nextInt(0x1 << dataBits) * Math.pow(-1, Random.nextInt(2))).S.asUInt))
-  io.arr := VecInit(Seq.fill(vectorLength)((-1.S).asUInt))
-
+ 	io.arr := VecInit(Seq.fill(vectorLength) 
+		(((Random.nextInt(0x1 << dataBits) * Math.pow(-1, Random.nextInt(2))).toInt.S).asUInt))
+  // io.arr := VecInit(Seq.fill(vectorLength)((-1.S).asUInt))
+	val print = VecInit(Seq.fill(vectorLength)(0.S(dataBits.W)))
   when (true.B) {
     printf("arr:")
     for (i <- 0 until vectorLength) {
-       printf("%d, ", io.arr(i))
+			 print(i) := io.arr(i).asSInt
+       printf(p"${Binary(print(i))} ")
     }
 		printf("packed result: ")
 		for (i <- 0 until dataBits) {
@@ -47,16 +49,17 @@ class OneVecGen (dataBits: Int = 2, vectorLength: Int = 1) extends Module {
 
 class PrintNum() extends Module {
 	val io = IO(new Bundle {
-		val num = Input(UInt(32.W))
+		val num = Input(UInt(8.W))
 	})
 	printf("Unsigned result: %d, Signed result: %d\n", io.num, io.num.asSInt)
-	printf(p"Binary: Unsigned result: ${Binary(io.num)}, Signed result: ${Binary(io.nu.asSInt)}\n")
+	printf(p"Binary: Unsigned result: ${Binary(io.num)}, Signed result: ${Binary(io.num.asSInt)}\n")
 }
 
-class Test (dataBits: Int = 8, vectorLength: Int = 1, 
+class Test (vectorLength: Int = 1, 
 	wBits: Int = 1, aBits: Int = 1) extends Module {
   val io = IO(new Bundle {})
 	
+
 	printf("activation: \n")
 	val aVecGen = Module(new OneVecGen(aBits, vectorLength))
 	val aBitpack = Module(new BitPack(aBits, vectorLength))
@@ -75,9 +78,8 @@ class Test (dataBits: Int = 8, vectorLength: Int = 1,
 	bitSerial.io.weight := wBitpack.io.out
 	bitSerial.io.activation := aBitpack.io.out
 	printNum.io.num := bitSerial.io.product
-	
 }
 
 object Elaborate extends App {
-  chisel3.Driver.execute(args, () => new Test(4, 3, 3))
+  chisel3.Driver.execute(args, () => new Test(4, 2, 2))
 }
