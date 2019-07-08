@@ -1,0 +1,13 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "--cc --exe -Mdir /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout --top-module Test /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v /home/bentu/Bit_Serial_Dot_Product/tsimTest/src/test/resources/csrc/main.cc -Wno-STMTDLY -Wno-WIDTH -Wno-CASEINCOMPLETE --output-split 20000 --output-split-cfuncs 20000 --x-assign unique +define+RANDOMIZE_GARBAGE_ASSIGN +define+RANDOMIZE_REG_INIT +define+RANDOMIZE_MEM_INIT -CFLAGS -I/home/bentu/Bit_Serial_Dot_Product/tsimTest/src/test/resources/csrc -include VTest.h -DVNAME=VTest -o /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test"
+S     26526 42729553  1562630024   928410840  1562630024   928410840 "/home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v"
+T     13999 42729561  1562630025   156415240  1562630025   156415240 "/home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/VTest.cpp"
+T      4133 42729560  1562630025   156415240  1562630025   156415240 "/home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/VTest.h"
+T      2088 42729575  1562630025   156415240  1562630025   156415240 "/home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/VTest.mk"
+T      6876 42729563  1562630025   156415240  1562630025   156415240 "/home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/VTest__Slow.cpp"
+T       520 42729559  1562630025   156415240  1562630025   156415240 "/home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/VTest__Syms.cpp"
+T       703 42729558  1562630025   156415240  1562630025   156415240 "/home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/VTest__Syms.h"
+T       651 42729622  1562630025   156415240  1562630025   156415240 "/home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/VTest__ver.d"
+T         0        0  1562630025   156415240  1562630025   156415240 "/home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/VTest__verFiles.dat"
+T      1168 42729572  1562630025   156415240  1562630025   156415240 "/home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/VTest_classes.mk"
+S   6619528 15730091  1556424481   372840019  1556424481   372840019 "/usr/local/bin/verilator_bin"

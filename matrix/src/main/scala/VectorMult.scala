@@ -121,14 +121,22 @@ class BitSerial(wBits: Int = 1,
 
 }
 
-class Compute extends Module{ 
+class Compute (vecLength: Int = 1, wBits: Int = 1, aBits: Int = 1) extends Module{
+	// max shiftBits needed is max(wBits, aBits)+1
+	private val shiftBits = Math.max(wBits, aBits)+1
+	private val outBits = wBits + aBits + shiftBits + vecLength - 1
 	val io = IO(new Bundle {
-		val w = Input(UInt(1.W))
-		val a = Input(UInt(1.W))
-		val shift = Input(UInt(8.W))
-		val product = Output(UInt(9.W))
+		val w = Input(Vec(vecLength, UInt(wBits.W)))
+		val a = Input(Vec(vecLength, UInt(aBits.W)))
+		val shift = Input(UInt(shiftBits.W))
+		val product = Output(UInt(outBits.W))
 	})
-		io.product := PopCount(io.w & io.a) << io.shift
+		val sum = RegInit(0.U(outBits.W))
+		for (i <- 0 until vecLength) {
+		// TODO: make sure muliplier of shift
+			sum := sum +& (io.w(i) *  io.a(i)) << (io.shift*wBits)
+		}
+		io.product := sum
 }
 
 

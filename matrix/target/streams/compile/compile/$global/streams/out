@@ -1,2 +1,7 @@
-[0m[[0m[33mwarn[0m] [0m[0mthere were 29 feature warnings; re-run with -feature for details[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/bentu/Bit_Serial_Dot_Product/matrix/src/main/scala/VectorMult.scala:137:51: overloaded method value * with alternatives:[0m
+[0m[[0m[31merror[0m] [0m[0m  (that: chisel3.core.SInt)chisel3.core.SInt <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (that: chisel3.core.UInt)chisel3.core.UInt[0m
+[0m[[0m[31merror[0m] [0m[0m cannot be applied to (Int)[0m
+[0m[[0m[31merror[0m] [0m[0m			sum := sum +& (io.w(i) *  io.a(i)) << (io.shift*wBits)[0m
+[0m[[0m[31merror[0m] [0m[0m			                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

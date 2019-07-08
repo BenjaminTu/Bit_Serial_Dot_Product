@@ -144,7 +144,7 @@ class Test (sel: Int = 1, dataBits: Int = 8, vectorLength: Int = 1,
 			val bitpack = Module(new BitPack(dataBits, vectorLength))
 			bitpack.io.arr := oneVecGen.io.arr
 			oneVecGen.io.out := bitpack.io.out
-	} else /*if (sel == 5)*/ {
+	} else if (sel == 5) {
     	printf("activation: \n")
 			val aVecGen = Module(new OneVecGen(aBits, vectorLength))
     	val aBitpack = Module(new BitPack(aBits, vectorLength))
@@ -163,9 +163,28 @@ class Test (sel: Int = 1, dataBits: Int = 8, vectorLength: Int = 1,
 			bitSerial.io.weight := wBitpack.io.out
 			bitSerial.io.activation := aBitpack.io.out
 			printNum.io.num := bitSerial.io.product
+	} else /*if (sel == 6)*/ {
+			printf("activation: \n")
+      val aVecGen = Module(new OneVecGen(aBits, vectorLength))
+      val aBitpack = Module(new BitPack(aBits, vectorLength))
+      aBitpack.io.arr := aVecGen.io.arr
+      aVecGen.io.out := aBitpack.io.out
+
+      printf("weight: \n")
+      val wBitpack = Module(new BitPack(wBits, vectorLength))
+      val wVecGen = Module(new OneVecGen(wBits, vectorLength))
+
+      wBitpack.io.arr := wVecGen.io.arr
+      wVecGen.io.out := wBitpack.io.out
+    
+      val compute = Module(new Compute(vectorLength wBits, aBits))
+      val printNum = Module(new PrintNum)
+      compute.io.weight := wBitpack.io.out
+      compute.io.activation := aBitpack.io.out
+      printNum.io.num := compute.io.product
 	}
 }
 
 object Elaborate extends App {
-  chisel3.Driver.execute(args, () => new Test(5, 3, 4, 3, 3))
+  chisel3.Driver.execute(args, () => new Test(6, 3, 4, 3, 3))
 }
