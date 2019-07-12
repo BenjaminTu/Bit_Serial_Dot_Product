@@ -65,12 +65,12 @@ class DotGen(dataBits: Int = 8, vectorLength: Int = 1) extends Module {
     io.a := VecInit(Seq.fill(vectorLength)(10.U))
     io.b := VecInit(Seq.fill(vectorLength)(12.U))
 	}
-	io.rst := cnt%15.U === 7.U
-	// io.a := VecInit(Seq.fill(vectorLength)(10.U))
-  // io.b := VecInit(Seq.fill(vectorLength)(12.U)) 
+	io.rst := cnt%15.U === 7.U | cnt%15.U === 0.U
+//	io.rst := false.B
+//	io.a := VecInit(Seq.fill(vectorLength)(cnt % 20.U))
+//  io.b := VecInit(Seq.fill(vectorLength)(cnt % 20.U)) 
 
 	when (true.B) {
-		printf("\noverall RST: %d \n", io.rst)
 		printf("arrA: ")
     for (i <- 0 until vectorLength) {
        printf("%d, ", io.a(i))
@@ -80,7 +80,7 @@ class DotGen(dataBits: Int = 8, vectorLength: Int = 1) extends Module {
        printf("%d, ", io.b(i))
 		}  
 		printf("\n")
-//    printf("\ny: %d\n", io.y)
+    printf("\ny: %d\n", io.y)
   }
 }
 
@@ -126,8 +126,11 @@ class OneVecGen (dataBits: Int = 2, vectorLength: Int = 1) extends Module {
 class PrintNum() extends Module {
 	val io = IO(new Bundle {
 		val num = Input(UInt(64.W))
+		val valid = Input(Bool())
 	})
-	printf("\nresult: %d\n", io.num)
+	when(io.valid) {
+		printf("\nresult: %d\n", io.num)
+	}
 }
 
 
@@ -144,36 +147,29 @@ class Test (sel: Int = 1, dataBits: Int = 8, vectorLength: Int = 1,
   	if (sel == 1) {
 			val dGen = Module(new DotGen(dataBits, vectorLength))
 			val dot = Module(new Dot(dataBits, vectorLength))
-			dot.io.a := dGen.io.a
-			dot.io.b := dGen.io.b
-			dGen.io.y := dot.io.y
-			// TODO: get width
-			// TODO: ValidIO or MUX on accum.io.in (valid signal when vector changes) 
-			val accum = Module(new Accumulator(2*dataBits + vectorLength-1))
 			val pNum = Module(new PrintNum)
-			val (cnt, _) = Counter(true.B, vectorLength)
-			// printf("\nrst: %d\n", (cnt === (vectorLength-1).U).asUInt)
-			// dot.io.rst := (cnt === (vectorLength-1).U)
-			// accum.io.rst := (cnt === (vectorLength-1).U)
-			dot.io.rst := dot.io.rst
-      accum.io.rst := dot.io.rst
-			accum.io.valid := dot.io.valid
-			accum.io.in := dot.io.y
-			pNum.io.num:= accum.io.sum
-		} else /*if (sel == 2)*/ {
+			dot.io.arrA := dGen.io.a
+			dot.io.arrB := dGen.io.b
+			dGen.io.y := dot.io.res
+			dot.io.start := dGen.io.rst
+			pNum.io.valid := dot.io.valid
+			pNum.io.num := dot.io.res
+		}
+			/*else if (sel == 2) {
 			val dGen = Module(new DotGen(dataBits, vectorLength))
 			val top = Module(new Top(dataBits, shiftBits, vectorLength))
 			val oneNum = Module(new OneNumGen)
 			val pNum = Module(new PrintNum)
-			top.io.rst := false.B
+			top.io.start := dGen.io.rst
+			top.io.rstAccum := false.B
 			top.io.arrA := dGen.io.a
 			top.io.arrB := dGen.io.b
 			top.io.shift := oneNum.io.num
 			dGen.io.y := top.io.dot
 			pNum.io.num := top.io.dot
-		} 
+		} */
 }
 
 object Elaborate extends App {
-  chisel3.Driver.execute(args, () => new Test(2, 4, 5, 5))
+  chisel3.Driver.execute(args, () => new Test(1, 4, 5, 5))
 }

@@ -68,21 +68,14 @@ void VTest::_eval_initial_loop(VTest__Syms* __restrict vlSymsp) {
 VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VTest::_sequent__TOP__1\n"); );
     VTest* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Variables
-    // Begin mtask footprint  all: 
-    VL_SIG8(__Vdly__Test__DOT__Top__DOT__computeDot__DOT__valid,0,0);
-    VL_SIG8(__Vdly__Test__DOT__Top__DOT__computeDot__DOT__cont,0,0);
     // Body
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:679
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:498
+    if (VL_UNLIKELY(((5U == (IData)(vlTOPp->Test__DOT__Dot__DOT__cnt)) 
+		     & (~ (IData)(vlTOPp->reset))))) {
 	VL_FWRITEF(0x80000002U,"\nresult: %20#\n",64,
-		   (QData)((IData)(vlTOPp->Test__DOT__Top__DOT__accumulator__DOT__reg__024)));
+		   (QData)((IData)(vlTOPp->Test__DOT__Dot__DOT__accum_4)));
     }
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:71
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"\noverall RST: %1# \n",
-		   1,(7U == (0xfU & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU)))));
-    }
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:76
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
 	VL_FWRITEF(0x80000002U,"arrA: ");
     }
@@ -142,136 +135,176 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
 	VL_FWRITEF(0x80000002U,"\n");
     }
-    __Vdly__Test__DOT__Top__DOT__computeDot__DOT__cont 
-	= vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__cont;
-    __Vdly__Test__DOT__Top__DOT__computeDot__DOT__valid 
-	= vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__valid;
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:459
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"io.shiftin: %4# \n",
-		   13,vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__accum_4);
+	VL_FWRITEF(0x80000002U,"\ny: %4#\n",12,vlTOPp->Test__DOT__Dot__DOT__accum_4);
     }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"io.shift:  3 \n");
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:405
+    if (VL_UNLIKELY((1U & ((~ (IData)(vlTOPp->Test__DOT__DotGen_io_rst)) 
+			   & (~ (IData)(vlTOPp->reset)))))) {
+	VL_FWRITEF(0x80000002U,"\ncnt: %1#, valid: %1#\n",
+		   3,vlTOPp->Test__DOT__Dot__DOT__cnt,
+		   1,(5U == (IData)(vlTOPp->Test__DOT__Dot__DOT__cnt)));
     }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"io.shiftout: %6# \n",
-		   18,(0x3ffffU & (IData)((VL_ULL(0xfffffffffff) 
-					   & ((QData)((IData)(vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__accum_4)) 
-					      << 3U)))));
-    }
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:543
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"io.datavalid: %1# \n",
-		   1,vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__valid);
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"io.accumin: %6# \n",
-		   17,(0x1ffffU & (IData)((VL_ULL(0xfffffffffff) 
-					   & ((QData)((IData)(vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__accum_4)) 
-					      << 3U)))));
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"io.sum: %6# \n",18,
-		   vlTOPp->Test__DOT__Top__DOT__accumulator__DOT__reg__024);
-    }
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:369
-    __Vdly__Test__DOT__Top__DOT__computeDot__DOT__valid 
-	= ((~ (IData)(vlTOPp->reset)) & ((IData)(vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__cont) 
-					 & (4U == (IData)(vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__value))));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:405
+    vlTOPp->Test__DOT__Dot__DOT__accum_2 = (0xfffU 
+					    & ((IData)(vlTOPp->reset)
+					        ? 0U
+					        : (IData)(vlTOPp->Test__DOT__Dot__DOT___GEN_6)));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:405
+    vlTOPp->Test__DOT__Dot__DOT__accum_1 = (0xfffU 
+					    & ((IData)(vlTOPp->reset)
+					        ? 0U
+					        : (IData)(vlTOPp->Test__DOT__Dot__DOT___GEN_4)));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:405
+    vlTOPp->Test__DOT__Dot__DOT__accum_3 = (0xfffU 
+					    & ((IData)(vlTOPp->reset)
+					        ? 0U
+					        : (IData)(vlTOPp->Test__DOT__Dot__DOT___GEN_8)));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:405
     if (vlTOPp->reset) {
-	__Vdly__Test__DOT__Top__DOT__computeDot__DOT__cont = 1U;
+	vlTOPp->Test__DOT__Dot__DOT__product_1 = 0U;
     } else {
-	if (vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__cont) {
-	    if (vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__valid) {
-		__Vdly__Test__DOT__Top__DOT__computeDot__DOT__cont = 0U;
-	    }
+	if ((1U & (~ (IData)(vlTOPp->Test__DOT__DotGen_io_rst)))) {
+	    vlTOPp->Test__DOT__Dot__DOT__product_1 
+		= vlTOPp->Test__DOT__Dot__DOT___T_153;
 	}
     }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"\ncont: %1#\n",1,vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__cont);
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:405
+    if (vlTOPp->reset) {
+	vlTOPp->Test__DOT__Dot__DOT__product_2 = 0U;
+    } else {
+	if ((1U & (~ (IData)(vlTOPp->Test__DOT__DotGen_io_rst)))) {
+	    vlTOPp->Test__DOT__Dot__DOT__product_2 
+		= vlTOPp->Test__DOT__Dot__DOT___T_155;
+	}
     }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"\ndata valid: %1#, current cnt: %1# \n",
-		   1,vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__valid,
-		   3,(IData)(vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__value));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:405
+    if (vlTOPp->reset) {
+	vlTOPp->Test__DOT__Dot__DOT__product_3 = 0U;
+    } else {
+	if ((1U & (~ (IData)(vlTOPp->Test__DOT__DotGen_io_rst)))) {
+	    vlTOPp->Test__DOT__Dot__DOT__product_3 
+		= vlTOPp->Test__DOT__Dot__DOT___T_157;
+	}
     }
-    vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__cont 
-	= __Vdly__Test__DOT__Top__DOT__computeDot__DOT__cont;
-    vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__valid 
-	= __Vdly__Test__DOT__Top__DOT__computeDot__DOT__valid;
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:543
-    vlTOPp->Test__DOT__Top__DOT__accumulator__DOT__reg__024 
-	= (0x3ffffU & ((IData)(vlTOPp->reset) ? 0U : vlTOPp->Test__DOT__Top__DOT__accumulator__DOT___GEN_0));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:369
-    vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__accum_4 
-	= (0xfffU & ((IData)(vlTOPp->reset) ? 0U : 
-		     ((IData)(vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__accum_3) 
-		      + (0xffU & (((7U > (0xfU & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU))))
-				    ? 6U : 0xaU) * 
-				  ((7U > (0xfU & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU))))
-				    ? 5U : 0xcU))))));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:369
-    vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__value 
-	= ((IData)(vlTOPp->reset) ? 0U : ((IData)(vlTOPp->Test__DOT__Top__DOT__computeDot__DOT___T_105)
-					   ? 0U : (IData)(vlTOPp->Test__DOT__Top__DOT__computeDot__DOT___T_108)));
-    vlTOPp->Test__DOT__Top__DOT__accumulator__DOT___GEN_0 
-	= (0x7ffffU & ((IData)(vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__valid)
-		        ? (vlTOPp->Test__DOT__Top__DOT__accumulator__DOT__reg__024 
-			   + (0x1ffffU & (IData)((VL_ULL(0xfffffffffff) 
-						  & ((QData)((IData)(vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__accum_4)) 
-						     << 3U)))))
-		        : vlTOPp->Test__DOT__Top__DOT__accumulator__DOT__reg__024));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:369
-    vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__accum_3 
-	= (0xfffU & ((IData)(vlTOPp->reset) ? 0U : 
-		     ((IData)(vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__accum_2) 
-		      + (0xffU & (((7U > (0xfU & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU))))
-				    ? 6U : 0xaU) * 
-				  ((7U > (0xfU & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU))))
-				    ? 5U : 0xcU))))));
-    vlTOPp->Test__DOT__Top__DOT__computeDot__DOT___T_105 
-	= (4U == (IData)(vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__value));
-    vlTOPp->Test__DOT__Top__DOT__computeDot__DOT___T_108 
-	= (7U & ((IData)(1U) + (IData)(vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__value)));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:369
-    vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__accum_2 
-	= (0xfffU & ((IData)(vlTOPp->reset) ? 0U : 
-		     ((IData)(vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__accum_1) 
-		      + (0xffU & (((7U > (0xfU & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU))))
-				    ? 6U : 0xaU) * 
-				  ((7U > (0xfU & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU))))
-				    ? 5U : 0xcU))))));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:369
-    vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__accum_1 
-	= (0xfffU & ((IData)(vlTOPp->reset) ? 0U : 
-		     ((IData)(vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__accum_0) 
-		      + (0xffU & (((7U > (0xfU & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU))))
-				    ? 6U : 0xaU) * 
-				  ((7U > (0xfU & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU))))
-				    ? 5U : 0xcU))))));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:369
-    vlTOPp->Test__DOT__Top__DOT__computeDot__DOT__accum_0 
-	= ((IData)(vlTOPp->reset) ? 0U : (0xffU & (
-						   ((7U 
-						     > 
-						     (0xfU 
-						      & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU))))
-						     ? 6U
-						     : 0xaU) 
-						   * 
-						   ((7U 
-						     > 
-						     (0xfU 
-						      & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU))))
-						     ? 5U
-						     : 0xcU))));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:71
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:405
+    if (vlTOPp->reset) {
+	vlTOPp->Test__DOT__Dot__DOT__product_4 = 0U;
+    } else {
+	if ((1U & (~ (IData)(vlTOPp->Test__DOT__DotGen_io_rst)))) {
+	    vlTOPp->Test__DOT__Dot__DOT__product_4 
+		= vlTOPp->Test__DOT__Dot__DOT___T_159;
+	}
+    }
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:405
+    if (vlTOPp->reset) {
+	vlTOPp->Test__DOT__Dot__DOT__accum_0 = 0U;
+    } else {
+	if ((1U & (~ (IData)(vlTOPp->Test__DOT__DotGen_io_rst)))) {
+	    vlTOPp->Test__DOT__Dot__DOT__accum_0 = vlTOPp->Test__DOT__Dot__DOT__product_0;
+	}
+    }
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:405
+    vlTOPp->Test__DOT__Dot__DOT__accum_4 = (0xfffU 
+					    & ((IData)(vlTOPp->reset)
+					        ? 0U
+					        : (IData)(vlTOPp->Test__DOT__Dot__DOT___GEN_10)));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:76
     vlTOPp->Test__DOT__DotGen__DOT__value = ((IData)(vlTOPp->reset)
 					      ? 0U : (IData)(vlTOPp->Test__DOT__DotGen__DOT___T_56));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:405
+    vlTOPp->Test__DOT__Dot__DOT__cnt = ((IData)(vlTOPp->reset)
+					 ? 0U : ((IData)(vlTOPp->Test__DOT__DotGen_io_rst)
+						  ? 0U
+						  : (IData)(vlTOPp->Test__DOT__Dot__DOT___T_163)));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/tsimTest/sim/vout/Test.v:405
+    if (vlTOPp->reset) {
+	vlTOPp->Test__DOT__Dot__DOT__product_0 = 0U;
+    } else {
+	if ((1U & (~ (IData)(vlTOPp->Test__DOT__DotGen_io_rst)))) {
+	    vlTOPp->Test__DOT__Dot__DOT__product_0 
+		= vlTOPp->Test__DOT__Dot__DOT___T_152;
+	}
+    }
     vlTOPp->Test__DOT__DotGen__DOT___T_56 = (0xffU 
 					     & ((IData)(1U) 
 						+ (IData)(vlTOPp->Test__DOT__DotGen__DOT__value)));
+    vlTOPp->Test__DOT__Dot__DOT___T_152 = (0xffU & 
+					   (((7U > 
+					      (0xfU 
+					       & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU))))
+					      ? 6U : 0xaU) 
+					    * ((7U 
+						> (0xfU 
+						   & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU))))
+					        ? 5U
+					        : 0xcU)));
+    vlTOPp->Test__DOT__Dot__DOT___T_153 = (0xffU & 
+					   (((7U > 
+					      (0xfU 
+					       & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU))))
+					      ? 6U : 0xaU) 
+					    * ((7U 
+						> (0xfU 
+						   & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU))))
+					        ? 5U
+					        : 0xcU)));
+    vlTOPp->Test__DOT__Dot__DOT___T_155 = (0xffU & 
+					   (((7U > 
+					      (0xfU 
+					       & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU))))
+					      ? 6U : 0xaU) 
+					    * ((7U 
+						> (0xfU 
+						   & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU))))
+					        ? 5U
+					        : 0xcU)));
+    vlTOPp->Test__DOT__Dot__DOT___T_157 = (0xffU & 
+					   (((7U > 
+					      (0xfU 
+					       & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU))))
+					      ? 6U : 0xaU) 
+					    * ((7U 
+						> (0xfU 
+						   & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU))))
+					        ? 5U
+					        : 0xcU)));
+    vlTOPp->Test__DOT__Dot__DOT___T_159 = (0xffU & 
+					   (((7U > 
+					      (0xfU 
+					       & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU))))
+					      ? 6U : 0xaU) 
+					    * ((7U 
+						> (0xfU 
+						   & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU))))
+					        ? 5U
+					        : 0xcU)));
+    vlTOPp->Test__DOT__DotGen_io_rst = ((7U == (0xfU 
+						& VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU)))) 
+					| (0U == (0xfU 
+						  & VL_MODDIV_III(8, (IData)(vlTOPp->Test__DOT__DotGen__DOT__value), (IData)(0xfU)))));
+    vlTOPp->Test__DOT__Dot__DOT___T_163 = (7U & ((IData)(1U) 
+						 + (IData)(vlTOPp->Test__DOT__Dot__DOT__cnt)));
+    vlTOPp->Test__DOT__Dot__DOT___GEN_4 = (0x1fffU 
+					   & ((IData)(vlTOPp->Test__DOT__DotGen_io_rst)
+					       ? (IData)(vlTOPp->Test__DOT__Dot__DOT__accum_1)
+					       : ((IData)(vlTOPp->Test__DOT__Dot__DOT__accum_0) 
+						  + (IData)(vlTOPp->Test__DOT__Dot__DOT__product_1))));
+    vlTOPp->Test__DOT__Dot__DOT___GEN_6 = (0x1fffU 
+					   & ((IData)(vlTOPp->Test__DOT__DotGen_io_rst)
+					       ? (IData)(vlTOPp->Test__DOT__Dot__DOT__accum_2)
+					       : ((IData)(vlTOPp->Test__DOT__Dot__DOT__accum_1) 
+						  + (IData)(vlTOPp->Test__DOT__Dot__DOT__product_2))));
+    vlTOPp->Test__DOT__Dot__DOT___GEN_8 = (0x1fffU 
+					   & ((IData)(vlTOPp->Test__DOT__DotGen_io_rst)
+					       ? (IData)(vlTOPp->Test__DOT__Dot__DOT__accum_3)
+					       : ((IData)(vlTOPp->Test__DOT__Dot__DOT__accum_2) 
+						  + (IData)(vlTOPp->Test__DOT__Dot__DOT__product_3))));
+    vlTOPp->Test__DOT__Dot__DOT___GEN_10 = (0x1fffU 
+					    & ((IData)(vlTOPp->Test__DOT__DotGen_io_rst)
+					        ? (IData)(vlTOPp->Test__DOT__Dot__DOT__accum_4)
+					        : ((IData)(vlTOPp->Test__DOT__Dot__DOT__accum_3) 
+						   + (IData)(vlTOPp->Test__DOT__Dot__DOT__product_4))));
 }
 
 void VTest::_eval(VTest__Syms* __restrict vlSymsp) {

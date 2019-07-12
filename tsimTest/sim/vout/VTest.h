@@ -27,30 +27,42 @@ VL_MODULE(VTest) {
     // LOCAL SIGNALS
     // Internals; generally not touched by application code
     // Begin mtask footprint  all: 
+    VL_SIG8(Test__DOT__DotGen_io_rst,0,0);
     VL_SIG8(Test__DOT__DotGen__DOT__value,7,0);
     VL_SIG8(Test__DOT__DotGen__DOT___T_56,7,0);
-    VL_SIG8(Test__DOT__Top__DOT__computeDot__DOT__valid,0,0);
-    VL_SIG8(Test__DOT__Top__DOT__computeDot__DOT__value,2,0);
-    VL_SIG8(Test__DOT__Top__DOT__computeDot__DOT___T_105,0,0);
-    VL_SIG8(Test__DOT__Top__DOT__computeDot__DOT___T_108,2,0);
-    VL_SIG8(Test__DOT__Top__DOT__computeDot__DOT__cont,0,0);
-    VL_SIG16(Test__DOT__Top__DOT__computeDot__DOT__accum_0,11,0);
-    VL_SIG16(Test__DOT__Top__DOT__computeDot__DOT__accum_1,11,0);
-    VL_SIG16(Test__DOT__Top__DOT__computeDot__DOT__accum_2,11,0);
-    VL_SIG16(Test__DOT__Top__DOT__computeDot__DOT__accum_3,11,0);
-    VL_SIG16(Test__DOT__Top__DOT__computeDot__DOT__accum_4,11,0);
+    VL_SIG8(Test__DOT__Dot__DOT__product_0,7,0);
+    VL_SIG8(Test__DOT__Dot__DOT__product_1,7,0);
+    VL_SIG8(Test__DOT__Dot__DOT__product_2,7,0);
+    VL_SIG8(Test__DOT__Dot__DOT__product_3,7,0);
+    VL_SIG8(Test__DOT__Dot__DOT__product_4,7,0);
+    VL_SIG8(Test__DOT__Dot__DOT__cnt,2,0);
+    VL_SIG8(Test__DOT__Dot__DOT___T_152,7,0);
+    VL_SIG8(Test__DOT__Dot__DOT___T_153,7,0);
+    VL_SIG8(Test__DOT__Dot__DOT___T_155,7,0);
+    VL_SIG8(Test__DOT__Dot__DOT___T_157,7,0);
+    VL_SIG8(Test__DOT__Dot__DOT___T_159,7,0);
+    VL_SIG8(Test__DOT__Dot__DOT___T_163,2,0);
+    VL_SIG16(Test__DOT__Dot__DOT__accum_0,11,0);
+    VL_SIG16(Test__DOT__Dot__DOT__accum_1,11,0);
+    VL_SIG16(Test__DOT__Dot__DOT__accum_2,11,0);
+    VL_SIG16(Test__DOT__Dot__DOT__accum_3,11,0);
+    VL_SIG16(Test__DOT__Dot__DOT__accum_4,11,0);
+    VL_SIG16(Test__DOT__Dot__DOT___GEN_4,12,0);
+    VL_SIG16(Test__DOT__Dot__DOT___GEN_6,12,0);
+    VL_SIG16(Test__DOT__Dot__DOT___GEN_8,12,0);
+    VL_SIG16(Test__DOT__Dot__DOT___GEN_10,12,0);
     VL_SIG(Test__DOT__DotGen__DOT___RAND_0,31,0);
-    VL_SIG(Test__DOT__Top__DOT__computeDot__DOT___RAND_0,31,0);
-    VL_SIG(Test__DOT__Top__DOT__computeDot__DOT___RAND_1,31,0);
-    VL_SIG(Test__DOT__Top__DOT__computeDot__DOT___RAND_2,31,0);
-    VL_SIG(Test__DOT__Top__DOT__computeDot__DOT___RAND_3,31,0);
-    VL_SIG(Test__DOT__Top__DOT__computeDot__DOT___RAND_4,31,0);
-    VL_SIG(Test__DOT__Top__DOT__computeDot__DOT___RAND_5,31,0);
-    VL_SIG(Test__DOT__Top__DOT__computeDot__DOT___RAND_6,31,0);
-    VL_SIG(Test__DOT__Top__DOT__computeDot__DOT___RAND_7,31,0);
-    VL_SIG(Test__DOT__Top__DOT__accumulator__DOT__reg__024,17,0);
-    VL_SIG(Test__DOT__Top__DOT__accumulator__DOT___RAND_0,31,0);
-    VL_SIG(Test__DOT__Top__DOT__accumulator__DOT___GEN_0,18,0);
+    VL_SIG(Test__DOT__Dot__DOT___RAND_0,31,0);
+    VL_SIG(Test__DOT__Dot__DOT___RAND_1,31,0);
+    VL_SIG(Test__DOT__Dot__DOT___RAND_2,31,0);
+    VL_SIG(Test__DOT__Dot__DOT___RAND_3,31,0);
+    VL_SIG(Test__DOT__Dot__DOT___RAND_4,31,0);
+    VL_SIG(Test__DOT__Dot__DOT___RAND_5,31,0);
+    VL_SIG(Test__DOT__Dot__DOT___RAND_6,31,0);
+    VL_SIG(Test__DOT__Dot__DOT___RAND_7,31,0);
+    VL_SIG(Test__DOT__Dot__DOT___RAND_8,31,0);
+    VL_SIG(Test__DOT__Dot__DOT___RAND_9,31,0);
+    VL_SIG(Test__DOT__Dot__DOT___RAND_10,31,0);
     
     // LOCAL VARIABLES
     // Internals; generally not touched by application code
