@@ -1,0 +1,13 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "--cc --exe -Mdir /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout --top-module Test /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/src/test/resources/csrc/main.cc -Wno-STMTDLY -Wno-WIDTH -Wno-CASEINCOMPLETE --output-split 20000 --output-split-cfuncs 20000 --x-assign unique +define+RANDOMIZE_GARBAGE_ASSIGN +define+RANDOMIZE_REG_INIT +define+RANDOMIZE_MEM_INIT -CFLAGS -I/Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/src/test/resources/csrc -include VTest.h -DVNAME=VTest -o /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test"
+S     25764 8597065705  1563837261           0  1563837261           0 "/Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v"
+T     13446 8597065711  1563837261           0  1563837261           0 "/Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/VTest.cpp"
+T      4344 8597065710  1563837261           0  1563837261           0 "/Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/VTest.h"
+T      2206 8597065714  1563837261           0  1563837261           0 "/Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/VTest.mk"
+T      7763 8597065712  1563837261           0  1563837261           0 "/Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/VTest__Slow.cpp"
+T       520 8597065709  1563837261           0  1563837261           0 "/Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/VTest__Syms.cpp"
+T       704 8597065708  1563837261           0  1563837261           0 "/Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/VTest__Syms.h"
+T       868 8597065715  1563837261           0  1563837261           0 "/Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/VTest__ver.d"
+T         0        0  1563837261           0  1563837261           0 "/Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/VTest__verFiles.dat"
+T      1254 8597065713  1563837261           0  1563837261           0 "/Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/VTest_classes.mk"
+S   4289660 8596210464  1561668395           0  1560691944           0 "/usr/local/Cellar/verilator/4.016/bin/verilator_bin"
