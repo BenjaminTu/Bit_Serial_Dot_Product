@@ -12,20 +12,21 @@ class VectorGen(dataBits: Int = 8, vectorLength: Int = 16) extends Module {
     val y = Input(SInt(32.W))
   })
   val rand = scala.util.Random
-  // random value : randInt(255) - 128 = -128 ~ 255
+  // random value : randInt(255) - 128 = -128 ~ 127
   val max = (1 << dataBits)
   val offset = max >> 1;
   // fill vector with random generated numbers
-  io.a := VecInit(Seq.fill(vectorLength)(10.S))
-  io.b := VecInit(Seq.fill(vectorLength)(-12.S)) 
-      
+   io.a := VecInit(Seq.fill(vectorLength)(10.S))
+   io.b := VecInit(Seq.fill(vectorLength)(12.S)) 
+//  io.a := VecInit(Seq.fill(vectorLength)(rand.nextInt(max).S))
+//	io.b := VecInit(Seq.fill(vectorLength)(rand.nextInt(max).S))
+	/*    
   when (true.B) {
     printf("\ny: ")
-    for (k <- 0 until vectorLength) {
-       printf("%d ,", io.y(k))
-    }
+    printf("%d ,", io.y)
     printf("\n\n")
   }
+  */
 }
 
 class Test(dataBits: Int = 8, vectorLength: Int = 16) extends Module {

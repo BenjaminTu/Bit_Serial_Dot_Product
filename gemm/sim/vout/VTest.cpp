@@ -65,11 +65,11 @@ void VTest::_eval_initial_loop(VTest__Syms* __restrict vlSymsp) {
 //--------------------
 // Internal Methods
 
-VL_INLINE_OPT void VTest::_sequent__TOP__2(VTest__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTest::_sequent__TOP__2\n"); );
+VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTest::_sequent__TOP__1\n"); );
     VTest* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:529
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:475
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
 	VL_FWRITEF(0x80000002U,"\na: ");
     }
@@ -125,179 +125,163 @@ VL_INLINE_OPT void VTest::_sequent__TOP__2(VTest__Syms* __restrict vlSymsp) {
 	VL_FWRITEF(0x80000002U,"\nb: ");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," -12 ,");
+	VL_FWRITEF(0x80000002U,"  12 ,");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," -12 ,");
+	VL_FWRITEF(0x80000002U,"  12 ,");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," -12 ,");
+	VL_FWRITEF(0x80000002U,"  12 ,");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," -12 ,");
+	VL_FWRITEF(0x80000002U,"  12 ,");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," -12 ,");
+	VL_FWRITEF(0x80000002U,"  12 ,");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," -12 ,");
+	VL_FWRITEF(0x80000002U,"  12 ,");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," -12 ,");
+	VL_FWRITEF(0x80000002U,"  12 ,");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," -12 ,");
+	VL_FWRITEF(0x80000002U,"  12 ,");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," -12 ,");
+	VL_FWRITEF(0x80000002U,"  12 ,");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," -12 ,");
+	VL_FWRITEF(0x80000002U,"  12 ,");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," -12 ,");
+	VL_FWRITEF(0x80000002U,"  12 ,");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," -12 ,");
+	VL_FWRITEF(0x80000002U,"  12 ,");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," -12 ,");
+	VL_FWRITEF(0x80000002U,"  12 ,");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," -12 ,");
+	VL_FWRITEF(0x80000002U,"  12 ,");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," -12 ,");
+	VL_FWRITEF(0x80000002U,"  12 ,");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U," -12 ,");
+	VL_FWRITEF(0x80000002U,"  12 ,");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"\n\n");
-    }
-    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:40
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"\ny: ");
+	VL_FWRITEF(0x80000002U,"\n");
     }
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%1# ,",1,(1U & vlTOPp->Test__DOT__dp_io_y));
+	VL_FWRITEF(0x80000002U,"y: %7#",21,(0x1fffffU 
+					    & (VL_EXTENDS_II(21,20, vlTOPp->Test__DOT__dp__DOT__a_3_0__DOT__rA) 
+					       + VL_EXTENDS_II(21,20, vlTOPp->Test__DOT__dp__DOT__a_3_0__DOT__rB))));
     }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%1# ,",1,(1U & (vlTOPp->Test__DOT__dp_io_y 
-						>> 1U)));
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%1# ,",1,(1U & (vlTOPp->Test__DOT__dp_io_y 
-						>> 2U)));
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%1# ,",1,(1U & (vlTOPp->Test__DOT__dp_io_y 
-						>> 3U)));
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%1# ,",1,(1U & (vlTOPp->Test__DOT__dp_io_y 
-						>> 4U)));
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%1# ,",1,(1U & (vlTOPp->Test__DOT__dp_io_y 
-						>> 5U)));
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%1# ,",1,(1U & (vlTOPp->Test__DOT__dp_io_y 
-						>> 6U)));
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%1# ,",1,(1U & (vlTOPp->Test__DOT__dp_io_y 
-						>> 7U)));
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%1# ,",1,(1U & (vlTOPp->Test__DOT__dp_io_y 
-						>> 8U)));
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%1# ,",1,(1U & (vlTOPp->Test__DOT__dp_io_y 
-						>> 9U)));
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%1# ,",1,(1U & (vlTOPp->Test__DOT__dp_io_y 
-						>> 0xaU)));
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%1# ,",1,(1U & (vlTOPp->Test__DOT__dp_io_y 
-						>> 0xbU)));
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%1# ,",1,(1U & (vlTOPp->Test__DOT__dp_io_y 
-						>> 0xcU)));
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%1# ,",1,(1U & (vlTOPp->Test__DOT__dp_io_y 
-						>> 0xdU)));
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%1# ,",1,(1U & (vlTOPp->Test__DOT__dp_io_y 
-						>> 0xeU)));
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%1# ,",1,(1U & (vlTOPp->Test__DOT__dp_io_y 
-						>> 0xfU)));
-    }
-    if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"\n\n");
-    }
-    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:393
-    vlTOPp->Test__DOT__dp__DOT__a_2_0__DOT__rB = (0x7ffffU 
-						  & (VL_EXTENDS_II(19,18, vlTOPp->Test__DOT__dp__DOT__a_1_1__DOT__rA) 
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:203
+    vlTOPp->Test__DOT__dp__DOT__a_3_0__DOT__rA = (0xfffffU 
+						  & (VL_EXTENDS_II(20,19, vlTOPp->Test__DOT__dp__DOT__a_2_0__DOT__rA) 
 						     + 
-						     VL_EXTENDS_II(19,18, vlTOPp->Test__DOT__dp__DOT__a_1_1__DOT__rB)));
-    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:393
+						     VL_EXTENDS_II(20,19, vlTOPp->Test__DOT__dp__DOT__a_2_0__DOT__rB)));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:203
+    vlTOPp->Test__DOT__dp__DOT__a_3_0__DOT__rB = (0xfffffU 
+						  & (VL_EXTENDS_II(20,19, vlTOPp->Test__DOT__dp__DOT__a_2_1__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(20,19, vlTOPp->Test__DOT__dp__DOT__a_2_1__DOT__rB)));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:153
     vlTOPp->Test__DOT__dp__DOT__a_2_0__DOT__rA = (0x7ffffU 
 						  & (VL_EXTENDS_II(19,18, vlTOPp->Test__DOT__dp__DOT__a_1_0__DOT__rA) 
 						     + 
 						     VL_EXTENDS_II(19,18, vlTOPp->Test__DOT__dp__DOT__a_1_0__DOT__rB)));
-    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:343
-    vlTOPp->Test__DOT__dp__DOT__a_1_1__DOT__rA = (0x3ffffU 
-						  & (VL_EXTENDS_II(18,17, vlTOPp->Test__DOT__dp__DOT__a_0_2__DOT__rA) 
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:153
+    vlTOPp->Test__DOT__dp__DOT__a_2_0__DOT__rB = (0x7ffffU 
+						  & (VL_EXTENDS_II(19,18, vlTOPp->Test__DOT__dp__DOT__a_1_1__DOT__rA) 
 						     + 
-						     VL_EXTENDS_II(18,17, vlTOPp->Test__DOT__dp__DOT__a_0_2__DOT__rB)));
-    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:343
-    vlTOPp->Test__DOT__dp__DOT__a_1_1__DOT__rB = (0x3ffffU 
-						  & (VL_EXTENDS_II(18,17, vlTOPp->Test__DOT__dp__DOT__a_0_3__DOT__rA) 
+						     VL_EXTENDS_II(19,18, vlTOPp->Test__DOT__dp__DOT__a_1_1__DOT__rB)));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:153
+    vlTOPp->Test__DOT__dp__DOT__a_2_1__DOT__rA = (0x7ffffU 
+						  & (VL_EXTENDS_II(19,18, vlTOPp->Test__DOT__dp__DOT__a_1_2__DOT__rA) 
 						     + 
-						     VL_EXTENDS_II(18,17, vlTOPp->Test__DOT__dp__DOT__a_0_3__DOT__rB)));
-    vlTOPp->Test__DOT__dp__DOT__a_2_0_io_y = (0xfffffU 
-					      & (VL_EXTENDS_II(20,19, vlTOPp->Test__DOT__dp__DOT__a_2_0__DOT__rA) 
-						 + 
-						 VL_EXTENDS_II(20,19, vlTOPp->Test__DOT__dp__DOT__a_2_0__DOT__rB)));
-    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:343
+						     VL_EXTENDS_II(19,18, vlTOPp->Test__DOT__dp__DOT__a_1_2__DOT__rB)));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:153
+    vlTOPp->Test__DOT__dp__DOT__a_2_1__DOT__rB = (0x7ffffU 
+						  & (VL_EXTENDS_II(19,18, vlTOPp->Test__DOT__dp__DOT__a_1_3__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(19,18, vlTOPp->Test__DOT__dp__DOT__a_1_3__DOT__rB)));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:103
     vlTOPp->Test__DOT__dp__DOT__a_1_0__DOT__rA = (0x3ffffU 
 						  & (VL_EXTENDS_II(18,17, vlTOPp->Test__DOT__dp__DOT__a_0_0__DOT__rA) 
 						     + 
 						     VL_EXTENDS_II(18,17, vlTOPp->Test__DOT__dp__DOT__a_0_0__DOT__rB)));
-    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:343
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:103
     vlTOPp->Test__DOT__dp__DOT__a_1_0__DOT__rB = (0x3ffffU 
 						  & (VL_EXTENDS_II(18,17, vlTOPp->Test__DOT__dp__DOT__a_0_1__DOT__rA) 
 						     + 
 						     VL_EXTENDS_II(18,17, vlTOPp->Test__DOT__dp__DOT__a_0_1__DOT__rB)));
-    vlTOPp->Test__DOT__dp_io_y = ((0x100000U & (vlTOPp->Test__DOT__dp__DOT__a_2_0_io_y 
-						<< 1U)) 
-				  | vlTOPp->Test__DOT__dp__DOT__a_2_0_io_y);
-    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:293
-    vlTOPp->Test__DOT__dp__DOT__a_0_2__DOT__rA = 0x1ff88U;
-    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:293
-    vlTOPp->Test__DOT__dp__DOT__a_0_2__DOT__rB = 0x1ff88U;
-    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:293
-    vlTOPp->Test__DOT__dp__DOT__a_0_3__DOT__rA = 0x1ff88U;
-    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:293
-    vlTOPp->Test__DOT__dp__DOT__a_0_3__DOT__rB = 0x1ff88U;
-    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:293
-    vlTOPp->Test__DOT__dp__DOT__a_0_0__DOT__rA = 0x1ff88U;
-    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:293
-    vlTOPp->Test__DOT__dp__DOT__a_0_0__DOT__rB = 0x1ff88U;
-    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:293
-    vlTOPp->Test__DOT__dp__DOT__a_0_1__DOT__rA = 0x1ff88U;
-    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:293
-    vlTOPp->Test__DOT__dp__DOT__a_0_1__DOT__rB = 0x1ff88U;
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:103
+    vlTOPp->Test__DOT__dp__DOT__a_1_1__DOT__rA = (0x3ffffU 
+						  & (VL_EXTENDS_II(18,17, vlTOPp->Test__DOT__dp__DOT__a_0_2__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(18,17, vlTOPp->Test__DOT__dp__DOT__a_0_2__DOT__rB)));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:103
+    vlTOPp->Test__DOT__dp__DOT__a_1_1__DOT__rB = (0x3ffffU 
+						  & (VL_EXTENDS_II(18,17, vlTOPp->Test__DOT__dp__DOT__a_0_3__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(18,17, vlTOPp->Test__DOT__dp__DOT__a_0_3__DOT__rB)));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:103
+    vlTOPp->Test__DOT__dp__DOT__a_1_2__DOT__rA = (0x3ffffU 
+						  & (VL_EXTENDS_II(18,17, vlTOPp->Test__DOT__dp__DOT__a_0_4__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(18,17, vlTOPp->Test__DOT__dp__DOT__a_0_4__DOT__rB)));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:103
+    vlTOPp->Test__DOT__dp__DOT__a_1_2__DOT__rB = (0x3ffffU 
+						  & (VL_EXTENDS_II(18,17, vlTOPp->Test__DOT__dp__DOT__a_0_5__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(18,17, vlTOPp->Test__DOT__dp__DOT__a_0_5__DOT__rB)));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:103
+    vlTOPp->Test__DOT__dp__DOT__a_1_3__DOT__rA = (0x3ffffU 
+						  & (VL_EXTENDS_II(18,17, vlTOPp->Test__DOT__dp__DOT__a_0_6__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(18,17, vlTOPp->Test__DOT__dp__DOT__a_0_6__DOT__rB)));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:103
+    vlTOPp->Test__DOT__dp__DOT__a_1_3__DOT__rB = (0x3ffffU 
+						  & (VL_EXTENDS_II(18,17, vlTOPp->Test__DOT__dp__DOT__a_0_7__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(18,17, vlTOPp->Test__DOT__dp__DOT__a_0_7__DOT__rB)));
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:53
+    vlTOPp->Test__DOT__dp__DOT__a_0_0__DOT__rA = 0x78U;
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:53
+    vlTOPp->Test__DOT__dp__DOT__a_0_0__DOT__rB = 0x78U;
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:53
+    vlTOPp->Test__DOT__dp__DOT__a_0_1__DOT__rA = 0x78U;
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:53
+    vlTOPp->Test__DOT__dp__DOT__a_0_1__DOT__rB = 0x78U;
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:53
+    vlTOPp->Test__DOT__dp__DOT__a_0_2__DOT__rA = 0x78U;
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:53
+    vlTOPp->Test__DOT__dp__DOT__a_0_2__DOT__rB = 0x78U;
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:53
+    vlTOPp->Test__DOT__dp__DOT__a_0_3__DOT__rA = 0x78U;
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:53
+    vlTOPp->Test__DOT__dp__DOT__a_0_3__DOT__rB = 0x78U;
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:53
+    vlTOPp->Test__DOT__dp__DOT__a_0_4__DOT__rA = 0x78U;
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:53
+    vlTOPp->Test__DOT__dp__DOT__a_0_4__DOT__rB = 0x78U;
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:53
+    vlTOPp->Test__DOT__dp__DOT__a_0_5__DOT__rA = 0x78U;
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:53
+    vlTOPp->Test__DOT__dp__DOT__a_0_5__DOT__rB = 0x78U;
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:53
+    vlTOPp->Test__DOT__dp__DOT__a_0_6__DOT__rA = 0x78U;
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:53
+    vlTOPp->Test__DOT__dp__DOT__a_0_6__DOT__rB = 0x78U;
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:53
+    vlTOPp->Test__DOT__dp__DOT__a_0_7__DOT__rA = 0x78U;
+    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:53
+    vlTOPp->Test__DOT__dp__DOT__a_0_7__DOT__rB = 0x78U;
 }
 
 void VTest::_eval(VTest__Syms* __restrict vlSymsp) {
@@ -305,7 +289,7 @@ void VTest::_eval(VTest__Syms* __restrict vlSymsp) {
     VTest* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (((IData)(vlTOPp->clock) & (~ (IData)(vlTOPp->__Vclklast__TOP__clock)))) {
-	vlTOPp->_sequent__TOP__2(vlSymsp);
+	vlTOPp->_sequent__TOP__1(vlSymsp);
     }
     // Final
     vlTOPp->__Vclklast__TOP__clock = vlTOPp->clock;

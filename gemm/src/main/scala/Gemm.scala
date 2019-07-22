@@ -50,14 +50,12 @@ class DotProduct(dataBits: Int = 8, size: Int = 16) extends Module {
     val b = Input(Vec(size, SInt(dataBits.W)))
     val y = Output(SInt(outBits.W))
   })
-  val p = log2Ceil(size/2)
-  val s = Seq.tabulate(log2Ceil(size))(i => pow(2, p - i).toInt)
-  val da = Seq.tabulate(s(0))(i => RegNext(io.a(s(0) + i)))
-  val db = Seq.tabulate(s(0))(i => RegNext(io.b(s(0) + i)))
-  val m = Seq.fill(s(0))(Module(new MAC(dataBits = dataBits, cBits = b, outBits = b + 1)))
+  val p = log2Ceil(size/2)+1 // # of adder layers
+  val s = Seq.tabulate(log2Ceil(size+1))(i => pow(2, log2Ceil(size) - i).toInt) // # of total layers
+  val m = Seq.fill(s(0))(Module(new MAC(dataBits = dataBits, cBits = b, outBits = b + 1))) // # of total entries
   val a = Seq.tabulate(p)(i =>
     Seq.fill(s(i + 1))(Module(new Adder(dataBits = b + i + 1, outBits = b + i + 2)))
-  )
+  ) // # adders within each layer
 
   // MACs
   for (i <- 0 until s(0)) {
@@ -92,7 +90,8 @@ class DotProduct(dataBits: Int = 8, size: Int = 16) extends Module {
     for (k <- 0 until size) {
        printf("%d ,", io.b(k))
     }
-    printf("\n\n")
+    printf("\n")
+		printf("y: %d", io.y)
   }
 }
 

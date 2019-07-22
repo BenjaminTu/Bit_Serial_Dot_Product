@@ -27,8 +27,6 @@ VL_MODULE(VTest) {
     // LOCAL SIGNALS
     // Internals; generally not touched by application code
     // Begin mtask footprint  all: 
-    VL_SIG(Test__DOT__dp_io_y,20,0);
-    VL_SIG(Test__DOT__dp__DOT__a_2_0_io_y,19,0);
     VL_SIG(Test__DOT__dp__DOT__a_0_0__DOT__rA,16,0);
     VL_SIG(Test__DOT__dp__DOT__a_0_0__DOT___RAND_0,31,0);
     VL_SIG(Test__DOT__dp__DOT__a_0_0__DOT__rB,16,0);
@@ -45,6 +43,22 @@ VL_MODULE(VTest) {
     VL_SIG(Test__DOT__dp__DOT__a_0_3__DOT___RAND_0,31,0);
     VL_SIG(Test__DOT__dp__DOT__a_0_3__DOT__rB,16,0);
     VL_SIG(Test__DOT__dp__DOT__a_0_3__DOT___RAND_1,31,0);
+    VL_SIG(Test__DOT__dp__DOT__a_0_4__DOT__rA,16,0);
+    VL_SIG(Test__DOT__dp__DOT__a_0_4__DOT___RAND_0,31,0);
+    VL_SIG(Test__DOT__dp__DOT__a_0_4__DOT__rB,16,0);
+    VL_SIG(Test__DOT__dp__DOT__a_0_4__DOT___RAND_1,31,0);
+    VL_SIG(Test__DOT__dp__DOT__a_0_5__DOT__rA,16,0);
+    VL_SIG(Test__DOT__dp__DOT__a_0_5__DOT___RAND_0,31,0);
+    VL_SIG(Test__DOT__dp__DOT__a_0_5__DOT__rB,16,0);
+    VL_SIG(Test__DOT__dp__DOT__a_0_5__DOT___RAND_1,31,0);
+    VL_SIG(Test__DOT__dp__DOT__a_0_6__DOT__rA,16,0);
+    VL_SIG(Test__DOT__dp__DOT__a_0_6__DOT___RAND_0,31,0);
+    VL_SIG(Test__DOT__dp__DOT__a_0_6__DOT__rB,16,0);
+    VL_SIG(Test__DOT__dp__DOT__a_0_6__DOT___RAND_1,31,0);
+    VL_SIG(Test__DOT__dp__DOT__a_0_7__DOT__rA,16,0);
+    VL_SIG(Test__DOT__dp__DOT__a_0_7__DOT___RAND_0,31,0);
+    VL_SIG(Test__DOT__dp__DOT__a_0_7__DOT__rB,16,0);
+    VL_SIG(Test__DOT__dp__DOT__a_0_7__DOT___RAND_1,31,0);
     VL_SIG(Test__DOT__dp__DOT__a_1_0__DOT__rA,17,0);
     VL_SIG(Test__DOT__dp__DOT__a_1_0__DOT___RAND_0,31,0);
     VL_SIG(Test__DOT__dp__DOT__a_1_0__DOT__rB,17,0);
@@ -53,10 +67,26 @@ VL_MODULE(VTest) {
     VL_SIG(Test__DOT__dp__DOT__a_1_1__DOT___RAND_0,31,0);
     VL_SIG(Test__DOT__dp__DOT__a_1_1__DOT__rB,17,0);
     VL_SIG(Test__DOT__dp__DOT__a_1_1__DOT___RAND_1,31,0);
+    VL_SIG(Test__DOT__dp__DOT__a_1_2__DOT__rA,17,0);
+    VL_SIG(Test__DOT__dp__DOT__a_1_2__DOT___RAND_0,31,0);
+    VL_SIG(Test__DOT__dp__DOT__a_1_2__DOT__rB,17,0);
+    VL_SIG(Test__DOT__dp__DOT__a_1_2__DOT___RAND_1,31,0);
+    VL_SIG(Test__DOT__dp__DOT__a_1_3__DOT__rA,17,0);
+    VL_SIG(Test__DOT__dp__DOT__a_1_3__DOT___RAND_0,31,0);
+    VL_SIG(Test__DOT__dp__DOT__a_1_3__DOT__rB,17,0);
+    VL_SIG(Test__DOT__dp__DOT__a_1_3__DOT___RAND_1,31,0);
     VL_SIG(Test__DOT__dp__DOT__a_2_0__DOT__rA,18,0);
     VL_SIG(Test__DOT__dp__DOT__a_2_0__DOT___RAND_0,31,0);
     VL_SIG(Test__DOT__dp__DOT__a_2_0__DOT__rB,18,0);
     VL_SIG(Test__DOT__dp__DOT__a_2_0__DOT___RAND_1,31,0);
+    VL_SIG(Test__DOT__dp__DOT__a_2_1__DOT__rA,18,0);
+    VL_SIG(Test__DOT__dp__DOT__a_2_1__DOT___RAND_0,31,0);
+    VL_SIG(Test__DOT__dp__DOT__a_2_1__DOT__rB,18,0);
+    VL_SIG(Test__DOT__dp__DOT__a_2_1__DOT___RAND_1,31,0);
+    VL_SIG(Test__DOT__dp__DOT__a_3_0__DOT__rA,19,0);
+    VL_SIG(Test__DOT__dp__DOT__a_3_0__DOT___RAND_0,31,0);
+    VL_SIG(Test__DOT__dp__DOT__a_3_0__DOT__rB,19,0);
+    VL_SIG(Test__DOT__dp__DOT__a_3_0__DOT___RAND_1,31,0);
     
     // LOCAL VARIABLES
     // Internals; generally not touched by application code
@@ -95,7 +125,7 @@ VL_MODULE(VTest) {
   private:
     static QData _change_request(VTest__Syms* __restrict vlSymsp);
     static QData _change_request_1(VTest__Syms* __restrict vlSymsp);
-    void _ctor_var_reset() VL_ATTR_COLD;
+    void _ctor_var_reset();
   public:
     static void _eval(VTest__Syms* __restrict vlSymsp);
   private:
@@ -103,11 +133,10 @@ VL_MODULE(VTest) {
     void _eval_debug_assertions();
 #endif // VL_DEBUG
   public:
-    static void _eval_initial(VTest__Syms* __restrict vlSymsp) VL_ATTR_COLD;
-    static void _eval_settle(VTest__Syms* __restrict vlSymsp) VL_ATTR_COLD;
-    static void _initial__TOP__1(VTest__Syms* __restrict vlSymsp) VL_ATTR_COLD;
-    static void _sequent__TOP__2(VTest__Syms* __restrict vlSymsp);
-    static void _settle__TOP__3(VTest__Syms* __restrict vlSymsp) VL_ATTR_COLD;
+    static void _eval_initial(VTest__Syms* __restrict vlSymsp);
+    static void _eval_settle(VTest__Syms* __restrict vlSymsp);
+    static void _initial__TOP__2(VTest__Syms* __restrict vlSymsp);
+    static void _sequent__TOP__1(VTest__Syms* __restrict vlSymsp);
 } VL_ATTR_ALIGNED(128);
 
 #endif // guard
