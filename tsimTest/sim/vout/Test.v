@@ -1,17 +1,18 @@
 module DotGen( // @[:@3.2]
-  input        clock, // @[:@4.4]
-  input        reset, // @[:@5.4]
-  output [3:0] io_a_0, // @[:@6.4]
-  output [3:0] io_a_1, // @[:@6.4]
-  output [3:0] io_a_2, // @[:@6.4]
-  output [3:0] io_a_3, // @[:@6.4]
-  output [3:0] io_a_4, // @[:@6.4]
-  output [3:0] io_b_0, // @[:@6.4]
-  output [3:0] io_b_1, // @[:@6.4]
-  output [3:0] io_b_2, // @[:@6.4]
-  output [3:0] io_b_3, // @[:@6.4]
-  output [3:0] io_b_4, // @[:@6.4]
-  output       io_rst // @[:@6.4]
+  input         clock, // @[:@4.4]
+  input         reset, // @[:@5.4]
+  output [3:0]  io_a_0, // @[:@6.4]
+  output [3:0]  io_a_1, // @[:@6.4]
+  output [3:0]  io_a_2, // @[:@6.4]
+  output [3:0]  io_a_3, // @[:@6.4]
+  output [3:0]  io_a_4, // @[:@6.4]
+  output [3:0]  io_b_0, // @[:@6.4]
+  output [3:0]  io_b_1, // @[:@6.4]
+  output [3:0]  io_b_2, // @[:@6.4]
+  output [3:0]  io_b_3, // @[:@6.4]
+  output [3:0]  io_b_4, // @[:@6.4]
+  input  [11:0] io_y, // @[:@6.4]
+  output        io_rst // @[:@6.4]
 );
   reg [7:0] value; // @[Counter.scala 26:33:@8.4]
   reg [31:0] _RAND_0;
@@ -20,13 +21,17 @@ module DotGen( // @[:@3.2]
   wire [7:0] _GEN_0; // @[Test.scala 61:13:@16.4]
   wire [3:0] _T_59; // @[Test.scala 61:13:@16.4]
   wire  _T_61; // @[Test.scala 61:20:@17.4]
-  wire  _T_133; // @[Test.scala 73:23:@71.6]
+  wire  _T_129; // @[Test.scala 68:28:@67.4]
+  wire  _T_133; // @[Test.scala 68:47:@69.4]
+  wire  _T_138; // @[Test.scala 74:23:@74.6]
   assign _T_55 = value + 8'h1; // @[Counter.scala 35:22:@11.6]
   assign _T_56 = value + 8'h1; // @[Counter.scala 35:22:@12.6]
   assign _GEN_0 = value % 8'hf; // @[Test.scala 61:13:@16.4]
   assign _T_59 = _GEN_0[3:0]; // @[Test.scala 61:13:@16.4]
   assign _T_61 = _T_59 < 4'h7; // @[Test.scala 61:20:@17.4]
-  assign _T_133 = reset == 1'h0; // @[Test.scala 73:23:@71.6]
+  assign _T_129 = _T_59 == 4'h7; // @[Test.scala 68:28:@67.4]
+  assign _T_133 = _T_59 == 4'h0; // @[Test.scala 68:47:@69.4]
+  assign _T_138 = reset == 1'h0; // @[Test.scala 74:23:@74.6]
   assign io_a_0 = _T_61 ? 4'h6 : 4'ha; // @[Test.scala 62:22:@25.6 Test.scala 65:10:@49.6]
   assign io_a_1 = _T_61 ? 4'h6 : 4'ha; // @[Test.scala 62:22:@26.6 Test.scala 65:10:@50.6]
   assign io_a_2 = _T_61 ? 4'h6 : 4'ha; // @[Test.scala 62:22:@27.6 Test.scala 65:10:@51.6]
@@ -37,7 +42,7 @@ module DotGen( // @[:@3.2]
   assign io_b_2 = _T_61 ? 4'h5 : 4'hc; // @[Test.scala 63:22:@38.6 Test.scala 66:10:@62.6]
   assign io_b_3 = _T_61 ? 4'h5 : 4'hc; // @[Test.scala 63:22:@39.6 Test.scala 66:10:@63.6]
   assign io_b_4 = _T_61 ? 4'h5 : 4'hc; // @[Test.scala 63:22:@40.6 Test.scala 66:10:@64.6]
-  assign io_rst = _T_59 == 4'h7; // @[Test.scala 68:16:@68.4]
+  assign io_rst = _T_129 | _T_133; // @[Test.scala 68:16:@71.4]
 `ifdef RANDOMIZE_GARBAGE_ASSIGN
 `define RANDOMIZE
 `endif
@@ -78,8 +83,8 @@ module DotGen( // @[:@3.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_133) begin
-          $fwrite(32'h80000002,"\noverall RST: %d \n",io_rst); // @[Test.scala 73:23:@73.8]
+        if (_T_138) begin
+          $fwrite(32'h80000002,"arrA: "); // @[Test.scala 74:23:@76.8]
         end
     `ifdef PRINTF_COND
       end
@@ -89,8 +94,8 @@ module DotGen( // @[:@3.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_133) begin
-          $fwrite(32'h80000002,"arrA: "); // @[Test.scala 74:23:@78.8]
+        if (_T_138) begin
+          $fwrite(32'h80000002,"%d, ",io_a_0); // @[Test.scala 76:14:@81.8]
         end
     `ifdef PRINTF_COND
       end
@@ -100,8 +105,8 @@ module DotGen( // @[:@3.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_133) begin
-          $fwrite(32'h80000002,"%d, ",io_a_0); // @[Test.scala 76:14:@83.8]
+        if (_T_138) begin
+          $fwrite(32'h80000002,"%d, ",io_a_1); // @[Test.scala 76:14:@86.8]
         end
     `ifdef PRINTF_COND
       end
@@ -111,8 +116,8 @@ module DotGen( // @[:@3.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_133) begin
-          $fwrite(32'h80000002,"%d, ",io_a_1); // @[Test.scala 76:14:@88.8]
+        if (_T_138) begin
+          $fwrite(32'h80000002,"%d, ",io_a_2); // @[Test.scala 76:14:@91.8]
         end
     `ifdef PRINTF_COND
       end
@@ -122,8 +127,8 @@ module DotGen( // @[:@3.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_133) begin
-          $fwrite(32'h80000002,"%d, ",io_a_2); // @[Test.scala 76:14:@93.8]
+        if (_T_138) begin
+          $fwrite(32'h80000002,"%d, ",io_a_3); // @[Test.scala 76:14:@96.8]
         end
     `ifdef PRINTF_COND
       end
@@ -133,8 +138,8 @@ module DotGen( // @[:@3.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_133) begin
-          $fwrite(32'h80000002,"%d, ",io_a_3); // @[Test.scala 76:14:@98.8]
+        if (_T_138) begin
+          $fwrite(32'h80000002,"%d, ",io_a_4); // @[Test.scala 76:14:@101.8]
         end
     `ifdef PRINTF_COND
       end
@@ -144,8 +149,8 @@ module DotGen( // @[:@3.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_133) begin
-          $fwrite(32'h80000002,"%d, ",io_a_4); // @[Test.scala 76:14:@103.8]
+        if (_T_138) begin
+          $fwrite(32'h80000002,"\narrB: "); // @[Test.scala 78:23:@106.8]
         end
     `ifdef PRINTF_COND
       end
@@ -155,8 +160,8 @@ module DotGen( // @[:@3.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_133) begin
-          $fwrite(32'h80000002,"\narrB: "); // @[Test.scala 78:23:@108.8]
+        if (_T_138) begin
+          $fwrite(32'h80000002,"%d, ",io_b_0); // @[Test.scala 80:14:@111.8]
         end
     `ifdef PRINTF_COND
       end
@@ -166,8 +171,8 @@ module DotGen( // @[:@3.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_133) begin
-          $fwrite(32'h80000002,"%d, ",io_b_0); // @[Test.scala 80:14:@113.8]
+        if (_T_138) begin
+          $fwrite(32'h80000002,"%d, ",io_b_1); // @[Test.scala 80:14:@116.8]
         end
     `ifdef PRINTF_COND
       end
@@ -177,8 +182,8 @@ module DotGen( // @[:@3.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_133) begin
-          $fwrite(32'h80000002,"%d, ",io_b_1); // @[Test.scala 80:14:@118.8]
+        if (_T_138) begin
+          $fwrite(32'h80000002,"%d, ",io_b_2); // @[Test.scala 80:14:@121.8]
         end
     `ifdef PRINTF_COND
       end
@@ -188,8 +193,8 @@ module DotGen( // @[:@3.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_133) begin
-          $fwrite(32'h80000002,"%d, ",io_b_2); // @[Test.scala 80:14:@123.8]
+        if (_T_138) begin
+          $fwrite(32'h80000002,"%d, ",io_b_3); // @[Test.scala 80:14:@126.8]
         end
     `ifdef PRINTF_COND
       end
@@ -199,8 +204,8 @@ module DotGen( // @[:@3.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_133) begin
-          $fwrite(32'h80000002,"%d, ",io_b_3); // @[Test.scala 80:14:@128.8]
+        if (_T_138) begin
+          $fwrite(32'h80000002,"%d, ",io_b_4); // @[Test.scala 80:14:@131.8]
         end
     `ifdef PRINTF_COND
       end
@@ -210,8 +215,8 @@ module DotGen( // @[:@3.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_133) begin
-          $fwrite(32'h80000002,"%d, ",io_b_4); // @[Test.scala 80:14:@133.8]
+        if (_T_138) begin
+          $fwrite(32'h80000002,"\n"); // @[Test.scala 82:23:@136.8]
         end
     `ifdef PRINTF_COND
       end
@@ -221,8 +226,8 @@ module DotGen( // @[:@3.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_133) begin
-          $fwrite(32'h80000002,"\n"); // @[Test.scala 82:23:@138.8]
+        if (_T_138) begin
+          $fwrite(32'h80000002,"\ny: %d\n",io_y); // @[Test.scala 83:11:@141.8]
         end
     `ifdef PRINTF_COND
       end
@@ -230,84 +235,103 @@ module DotGen( // @[:@3.2]
     `endif // SYNTHESIS
   end
 endmodule
-module Dot( // @[:@142.2]
-  input         clock, // @[:@143.4]
-  input         reset, // @[:@144.4]
-  input  [3:0]  io_a_0, // @[:@145.4]
-  input  [3:0]  io_a_1, // @[:@145.4]
-  input  [3:0]  io_a_2, // @[:@145.4]
-  input  [3:0]  io_a_3, // @[:@145.4]
-  input  [3:0]  io_a_4, // @[:@145.4]
-  input  [3:0]  io_b_0, // @[:@145.4]
-  input  [3:0]  io_b_1, // @[:@145.4]
-  input  [3:0]  io_b_2, // @[:@145.4]
-  input  [3:0]  io_b_3, // @[:@145.4]
-  input  [3:0]  io_b_4, // @[:@145.4]
-  output        io_valid, // @[:@145.4]
-  output [11:0] io_y // @[:@145.4]
+module Dot( // @[:@145.2]
+  input         clock, // @[:@146.4]
+  input         reset, // @[:@147.4]
+  input         io_start, // @[:@148.4]
+  input  [3:0]  io_arrA_0, // @[:@148.4]
+  input  [3:0]  io_arrA_1, // @[:@148.4]
+  input  [3:0]  io_arrA_2, // @[:@148.4]
+  input  [3:0]  io_arrA_3, // @[:@148.4]
+  input  [3:0]  io_arrA_4, // @[:@148.4]
+  input  [3:0]  io_arrB_0, // @[:@148.4]
+  input  [3:0]  io_arrB_1, // @[:@148.4]
+  input  [3:0]  io_arrB_2, // @[:@148.4]
+  input  [3:0]  io_arrB_3, // @[:@148.4]
+  input  [3:0]  io_arrB_4, // @[:@148.4]
+  output        io_valid, // @[:@148.4]
+  output [11:0] io_res // @[:@148.4]
 );
-  reg [11:0] accum_0; // @[VectorMult.scala 17:22:@153.4]
+  reg [7:0] product_0; // @[Top.scala 16:30:@156.4]
   reg [31:0] _RAND_0;
-  reg [11:0] accum_1; // @[VectorMult.scala 17:22:@153.4]
+  reg [7:0] product_1; // @[Top.scala 16:30:@156.4]
   reg [31:0] _RAND_1;
-  reg [11:0] accum_2; // @[VectorMult.scala 17:22:@153.4]
+  reg [7:0] product_2; // @[Top.scala 16:30:@156.4]
   reg [31:0] _RAND_2;
-  reg [11:0] accum_3; // @[VectorMult.scala 17:22:@153.4]
+  reg [7:0] product_3; // @[Top.scala 16:30:@156.4]
   reg [31:0] _RAND_3;
-  reg [11:0] accum_4; // @[VectorMult.scala 17:22:@153.4]
+  reg [7:0] product_4; // @[Top.scala 16:30:@156.4]
   reg [31:0] _RAND_4;
-  reg  valid; // @[VectorMult.scala 18:28:@154.4]
+  reg [11:0] accum_0; // @[Top.scala 17:28:@163.4]
   reg [31:0] _RAND_5;
-  reg [2:0] value; // @[Counter.scala 26:33:@155.4]
+  reg [11:0] accum_1; // @[Top.scala 17:28:@163.4]
   reg [31:0] _RAND_6;
-  wire  _T_105; // @[Counter.scala 34:24:@157.6]
-  wire [3:0] _T_107; // @[Counter.scala 35:22:@158.6]
-  wire [2:0] _T_108; // @[Counter.scala 35:22:@159.6]
-  wire [2:0] _GEN_0; // @[Counter.scala 37:21:@161.6]
-  reg  cont; // @[VectorMult.scala 20:27:@166.4]
+  reg [11:0] accum_2; // @[Top.scala 17:28:@163.4]
   reg [31:0] _RAND_7;
-  wire [7:0] _T_115; // @[VectorMult.scala 26:37:@177.6]
-  wire [7:0] _T_116; // @[VectorMult.scala 28:44:@179.6]
-  wire [11:0] _GEN_12; // @[VectorMult.scala 28:32:@180.6]
-  wire [12:0] _T_117; // @[VectorMult.scala 28:32:@180.6]
-  wire [7:0] _T_118; // @[VectorMult.scala 28:44:@182.6]
-  wire [11:0] _GEN_13; // @[VectorMult.scala 28:32:@183.6]
-  wire [12:0] _T_119; // @[VectorMult.scala 28:32:@183.6]
-  wire [7:0] _T_120; // @[VectorMult.scala 28:44:@185.6]
-  wire [11:0] _GEN_14; // @[VectorMult.scala 28:32:@186.6]
-  wire [12:0] _T_121; // @[VectorMult.scala 28:32:@186.6]
-  wire [7:0] _T_122; // @[VectorMult.scala 28:44:@188.6]
-  wire [11:0] _GEN_15; // @[VectorMult.scala 28:32:@189.6]
-  wire [12:0] _T_123; // @[VectorMult.scala 28:32:@189.6]
-  wire  _GEN_2; // @[VectorMult.scala 32:38:@194.8]
-  wire  _GEN_3; // @[VectorMult.scala 30:29:@191.6]
-  wire  _GEN_4; // @[VectorMult.scala 30:29:@191.6]
-  wire [11:0] _GEN_5; // @[VectorMult.scala 21:23:@167.4]
-  wire  _T_130; // @[VectorMult.scala 37:15:@203.4]
-  assign _T_105 = value == 3'h4; // @[Counter.scala 34:24:@157.6]
-  assign _T_107 = value + 3'h1; // @[Counter.scala 35:22:@158.6]
-  assign _T_108 = value + 3'h1; // @[Counter.scala 35:22:@159.6]
-  assign _GEN_0 = _T_105 ? 3'h0 : _T_108; // @[Counter.scala 37:21:@161.6]
-  assign _T_115 = io_a_0 * io_b_0; // @[VectorMult.scala 26:37:@177.6]
-  assign _T_116 = io_a_1 * io_b_1; // @[VectorMult.scala 28:44:@179.6]
-  assign _GEN_12 = {{4'd0}, _T_116}; // @[VectorMult.scala 28:32:@180.6]
-  assign _T_117 = accum_0 + _GEN_12; // @[VectorMult.scala 28:32:@180.6]
-  assign _T_118 = io_a_2 * io_b_2; // @[VectorMult.scala 28:44:@182.6]
-  assign _GEN_13 = {{4'd0}, _T_118}; // @[VectorMult.scala 28:32:@183.6]
-  assign _T_119 = accum_1 + _GEN_13; // @[VectorMult.scala 28:32:@183.6]
-  assign _T_120 = io_a_3 * io_b_3; // @[VectorMult.scala 28:44:@185.6]
-  assign _GEN_14 = {{4'd0}, _T_120}; // @[VectorMult.scala 28:32:@186.6]
-  assign _T_121 = accum_2 + _GEN_14; // @[VectorMult.scala 28:32:@186.6]
-  assign _T_122 = io_a_4 * io_b_4; // @[VectorMult.scala 28:44:@188.6]
-  assign _GEN_15 = {{4'd0}, _T_122}; // @[VectorMult.scala 28:32:@189.6]
-  assign _T_123 = accum_3 + _GEN_15; // @[VectorMult.scala 28:32:@189.6]
-  assign _GEN_2 = valid ? 1'h0 : cont; // @[VectorMult.scala 32:38:@194.8]
-  assign _GEN_3 = cont ? _T_105 : 1'h0; // @[VectorMult.scala 30:29:@191.6]
-  assign _GEN_4 = cont ? _GEN_2 : cont; // @[VectorMult.scala 30:29:@191.6]
-  assign _GEN_5 = {{4'd0}, _T_115}; // @[VectorMult.scala 21:23:@167.4]
-  assign _T_130 = reset == 1'h0; // @[VectorMult.scala 37:15:@203.4]
-  assign io_valid = valid; // @[VectorMult.scala 23:26:@173.6 VectorMult.scala 39:18:@212.4]
-  assign io_y = accum_4; // @[VectorMult.scala 40:8:@213.4]
+  reg [11:0] accum_3; // @[Top.scala 17:28:@163.4]
+  reg [31:0] _RAND_8;
+  reg [11:0] accum_4; // @[Top.scala 17:28:@163.4]
+  reg [31:0] _RAND_9;
+  reg [2:0] cnt; // @[Top.scala 18:26:@164.4]
+  reg [31:0] _RAND_10;
+  wire [7:0] _T_152; // @[Top.scala 23:42:@170.6]
+  wire [7:0] _T_153; // @[Top.scala 25:50:@172.6]
+  wire [11:0] _GEN_11; // @[Top.scala 26:48:@174.6]
+  wire [12:0] _T_154; // @[Top.scala 26:48:@174.6]
+  wire [7:0] _T_155; // @[Top.scala 25:50:@176.6]
+  wire [11:0] _GEN_12; // @[Top.scala 26:48:@178.6]
+  wire [12:0] _T_156; // @[Top.scala 26:48:@178.6]
+  wire [7:0] _T_157; // @[Top.scala 25:50:@180.6]
+  wire [11:0] _GEN_13; // @[Top.scala 26:48:@182.6]
+  wire [12:0] _T_158; // @[Top.scala 26:48:@182.6]
+  wire [7:0] _T_159; // @[Top.scala 25:50:@184.6]
+  wire [11:0] _GEN_14; // @[Top.scala 26:48:@186.6]
+  wire [12:0] _T_160; // @[Top.scala 26:48:@186.6]
+  wire [3:0] _T_162; // @[Top.scala 30:28:@188.6]
+  wire [2:0] _T_163; // @[Top.scala 30:28:@189.6]
+  wire  _T_166; // @[Top.scala 31:23:@192.6]
+  wire [2:0] _GEN_0; // @[Top.scala 19:25:@165.4]
+  wire [11:0] _GEN_1; // @[Top.scala 19:25:@165.4]
+  wire [7:0] _GEN_2; // @[Top.scala 19:25:@165.4]
+  wire [7:0] _GEN_3; // @[Top.scala 19:25:@165.4]
+  wire [12:0] _GEN_4; // @[Top.scala 19:25:@165.4]
+  wire [7:0] _GEN_5; // @[Top.scala 19:25:@165.4]
+  wire [12:0] _GEN_6; // @[Top.scala 19:25:@165.4]
+  wire [7:0] _GEN_7; // @[Top.scala 19:25:@165.4]
+  wire [12:0] _GEN_8; // @[Top.scala 19:25:@165.4]
+  wire [7:0] _GEN_9; // @[Top.scala 19:25:@165.4]
+  wire [12:0] _GEN_10; // @[Top.scala 19:25:@165.4]
+  wire  _GEN_15; // @[Top.scala 31:23:@194.8]
+  assign _T_152 = io_arrA_0 * io_arrB_0; // @[Top.scala 23:42:@170.6]
+  assign _T_153 = io_arrA_1 * io_arrB_1; // @[Top.scala 25:50:@172.6]
+  assign _GEN_11 = {{4'd0}, product_1}; // @[Top.scala 26:48:@174.6]
+  assign _T_154 = accum_0 + _GEN_11; // @[Top.scala 26:48:@174.6]
+  assign _T_155 = io_arrA_2 * io_arrB_2; // @[Top.scala 25:50:@176.6]
+  assign _GEN_12 = {{4'd0}, product_2}; // @[Top.scala 26:48:@178.6]
+  assign _T_156 = accum_1 + _GEN_12; // @[Top.scala 26:48:@178.6]
+  assign _T_157 = io_arrA_3 * io_arrB_3; // @[Top.scala 25:50:@180.6]
+  assign _GEN_13 = {{4'd0}, product_3}; // @[Top.scala 26:48:@182.6]
+  assign _T_158 = accum_2 + _GEN_13; // @[Top.scala 26:48:@182.6]
+  assign _T_159 = io_arrA_4 * io_arrB_4; // @[Top.scala 25:50:@184.6]
+  assign _GEN_14 = {{4'd0}, product_4}; // @[Top.scala 26:48:@186.6]
+  assign _T_160 = accum_3 + _GEN_14; // @[Top.scala 26:48:@186.6]
+  assign _T_162 = cnt + 3'h1; // @[Top.scala 30:28:@188.6]
+  assign _T_163 = cnt + 3'h1; // @[Top.scala 30:28:@189.6]
+  assign _T_166 = reset == 1'h0; // @[Top.scala 31:23:@192.6]
+  assign _GEN_0 = io_start ? 3'h0 : _T_163; // @[Top.scala 19:25:@165.4]
+  assign _GEN_1 = io_start ? accum_0 : {{4'd0}, product_0}; // @[Top.scala 19:25:@165.4]
+  assign _GEN_2 = io_start ? product_0 : _T_152; // @[Top.scala 19:25:@165.4]
+  assign _GEN_3 = io_start ? product_1 : _T_153; // @[Top.scala 19:25:@165.4]
+  assign _GEN_4 = io_start ? {{1'd0}, accum_1} : _T_154; // @[Top.scala 19:25:@165.4]
+  assign _GEN_5 = io_start ? product_2 : _T_155; // @[Top.scala 19:25:@165.4]
+  assign _GEN_6 = io_start ? {{1'd0}, accum_2} : _T_156; // @[Top.scala 19:25:@165.4]
+  assign _GEN_7 = io_start ? product_3 : _T_157; // @[Top.scala 19:25:@165.4]
+  assign _GEN_8 = io_start ? {{1'd0}, accum_3} : _T_158; // @[Top.scala 19:25:@165.4]
+  assign _GEN_9 = io_start ? product_4 : _T_159; // @[Top.scala 19:25:@165.4]
+  assign _GEN_10 = io_start ? {{1'd0}, accum_4} : _T_160; // @[Top.scala 19:25:@165.4]
+  assign io_valid = cnt == 3'h5; // @[Top.scala 35:18:@199.4]
+  assign io_res = accum_4; // @[Top.scala 34:16:@197.4]
+  assign _GEN_15 = io_start == 1'h0; // @[Top.scala 31:23:@194.8]
 `ifdef RANDOMIZE_GARBAGE_ASSIGN
 `define RANDOMIZE
 `endif
@@ -334,108 +358,128 @@ module Dot( // @[:@142.2]
     `endif
   `ifdef RANDOMIZE_REG_INIT
   _RAND_0 = {1{`RANDOM}};
-  accum_0 = _RAND_0[11:0];
+  product_0 = _RAND_0[7:0];
   `endif // RANDOMIZE_REG_INIT
   `ifdef RANDOMIZE_REG_INIT
   _RAND_1 = {1{`RANDOM}};
-  accum_1 = _RAND_1[11:0];
+  product_1 = _RAND_1[7:0];
   `endif // RANDOMIZE_REG_INIT
   `ifdef RANDOMIZE_REG_INIT
   _RAND_2 = {1{`RANDOM}};
-  accum_2 = _RAND_2[11:0];
+  product_2 = _RAND_2[7:0];
   `endif // RANDOMIZE_REG_INIT
   `ifdef RANDOMIZE_REG_INIT
   _RAND_3 = {1{`RANDOM}};
-  accum_3 = _RAND_3[11:0];
+  product_3 = _RAND_3[7:0];
   `endif // RANDOMIZE_REG_INIT
   `ifdef RANDOMIZE_REG_INIT
   _RAND_4 = {1{`RANDOM}};
-  accum_4 = _RAND_4[11:0];
+  product_4 = _RAND_4[7:0];
   `endif // RANDOMIZE_REG_INIT
   `ifdef RANDOMIZE_REG_INIT
   _RAND_5 = {1{`RANDOM}};
-  valid = _RAND_5[0:0];
+  accum_0 = _RAND_5[11:0];
   `endif // RANDOMIZE_REG_INIT
   `ifdef RANDOMIZE_REG_INIT
   _RAND_6 = {1{`RANDOM}};
-  value = _RAND_6[2:0];
+  accum_1 = _RAND_6[11:0];
   `endif // RANDOMIZE_REG_INIT
   `ifdef RANDOMIZE_REG_INIT
   _RAND_7 = {1{`RANDOM}};
-  cont = _RAND_7[0:0];
+  accum_2 = _RAND_7[11:0];
+  `endif // RANDOMIZE_REG_INIT
+  `ifdef RANDOMIZE_REG_INIT
+  _RAND_8 = {1{`RANDOM}};
+  accum_3 = _RAND_8[11:0];
+  `endif // RANDOMIZE_REG_INIT
+  `ifdef RANDOMIZE_REG_INIT
+  _RAND_9 = {1{`RANDOM}};
+  accum_4 = _RAND_9[11:0];
+  `endif // RANDOMIZE_REG_INIT
+  `ifdef RANDOMIZE_REG_INIT
+  _RAND_10 = {1{`RANDOM}};
+  cnt = _RAND_10[2:0];
   `endif // RANDOMIZE_REG_INIT
   end
 `endif // RANDOMIZE
   always @(posedge clock) begin
     if (reset) begin
+      product_0 <= 8'h0;
+    end else begin
+      if (!(io_start)) begin
+        product_0 <= _T_152;
+      end
+    end
+    if (reset) begin
+      product_1 <= 8'h0;
+    end else begin
+      if (!(io_start)) begin
+        product_1 <= _T_153;
+      end
+    end
+    if (reset) begin
+      product_2 <= 8'h0;
+    end else begin
+      if (!(io_start)) begin
+        product_2 <= _T_155;
+      end
+    end
+    if (reset) begin
+      product_3 <= 8'h0;
+    end else begin
+      if (!(io_start)) begin
+        product_3 <= _T_157;
+      end
+    end
+    if (reset) begin
+      product_4 <= 8'h0;
+    end else begin
+      if (!(io_start)) begin
+        product_4 <= _T_159;
+      end
+    end
+    if (reset) begin
       accum_0 <= 12'h0;
     end else begin
-      accum_0 <= _GEN_5;
+      if (!(io_start)) begin
+        accum_0 <= {{4'd0}, product_0};
+      end
     end
     if (reset) begin
       accum_1 <= 12'h0;
     end else begin
-      accum_1 <= _T_117[11:0];
+      accum_1 <= _GEN_4[11:0];
     end
     if (reset) begin
       accum_2 <= 12'h0;
     end else begin
-      accum_2 <= _T_119[11:0];
+      accum_2 <= _GEN_6[11:0];
     end
     if (reset) begin
       accum_3 <= 12'h0;
     end else begin
-      accum_3 <= _T_121[11:0];
+      accum_3 <= _GEN_8[11:0];
     end
     if (reset) begin
       accum_4 <= 12'h0;
     end else begin
-      accum_4 <= _T_123[11:0];
+      accum_4 <= _GEN_10[11:0];
     end
     if (reset) begin
-      valid <= 1'h0;
+      cnt <= 3'h0;
     end else begin
-      if (cont) begin
-        valid <= _T_105;
+      if (io_start) begin
+        cnt <= 3'h0;
       end else begin
-        valid <= 1'h0;
-      end
-    end
-    if (reset) begin
-      value <= 3'h0;
-    end else begin
-      if (_T_105) begin
-        value <= 3'h0;
-      end else begin
-        value <= _T_108;
-      end
-    end
-    if (reset) begin
-      cont <= 1'h1;
-    end else begin
-      if (cont) begin
-        if (valid) begin
-          cont <= 1'h0;
-        end
+        cnt <= _T_163;
       end
     end
     `ifndef SYNTHESIS
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_130) begin
-          $fwrite(32'h80000002,"\ncont: %d\n",cont); // @[VectorMult.scala 37:15:@205.6]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_130) begin
-          $fwrite(32'h80000002,"\ndata valid: %d, current cnt: %d \n",valid,value); // @[VectorMult.scala 38:15:@210.6]
+        if (_GEN_15 & _T_166) begin
+          $fwrite(32'h80000002,"\ncnt: %d, valid: %d\n",cnt,io_valid); // @[Top.scala 31:23:@194.8]
         end
     `ifdef PRINTF_COND
       end
@@ -443,48 +487,21 @@ module Dot( // @[:@142.2]
     `endif // SYNTHESIS
   end
 endmodule
-module Shift( // @[:@215.2]
-  input         clock, // @[:@216.4]
-  input         reset, // @[:@217.4]
-  input  [12:0] io_in, // @[:@218.4]
-  output [17:0] io_out // @[:@218.4]
+module PrintNum( // @[:@201.2]
+  input         clock, // @[:@202.4]
+  input         reset, // @[:@203.4]
+  input  [63:0] io_num, // @[:@204.4]
+  input         io_valid // @[:@204.4]
 );
-  wire [43:0] _GEN_0; // @[VectorMult.scala 96:25:@220.4]
-  wire [43:0] _T_11; // @[VectorMult.scala 96:25:@220.4]
-  wire  _T_14; // @[VectorMult.scala 97:15:@223.4]
-  assign _GEN_0 = {{31'd0}, io_in}; // @[VectorMult.scala 96:25:@220.4]
-  assign _T_11 = _GEN_0 << 5'h3; // @[VectorMult.scala 96:25:@220.4]
-  assign _T_14 = reset == 1'h0; // @[VectorMult.scala 97:15:@223.4]
-  assign io_out = _T_11[17:0]; // @[VectorMult.scala 96:16:@221.4]
+  wire  _T_11; // @[Test.scala 132:23:@208.6]
+  assign _T_11 = reset == 1'h0; // @[Test.scala 132:23:@208.6]
   always @(posedge clock) begin
     `ifndef SYNTHESIS
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_14) begin
-          $fwrite(32'h80000002,"io.shiftin: %d \n",io_in); // @[VectorMult.scala 97:15:@225.6]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_14) begin
-          $fwrite(32'h80000002,"io.shift: %d \n",5'h3); // @[VectorMult.scala 98:15:@230.6]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_14) begin
-          $fwrite(32'h80000002,"io.shiftout: %d \n",io_out); // @[VectorMult.scala 99:15:@235.6]
+        if (io_valid & _T_11) begin
+          $fwrite(32'h80000002,"\nresult: %d\n",io_num); // @[Test.scala 132:23:@210.8]
         end
     `ifdef PRINTF_COND
       end
@@ -492,238 +509,44 @@ module Shift( // @[:@215.2]
     `endif // SYNTHESIS
   end
 endmodule
-module Accumulator( // @[:@238.2]
-  input         clock, // @[:@239.4]
-  input         reset, // @[:@240.4]
-  input         io_valid, // @[:@241.4]
-  input  [16:0] io_in, // @[:@241.4]
-  output [17:0] io_sum // @[:@241.4]
+module Test( // @[:@214.2]
+  input   clock, // @[:@215.4]
+  input   reset // @[:@216.4]
 );
-  reg [17:0] reg$; // @[VectorMult.scala 77:26:@243.4]
-  reg [31:0] _RAND_0;
-  wire [17:0] _GEN_2; // @[VectorMult.scala 81:28:@249.8]
-  wire [18:0] _T_16; // @[VectorMult.scala 81:28:@249.8]
-  wire [18:0] _GEN_0; // @[VectorMult.scala 80:32:@248.6]
-  wire  _T_19; // @[VectorMult.scala 84:9:@254.4]
-  assign _GEN_2 = {{1'd0}, io_in}; // @[VectorMult.scala 81:28:@249.8]
-  assign _T_16 = reg$ + _GEN_2; // @[VectorMult.scala 81:28:@249.8]
-  assign _GEN_0 = io_valid ? _T_16 : {{1'd0}, reg$}; // @[VectorMult.scala 80:32:@248.6]
-  assign _T_19 = reset == 1'h0; // @[VectorMult.scala 84:9:@254.4]
-  assign io_sum = reg$; // @[VectorMult.scala 83:16:@252.4]
-`ifdef RANDOMIZE_GARBAGE_ASSIGN
-`define RANDOMIZE
-`endif
-`ifdef RANDOMIZE_INVALID_ASSIGN
-`define RANDOMIZE
-`endif
-`ifdef RANDOMIZE_REG_INIT
-`define RANDOMIZE
-`endif
-`ifdef RANDOMIZE_MEM_INIT
-`define RANDOMIZE
-`endif
-`ifndef RANDOM
-`define RANDOM $random
-`endif
-`ifdef RANDOMIZE
-  integer initvar;
-  initial begin
-    `ifdef INIT_RANDOM
-      `INIT_RANDOM
-    `endif
-    `ifndef VERILATOR
-      #0.002 begin end
-    `endif
-  `ifdef RANDOMIZE_REG_INIT
-  _RAND_0 = {1{`RANDOM}};
-  reg$ = _RAND_0[17:0];
-  `endif // RANDOMIZE_REG_INIT
-  end
-`endif // RANDOMIZE
-  always @(posedge clock) begin
-    if (reset) begin
-      reg$ <= 18'h0;
-    end else begin
-      reg$ <= _GEN_0[17:0];
-    end
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_19) begin
-          $fwrite(32'h80000002,"io.datavalid: %d \n",io_valid); // @[VectorMult.scala 84:9:@256.6]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_19) begin
-          $fwrite(32'h80000002,"io.accumin: %d \n",io_in); // @[VectorMult.scala 85:9:@261.6]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_19) begin
-          $fwrite(32'h80000002,"io.sum: %d \n",io_sum); // @[VectorMult.scala 86:9:@266.6]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-  end
-endmodule
-module Top( // @[:@269.2]
-  input         clock, // @[:@270.4]
-  input         reset, // @[:@271.4]
-  input  [3:0]  io_arrA_0, // @[:@272.4]
-  input  [3:0]  io_arrA_1, // @[:@272.4]
-  input  [3:0]  io_arrA_2, // @[:@272.4]
-  input  [3:0]  io_arrA_3, // @[:@272.4]
-  input  [3:0]  io_arrA_4, // @[:@272.4]
-  input  [3:0]  io_arrB_0, // @[:@272.4]
-  input  [3:0]  io_arrB_1, // @[:@272.4]
-  input  [3:0]  io_arrB_2, // @[:@272.4]
-  input  [3:0]  io_arrB_3, // @[:@272.4]
-  input  [3:0]  io_arrB_4, // @[:@272.4]
-  output [17:0] io_dot // @[:@272.4]
-);
-  wire  computeDot_clock; // @[VectorMult.scala 114:32:@274.4]
-  wire  computeDot_reset; // @[VectorMult.scala 114:32:@274.4]
-  wire [3:0] computeDot_io_a_0; // @[VectorMult.scala 114:32:@274.4]
-  wire [3:0] computeDot_io_a_1; // @[VectorMult.scala 114:32:@274.4]
-  wire [3:0] computeDot_io_a_2; // @[VectorMult.scala 114:32:@274.4]
-  wire [3:0] computeDot_io_a_3; // @[VectorMult.scala 114:32:@274.4]
-  wire [3:0] computeDot_io_a_4; // @[VectorMult.scala 114:32:@274.4]
-  wire [3:0] computeDot_io_b_0; // @[VectorMult.scala 114:32:@274.4]
-  wire [3:0] computeDot_io_b_1; // @[VectorMult.scala 114:32:@274.4]
-  wire [3:0] computeDot_io_b_2; // @[VectorMult.scala 114:32:@274.4]
-  wire [3:0] computeDot_io_b_3; // @[VectorMult.scala 114:32:@274.4]
-  wire [3:0] computeDot_io_b_4; // @[VectorMult.scala 114:32:@274.4]
-  wire  computeDot_io_valid; // @[VectorMult.scala 114:32:@274.4]
-  wire [11:0] computeDot_io_y; // @[VectorMult.scala 114:32:@274.4]
-  wire  shifter_clock; // @[VectorMult.scala 115:29:@277.4]
-  wire  shifter_reset; // @[VectorMult.scala 115:29:@277.4]
-  wire [12:0] shifter_io_in; // @[VectorMult.scala 115:29:@277.4]
-  wire [17:0] shifter_io_out; // @[VectorMult.scala 115:29:@277.4]
-  wire  accumulator_clock; // @[VectorMult.scala 116:33:@280.4]
-  wire  accumulator_reset; // @[VectorMult.scala 116:33:@280.4]
-  wire  accumulator_io_valid; // @[VectorMult.scala 116:33:@280.4]
-  wire [16:0] accumulator_io_in; // @[VectorMult.scala 116:33:@280.4]
-  wire [17:0] accumulator_io_sum; // @[VectorMult.scala 116:33:@280.4]
-  Dot computeDot ( // @[VectorMult.scala 114:32:@274.4]
-    .clock(computeDot_clock),
-    .reset(computeDot_reset),
-    .io_a_0(computeDot_io_a_0),
-    .io_a_1(computeDot_io_a_1),
-    .io_a_2(computeDot_io_a_2),
-    .io_a_3(computeDot_io_a_3),
-    .io_a_4(computeDot_io_a_4),
-    .io_b_0(computeDot_io_b_0),
-    .io_b_1(computeDot_io_b_1),
-    .io_b_2(computeDot_io_b_2),
-    .io_b_3(computeDot_io_b_3),
-    .io_b_4(computeDot_io_b_4),
-    .io_valid(computeDot_io_valid),
-    .io_y(computeDot_io_y)
-  );
-  Shift shifter ( // @[VectorMult.scala 115:29:@277.4]
-    .clock(shifter_clock),
-    .reset(shifter_reset),
-    .io_in(shifter_io_in),
-    .io_out(shifter_io_out)
-  );
-  Accumulator accumulator ( // @[VectorMult.scala 116:33:@280.4]
-    .clock(accumulator_clock),
-    .reset(accumulator_reset),
-    .io_valid(accumulator_io_valid),
-    .io_in(accumulator_io_in),
-    .io_sum(accumulator_io_sum)
-  );
-  assign io_dot = accumulator_io_sum; // @[VectorMult.scala 125:16:@299.4]
-  assign computeDot_clock = clock; // @[:@275.4]
-  assign computeDot_reset = reset; // @[:@276.4]
-  assign computeDot_io_a_0 = io_arrA_0; // @[VectorMult.scala 118:25:@284.4]
-  assign computeDot_io_a_1 = io_arrA_1; // @[VectorMult.scala 118:25:@285.4]
-  assign computeDot_io_a_2 = io_arrA_2; // @[VectorMult.scala 118:25:@286.4]
-  assign computeDot_io_a_3 = io_arrA_3; // @[VectorMult.scala 118:25:@287.4]
-  assign computeDot_io_a_4 = io_arrA_4; // @[VectorMult.scala 118:25:@288.4]
-  assign computeDot_io_b_0 = io_arrB_0; // @[VectorMult.scala 119:25:@289.4]
-  assign computeDot_io_b_1 = io_arrB_1; // @[VectorMult.scala 119:25:@290.4]
-  assign computeDot_io_b_2 = io_arrB_2; // @[VectorMult.scala 119:25:@291.4]
-  assign computeDot_io_b_3 = io_arrB_3; // @[VectorMult.scala 119:25:@292.4]
-  assign computeDot_io_b_4 = io_arrB_4; // @[VectorMult.scala 119:25:@293.4]
-  assign shifter_clock = clock; // @[:@278.4]
-  assign shifter_reset = reset; // @[:@279.4]
-  assign shifter_io_in = {{1'd0}, computeDot_io_y}; // @[VectorMult.scala 122:23:@296.4]
-  assign accumulator_clock = clock; // @[:@281.4]
-  assign accumulator_reset = reset; // @[:@282.4]
-  assign accumulator_io_valid = computeDot_io_valid; // @[VectorMult.scala 121:30:@295.4]
-  assign accumulator_io_in = shifter_io_out[16:0]; // @[VectorMult.scala 124:27:@298.4]
-endmodule
-module PrintNum( // @[:@316.2]
-  input         clock, // @[:@317.4]
-  input         reset, // @[:@318.4]
-  input  [63:0] io_num // @[:@319.4]
-);
-  wire  _T_9; // @[Test.scala 130:15:@322.4]
-  assign _T_9 = reset == 1'h0; // @[Test.scala 130:15:@322.4]
-  always @(posedge clock) begin
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_9) begin
-          $fwrite(32'h80000002,"\nresult: %d\n",io_num); // @[Test.scala 130:15:@324.6]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-  end
-endmodule
-module Test( // @[:@327.2]
-  input   clock, // @[:@328.4]
-  input   reset // @[:@329.4]
-);
-  wire  DotGen_clock; // @[Test.scala 164:42:@332.4]
-  wire  DotGen_reset; // @[Test.scala 164:42:@332.4]
-  wire [3:0] DotGen_io_a_0; // @[Test.scala 164:42:@332.4]
-  wire [3:0] DotGen_io_a_1; // @[Test.scala 164:42:@332.4]
-  wire [3:0] DotGen_io_a_2; // @[Test.scala 164:42:@332.4]
-  wire [3:0] DotGen_io_a_3; // @[Test.scala 164:42:@332.4]
-  wire [3:0] DotGen_io_a_4; // @[Test.scala 164:42:@332.4]
-  wire [3:0] DotGen_io_b_0; // @[Test.scala 164:42:@332.4]
-  wire [3:0] DotGen_io_b_1; // @[Test.scala 164:42:@332.4]
-  wire [3:0] DotGen_io_b_2; // @[Test.scala 164:42:@332.4]
-  wire [3:0] DotGen_io_b_3; // @[Test.scala 164:42:@332.4]
-  wire [3:0] DotGen_io_b_4; // @[Test.scala 164:42:@332.4]
-  wire  DotGen_io_rst; // @[Test.scala 164:42:@332.4]
-  wire  Top_clock; // @[Test.scala 165:41:@335.4]
-  wire  Top_reset; // @[Test.scala 165:41:@335.4]
-  wire [3:0] Top_io_arrA_0; // @[Test.scala 165:41:@335.4]
-  wire [3:0] Top_io_arrA_1; // @[Test.scala 165:41:@335.4]
-  wire [3:0] Top_io_arrA_2; // @[Test.scala 165:41:@335.4]
-  wire [3:0] Top_io_arrA_3; // @[Test.scala 165:41:@335.4]
-  wire [3:0] Top_io_arrA_4; // @[Test.scala 165:41:@335.4]
-  wire [3:0] Top_io_arrB_0; // @[Test.scala 165:41:@335.4]
-  wire [3:0] Top_io_arrB_1; // @[Test.scala 165:41:@335.4]
-  wire [3:0] Top_io_arrB_2; // @[Test.scala 165:41:@335.4]
-  wire [3:0] Top_io_arrB_3; // @[Test.scala 165:41:@335.4]
-  wire [3:0] Top_io_arrB_4; // @[Test.scala 165:41:@335.4]
-  wire [17:0] Top_io_dot; // @[Test.scala 165:41:@335.4]
-  wire  PrintNum_clock; // @[Test.scala 167:42:@341.4]
-  wire  PrintNum_reset; // @[Test.scala 167:42:@341.4]
-  wire [63:0] PrintNum_io_num; // @[Test.scala 167:42:@341.4]
-  DotGen DotGen ( // @[Test.scala 164:42:@332.4]
+  wire  DotGen_clock; // @[Test.scala 148:42:@219.4]
+  wire  DotGen_reset; // @[Test.scala 148:42:@219.4]
+  wire [3:0] DotGen_io_a_0; // @[Test.scala 148:42:@219.4]
+  wire [3:0] DotGen_io_a_1; // @[Test.scala 148:42:@219.4]
+  wire [3:0] DotGen_io_a_2; // @[Test.scala 148:42:@219.4]
+  wire [3:0] DotGen_io_a_3; // @[Test.scala 148:42:@219.4]
+  wire [3:0] DotGen_io_a_4; // @[Test.scala 148:42:@219.4]
+  wire [3:0] DotGen_io_b_0; // @[Test.scala 148:42:@219.4]
+  wire [3:0] DotGen_io_b_1; // @[Test.scala 148:42:@219.4]
+  wire [3:0] DotGen_io_b_2; // @[Test.scala 148:42:@219.4]
+  wire [3:0] DotGen_io_b_3; // @[Test.scala 148:42:@219.4]
+  wire [3:0] DotGen_io_b_4; // @[Test.scala 148:42:@219.4]
+  wire [11:0] DotGen_io_y; // @[Test.scala 148:42:@219.4]
+  wire  DotGen_io_rst; // @[Test.scala 148:42:@219.4]
+  wire  Dot_clock; // @[Test.scala 149:41:@222.4]
+  wire  Dot_reset; // @[Test.scala 149:41:@222.4]
+  wire  Dot_io_start; // @[Test.scala 149:41:@222.4]
+  wire [3:0] Dot_io_arrA_0; // @[Test.scala 149:41:@222.4]
+  wire [3:0] Dot_io_arrA_1; // @[Test.scala 149:41:@222.4]
+  wire [3:0] Dot_io_arrA_2; // @[Test.scala 149:41:@222.4]
+  wire [3:0] Dot_io_arrA_3; // @[Test.scala 149:41:@222.4]
+  wire [3:0] Dot_io_arrA_4; // @[Test.scala 149:41:@222.4]
+  wire [3:0] Dot_io_arrB_0; // @[Test.scala 149:41:@222.4]
+  wire [3:0] Dot_io_arrB_1; // @[Test.scala 149:41:@222.4]
+  wire [3:0] Dot_io_arrB_2; // @[Test.scala 149:41:@222.4]
+  wire [3:0] Dot_io_arrB_3; // @[Test.scala 149:41:@222.4]
+  wire [3:0] Dot_io_arrB_4; // @[Test.scala 149:41:@222.4]
+  wire  Dot_io_valid; // @[Test.scala 149:41:@222.4]
+  wire [11:0] Dot_io_res; // @[Test.scala 149:41:@222.4]
+  wire  PrintNum_clock; // @[Test.scala 150:42:@225.4]
+  wire  PrintNum_reset; // @[Test.scala 150:42:@225.4]
+  wire [63:0] PrintNum_io_num; // @[Test.scala 150:42:@225.4]
+  wire  PrintNum_io_valid; // @[Test.scala 150:42:@225.4]
+  DotGen DotGen ( // @[Test.scala 148:42:@219.4]
     .clock(DotGen_clock),
     .reset(DotGen_reset),
     .io_a_0(DotGen_io_a_0),
@@ -736,43 +559,50 @@ module Test( // @[:@327.2]
     .io_b_2(DotGen_io_b_2),
     .io_b_3(DotGen_io_b_3),
     .io_b_4(DotGen_io_b_4),
+    .io_y(DotGen_io_y),
     .io_rst(DotGen_io_rst)
   );
-  Top Top ( // @[Test.scala 165:41:@335.4]
-    .clock(Top_clock),
-    .reset(Top_reset),
-    .io_arrA_0(Top_io_arrA_0),
-    .io_arrA_1(Top_io_arrA_1),
-    .io_arrA_2(Top_io_arrA_2),
-    .io_arrA_3(Top_io_arrA_3),
-    .io_arrA_4(Top_io_arrA_4),
-    .io_arrB_0(Top_io_arrB_0),
-    .io_arrB_1(Top_io_arrB_1),
-    .io_arrB_2(Top_io_arrB_2),
-    .io_arrB_3(Top_io_arrB_3),
-    .io_arrB_4(Top_io_arrB_4),
-    .io_dot(Top_io_dot)
+  Dot Dot ( // @[Test.scala 149:41:@222.4]
+    .clock(Dot_clock),
+    .reset(Dot_reset),
+    .io_start(Dot_io_start),
+    .io_arrA_0(Dot_io_arrA_0),
+    .io_arrA_1(Dot_io_arrA_1),
+    .io_arrA_2(Dot_io_arrA_2),
+    .io_arrA_3(Dot_io_arrA_3),
+    .io_arrA_4(Dot_io_arrA_4),
+    .io_arrB_0(Dot_io_arrB_0),
+    .io_arrB_1(Dot_io_arrB_1),
+    .io_arrB_2(Dot_io_arrB_2),
+    .io_arrB_3(Dot_io_arrB_3),
+    .io_arrB_4(Dot_io_arrB_4),
+    .io_valid(Dot_io_valid),
+    .io_res(Dot_io_res)
   );
-  PrintNum PrintNum ( // @[Test.scala 167:42:@341.4]
+  PrintNum PrintNum ( // @[Test.scala 150:42:@225.4]
     .clock(PrintNum_clock),
     .reset(PrintNum_reset),
-    .io_num(PrintNum_io_num)
+    .io_num(PrintNum_io_num),
+    .io_valid(PrintNum_io_valid)
   );
-  assign DotGen_clock = clock; // @[:@333.4]
-  assign DotGen_reset = reset; // @[:@334.4]
-  assign Top_clock = clock; // @[:@336.4]
-  assign Top_reset = reset; // @[:@337.4]
-  assign Top_io_arrA_0 = DotGen_io_a_0; // @[Test.scala 169:37:@345.4]
-  assign Top_io_arrA_1 = DotGen_io_a_1; // @[Test.scala 169:37:@346.4]
-  assign Top_io_arrA_2 = DotGen_io_a_2; // @[Test.scala 169:37:@347.4]
-  assign Top_io_arrA_3 = DotGen_io_a_3; // @[Test.scala 169:37:@348.4]
-  assign Top_io_arrA_4 = DotGen_io_a_4; // @[Test.scala 169:37:@349.4]
-  assign Top_io_arrB_0 = DotGen_io_b_0; // @[Test.scala 170:37:@350.4]
-  assign Top_io_arrB_1 = DotGen_io_b_1; // @[Test.scala 170:37:@351.4]
-  assign Top_io_arrB_2 = DotGen_io_b_2; // @[Test.scala 170:37:@352.4]
-  assign Top_io_arrB_3 = DotGen_io_b_3; // @[Test.scala 170:37:@353.4]
-  assign Top_io_arrB_4 = DotGen_io_b_4; // @[Test.scala 170:37:@354.4]
-  assign PrintNum_clock = clock; // @[:@342.4]
-  assign PrintNum_reset = reset; // @[:@343.4]
-  assign PrintNum_io_num = {{46'd0}, Top_io_dot}; // @[Test.scala 173:37:@357.4]
+  assign DotGen_clock = clock; // @[:@220.4]
+  assign DotGen_reset = reset; // @[:@221.4]
+  assign DotGen_io_y = Dot_io_res; // @[Test.scala 153:35:@238.4]
+  assign Dot_clock = clock; // @[:@223.4]
+  assign Dot_reset = reset; // @[:@224.4]
+  assign Dot_io_start = DotGen_io_rst; // @[Test.scala 154:38:@239.4]
+  assign Dot_io_arrA_0 = DotGen_io_a_0; // @[Test.scala 151:37:@228.4]
+  assign Dot_io_arrA_1 = DotGen_io_a_1; // @[Test.scala 151:37:@229.4]
+  assign Dot_io_arrA_2 = DotGen_io_a_2; // @[Test.scala 151:37:@230.4]
+  assign Dot_io_arrA_3 = DotGen_io_a_3; // @[Test.scala 151:37:@231.4]
+  assign Dot_io_arrA_4 = DotGen_io_a_4; // @[Test.scala 151:37:@232.4]
+  assign Dot_io_arrB_0 = DotGen_io_b_0; // @[Test.scala 152:37:@233.4]
+  assign Dot_io_arrB_1 = DotGen_io_b_1; // @[Test.scala 152:37:@234.4]
+  assign Dot_io_arrB_2 = DotGen_io_b_2; // @[Test.scala 152:37:@235.4]
+  assign Dot_io_arrB_3 = DotGen_io_b_3; // @[Test.scala 152:37:@236.4]
+  assign Dot_io_arrB_4 = DotGen_io_b_4; // @[Test.scala 152:37:@237.4]
+  assign PrintNum_clock = clock; // @[:@226.4]
+  assign PrintNum_reset = reset; // @[:@227.4]
+  assign PrintNum_io_num = {{52'd0}, Dot_io_res}; // @[Test.scala 156:37:@241.4]
+  assign PrintNum_io_valid = Dot_io_valid; // @[Test.scala 155:39:@240.4]
 endmodule
