@@ -40,14 +40,15 @@ class Adder(dataBits: Int = 8, outBits: Int = 17) extends Module {
 }
 
 /** Pipelined DotProduct based on MAC and Adder */
-class DotProduct(dataBits: Int = 8, size: Int = 16) extends Module {
+class DotProduct(inpBits: Int = 8, wgtBits: Int = 8, size: Int = 16) extends Module {
   val errMsg = s"\n\n[VTA] [DotProduct] size must be greater than 4 and a power of 2\n\n"
   require(size >= 4 && isPow2(size), errMsg)
-  val b = dataBits * 2
+  val b = inpBits + wgtBits
+	val dataBits = Math.max(inpBits, wgtBits)
   val outBits = b + log2Ceil(size) + 1
   val io = IO(new Bundle {
-    val a = Input(Vec(size, SInt(dataBits.W)))
-    val b = Input(Vec(size, SInt(dataBits.W)))
+    val a = Input(Vec(size, SInt(inpBits.W)))
+    val b = Input(Vec(size, SInt(wgtBits.W)))
     val y = Output(SInt(outBits.W))
   })
   val s = Seq.tabulate(log2Ceil(size+1))(i => pow(2, log2Ceil(size) - i).toInt) // # of total layers
@@ -108,7 +109,7 @@ class MatrixVectorCore(inpBits: Int = 8, wgtBits: Int = 8, outBits: Int = 8, siz
     val acc_o = ValidIO(Vec(1, Vec(size, UInt(accBits.W))))
     val out = ValidIO(Vec(1, Vec(size, UInt(outBits.W))))
   })
-  val dot = Seq.fill(size)(Module(new DotProduct(outBits, size)))
+  val dot = Seq.fill(size)(Module(new DotProduct(inpBits, wgtBits, size)))
   val acc = Seq.fill(size)(Module(new Pipe(UInt(accBits.W), latency = log2Ceil(size) + 1)))
   val add = Seq.fill(size)(Wire(SInt(accBits.W)))
   val vld = Wire(Vec(size, Bool()))

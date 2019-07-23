@@ -30,10 +30,10 @@ class MVCoreGen(inpBits: Int = 9, wgtBits: Int = 9, accBits: Int = 32, size: Int
 	val (cnt, _) = Counter(true.B, 256)
 
   for (i <- 0 until size) {
-    io.inp.bits(0)(i) := 10.U
+    io.inp.bits(0)(i) := i.U
     io.acc_i.bits(0)(i) := 0.U
     for (j <- 0 until size) {
-      io.wgt.bits(i)(j) := 9.U
+      io.wgt.bits(i)(j) := (i+j).U
     }
   }
 
@@ -102,5 +102,5 @@ class Test(inpBits: Int = 8, wgtBits: Int = 8, vectorLength: Int = 16) extends M
 }
 
 object Elaborate extends App {
-  chisel3.Driver.execute(args, () => new Test(3, 3))
+  chisel3.Driver.execute(args, () => new Test(8, 8))
 }
