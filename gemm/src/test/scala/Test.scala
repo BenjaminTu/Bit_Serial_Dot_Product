@@ -21,19 +21,19 @@ class VectorGen(dataBits: Int = 8, vectorLength: Int = 16) extends Module {
 //	io.b := VecInit(Seq.fill(vectorLength)(rand.nextInt(max).S))
 }
 
-class MVCoreGen(dataBits: Int = 8, accBits: Int = 32, size: Int = 16) extends Module {
+class MVCoreGen(inpBits: Int = 9, wgtBits: Int = 9, accBits: Int = 32, size: Int = 16) extends Module {
 	val io = IO(new Bundle {
-		val inp = ValidIO(Vec(1, Vec(size, UInt(dataBits.W))))
-		val wgt = ValidIO(Vec(size, Vec(size, UInt(dataBits.W))))
+		val inp = ValidIO(Vec(1, Vec(size, UInt(inpBits.W))))
+		val wgt = ValidIO(Vec(size, Vec(size, UInt(wgtBits.W))))
 		val acc_i = ValidIO(Vec(1, Vec(size, UInt(accBits.W)))) 
 	})
 	val (cnt, _) = Counter(true.B, 256)
 
   for (i <- 0 until size) {
-    io.inp.bits(0)(i) := (i*2).U
+    io.inp.bits(0)(i) := 10.U
     io.acc_i.bits(0)(i) := 0.U
     for (j <- 0 until size) {
-      io.wgt.bits(i)(j) := (i+j).U
+      io.wgt.bits(i)(j) := 9.U
     }
   }
 
@@ -55,11 +55,6 @@ class MVCoreGen(dataBits: Int = 8, accBits: Int = 32, size: Int = 16) extends Mo
 			printf("\n")
 		}
 		printf("\n")
-		printf("acc_i: \n")
-		for (i <- 0 until size) {
-      printf("%d, ", io.acc_i.bits(0)(i).asSInt)
-    }
-		print("\n") 
   }
 }
 
@@ -74,7 +69,7 @@ class PrintVec(dataBits: Int = 8, size: Int = 16) extends Module {
   val io = IO(new Bundle { 
     val vec = Flipped(ValidIO(Vec(1, Vec(size, UInt(dataBits.W)))))
   }) 
-	when (!io.vec.valid) { 
+	when (io.vec.valid) { 
 		printf("\nvec: ")
 		for (i <- 0 until size) {
   		printf("%d, ", io.vec.bits(0)(i).asSInt)
@@ -83,7 +78,7 @@ class PrintVec(dataBits: Int = 8, size: Int = 16) extends Module {
 	}
 }
 
-class Test(dataBits: Int = 8, vectorLength: Int = 16) extends Module {
+class Test(inpBits: Int = 8, wgtBits: Int = 8, vectorLength: Int = 16) extends Module {
   val io = IO(new Bundle {})
  	/*
 	val gen = Module(new VectorGen(dataBits, vectorLength))
@@ -95,8 +90,8 @@ class Test(dataBits: Int = 8, vectorLength: Int = 16) extends Module {
 	pn.io.num := dp.io.y
 	*/
 
-	val mvgen = Module(new MVCoreGen(dataBits, 32, vectorLength))
-	val mvcore = Module(new MatrixVectorCore(dataBits, vectorLength))
+	val mvgen = Module(new MVCoreGen(inpBits, wgtBits, 32, vectorLength))
+	val mvcore = Module(new MatrixVectorCore(inpBits, wgtBits, vectorLength))
 	val pv = Module(new PrintVec(32, vectorLength))
 
 	mvcore.io.reset := false.B
@@ -107,5 +102,5 @@ class Test(dataBits: Int = 8, vectorLength: Int = 16) extends Module {
 }
 
 object Elaborate extends App {
-  chisel3.Driver.execute(args, () => new Test)
+  chisel3.Driver.execute(args, () => new Test(2, 2))
 }

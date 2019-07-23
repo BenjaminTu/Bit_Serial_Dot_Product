@@ -93,6 +93,7 @@ class DotProduct(dataBits: Int = 8, size: Int = 16) extends Module {
     printf("\n")
 		printf("y: %d", io.y)
   }
+	printf("\n")
 */
 }
 
