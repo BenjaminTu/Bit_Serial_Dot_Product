@@ -97,17 +97,17 @@ class DotProduct(dataBits: Int = 8, size: Int = 16) extends Module {
 }
 
 /** Perform matrix-vector-multiplication based on DotProduct */
-class MatrixVectorCore(dataBits: Int = 8, size: Int = 16) extends Module {
+class MatrixVectorCore(inpBits: Int = 8, wgtBits: Int = 8, outBits: Int = 8, size: Int = 16) extends Module {
   val accBits = 32
   val io = IO(new Bundle{
     val reset = Input(Bool()) // FIXME: reset should be replaced by a load-acc instr
-    val inp = Flipped(ValidIO(Vec(1, Vec(size, UInt(dataBits.W)))))
-    val wgt = Flipped(ValidIO(Vec(size, Vec(size, UInt(dataBits.W)))))
+    val inp = Flipped(ValidIO(Vec(1, Vec(size, UInt(inpBits.W)))))
+    val wgt = Flipped(ValidIO(Vec(size, Vec(size, UInt(wgtBits.W)))))
     val acc_i = Flipped(ValidIO(Vec(1, Vec(size, UInt(accBits.W)))))
     val acc_o = ValidIO(Vec(1, Vec(size, UInt(accBits.W))))
-    val out = ValidIO(Vec(1, Vec(size, UInt(dataBits.W))))
+    val out = ValidIO(Vec(1, Vec(size, UInt(outBits.W))))
   })
-  val dot = Seq.fill(size)(Module(new DotProduct(dataBits, size)))
+  val dot = Seq.fill(size)(Module(new DotProduct(outBits, size)))
   val acc = Seq.fill(size)(Module(new Pipe(UInt(accBits.W), latency = log2Ceil(size) + 1)))
   val add = Seq.fill(size)(Wire(SInt(accBits.W)))
   val vld = Wire(Vec(size, Bool()))
