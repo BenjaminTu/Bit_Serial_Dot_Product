@@ -80,7 +80,7 @@ class DotProduct(dataBits: Int = 8, size: Int = 16) extends Module {
   
   // last adder
   io.y := a(p-1)(0).io.y
-
+/*
   when (true.B) {
     printf("\na: ")
     for (k <- 0 until size) {
@@ -93,6 +93,7 @@ class DotProduct(dataBits: Int = 8, size: Int = 16) extends Module {
     printf("\n")
 		printf("y: %d", io.y)
   }
+*/
 }
 
 /** Perform matrix-vector-multiplication based on DotProduct */
@@ -102,9 +103,9 @@ class MatrixVectorCore(dataBits: Int = 8, size: Int = 16) extends Module {
     val reset = Input(Bool()) // FIXME: reset should be replaced by a load-acc instr
     val inp = Flipped(ValidIO(Vec(1, Vec(size, UInt(dataBits.W)))))
     val wgt = Flipped(ValidIO(Vec(size, Vec(size, UInt(dataBits.W)))))
-    val acc_i = Flipped(ValidIO(Vec(1, Vec(size, UInt(dataBits.W)))))
-    val acc_o = Flipped(ValidIO(Vec(1, Vec(size, UInt(dataBits.W)))))
-    val out = Flipped(ValidIO(Vec(1, Vec(size, UInt(dataBits.W)))))
+    val acc_i = Flipped(ValidIO(Vec(1, Vec(size, UInt(accBits.W)))))
+    val acc_o = ValidIO(Vec(1, Vec(size, UInt(accBits.W))))
+    val out = ValidIO(Vec(1, Vec(size, UInt(dataBits.W))))
   })
   val dot = Seq.fill(size)(Module(new DotProduct(dataBits, size)))
   val acc = Seq.fill(size)(Module(new Pipe(UInt(accBits.W), latency = log2Ceil(size) + 1)))

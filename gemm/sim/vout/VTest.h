@@ -11,11 +11,31 @@
 #include "verilated_heavy.h"
 
 class VTest__Syms;
+class VTest_DotProduct;
 
 //----------
 
 VL_MODULE(VTest) {
   public:
+    // CELLS
+    // Public to allow access to /*verilator_public*/ items;
+    // otherwise the application code can consider these internals.
+    VTest_DotProduct*  	__PVT__Test__DOT__mvcore__DOT__dot_0;
+    VTest_DotProduct*  	__PVT__Test__DOT__mvcore__DOT__dot_1;
+    VTest_DotProduct*  	__PVT__Test__DOT__mvcore__DOT__dot_2;
+    VTest_DotProduct*  	__PVT__Test__DOT__mvcore__DOT__dot_3;
+    VTest_DotProduct*  	__PVT__Test__DOT__mvcore__DOT__dot_4;
+    VTest_DotProduct*  	__PVT__Test__DOT__mvcore__DOT__dot_5;
+    VTest_DotProduct*  	__PVT__Test__DOT__mvcore__DOT__dot_6;
+    VTest_DotProduct*  	__PVT__Test__DOT__mvcore__DOT__dot_7;
+    VTest_DotProduct*  	__PVT__Test__DOT__mvcore__DOT__dot_8;
+    VTest_DotProduct*  	__PVT__Test__DOT__mvcore__DOT__dot_9;
+    VTest_DotProduct*  	__PVT__Test__DOT__mvcore__DOT__dot_10;
+    VTest_DotProduct*  	__PVT__Test__DOT__mvcore__DOT__dot_11;
+    VTest_DotProduct*  	__PVT__Test__DOT__mvcore__DOT__dot_12;
+    VTest_DotProduct*  	__PVT__Test__DOT__mvcore__DOT__dot_13;
+    VTest_DotProduct*  	__PVT__Test__DOT__mvcore__DOT__dot_14;
+    VTest_DotProduct*  	__PVT__Test__DOT__mvcore__DOT__dot_15;
     
     // PORTS
     // The application code writes and reads these signals to
@@ -26,67 +46,178 @@ VL_MODULE(VTest) {
     
     // LOCAL SIGNALS
     // Internals; generally not touched by application code
-    // Begin mtask footprint  all: 
-    VL_SIG(Test__DOT__dp__DOT__a_0_0__DOT__rA,16,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_0__DOT___RAND_0,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_0__DOT__rB,16,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_0__DOT___RAND_1,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_1__DOT__rA,16,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_1__DOT___RAND_0,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_1__DOT__rB,16,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_1__DOT___RAND_1,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_2__DOT__rA,16,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_2__DOT___RAND_0,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_2__DOT__rB,16,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_2__DOT___RAND_1,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_3__DOT__rA,16,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_3__DOT___RAND_0,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_3__DOT__rB,16,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_3__DOT___RAND_1,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_4__DOT__rA,16,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_4__DOT___RAND_0,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_4__DOT__rB,16,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_4__DOT___RAND_1,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_5__DOT__rA,16,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_5__DOT___RAND_0,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_5__DOT__rB,16,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_5__DOT___RAND_1,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_6__DOT__rA,16,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_6__DOT___RAND_0,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_6__DOT__rB,16,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_6__DOT___RAND_1,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_7__DOT__rA,16,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_7__DOT___RAND_0,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_7__DOT__rB,16,0);
-    VL_SIG(Test__DOT__dp__DOT__a_0_7__DOT___RAND_1,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_1_0__DOT__rA,17,0);
-    VL_SIG(Test__DOT__dp__DOT__a_1_0__DOT___RAND_0,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_1_0__DOT__rB,17,0);
-    VL_SIG(Test__DOT__dp__DOT__a_1_0__DOT___RAND_1,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_1_1__DOT__rA,17,0);
-    VL_SIG(Test__DOT__dp__DOT__a_1_1__DOT___RAND_0,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_1_1__DOT__rB,17,0);
-    VL_SIG(Test__DOT__dp__DOT__a_1_1__DOT___RAND_1,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_1_2__DOT__rA,17,0);
-    VL_SIG(Test__DOT__dp__DOT__a_1_2__DOT___RAND_0,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_1_2__DOT__rB,17,0);
-    VL_SIG(Test__DOT__dp__DOT__a_1_2__DOT___RAND_1,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_1_3__DOT__rA,17,0);
-    VL_SIG(Test__DOT__dp__DOT__a_1_3__DOT___RAND_0,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_1_3__DOT__rB,17,0);
-    VL_SIG(Test__DOT__dp__DOT__a_1_3__DOT___RAND_1,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_2_0__DOT__rA,18,0);
-    VL_SIG(Test__DOT__dp__DOT__a_2_0__DOT___RAND_0,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_2_0__DOT__rB,18,0);
-    VL_SIG(Test__DOT__dp__DOT__a_2_0__DOT___RAND_1,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_2_1__DOT__rA,18,0);
-    VL_SIG(Test__DOT__dp__DOT__a_2_1__DOT___RAND_0,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_2_1__DOT__rB,18,0);
-    VL_SIG(Test__DOT__dp__DOT__a_2_1__DOT___RAND_1,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_3_0__DOT__rA,19,0);
-    VL_SIG(Test__DOT__dp__DOT__a_3_0__DOT___RAND_0,31,0);
-    VL_SIG(Test__DOT__dp__DOT__a_3_0__DOT__rB,19,0);
-    VL_SIG(Test__DOT__dp__DOT__a_3_0__DOT___RAND_1,31,0);
+    // Anonymous structures to workaround compiler member-count bugs
+    struct {
+	// Begin mtask footprint  all: 
+	VL_SIG8(Test__DOT__mvgen__DOT__value,7,0);
+	VL_SIG8(Test__DOT__mvgen__DOT___T_3078,7,0);
+	VL_SIG8(Test__DOT__mvcore__DOT___T_6016,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_0__DOT___T_19,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_0__DOT___T_24,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_0__DOT___T_29,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_0__DOT___T_34,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_0__DOT___T_39,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_1__DOT___T_19,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_1__DOT___T_24,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_1__DOT___T_29,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_1__DOT___T_34,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_1__DOT___T_39,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_2__DOT___T_19,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_2__DOT___T_24,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_2__DOT___T_29,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_2__DOT___T_34,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_2__DOT___T_39,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_3__DOT___T_19,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_3__DOT___T_24,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_3__DOT___T_29,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_3__DOT___T_34,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_3__DOT___T_39,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_4__DOT___T_19,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_4__DOT___T_24,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_4__DOT___T_29,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_4__DOT___T_34,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_4__DOT___T_39,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_5__DOT___T_19,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_5__DOT___T_24,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_5__DOT___T_29,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_5__DOT___T_34,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_5__DOT___T_39,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_6__DOT___T_19,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_6__DOT___T_24,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_6__DOT___T_29,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_6__DOT___T_34,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_6__DOT___T_39,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_7__DOT___T_19,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_7__DOT___T_24,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_7__DOT___T_29,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_7__DOT___T_34,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_7__DOT___T_39,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_8__DOT___T_19,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_8__DOT___T_24,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_8__DOT___T_29,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_8__DOT___T_34,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_8__DOT___T_39,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_9__DOT___T_19,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_9__DOT___T_24,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_9__DOT___T_29,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_9__DOT___T_34,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_9__DOT___T_39,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_10__DOT___T_19,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_10__DOT___T_24,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_10__DOT___T_29,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_10__DOT___T_34,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_10__DOT___T_39,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_11__DOT___T_19,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_11__DOT___T_24,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_11__DOT___T_29,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_11__DOT___T_34,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_11__DOT___T_39,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_12__DOT___T_19,0,0);
+    };
+    struct {
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_12__DOT___T_24,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_12__DOT___T_29,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_12__DOT___T_34,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_12__DOT___T_39,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_13__DOT___T_19,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_13__DOT___T_24,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_13__DOT___T_29,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_13__DOT___T_34,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_13__DOT___T_39,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_14__DOT___T_19,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_14__DOT___T_24,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_14__DOT___T_29,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_14__DOT___T_34,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_14__DOT___T_39,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_15__DOT___T_19,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_15__DOT___T_24,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_15__DOT___T_29,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_15__DOT___T_34,0,0);
+	VL_SIG8(Test__DOT__mvcore__DOT__acc_15__DOT___T_39,0,0);
+	VL_SIG(Test__DOT__mvgen__DOT___RAND_0,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_0__DOT___RAND_0,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_0__DOT___RAND_1,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_0__DOT___RAND_2,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_0__DOT___RAND_3,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_0__DOT___RAND_4,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_1__DOT___RAND_0,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_1__DOT___RAND_1,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_1__DOT___RAND_2,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_1__DOT___RAND_3,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_1__DOT___RAND_4,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_2__DOT___RAND_0,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_2__DOT___RAND_1,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_2__DOT___RAND_2,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_2__DOT___RAND_3,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_2__DOT___RAND_4,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_3__DOT___RAND_0,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_3__DOT___RAND_1,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_3__DOT___RAND_2,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_3__DOT___RAND_3,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_3__DOT___RAND_4,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_4__DOT___RAND_0,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_4__DOT___RAND_1,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_4__DOT___RAND_2,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_4__DOT___RAND_3,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_4__DOT___RAND_4,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_5__DOT___RAND_0,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_5__DOT___RAND_1,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_5__DOT___RAND_2,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_5__DOT___RAND_3,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_5__DOT___RAND_4,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_6__DOT___RAND_0,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_6__DOT___RAND_1,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_6__DOT___RAND_2,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_6__DOT___RAND_3,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_6__DOT___RAND_4,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_7__DOT___RAND_0,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_7__DOT___RAND_1,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_7__DOT___RAND_2,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_7__DOT___RAND_3,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_7__DOT___RAND_4,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_8__DOT___RAND_0,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_8__DOT___RAND_1,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_8__DOT___RAND_2,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_8__DOT___RAND_3,31,0);
+    };
+    struct {
+	VL_SIG(Test__DOT__mvcore__DOT__acc_8__DOT___RAND_4,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_9__DOT___RAND_0,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_9__DOT___RAND_1,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_9__DOT___RAND_2,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_9__DOT___RAND_3,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_9__DOT___RAND_4,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_10__DOT___RAND_0,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_10__DOT___RAND_1,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_10__DOT___RAND_2,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_10__DOT___RAND_3,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_10__DOT___RAND_4,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_11__DOT___RAND_0,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_11__DOT___RAND_1,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_11__DOT___RAND_2,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_11__DOT___RAND_3,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_11__DOT___RAND_4,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_12__DOT___RAND_0,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_12__DOT___RAND_1,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_12__DOT___RAND_2,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_12__DOT___RAND_3,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_12__DOT___RAND_4,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_13__DOT___RAND_0,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_13__DOT___RAND_1,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_13__DOT___RAND_2,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_13__DOT___RAND_3,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_13__DOT___RAND_4,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_14__DOT___RAND_0,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_14__DOT___RAND_1,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_14__DOT___RAND_2,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_14__DOT___RAND_3,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_14__DOT___RAND_4,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_15__DOT___RAND_0,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_15__DOT___RAND_1,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_15__DOT___RAND_2,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_15__DOT___RAND_3,31,0);
+	VL_SIG(Test__DOT__mvcore__DOT__acc_15__DOT___RAND_4,31,0);
+    };
     
     // LOCAL VARIABLES
     // Internals; generally not touched by application code
@@ -137,6 +268,7 @@ VL_MODULE(VTest) {
     static void _eval_settle(VTest__Syms* __restrict vlSymsp);
     static void _initial__TOP__2(VTest__Syms* __restrict vlSymsp);
     static void _sequent__TOP__1(VTest__Syms* __restrict vlSymsp);
+    static void _settle__TOP__3(VTest__Syms* __restrict vlSymsp);
 } VL_ATTR_ALIGNED(128);
 
 #endif // guard
