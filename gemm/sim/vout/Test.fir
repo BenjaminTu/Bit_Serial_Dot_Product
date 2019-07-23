@@ -3,7 +3,7 @@ circuit Test :
   module MVCoreGen : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {inp : {valid : UInt<1>, bits : UInt<2>[16][1]}, wgt : {valid : UInt<1>, bits : UInt<2>[16][16]}, acc_i : {valid : UInt<1>, bits : UInt<32>[16][1]}}
+    output io : {inp : {valid : UInt<1>, bits : UInt<3>[16][1]}, wgt : {valid : UInt<1>, bits : UInt<3>[16][16]}, acc_i : {valid : UInt<1>, bits : UInt<32>[16][1]}}
     
     reg value : UInt<8>, clock with : (reset => (reset, UInt<8>("h00"))) @[Counter.scala 26:33]
     when UInt<1>("h01") : @[Counter.scala 63:17]
@@ -13773,7 +13773,7 @@ circuit Test :
   module MatrixVectorCore : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip reset : UInt<1>, flip inp : {valid : UInt<1>, bits : UInt<2>[16][1]}, flip wgt : {valid : UInt<1>, bits : UInt<2>[16][16]}, flip acc_i : {valid : UInt<1>, bits : UInt<32>[16][1]}, acc_o : {valid : UInt<1>, bits : UInt<32>[16][1]}, out : {valid : UInt<1>, bits : UInt<16>[16][1]}}
+    output io : {flip reset : UInt<1>, flip inp : {valid : UInt<1>, bits : UInt<3>[16][1]}, flip wgt : {valid : UInt<1>, bits : UInt<3>[16][16]}, flip acc_i : {valid : UInt<1>, bits : UInt<32>[16][1]}, acc_o : {valid : UInt<1>, bits : UInt<32>[16][1]}, out : {valid : UInt<1>, bits : UInt<16>[16][1]}}
     
     inst dot_0 of DotProduct @[Gemm.scala 111:34]
     dot_0.clock <= clock

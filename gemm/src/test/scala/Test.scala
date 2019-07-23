@@ -102,5 +102,5 @@ class Test(inpBits: Int = 8, wgtBits: Int = 8, vectorLength: Int = 16) extends M
 }
 
 object Elaborate extends App {
-  chisel3.Driver.execute(args, () => new Test(2, 2))
+  chisel3.Driver.execute(args, () => new Test(3, 3))
 }

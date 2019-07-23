@@ -184,97 +184,97 @@ VL_INLINE_OPT void VTest_DotProduct::_sequent__TOP__Test__DOT__mvcore__DOT__dot_
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_0__DOT__rC = 0U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
-    this->__PVT__m_0__DOT__rA = 0xfffeU;
+    this->__PVT__m_0__DOT__rA = 2U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_0__DOT__rB = 1U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_1__DOT__rC = 0U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
-    this->__PVT__m_1__DOT__rA = 0xfffeU;
+    this->__PVT__m_1__DOT__rA = 2U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_1__DOT__rB = 1U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_2__DOT__rC = 0U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
-    this->__PVT__m_2__DOT__rA = 0xfffeU;
+    this->__PVT__m_2__DOT__rA = 2U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_2__DOT__rB = 1U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_3__DOT__rC = 0U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
-    this->__PVT__m_3__DOT__rA = 0xfffeU;
+    this->__PVT__m_3__DOT__rA = 2U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_3__DOT__rB = 1U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_4__DOT__rC = 0U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
-    this->__PVT__m_4__DOT__rA = 0xfffeU;
+    this->__PVT__m_4__DOT__rA = 2U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_4__DOT__rB = 1U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_5__DOT__rC = 0U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
-    this->__PVT__m_5__DOT__rA = 0xfffeU;
+    this->__PVT__m_5__DOT__rA = 2U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_5__DOT__rB = 1U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_6__DOT__rC = 0U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
-    this->__PVT__m_6__DOT__rA = 0xfffeU;
+    this->__PVT__m_6__DOT__rA = 2U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_6__DOT__rB = 1U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_7__DOT__rC = 0U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
-    this->__PVT__m_7__DOT__rA = 0xfffeU;
+    this->__PVT__m_7__DOT__rA = 2U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_7__DOT__rB = 1U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_8__DOT__rC = 0U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
-    this->__PVT__m_8__DOT__rA = 0xfffeU;
+    this->__PVT__m_8__DOT__rA = 2U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_8__DOT__rB = 1U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_9__DOT__rC = 0U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
-    this->__PVT__m_9__DOT__rA = 0xfffeU;
+    this->__PVT__m_9__DOT__rA = 2U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_9__DOT__rB = 1U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_10__DOT__rC = 0U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
-    this->__PVT__m_10__DOT__rA = 0xfffeU;
+    this->__PVT__m_10__DOT__rA = 2U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_10__DOT__rB = 1U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_11__DOT__rC = 0U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
-    this->__PVT__m_11__DOT__rA = 0xfffeU;
+    this->__PVT__m_11__DOT__rA = 2U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_11__DOT__rB = 1U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_12__DOT__rC = 0U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
-    this->__PVT__m_12__DOT__rA = 0xfffeU;
+    this->__PVT__m_12__DOT__rA = 2U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_12__DOT__rB = 1U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_13__DOT__rC = 0U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
-    this->__PVT__m_13__DOT__rA = 0xfffeU;
+    this->__PVT__m_13__DOT__rA = 2U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_13__DOT__rB = 1U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_14__DOT__rC = 0U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
-    this->__PVT__m_14__DOT__rA = 0xfffeU;
+    this->__PVT__m_14__DOT__rA = 2U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_14__DOT__rB = 1U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_15__DOT__rC = 0U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
-    this->__PVT__m_15__DOT__rA = 0xfffeU;
+    this->__PVT__m_15__DOT__rA = 2U;
     // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:4411
     this->__PVT__m_15__DOT__rB = 1U;
 }
