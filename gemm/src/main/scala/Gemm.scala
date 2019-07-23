@@ -50,9 +50,9 @@ class DotProduct(dataBits: Int = 8, size: Int = 16) extends Module {
     val b = Input(Vec(size, SInt(dataBits.W)))
     val y = Output(SInt(outBits.W))
   })
-  val p = log2Ceil(size/2)+1 // # of adder layers
   val s = Seq.tabulate(log2Ceil(size+1))(i => pow(2, log2Ceil(size) - i).toInt) // # of total layers
-  val m = Seq.fill(s(0))(Module(new MAC(dataBits = dataBits, cBits = b, outBits = b + 1))) // # of total entries
+  val p = log2Ceil(size/2)+1 // # of adder layers
+  val m = Seq.fill(s(0))(Module(new MAC(dataBits = dataBits, cBits = b, outBits = b + 1))) // # of total vector pairs
   val a = Seq.tabulate(p)(i =>
     Seq.fill(s(i + 1))(Module(new Adder(dataBits = b + i + 1, outBits = b + i + 2)))
   ) // # adders within each layer
@@ -95,40 +95,38 @@ class DotProduct(dataBits: Int = 8, size: Int = 16) extends Module {
   }
 }
 
-// /** Perform matrix-vector-multiplication based on DotProduct */
-// class MatrixVectorCore(tensorWidth: Int = 8, tensorElemBits: Int = 16) extends Module {
-//   val accBits = p(CoreKey).accBits
-//   val size = p(CoreKey).blockOut
-//   val dataBits = p(CoreKey).inpBits
-//   val io = IO(new Bundle{
-//     val reset = Input(Bool()) // FIXME: reset should be replaced by a load-acc instr
-//     val inp = Flipped(ValidIO(Vec(tensorWidth, UInt(tensorElemBits.W))))
-//     val wgt = Flipped(ValidIO(Vec(tensorLength, Vec(tensorWidth, UInt(tensorElemBits.W)))))
-//     val acc_i = Flipped(ValidIO(Vec(tensorWidth, UInt(tensorElemBits.W))))
-//     val acc_o = Flipped(ValidIO(Vec(tensorWidth, UInt(tensorElemBits.W))))
-//     val out = Flipped(ValidIO(Vec(tensorWidth, UInt(tensorElemBits.W))))
-//   })
-//   val dot = Seq.fill(size)(Module(new DotProduct(dataBits, size)))
-//   val acc = Seq.fill(size)(Module(new Pipe(UInt(accBits.W), latency = log2Ceil(size) + 1)))
-//   val add = Seq.fill(size)(Wire(SInt(accBits.W)))
-//   val vld = Wire(Vec(size, Bool()))
+/** Perform matrix-vector-multiplication based on DotProduct */
+class MatrixVectorCore(dataBits: Int = 8, size: Int = 16) extends Module {
+  val accBits = 32
+  val io = IO(new Bundle{
+    val reset = Input(Bool()) // FIXME: reset should be replaced by a load-acc instr
+    val inp = Flipped(ValidIO(Vec(1, Vec(size, UInt(dataBits.W)))))
+    val wgt = Flipped(ValidIO(Vec(size, Vec(size, UInt(dataBits.W)))))
+    val acc_i = Flipped(ValidIO(Vec(1, Vec(size, UInt(dataBits.W)))))
+    val acc_o = Flipped(ValidIO(Vec(1, Vec(size, UInt(dataBits.W)))))
+    val out = Flipped(ValidIO(Vec(1, Vec(size, UInt(dataBits.W)))))
+  })
+  val dot = Seq.fill(size)(Module(new DotProduct(dataBits, size)))
+  val acc = Seq.fill(size)(Module(new Pipe(UInt(accBits.W), latency = log2Ceil(size) + 1)))
+  val add = Seq.fill(size)(Wire(SInt(accBits.W)))
+  val vld = Wire(Vec(size, Bool()))
 
-//   for (i <- 0 until size) {
-//     acc(i).io.enq.valid := io.inp.valid & io.wgt.valid & io.acc_i.valid & ~io.reset
-//     acc(i).io.enq.bits := io.acc_i.bits(0)(i)
-//     for (j <- 0 until size) {
-//       dot(i).io.a(j) := io.inp.bits(0)(j).asSInt
-//       dot(i).io.b(j) := io.wgt.bits(i)(j).asSInt
-//     }
-//     add(i) := acc(i).io.deq.bits.asSInt + dot(i).io.y
-//     io.acc_o.bits(0)(i) := Mux(io.reset, 0.U, add(i).asUInt)
-//     io.out.bits(0)(i) := add(i).asUInt
-//     vld(i) := acc(i).io.deq.valid
-//   }
-//   io.acc_o.valid := vld.asUInt.andR | io.reset
-//   io.out.valid := vld.asUInt.andR
-// }
+  for (i <- 0 until size) {
+    acc(i).io.enq.valid := io.inp.valid & io.wgt.valid & io.acc_i.valid & ~io.reset
+    acc(i).io.enq.bits := io.acc_i.bits(0)(i)
+    for (j <- 0 until size) {
+      dot(i).io.a(j) := io.inp.bits(0)(j).asSInt
+      dot(i).io.b(j) := io.wgt.bits(i)(j).asSInt
+    }
+    add(i) := acc(i).io.deq.bits.asSInt + dot(i).io.y
+    io.acc_o.bits(0)(i) := Mux(io.reset, 0.U, add(i).asUInt)
+    io.out.bits(0)(i) := add(i).asUInt
+    vld(i) := acc(i).io.deq.valid
+  }
+  io.acc_o.valid := vld.asUInt.andR | io.reset
+  io.out.valid := vld.asUInt.andR
+}
 
 object Elaborate extends App {
-  chisel3.Driver.execute(args, () => new DotProduct)
+  chisel3.Driver.execute(args, () => new MatrixVectorCore)
 }
