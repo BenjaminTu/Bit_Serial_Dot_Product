@@ -57,14 +57,14 @@ class DotProduct(dataBits: Int = 8, size: Int = 16) extends Module {
     Seq.fill(s(i + 1))(Module(new Adder(dataBits = b + i + 1, outBits = b + i + 2)))
   ) // # adders within each layer
 
-  // MACs
+  // Vector MACs
   for (i <- 0 until s(0)) {
     m(i).io.a := io.a(i)
     m(i).io.b := io.b(i)
     m(i).io.c := 0.S
   }
 
-  // Adders
+  // Adder Reduction
   for (i <- 0 until p) {
     for (j <- 0 until s(i+1)) {
       if (i == 0) {
@@ -95,7 +95,7 @@ class DotProduct(dataBits: Int = 8, size: Int = 16) extends Module {
   }
 }
 
-// /** Perform matric-vector-multiplication based on DotProduct */
+// /** Perform matrix-vector-multiplication based on DotProduct */
 // class MatrixVectorCore(tensorWidth: Int = 8, tensorElemBits: Int = 16) extends Module {
 //   val accBits = p(CoreKey).accBits
 //   val size = p(CoreKey).blockOut
