@@ -1,4 +1,5 @@
 # DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+<<<<<<< HEAD
 C "--cc --exe -Mdir /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout --top-module Test /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/src/test/resources/csrc/main.cc -Wno-STMTDLY -Wno-WIDTH -Wno-CASEINCOMPLETE --output-split 20000 --output-split-cfuncs 20000 --x-assign unique +define+RANDOMIZE_GARBAGE_ASSIGN +define+RANDOMIZE_REG_INIT +define+RANDOMIZE_MEM_INIT -CFLAGS -I/Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/src/test/resources/csrc -include VTest.h -DVNAME=VTest -o /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test"
 S    299521 8597134593  1564004022           0  1564004022           0 "/Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v"
 T    112239 8597134600  1564004024           0  1564004024           0 "/Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/VTest.cpp"
@@ -15,3 +16,20 @@ T      1247 8597134608  1564004024           0  1564004024           0 "/Users/b
 T         0        0  1564004024           0  1564004024           0 "/Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/VTest__verFiles.dat"
 T      1323 8597134606  1564004024           0  1564004024           0 "/Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/VTest_classes.mk"
 S   4289660 8596210464  1561668395           0  1560691944           0 "/usr/local/Cellar/verilator/4.016/bin/verilator_bin"
+=======
+C "--cc --exe -Mdir /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout --top-module Test /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v /home/bentu/Bit_Serial_Dot_Product/gemm/src/test/resources/csrc/main.cc -Wno-STMTDLY -Wno-WIDTH -Wno-CASEINCOMPLETE --output-split 20000 --output-split-cfuncs 20000 --x-assign unique +define+RANDOMIZE_GARBAGE_ASSIGN +define+RANDOMIZE_REG_INIT +define+RANDOMIZE_MEM_INIT -CFLAGS -I/home/bentu/Bit_Serial_Dot_Product/gemm/src/test/resources/csrc -include VTest.h -DVNAME=VTest -o /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test"
+S    285018 38797692  1563915087    63535311  1563915087    63535311 "/home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v"
+T     91942 38806560  1563915087   639546824  1563915087   639546824 "/home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/VTest.cpp"
+T     13452 38806559  1563915087   635546744  1563915087   635546744 "/home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/VTest.h"
+T      2068 38806661  1563915087   647546984  1563915087   647546984 "/home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/VTest.mk"
+T    272420 38806658  1563915087   647546984  1563915087   647546984 "/home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/VTest_DotProduct.cpp"
+T      9104 38806657  1563915087   639546824  1563915087   639546824 "/home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/VTest_DotProduct.h"
+T     22286 38806659  1563915087   647546984  1563915087   647546984 "/home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/VTest_DotProduct__Slow.cpp"
+T     33825 38806656  1563915087   639546824  1563915087   639546824 "/home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/VTest__Slow.cpp"
+T      4515 38806558  1563915087   635546744  1563915087   635546744 "/home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/VTest__Syms.cpp"
+T      1875 38806557  1563915087   635546744  1563915087   635546744 "/home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/VTest__Syms.h"
+T       829 38806662  1563915087   647546984  1563915087   647546984 "/home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/VTest__ver.d"
+T         0        0  1563915087   647546984  1563915087   647546984 "/home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/VTest__verFiles.dat"
+T      1214 38806660  1563915087   647546984  1563915087   647546984 "/home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/VTest_classes.mk"
+S   6619528 15730091  1556424481   372840019  1556424481   372840019 "/usr/local/bin/verilator_bin"
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038

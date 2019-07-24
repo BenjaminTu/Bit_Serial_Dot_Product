@@ -1,297 +1,281 @@
 module MVCoreGen( // @[:@3.2]
-  input         clock, // @[:@4.4]
-  input         reset, // @[:@5.4]
-  output        io_inp_valid, // @[:@6.4]
-  output [7:0]  io_inp_bits_0_0, // @[:@6.4]
-  output [7:0]  io_inp_bits_0_1, // @[:@6.4]
-  output [7:0]  io_inp_bits_0_2, // @[:@6.4]
-  output [7:0]  io_inp_bits_0_3, // @[:@6.4]
-  output [7:0]  io_inp_bits_0_4, // @[:@6.4]
-  output [7:0]  io_inp_bits_0_5, // @[:@6.4]
-  output [7:0]  io_inp_bits_0_6, // @[:@6.4]
-  output [7:0]  io_inp_bits_0_7, // @[:@6.4]
-  output [7:0]  io_inp_bits_0_8, // @[:@6.4]
-  output [7:0]  io_inp_bits_0_9, // @[:@6.4]
-  output [7:0]  io_inp_bits_0_10, // @[:@6.4]
-  output [7:0]  io_inp_bits_0_11, // @[:@6.4]
-  output [7:0]  io_inp_bits_0_12, // @[:@6.4]
-  output [7:0]  io_inp_bits_0_13, // @[:@6.4]
-  output [7:0]  io_inp_bits_0_14, // @[:@6.4]
-  output [7:0]  io_inp_bits_0_15, // @[:@6.4]
-  output        io_wgt_valid, // @[:@6.4]
-  output [7:0]  io_wgt_bits_0_0, // @[:@6.4]
-  output [7:0]  io_wgt_bits_0_1, // @[:@6.4]
-  output [7:0]  io_wgt_bits_0_2, // @[:@6.4]
-  output [7:0]  io_wgt_bits_0_3, // @[:@6.4]
-  output [7:0]  io_wgt_bits_0_4, // @[:@6.4]
-  output [7:0]  io_wgt_bits_0_5, // @[:@6.4]
-  output [7:0]  io_wgt_bits_0_6, // @[:@6.4]
-  output [7:0]  io_wgt_bits_0_7, // @[:@6.4]
-  output [7:0]  io_wgt_bits_0_8, // @[:@6.4]
-  output [7:0]  io_wgt_bits_0_9, // @[:@6.4]
-  output [7:0]  io_wgt_bits_0_10, // @[:@6.4]
-  output [7:0]  io_wgt_bits_0_11, // @[:@6.4]
-  output [7:0]  io_wgt_bits_0_12, // @[:@6.4]
-  output [7:0]  io_wgt_bits_0_13, // @[:@6.4]
-  output [7:0]  io_wgt_bits_0_14, // @[:@6.4]
-  output [7:0]  io_wgt_bits_0_15, // @[:@6.4]
-  output [7:0]  io_wgt_bits_1_0, // @[:@6.4]
-  output [7:0]  io_wgt_bits_1_1, // @[:@6.4]
-  output [7:0]  io_wgt_bits_1_2, // @[:@6.4]
-  output [7:0]  io_wgt_bits_1_3, // @[:@6.4]
-  output [7:0]  io_wgt_bits_1_4, // @[:@6.4]
-  output [7:0]  io_wgt_bits_1_5, // @[:@6.4]
-  output [7:0]  io_wgt_bits_1_6, // @[:@6.4]
-  output [7:0]  io_wgt_bits_1_7, // @[:@6.4]
-  output [7:0]  io_wgt_bits_1_8, // @[:@6.4]
-  output [7:0]  io_wgt_bits_1_9, // @[:@6.4]
-  output [7:0]  io_wgt_bits_1_10, // @[:@6.4]
-  output [7:0]  io_wgt_bits_1_11, // @[:@6.4]
-  output [7:0]  io_wgt_bits_1_12, // @[:@6.4]
-  output [7:0]  io_wgt_bits_1_13, // @[:@6.4]
-  output [7:0]  io_wgt_bits_1_14, // @[:@6.4]
-  output [7:0]  io_wgt_bits_1_15, // @[:@6.4]
-  output [7:0]  io_wgt_bits_2_0, // @[:@6.4]
-  output [7:0]  io_wgt_bits_2_1, // @[:@6.4]
-  output [7:0]  io_wgt_bits_2_2, // @[:@6.4]
-  output [7:0]  io_wgt_bits_2_3, // @[:@6.4]
-  output [7:0]  io_wgt_bits_2_4, // @[:@6.4]
-  output [7:0]  io_wgt_bits_2_5, // @[:@6.4]
-  output [7:0]  io_wgt_bits_2_6, // @[:@6.4]
-  output [7:0]  io_wgt_bits_2_7, // @[:@6.4]
-  output [7:0]  io_wgt_bits_2_8, // @[:@6.4]
-  output [7:0]  io_wgt_bits_2_9, // @[:@6.4]
-  output [7:0]  io_wgt_bits_2_10, // @[:@6.4]
-  output [7:0]  io_wgt_bits_2_11, // @[:@6.4]
-  output [7:0]  io_wgt_bits_2_12, // @[:@6.4]
-  output [7:0]  io_wgt_bits_2_13, // @[:@6.4]
-  output [7:0]  io_wgt_bits_2_14, // @[:@6.4]
-  output [7:0]  io_wgt_bits_2_15, // @[:@6.4]
-  output [7:0]  io_wgt_bits_3_0, // @[:@6.4]
-  output [7:0]  io_wgt_bits_3_1, // @[:@6.4]
-  output [7:0]  io_wgt_bits_3_2, // @[:@6.4]
-  output [7:0]  io_wgt_bits_3_3, // @[:@6.4]
-  output [7:0]  io_wgt_bits_3_4, // @[:@6.4]
-  output [7:0]  io_wgt_bits_3_5, // @[:@6.4]
-  output [7:0]  io_wgt_bits_3_6, // @[:@6.4]
-  output [7:0]  io_wgt_bits_3_7, // @[:@6.4]
-  output [7:0]  io_wgt_bits_3_8, // @[:@6.4]
-  output [7:0]  io_wgt_bits_3_9, // @[:@6.4]
-  output [7:0]  io_wgt_bits_3_10, // @[:@6.4]
-  output [7:0]  io_wgt_bits_3_11, // @[:@6.4]
-  output [7:0]  io_wgt_bits_3_12, // @[:@6.4]
-  output [7:0]  io_wgt_bits_3_13, // @[:@6.4]
-  output [7:0]  io_wgt_bits_3_14, // @[:@6.4]
-  output [7:0]  io_wgt_bits_3_15, // @[:@6.4]
-  output [7:0]  io_wgt_bits_4_0, // @[:@6.4]
-  output [7:0]  io_wgt_bits_4_1, // @[:@6.4]
-  output [7:0]  io_wgt_bits_4_2, // @[:@6.4]
-  output [7:0]  io_wgt_bits_4_3, // @[:@6.4]
-  output [7:0]  io_wgt_bits_4_4, // @[:@6.4]
-  output [7:0]  io_wgt_bits_4_5, // @[:@6.4]
-  output [7:0]  io_wgt_bits_4_6, // @[:@6.4]
-  output [7:0]  io_wgt_bits_4_7, // @[:@6.4]
-  output [7:0]  io_wgt_bits_4_8, // @[:@6.4]
-  output [7:0]  io_wgt_bits_4_9, // @[:@6.4]
-  output [7:0]  io_wgt_bits_4_10, // @[:@6.4]
-  output [7:0]  io_wgt_bits_4_11, // @[:@6.4]
-  output [7:0]  io_wgt_bits_4_12, // @[:@6.4]
-  output [7:0]  io_wgt_bits_4_13, // @[:@6.4]
-  output [7:0]  io_wgt_bits_4_14, // @[:@6.4]
-  output [7:0]  io_wgt_bits_4_15, // @[:@6.4]
-  output [7:0]  io_wgt_bits_5_0, // @[:@6.4]
-  output [7:0]  io_wgt_bits_5_1, // @[:@6.4]
-  output [7:0]  io_wgt_bits_5_2, // @[:@6.4]
-  output [7:0]  io_wgt_bits_5_3, // @[:@6.4]
-  output [7:0]  io_wgt_bits_5_4, // @[:@6.4]
-  output [7:0]  io_wgt_bits_5_5, // @[:@6.4]
-  output [7:0]  io_wgt_bits_5_6, // @[:@6.4]
-  output [7:0]  io_wgt_bits_5_7, // @[:@6.4]
-  output [7:0]  io_wgt_bits_5_8, // @[:@6.4]
-  output [7:0]  io_wgt_bits_5_9, // @[:@6.4]
-  output [7:0]  io_wgt_bits_5_10, // @[:@6.4]
-  output [7:0]  io_wgt_bits_5_11, // @[:@6.4]
-  output [7:0]  io_wgt_bits_5_12, // @[:@6.4]
-  output [7:0]  io_wgt_bits_5_13, // @[:@6.4]
-  output [7:0]  io_wgt_bits_5_14, // @[:@6.4]
-  output [7:0]  io_wgt_bits_5_15, // @[:@6.4]
-  output [7:0]  io_wgt_bits_6_0, // @[:@6.4]
-  output [7:0]  io_wgt_bits_6_1, // @[:@6.4]
-  output [7:0]  io_wgt_bits_6_2, // @[:@6.4]
-  output [7:0]  io_wgt_bits_6_3, // @[:@6.4]
-  output [7:0]  io_wgt_bits_6_4, // @[:@6.4]
-  output [7:0]  io_wgt_bits_6_5, // @[:@6.4]
-  output [7:0]  io_wgt_bits_6_6, // @[:@6.4]
-  output [7:0]  io_wgt_bits_6_7, // @[:@6.4]
-  output [7:0]  io_wgt_bits_6_8, // @[:@6.4]
-  output [7:0]  io_wgt_bits_6_9, // @[:@6.4]
-  output [7:0]  io_wgt_bits_6_10, // @[:@6.4]
-  output [7:0]  io_wgt_bits_6_11, // @[:@6.4]
-  output [7:0]  io_wgt_bits_6_12, // @[:@6.4]
-  output [7:0]  io_wgt_bits_6_13, // @[:@6.4]
-  output [7:0]  io_wgt_bits_6_14, // @[:@6.4]
-  output [7:0]  io_wgt_bits_6_15, // @[:@6.4]
-  output [7:0]  io_wgt_bits_7_0, // @[:@6.4]
-  output [7:0]  io_wgt_bits_7_1, // @[:@6.4]
-  output [7:0]  io_wgt_bits_7_2, // @[:@6.4]
-  output [7:0]  io_wgt_bits_7_3, // @[:@6.4]
-  output [7:0]  io_wgt_bits_7_4, // @[:@6.4]
-  output [7:0]  io_wgt_bits_7_5, // @[:@6.4]
-  output [7:0]  io_wgt_bits_7_6, // @[:@6.4]
-  output [7:0]  io_wgt_bits_7_7, // @[:@6.4]
-  output [7:0]  io_wgt_bits_7_8, // @[:@6.4]
-  output [7:0]  io_wgt_bits_7_9, // @[:@6.4]
-  output [7:0]  io_wgt_bits_7_10, // @[:@6.4]
-  output [7:0]  io_wgt_bits_7_11, // @[:@6.4]
-  output [7:0]  io_wgt_bits_7_12, // @[:@6.4]
-  output [7:0]  io_wgt_bits_7_13, // @[:@6.4]
-  output [7:0]  io_wgt_bits_7_14, // @[:@6.4]
-  output [7:0]  io_wgt_bits_7_15, // @[:@6.4]
-  output [7:0]  io_wgt_bits_8_0, // @[:@6.4]
-  output [7:0]  io_wgt_bits_8_1, // @[:@6.4]
-  output [7:0]  io_wgt_bits_8_2, // @[:@6.4]
-  output [7:0]  io_wgt_bits_8_3, // @[:@6.4]
-  output [7:0]  io_wgt_bits_8_4, // @[:@6.4]
-  output [7:0]  io_wgt_bits_8_5, // @[:@6.4]
-  output [7:0]  io_wgt_bits_8_6, // @[:@6.4]
-  output [7:0]  io_wgt_bits_8_7, // @[:@6.4]
-  output [7:0]  io_wgt_bits_8_8, // @[:@6.4]
-  output [7:0]  io_wgt_bits_8_9, // @[:@6.4]
-  output [7:0]  io_wgt_bits_8_10, // @[:@6.4]
-  output [7:0]  io_wgt_bits_8_11, // @[:@6.4]
-  output [7:0]  io_wgt_bits_8_12, // @[:@6.4]
-  output [7:0]  io_wgt_bits_8_13, // @[:@6.4]
-  output [7:0]  io_wgt_bits_8_14, // @[:@6.4]
-  output [7:0]  io_wgt_bits_8_15, // @[:@6.4]
-  output [7:0]  io_wgt_bits_9_0, // @[:@6.4]
-  output [7:0]  io_wgt_bits_9_1, // @[:@6.4]
-  output [7:0]  io_wgt_bits_9_2, // @[:@6.4]
-  output [7:0]  io_wgt_bits_9_3, // @[:@6.4]
-  output [7:0]  io_wgt_bits_9_4, // @[:@6.4]
-  output [7:0]  io_wgt_bits_9_5, // @[:@6.4]
-  output [7:0]  io_wgt_bits_9_6, // @[:@6.4]
-  output [7:0]  io_wgt_bits_9_7, // @[:@6.4]
-  output [7:0]  io_wgt_bits_9_8, // @[:@6.4]
-  output [7:0]  io_wgt_bits_9_9, // @[:@6.4]
-  output [7:0]  io_wgt_bits_9_10, // @[:@6.4]
-  output [7:0]  io_wgt_bits_9_11, // @[:@6.4]
-  output [7:0]  io_wgt_bits_9_12, // @[:@6.4]
-  output [7:0]  io_wgt_bits_9_13, // @[:@6.4]
-  output [7:0]  io_wgt_bits_9_14, // @[:@6.4]
-  output [7:0]  io_wgt_bits_9_15, // @[:@6.4]
-  output [7:0]  io_wgt_bits_10_0, // @[:@6.4]
-  output [7:0]  io_wgt_bits_10_1, // @[:@6.4]
-  output [7:0]  io_wgt_bits_10_2, // @[:@6.4]
-  output [7:0]  io_wgt_bits_10_3, // @[:@6.4]
-  output [7:0]  io_wgt_bits_10_4, // @[:@6.4]
-  output [7:0]  io_wgt_bits_10_5, // @[:@6.4]
-  output [7:0]  io_wgt_bits_10_6, // @[:@6.4]
-  output [7:0]  io_wgt_bits_10_7, // @[:@6.4]
-  output [7:0]  io_wgt_bits_10_8, // @[:@6.4]
-  output [7:0]  io_wgt_bits_10_9, // @[:@6.4]
-  output [7:0]  io_wgt_bits_10_10, // @[:@6.4]
-  output [7:0]  io_wgt_bits_10_11, // @[:@6.4]
-  output [7:0]  io_wgt_bits_10_12, // @[:@6.4]
-  output [7:0]  io_wgt_bits_10_13, // @[:@6.4]
-  output [7:0]  io_wgt_bits_10_14, // @[:@6.4]
-  output [7:0]  io_wgt_bits_10_15, // @[:@6.4]
-  output [7:0]  io_wgt_bits_11_0, // @[:@6.4]
-  output [7:0]  io_wgt_bits_11_1, // @[:@6.4]
-  output [7:0]  io_wgt_bits_11_2, // @[:@6.4]
-  output [7:0]  io_wgt_bits_11_3, // @[:@6.4]
-  output [7:0]  io_wgt_bits_11_4, // @[:@6.4]
-  output [7:0]  io_wgt_bits_11_5, // @[:@6.4]
-  output [7:0]  io_wgt_bits_11_6, // @[:@6.4]
-  output [7:0]  io_wgt_bits_11_7, // @[:@6.4]
-  output [7:0]  io_wgt_bits_11_8, // @[:@6.4]
-  output [7:0]  io_wgt_bits_11_9, // @[:@6.4]
-  output [7:0]  io_wgt_bits_11_10, // @[:@6.4]
-  output [7:0]  io_wgt_bits_11_11, // @[:@6.4]
-  output [7:0]  io_wgt_bits_11_12, // @[:@6.4]
-  output [7:0]  io_wgt_bits_11_13, // @[:@6.4]
-  output [7:0]  io_wgt_bits_11_14, // @[:@6.4]
-  output [7:0]  io_wgt_bits_11_15, // @[:@6.4]
-  output [7:0]  io_wgt_bits_12_0, // @[:@6.4]
-  output [7:0]  io_wgt_bits_12_1, // @[:@6.4]
-  output [7:0]  io_wgt_bits_12_2, // @[:@6.4]
-  output [7:0]  io_wgt_bits_12_3, // @[:@6.4]
-  output [7:0]  io_wgt_bits_12_4, // @[:@6.4]
-  output [7:0]  io_wgt_bits_12_5, // @[:@6.4]
-  output [7:0]  io_wgt_bits_12_6, // @[:@6.4]
-  output [7:0]  io_wgt_bits_12_7, // @[:@6.4]
-  output [7:0]  io_wgt_bits_12_8, // @[:@6.4]
-  output [7:0]  io_wgt_bits_12_9, // @[:@6.4]
-  output [7:0]  io_wgt_bits_12_10, // @[:@6.4]
-  output [7:0]  io_wgt_bits_12_11, // @[:@6.4]
-  output [7:0]  io_wgt_bits_12_12, // @[:@6.4]
-  output [7:0]  io_wgt_bits_12_13, // @[:@6.4]
-  output [7:0]  io_wgt_bits_12_14, // @[:@6.4]
-  output [7:0]  io_wgt_bits_12_15, // @[:@6.4]
-  output [7:0]  io_wgt_bits_13_0, // @[:@6.4]
-  output [7:0]  io_wgt_bits_13_1, // @[:@6.4]
-  output [7:0]  io_wgt_bits_13_2, // @[:@6.4]
-  output [7:0]  io_wgt_bits_13_3, // @[:@6.4]
-  output [7:0]  io_wgt_bits_13_4, // @[:@6.4]
-  output [7:0]  io_wgt_bits_13_5, // @[:@6.4]
-  output [7:0]  io_wgt_bits_13_6, // @[:@6.4]
-  output [7:0]  io_wgt_bits_13_7, // @[:@6.4]
-  output [7:0]  io_wgt_bits_13_8, // @[:@6.4]
-  output [7:0]  io_wgt_bits_13_9, // @[:@6.4]
-  output [7:0]  io_wgt_bits_13_10, // @[:@6.4]
-  output [7:0]  io_wgt_bits_13_11, // @[:@6.4]
-  output [7:0]  io_wgt_bits_13_12, // @[:@6.4]
-  output [7:0]  io_wgt_bits_13_13, // @[:@6.4]
-  output [7:0]  io_wgt_bits_13_14, // @[:@6.4]
-  output [7:0]  io_wgt_bits_13_15, // @[:@6.4]
-  output [7:0]  io_wgt_bits_14_0, // @[:@6.4]
-  output [7:0]  io_wgt_bits_14_1, // @[:@6.4]
-  output [7:0]  io_wgt_bits_14_2, // @[:@6.4]
-  output [7:0]  io_wgt_bits_14_3, // @[:@6.4]
-  output [7:0]  io_wgt_bits_14_4, // @[:@6.4]
-  output [7:0]  io_wgt_bits_14_5, // @[:@6.4]
-  output [7:0]  io_wgt_bits_14_6, // @[:@6.4]
-  output [7:0]  io_wgt_bits_14_7, // @[:@6.4]
-  output [7:0]  io_wgt_bits_14_8, // @[:@6.4]
-  output [7:0]  io_wgt_bits_14_9, // @[:@6.4]
-  output [7:0]  io_wgt_bits_14_10, // @[:@6.4]
-  output [7:0]  io_wgt_bits_14_11, // @[:@6.4]
-  output [7:0]  io_wgt_bits_14_12, // @[:@6.4]
-  output [7:0]  io_wgt_bits_14_13, // @[:@6.4]
-  output [7:0]  io_wgt_bits_14_14, // @[:@6.4]
-  output [7:0]  io_wgt_bits_14_15, // @[:@6.4]
-  output [7:0]  io_wgt_bits_15_0, // @[:@6.4]
-  output [7:0]  io_wgt_bits_15_1, // @[:@6.4]
-  output [7:0]  io_wgt_bits_15_2, // @[:@6.4]
-  output [7:0]  io_wgt_bits_15_3, // @[:@6.4]
-  output [7:0]  io_wgt_bits_15_4, // @[:@6.4]
-  output [7:0]  io_wgt_bits_15_5, // @[:@6.4]
-  output [7:0]  io_wgt_bits_15_6, // @[:@6.4]
-  output [7:0]  io_wgt_bits_15_7, // @[:@6.4]
-  output [7:0]  io_wgt_bits_15_8, // @[:@6.4]
-  output [7:0]  io_wgt_bits_15_9, // @[:@6.4]
-  output [7:0]  io_wgt_bits_15_10, // @[:@6.4]
-  output [7:0]  io_wgt_bits_15_11, // @[:@6.4]
-  output [7:0]  io_wgt_bits_15_12, // @[:@6.4]
-  output [7:0]  io_wgt_bits_15_13, // @[:@6.4]
-  output [7:0]  io_wgt_bits_15_14, // @[:@6.4]
-  output [7:0]  io_wgt_bits_15_15, // @[:@6.4]
-  output        io_acc_i_valid, // @[:@6.4]
-  output [31:0] io_acc_i_bits_0_0, // @[:@6.4]
-  output [31:0] io_acc_i_bits_0_1, // @[:@6.4]
-  output [31:0] io_acc_i_bits_0_2, // @[:@6.4]
-  output [31:0] io_acc_i_bits_0_3, // @[:@6.4]
-  output [31:0] io_acc_i_bits_0_4, // @[:@6.4]
-  output [31:0] io_acc_i_bits_0_5, // @[:@6.4]
-  output [31:0] io_acc_i_bits_0_6, // @[:@6.4]
-  output [31:0] io_acc_i_bits_0_7, // @[:@6.4]
-  output [31:0] io_acc_i_bits_0_8, // @[:@6.4]
-  output [31:0] io_acc_i_bits_0_9, // @[:@6.4]
-  output [31:0] io_acc_i_bits_0_10, // @[:@6.4]
-  output [31:0] io_acc_i_bits_0_11, // @[:@6.4]
-  output [31:0] io_acc_i_bits_0_12, // @[:@6.4]
-  output [31:0] io_acc_i_bits_0_13, // @[:@6.4]
-  output [31:0] io_acc_i_bits_0_14, // @[:@6.4]
-  output [31:0] io_acc_i_bits_0_15 // @[:@6.4]
+  input        clock, // @[:@4.4]
+  input        reset, // @[:@5.4]
+  output       io_inp_valid, // @[:@6.4]
+  output [7:0] io_inp_bits_0_0, // @[:@6.4]
+  output [7:0] io_inp_bits_0_1, // @[:@6.4]
+  output [7:0] io_inp_bits_0_2, // @[:@6.4]
+  output [7:0] io_inp_bits_0_3, // @[:@6.4]
+  output [7:0] io_inp_bits_0_4, // @[:@6.4]
+  output [7:0] io_inp_bits_0_5, // @[:@6.4]
+  output [7:0] io_inp_bits_0_6, // @[:@6.4]
+  output [7:0] io_inp_bits_0_7, // @[:@6.4]
+  output [7:0] io_inp_bits_0_8, // @[:@6.4]
+  output [7:0] io_inp_bits_0_9, // @[:@6.4]
+  output [7:0] io_inp_bits_0_10, // @[:@6.4]
+  output [7:0] io_inp_bits_0_11, // @[:@6.4]
+  output [7:0] io_inp_bits_0_12, // @[:@6.4]
+  output [7:0] io_inp_bits_0_13, // @[:@6.4]
+  output [7:0] io_inp_bits_0_14, // @[:@6.4]
+  output [7:0] io_inp_bits_0_15, // @[:@6.4]
+  output       io_wgt_valid, // @[:@6.4]
+  output [7:0] io_wgt_bits_0_0, // @[:@6.4]
+  output [7:0] io_wgt_bits_0_1, // @[:@6.4]
+  output [7:0] io_wgt_bits_0_2, // @[:@6.4]
+  output [7:0] io_wgt_bits_0_3, // @[:@6.4]
+  output [7:0] io_wgt_bits_0_4, // @[:@6.4]
+  output [7:0] io_wgt_bits_0_5, // @[:@6.4]
+  output [7:0] io_wgt_bits_0_6, // @[:@6.4]
+  output [7:0] io_wgt_bits_0_7, // @[:@6.4]
+  output [7:0] io_wgt_bits_0_8, // @[:@6.4]
+  output [7:0] io_wgt_bits_0_9, // @[:@6.4]
+  output [7:0] io_wgt_bits_0_10, // @[:@6.4]
+  output [7:0] io_wgt_bits_0_11, // @[:@6.4]
+  output [7:0] io_wgt_bits_0_12, // @[:@6.4]
+  output [7:0] io_wgt_bits_0_13, // @[:@6.4]
+  output [7:0] io_wgt_bits_0_14, // @[:@6.4]
+  output [7:0] io_wgt_bits_0_15, // @[:@6.4]
+  output [7:0] io_wgt_bits_1_0, // @[:@6.4]
+  output [7:0] io_wgt_bits_1_1, // @[:@6.4]
+  output [7:0] io_wgt_bits_1_2, // @[:@6.4]
+  output [7:0] io_wgt_bits_1_3, // @[:@6.4]
+  output [7:0] io_wgt_bits_1_4, // @[:@6.4]
+  output [7:0] io_wgt_bits_1_5, // @[:@6.4]
+  output [7:0] io_wgt_bits_1_6, // @[:@6.4]
+  output [7:0] io_wgt_bits_1_7, // @[:@6.4]
+  output [7:0] io_wgt_bits_1_8, // @[:@6.4]
+  output [7:0] io_wgt_bits_1_9, // @[:@6.4]
+  output [7:0] io_wgt_bits_1_10, // @[:@6.4]
+  output [7:0] io_wgt_bits_1_11, // @[:@6.4]
+  output [7:0] io_wgt_bits_1_12, // @[:@6.4]
+  output [7:0] io_wgt_bits_1_13, // @[:@6.4]
+  output [7:0] io_wgt_bits_1_14, // @[:@6.4]
+  output [7:0] io_wgt_bits_1_15, // @[:@6.4]
+  output [7:0] io_wgt_bits_2_0, // @[:@6.4]
+  output [7:0] io_wgt_bits_2_1, // @[:@6.4]
+  output [7:0] io_wgt_bits_2_2, // @[:@6.4]
+  output [7:0] io_wgt_bits_2_3, // @[:@6.4]
+  output [7:0] io_wgt_bits_2_4, // @[:@6.4]
+  output [7:0] io_wgt_bits_2_5, // @[:@6.4]
+  output [7:0] io_wgt_bits_2_6, // @[:@6.4]
+  output [7:0] io_wgt_bits_2_7, // @[:@6.4]
+  output [7:0] io_wgt_bits_2_8, // @[:@6.4]
+  output [7:0] io_wgt_bits_2_9, // @[:@6.4]
+  output [7:0] io_wgt_bits_2_10, // @[:@6.4]
+  output [7:0] io_wgt_bits_2_11, // @[:@6.4]
+  output [7:0] io_wgt_bits_2_12, // @[:@6.4]
+  output [7:0] io_wgt_bits_2_13, // @[:@6.4]
+  output [7:0] io_wgt_bits_2_14, // @[:@6.4]
+  output [7:0] io_wgt_bits_2_15, // @[:@6.4]
+  output [7:0] io_wgt_bits_3_0, // @[:@6.4]
+  output [7:0] io_wgt_bits_3_1, // @[:@6.4]
+  output [7:0] io_wgt_bits_3_2, // @[:@6.4]
+  output [7:0] io_wgt_bits_3_3, // @[:@6.4]
+  output [7:0] io_wgt_bits_3_4, // @[:@6.4]
+  output [7:0] io_wgt_bits_3_5, // @[:@6.4]
+  output [7:0] io_wgt_bits_3_6, // @[:@6.4]
+  output [7:0] io_wgt_bits_3_7, // @[:@6.4]
+  output [7:0] io_wgt_bits_3_8, // @[:@6.4]
+  output [7:0] io_wgt_bits_3_9, // @[:@6.4]
+  output [7:0] io_wgt_bits_3_10, // @[:@6.4]
+  output [7:0] io_wgt_bits_3_11, // @[:@6.4]
+  output [7:0] io_wgt_bits_3_12, // @[:@6.4]
+  output [7:0] io_wgt_bits_3_13, // @[:@6.4]
+  output [7:0] io_wgt_bits_3_14, // @[:@6.4]
+  output [7:0] io_wgt_bits_3_15, // @[:@6.4]
+  output [7:0] io_wgt_bits_4_0, // @[:@6.4]
+  output [7:0] io_wgt_bits_4_1, // @[:@6.4]
+  output [7:0] io_wgt_bits_4_2, // @[:@6.4]
+  output [7:0] io_wgt_bits_4_3, // @[:@6.4]
+  output [7:0] io_wgt_bits_4_4, // @[:@6.4]
+  output [7:0] io_wgt_bits_4_5, // @[:@6.4]
+  output [7:0] io_wgt_bits_4_6, // @[:@6.4]
+  output [7:0] io_wgt_bits_4_7, // @[:@6.4]
+  output [7:0] io_wgt_bits_4_8, // @[:@6.4]
+  output [7:0] io_wgt_bits_4_9, // @[:@6.4]
+  output [7:0] io_wgt_bits_4_10, // @[:@6.4]
+  output [7:0] io_wgt_bits_4_11, // @[:@6.4]
+  output [7:0] io_wgt_bits_4_12, // @[:@6.4]
+  output [7:0] io_wgt_bits_4_13, // @[:@6.4]
+  output [7:0] io_wgt_bits_4_14, // @[:@6.4]
+  output [7:0] io_wgt_bits_4_15, // @[:@6.4]
+  output [7:0] io_wgt_bits_5_0, // @[:@6.4]
+  output [7:0] io_wgt_bits_5_1, // @[:@6.4]
+  output [7:0] io_wgt_bits_5_2, // @[:@6.4]
+  output [7:0] io_wgt_bits_5_3, // @[:@6.4]
+  output [7:0] io_wgt_bits_5_4, // @[:@6.4]
+  output [7:0] io_wgt_bits_5_5, // @[:@6.4]
+  output [7:0] io_wgt_bits_5_6, // @[:@6.4]
+  output [7:0] io_wgt_bits_5_7, // @[:@6.4]
+  output [7:0] io_wgt_bits_5_8, // @[:@6.4]
+  output [7:0] io_wgt_bits_5_9, // @[:@6.4]
+  output [7:0] io_wgt_bits_5_10, // @[:@6.4]
+  output [7:0] io_wgt_bits_5_11, // @[:@6.4]
+  output [7:0] io_wgt_bits_5_12, // @[:@6.4]
+  output [7:0] io_wgt_bits_5_13, // @[:@6.4]
+  output [7:0] io_wgt_bits_5_14, // @[:@6.4]
+  output [7:0] io_wgt_bits_5_15, // @[:@6.4]
+  output [7:0] io_wgt_bits_6_0, // @[:@6.4]
+  output [7:0] io_wgt_bits_6_1, // @[:@6.4]
+  output [7:0] io_wgt_bits_6_2, // @[:@6.4]
+  output [7:0] io_wgt_bits_6_3, // @[:@6.4]
+  output [7:0] io_wgt_bits_6_4, // @[:@6.4]
+  output [7:0] io_wgt_bits_6_5, // @[:@6.4]
+  output [7:0] io_wgt_bits_6_6, // @[:@6.4]
+  output [7:0] io_wgt_bits_6_7, // @[:@6.4]
+  output [7:0] io_wgt_bits_6_8, // @[:@6.4]
+  output [7:0] io_wgt_bits_6_9, // @[:@6.4]
+  output [7:0] io_wgt_bits_6_10, // @[:@6.4]
+  output [7:0] io_wgt_bits_6_11, // @[:@6.4]
+  output [7:0] io_wgt_bits_6_12, // @[:@6.4]
+  output [7:0] io_wgt_bits_6_13, // @[:@6.4]
+  output [7:0] io_wgt_bits_6_14, // @[:@6.4]
+  output [7:0] io_wgt_bits_6_15, // @[:@6.4]
+  output [7:0] io_wgt_bits_7_0, // @[:@6.4]
+  output [7:0] io_wgt_bits_7_1, // @[:@6.4]
+  output [7:0] io_wgt_bits_7_2, // @[:@6.4]
+  output [7:0] io_wgt_bits_7_3, // @[:@6.4]
+  output [7:0] io_wgt_bits_7_4, // @[:@6.4]
+  output [7:0] io_wgt_bits_7_5, // @[:@6.4]
+  output [7:0] io_wgt_bits_7_6, // @[:@6.4]
+  output [7:0] io_wgt_bits_7_7, // @[:@6.4]
+  output [7:0] io_wgt_bits_7_8, // @[:@6.4]
+  output [7:0] io_wgt_bits_7_9, // @[:@6.4]
+  output [7:0] io_wgt_bits_7_10, // @[:@6.4]
+  output [7:0] io_wgt_bits_7_11, // @[:@6.4]
+  output [7:0] io_wgt_bits_7_12, // @[:@6.4]
+  output [7:0] io_wgt_bits_7_13, // @[:@6.4]
+  output [7:0] io_wgt_bits_7_14, // @[:@6.4]
+  output [7:0] io_wgt_bits_7_15, // @[:@6.4]
+  output [7:0] io_wgt_bits_8_0, // @[:@6.4]
+  output [7:0] io_wgt_bits_8_1, // @[:@6.4]
+  output [7:0] io_wgt_bits_8_2, // @[:@6.4]
+  output [7:0] io_wgt_bits_8_3, // @[:@6.4]
+  output [7:0] io_wgt_bits_8_4, // @[:@6.4]
+  output [7:0] io_wgt_bits_8_5, // @[:@6.4]
+  output [7:0] io_wgt_bits_8_6, // @[:@6.4]
+  output [7:0] io_wgt_bits_8_7, // @[:@6.4]
+  output [7:0] io_wgt_bits_8_8, // @[:@6.4]
+  output [7:0] io_wgt_bits_8_9, // @[:@6.4]
+  output [7:0] io_wgt_bits_8_10, // @[:@6.4]
+  output [7:0] io_wgt_bits_8_11, // @[:@6.4]
+  output [7:0] io_wgt_bits_8_12, // @[:@6.4]
+  output [7:0] io_wgt_bits_8_13, // @[:@6.4]
+  output [7:0] io_wgt_bits_8_14, // @[:@6.4]
+  output [7:0] io_wgt_bits_8_15, // @[:@6.4]
+  output [7:0] io_wgt_bits_9_0, // @[:@6.4]
+  output [7:0] io_wgt_bits_9_1, // @[:@6.4]
+  output [7:0] io_wgt_bits_9_2, // @[:@6.4]
+  output [7:0] io_wgt_bits_9_3, // @[:@6.4]
+  output [7:0] io_wgt_bits_9_4, // @[:@6.4]
+  output [7:0] io_wgt_bits_9_5, // @[:@6.4]
+  output [7:0] io_wgt_bits_9_6, // @[:@6.4]
+  output [7:0] io_wgt_bits_9_7, // @[:@6.4]
+  output [7:0] io_wgt_bits_9_8, // @[:@6.4]
+  output [7:0] io_wgt_bits_9_9, // @[:@6.4]
+  output [7:0] io_wgt_bits_9_10, // @[:@6.4]
+  output [7:0] io_wgt_bits_9_11, // @[:@6.4]
+  output [7:0] io_wgt_bits_9_12, // @[:@6.4]
+  output [7:0] io_wgt_bits_9_13, // @[:@6.4]
+  output [7:0] io_wgt_bits_9_14, // @[:@6.4]
+  output [7:0] io_wgt_bits_9_15, // @[:@6.4]
+  output [7:0] io_wgt_bits_10_0, // @[:@6.4]
+  output [7:0] io_wgt_bits_10_1, // @[:@6.4]
+  output [7:0] io_wgt_bits_10_2, // @[:@6.4]
+  output [7:0] io_wgt_bits_10_3, // @[:@6.4]
+  output [7:0] io_wgt_bits_10_4, // @[:@6.4]
+  output [7:0] io_wgt_bits_10_5, // @[:@6.4]
+  output [7:0] io_wgt_bits_10_6, // @[:@6.4]
+  output [7:0] io_wgt_bits_10_7, // @[:@6.4]
+  output [7:0] io_wgt_bits_10_8, // @[:@6.4]
+  output [7:0] io_wgt_bits_10_9, // @[:@6.4]
+  output [7:0] io_wgt_bits_10_10, // @[:@6.4]
+  output [7:0] io_wgt_bits_10_11, // @[:@6.4]
+  output [7:0] io_wgt_bits_10_12, // @[:@6.4]
+  output [7:0] io_wgt_bits_10_13, // @[:@6.4]
+  output [7:0] io_wgt_bits_10_14, // @[:@6.4]
+  output [7:0] io_wgt_bits_10_15, // @[:@6.4]
+  output [7:0] io_wgt_bits_11_0, // @[:@6.4]
+  output [7:0] io_wgt_bits_11_1, // @[:@6.4]
+  output [7:0] io_wgt_bits_11_2, // @[:@6.4]
+  output [7:0] io_wgt_bits_11_3, // @[:@6.4]
+  output [7:0] io_wgt_bits_11_4, // @[:@6.4]
+  output [7:0] io_wgt_bits_11_5, // @[:@6.4]
+  output [7:0] io_wgt_bits_11_6, // @[:@6.4]
+  output [7:0] io_wgt_bits_11_7, // @[:@6.4]
+  output [7:0] io_wgt_bits_11_8, // @[:@6.4]
+  output [7:0] io_wgt_bits_11_9, // @[:@6.4]
+  output [7:0] io_wgt_bits_11_10, // @[:@6.4]
+  output [7:0] io_wgt_bits_11_11, // @[:@6.4]
+  output [7:0] io_wgt_bits_11_12, // @[:@6.4]
+  output [7:0] io_wgt_bits_11_13, // @[:@6.4]
+  output [7:0] io_wgt_bits_11_14, // @[:@6.4]
+  output [7:0] io_wgt_bits_11_15, // @[:@6.4]
+  output [7:0] io_wgt_bits_12_0, // @[:@6.4]
+  output [7:0] io_wgt_bits_12_1, // @[:@6.4]
+  output [7:0] io_wgt_bits_12_2, // @[:@6.4]
+  output [7:0] io_wgt_bits_12_3, // @[:@6.4]
+  output [7:0] io_wgt_bits_12_4, // @[:@6.4]
+  output [7:0] io_wgt_bits_12_5, // @[:@6.4]
+  output [7:0] io_wgt_bits_12_6, // @[:@6.4]
+  output [7:0] io_wgt_bits_12_7, // @[:@6.4]
+  output [7:0] io_wgt_bits_12_8, // @[:@6.4]
+  output [7:0] io_wgt_bits_12_9, // @[:@6.4]
+  output [7:0] io_wgt_bits_12_10, // @[:@6.4]
+  output [7:0] io_wgt_bits_12_11, // @[:@6.4]
+  output [7:0] io_wgt_bits_12_12, // @[:@6.4]
+  output [7:0] io_wgt_bits_12_13, // @[:@6.4]
+  output [7:0] io_wgt_bits_12_14, // @[:@6.4]
+  output [7:0] io_wgt_bits_12_15, // @[:@6.4]
+  output [7:0] io_wgt_bits_13_0, // @[:@6.4]
+  output [7:0] io_wgt_bits_13_1, // @[:@6.4]
+  output [7:0] io_wgt_bits_13_2, // @[:@6.4]
+  output [7:0] io_wgt_bits_13_3, // @[:@6.4]
+  output [7:0] io_wgt_bits_13_4, // @[:@6.4]
+  output [7:0] io_wgt_bits_13_5, // @[:@6.4]
+  output [7:0] io_wgt_bits_13_6, // @[:@6.4]
+  output [7:0] io_wgt_bits_13_7, // @[:@6.4]
+  output [7:0] io_wgt_bits_13_8, // @[:@6.4]
+  output [7:0] io_wgt_bits_13_9, // @[:@6.4]
+  output [7:0] io_wgt_bits_13_10, // @[:@6.4]
+  output [7:0] io_wgt_bits_13_11, // @[:@6.4]
+  output [7:0] io_wgt_bits_13_12, // @[:@6.4]
+  output [7:0] io_wgt_bits_13_13, // @[:@6.4]
+  output [7:0] io_wgt_bits_13_14, // @[:@6.4]
+  output [7:0] io_wgt_bits_13_15, // @[:@6.4]
+  output [7:0] io_wgt_bits_14_0, // @[:@6.4]
+  output [7:0] io_wgt_bits_14_1, // @[:@6.4]
+  output [7:0] io_wgt_bits_14_2, // @[:@6.4]
+  output [7:0] io_wgt_bits_14_3, // @[:@6.4]
+  output [7:0] io_wgt_bits_14_4, // @[:@6.4]
+  output [7:0] io_wgt_bits_14_5, // @[:@6.4]
+  output [7:0] io_wgt_bits_14_6, // @[:@6.4]
+  output [7:0] io_wgt_bits_14_7, // @[:@6.4]
+  output [7:0] io_wgt_bits_14_8, // @[:@6.4]
+  output [7:0] io_wgt_bits_14_9, // @[:@6.4]
+  output [7:0] io_wgt_bits_14_10, // @[:@6.4]
+  output [7:0] io_wgt_bits_14_11, // @[:@6.4]
+  output [7:0] io_wgt_bits_14_12, // @[:@6.4]
+  output [7:0] io_wgt_bits_14_13, // @[:@6.4]
+  output [7:0] io_wgt_bits_14_14, // @[:@6.4]
+  output [7:0] io_wgt_bits_14_15, // @[:@6.4]
+  output [7:0] io_wgt_bits_15_0, // @[:@6.4]
+  output [7:0] io_wgt_bits_15_1, // @[:@6.4]
+  output [7:0] io_wgt_bits_15_2, // @[:@6.4]
+  output [7:0] io_wgt_bits_15_3, // @[:@6.4]
+  output [7:0] io_wgt_bits_15_4, // @[:@6.4]
+  output [7:0] io_wgt_bits_15_5, // @[:@6.4]
+  output [7:0] io_wgt_bits_15_6, // @[:@6.4]
+  output [7:0] io_wgt_bits_15_7, // @[:@6.4]
+  output [7:0] io_wgt_bits_15_8, // @[:@6.4]
+  output [7:0] io_wgt_bits_15_9, // @[:@6.4]
+  output [7:0] io_wgt_bits_15_10, // @[:@6.4]
+  output [7:0] io_wgt_bits_15_11, // @[:@6.4]
+  output [7:0] io_wgt_bits_15_12, // @[:@6.4]
+  output [7:0] io_wgt_bits_15_13, // @[:@6.4]
+  output [7:0] io_wgt_bits_15_14, // @[:@6.4]
+  output [7:0] io_wgt_bits_15_15, // @[:@6.4]
+  output       io_acc_i_valid // @[:@6.4]
 );
   reg [7:0] value; // @[Counter.scala 26:33:@8.4]
   reg [31:0] _RAND_0;
@@ -570,22 +554,6 @@ module MVCoreGen( // @[:@3.2]
   wire [7:0] _T_4505; // @[Test.scala 53:42:@2015.6]
   wire [7:0] _T_4509; // @[Test.scala 53:42:@2021.6]
   wire [7:0] _T_4513; // @[Test.scala 53:42:@2027.6]
-  wire [31:0] _T_4526; // @[Test.scala 60:42:@2048.6]
-  wire [31:0] _T_4530; // @[Test.scala 60:42:@2054.6]
-  wire [31:0] _T_4534; // @[Test.scala 60:42:@2060.6]
-  wire [31:0] _T_4538; // @[Test.scala 60:42:@2066.6]
-  wire [31:0] _T_4542; // @[Test.scala 60:42:@2072.6]
-  wire [31:0] _T_4546; // @[Test.scala 60:42:@2078.6]
-  wire [31:0] _T_4550; // @[Test.scala 60:42:@2084.6]
-  wire [31:0] _T_4554; // @[Test.scala 60:42:@2090.6]
-  wire [31:0] _T_4558; // @[Test.scala 60:42:@2096.6]
-  wire [31:0] _T_4562; // @[Test.scala 60:42:@2102.6]
-  wire [31:0] _T_4566; // @[Test.scala 60:42:@2108.6]
-  wire [31:0] _T_4570; // @[Test.scala 60:42:@2114.6]
-  wire [31:0] _T_4574; // @[Test.scala 60:42:@2120.6]
-  wire [31:0] _T_4578; // @[Test.scala 60:42:@2126.6]
-  wire [31:0] _T_4582; // @[Test.scala 60:42:@2132.6]
-  wire [31:0] _T_4586; // @[Test.scala 60:42:@2138.6]
   assign _T_3077 = value + 8'h1; // @[Counter.scala 35:22:@11.6]
   assign _T_3078 = value + 8'h1; // @[Counter.scala 35:22:@12.6]
   assign _T_3377 = reset == 1'h0; // @[Test.scala 45:11:@312.6]
@@ -861,39 +829,23 @@ module MVCoreGen( // @[:@3.2]
   assign _T_4505 = $signed(io_wgt_bits_15_13); // @[Test.scala 53:42:@2015.6]
   assign _T_4509 = $signed(io_wgt_bits_15_14); // @[Test.scala 53:42:@2021.6]
   assign _T_4513 = $signed(io_wgt_bits_15_15); // @[Test.scala 53:42:@2027.6]
-  assign _T_4526 = $signed(io_acc_i_bits_0_0); // @[Test.scala 60:42:@2048.6]
-  assign _T_4530 = $signed(io_acc_i_bits_0_1); // @[Test.scala 60:42:@2054.6]
-  assign _T_4534 = $signed(io_acc_i_bits_0_2); // @[Test.scala 60:42:@2060.6]
-  assign _T_4538 = $signed(io_acc_i_bits_0_3); // @[Test.scala 60:42:@2066.6]
-  assign _T_4542 = $signed(io_acc_i_bits_0_4); // @[Test.scala 60:42:@2072.6]
-  assign _T_4546 = $signed(io_acc_i_bits_0_5); // @[Test.scala 60:42:@2078.6]
-  assign _T_4550 = $signed(io_acc_i_bits_0_6); // @[Test.scala 60:42:@2084.6]
-  assign _T_4554 = $signed(io_acc_i_bits_0_7); // @[Test.scala 60:42:@2090.6]
-  assign _T_4558 = $signed(io_acc_i_bits_0_8); // @[Test.scala 60:42:@2096.6]
-  assign _T_4562 = $signed(io_acc_i_bits_0_9); // @[Test.scala 60:42:@2102.6]
-  assign _T_4566 = $signed(io_acc_i_bits_0_10); // @[Test.scala 60:42:@2108.6]
-  assign _T_4570 = $signed(io_acc_i_bits_0_11); // @[Test.scala 60:42:@2114.6]
-  assign _T_4574 = $signed(io_acc_i_bits_0_12); // @[Test.scala 60:42:@2120.6]
-  assign _T_4578 = $signed(io_acc_i_bits_0_13); // @[Test.scala 60:42:@2126.6]
-  assign _T_4582 = $signed(io_acc_i_bits_0_14); // @[Test.scala 60:42:@2132.6]
-  assign _T_4586 = $signed(io_acc_i_bits_0_15); // @[Test.scala 60:42:@2138.6]
   assign io_inp_valid = value == 8'ha; // @[Test.scala 40:16:@305.4]
   assign io_inp_bits_0_0 = 8'h0; // @[Test.scala 33:23:@16.4]
-  assign io_inp_bits_0_1 = 8'h2; // @[Test.scala 33:23:@34.4]
-  assign io_inp_bits_0_2 = 8'h4; // @[Test.scala 33:23:@52.4]
-  assign io_inp_bits_0_3 = 8'h6; // @[Test.scala 33:23:@70.4]
-  assign io_inp_bits_0_4 = 8'h8; // @[Test.scala 33:23:@88.4]
-  assign io_inp_bits_0_5 = 8'ha; // @[Test.scala 33:23:@106.4]
-  assign io_inp_bits_0_6 = 8'hc; // @[Test.scala 33:23:@124.4]
-  assign io_inp_bits_0_7 = 8'he; // @[Test.scala 33:23:@142.4]
-  assign io_inp_bits_0_8 = 8'h10; // @[Test.scala 33:23:@160.4]
-  assign io_inp_bits_0_9 = 8'h12; // @[Test.scala 33:23:@178.4]
-  assign io_inp_bits_0_10 = 8'h14; // @[Test.scala 33:23:@196.4]
-  assign io_inp_bits_0_11 = 8'h16; // @[Test.scala 33:23:@214.4]
-  assign io_inp_bits_0_12 = 8'h18; // @[Test.scala 33:23:@232.4]
-  assign io_inp_bits_0_13 = 8'h1a; // @[Test.scala 33:23:@250.4]
-  assign io_inp_bits_0_14 = 8'h1c; // @[Test.scala 33:23:@268.4]
-  assign io_inp_bits_0_15 = 8'h1e; // @[Test.scala 33:23:@286.4]
+  assign io_inp_bits_0_1 = 8'h1; // @[Test.scala 33:23:@34.4]
+  assign io_inp_bits_0_2 = 8'h2; // @[Test.scala 33:23:@52.4]
+  assign io_inp_bits_0_3 = 8'h3; // @[Test.scala 33:23:@70.4]
+  assign io_inp_bits_0_4 = 8'h4; // @[Test.scala 33:23:@88.4]
+  assign io_inp_bits_0_5 = 8'h5; // @[Test.scala 33:23:@106.4]
+  assign io_inp_bits_0_6 = 8'h6; // @[Test.scala 33:23:@124.4]
+  assign io_inp_bits_0_7 = 8'h7; // @[Test.scala 33:23:@142.4]
+  assign io_inp_bits_0_8 = 8'h8; // @[Test.scala 33:23:@160.4]
+  assign io_inp_bits_0_9 = 8'h9; // @[Test.scala 33:23:@178.4]
+  assign io_inp_bits_0_10 = 8'ha; // @[Test.scala 33:23:@196.4]
+  assign io_inp_bits_0_11 = 8'hb; // @[Test.scala 33:23:@214.4]
+  assign io_inp_bits_0_12 = 8'hc; // @[Test.scala 33:23:@232.4]
+  assign io_inp_bits_0_13 = 8'hd; // @[Test.scala 33:23:@250.4]
+  assign io_inp_bits_0_14 = 8'he; // @[Test.scala 33:23:@268.4]
+  assign io_inp_bits_0_15 = 8'hf; // @[Test.scala 33:23:@286.4]
   assign io_wgt_valid = value == 8'ha; // @[Test.scala 41:16:@307.4]
   assign io_wgt_bits_0_0 = 8'h0; // @[Test.scala 36:25:@18.4]
   assign io_wgt_bits_0_1 = 8'h1; // @[Test.scala 36:25:@19.4]
@@ -1152,22 +1104,6 @@ module MVCoreGen( // @[:@3.2]
   assign io_wgt_bits_15_14 = 8'h1d; // @[Test.scala 36:25:@302.4]
   assign io_wgt_bits_15_15 = 8'h1e; // @[Test.scala 36:25:@303.4]
   assign io_acc_i_valid = value == 8'ha; // @[Test.scala 42:18:@309.4]
-  assign io_acc_i_bits_0_0 = 32'h0; // @[Test.scala 34:25:@17.4]
-  assign io_acc_i_bits_0_1 = 32'h0; // @[Test.scala 34:25:@35.4]
-  assign io_acc_i_bits_0_2 = 32'h0; // @[Test.scala 34:25:@53.4]
-  assign io_acc_i_bits_0_3 = 32'h0; // @[Test.scala 34:25:@71.4]
-  assign io_acc_i_bits_0_4 = 32'h0; // @[Test.scala 34:25:@89.4]
-  assign io_acc_i_bits_0_5 = 32'h0; // @[Test.scala 34:25:@107.4]
-  assign io_acc_i_bits_0_6 = 32'h0; // @[Test.scala 34:25:@125.4]
-  assign io_acc_i_bits_0_7 = 32'h0; // @[Test.scala 34:25:@143.4]
-  assign io_acc_i_bits_0_8 = 32'h0; // @[Test.scala 34:25:@161.4]
-  assign io_acc_i_bits_0_9 = 32'h0; // @[Test.scala 34:25:@179.4]
-  assign io_acc_i_bits_0_10 = 32'h0; // @[Test.scala 34:25:@197.4]
-  assign io_acc_i_bits_0_11 = 32'h0; // @[Test.scala 34:25:@215.4]
-  assign io_acc_i_bits_0_12 = 32'h0; // @[Test.scala 34:25:@233.4]
-  assign io_acc_i_bits_0_13 = 32'h0; // @[Test.scala 34:25:@251.4]
-  assign io_acc_i_bits_0_14 = 32'h0; // @[Test.scala 34:25:@269.4]
-  assign io_acc_i_bits_0_15 = 32'h0; // @[Test.scala 34:25:@287.4]
 `ifdef RANDOMIZE_GARBAGE_ASSIGN
 `define RANDOMIZE
 `endif
@@ -4416,195 +4352,9 @@ module MVCoreGen( // @[:@3.2]
       end
     `endif
     `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_3377) begin
-          $fwrite(32'h80000002,"acc_i: \n"); // @[Test.scala 58:23:@2046.8]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_3377) begin
-          $fwrite(32'h80000002,"%d, ",_T_4526); // @[Test.scala 60:13:@2052.8]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_3377) begin
-          $fwrite(32'h80000002,"%d, ",_T_4530); // @[Test.scala 60:13:@2058.8]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_3377) begin
-          $fwrite(32'h80000002,"%d, ",_T_4534); // @[Test.scala 60:13:@2064.8]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_3377) begin
-          $fwrite(32'h80000002,"%d, ",_T_4538); // @[Test.scala 60:13:@2070.8]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_3377) begin
-          $fwrite(32'h80000002,"%d, ",_T_4542); // @[Test.scala 60:13:@2076.8]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_3377) begin
-          $fwrite(32'h80000002,"%d, ",_T_4546); // @[Test.scala 60:13:@2082.8]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_3377) begin
-          $fwrite(32'h80000002,"%d, ",_T_4550); // @[Test.scala 60:13:@2088.8]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_3377) begin
-          $fwrite(32'h80000002,"%d, ",_T_4554); // @[Test.scala 60:13:@2094.8]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_3377) begin
-          $fwrite(32'h80000002,"%d, ",_T_4558); // @[Test.scala 60:13:@2100.8]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_3377) begin
-          $fwrite(32'h80000002,"%d, ",_T_4562); // @[Test.scala 60:13:@2106.8]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_3377) begin
-          $fwrite(32'h80000002,"%d, ",_T_4566); // @[Test.scala 60:13:@2112.8]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_3377) begin
-          $fwrite(32'h80000002,"%d, ",_T_4570); // @[Test.scala 60:13:@2118.8]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_3377) begin
-          $fwrite(32'h80000002,"%d, ",_T_4574); // @[Test.scala 60:13:@2124.8]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_3377) begin
-          $fwrite(32'h80000002,"%d, ",_T_4578); // @[Test.scala 60:13:@2130.8]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_3377) begin
-          $fwrite(32'h80000002,"%d, ",_T_4582); // @[Test.scala 60:13:@2136.8]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
-    `ifndef SYNTHESIS
-    `ifdef PRINTF_COND
-      if (`PRINTF_COND) begin
-    `endif
-        if (_T_3377) begin
-          $fwrite(32'h80000002,"%d, ",_T_4586); // @[Test.scala 60:13:@2142.8]
-        end
-    `ifdef PRINTF_COND
-      end
-    `endif
-    `endif // SYNTHESIS
   end
 endmodule
+<<<<<<< HEAD
 module MAC( // @[:@2146.2]
   input         clock, // @[:@2147.4]
   input  [7:0]  io_a, // @[:@2149.4]
@@ -4625,6 +4375,24 @@ module MAC( // @[:@2146.2]
   assign mult = $signed(_GEN_0) * $signed(rB); // @[Gemm.scala 22:14:@2159.4]
   assign _GEN_1 = {24{rC}}; // @[Gemm.scala 23:13:@2161.4]
   assign io_y = $signed(_GEN_1) + $signed(mult); // @[Gemm.scala 25:8:@2163.4]
+=======
+module MAC( // @[:@2045.2]
+  input         clock, // @[:@2046.4]
+  input  [7:0]  io_a, // @[:@2048.4]
+  input  [7:0]  io_b, // @[:@2048.4]
+  input  [15:0] io_c, // @[:@2048.4]
+  output [16:0] io_y // @[:@2048.4]
+);
+  reg [7:0] rA; // @[Gemm.scala 19:19:@2052.4]
+  reg [31:0] _RAND_0;
+  reg [7:0] rB; // @[Gemm.scala 20:19:@2054.4]
+  reg [31:0] _RAND_1;
+  reg [15:0] rC; // @[Gemm.scala 21:19:@2056.4]
+  reg [31:0] _RAND_2;
+  wire [15:0] mult; // @[Gemm.scala 22:14:@2058.4]
+  assign mult = $signed(rA) * $signed(rB); // @[Gemm.scala 22:14:@2058.4]
+  assign io_y = $signed(rC) + $signed(mult); // @[Gemm.scala 24:8:@2062.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
 `ifdef RANDOMIZE_GARBAGE_ASSIGN
 `define RANDOMIZE
 `endif
@@ -4669,6 +4437,7 @@ module MAC( // @[:@2146.2]
     rC <= io_c;
   end
 endmodule
+<<<<<<< HEAD
 module PipeAdder( // @[:@2450.2]
   input         clock, // @[:@2451.4]
   input  [16:0] io_a, // @[:@2453.4]
@@ -4682,6 +4451,19 @@ module PipeAdder( // @[:@2450.2]
   wire [16:0] _GEN_0; // @[Gemm.scala 39:13:@2460.4]
   assign _GEN_0 = {{8{rB[8]}},rB}; // @[Gemm.scala 39:13:@2460.4]
   assign io_y = $signed(rA) + $signed(_GEN_0); // @[Gemm.scala 40:8:@2462.4]
+=======
+module Adder( // @[:@2349.2]
+  input         clock, // @[:@2350.4]
+  input  [16:0] io_a, // @[:@2352.4]
+  input  [16:0] io_b, // @[:@2352.4]
+  output [17:0] io_y // @[:@2352.4]
+);
+  reg [16:0] rA; // @[Gemm.scala 36:19:@2355.4]
+  reg [31:0] _RAND_0;
+  reg [16:0] rB; // @[Gemm.scala 37:19:@2357.4]
+  reg [31:0] _RAND_1;
+  assign io_y = $signed(rA) + $signed(rB); // @[Gemm.scala 39:8:@2361.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
 `ifdef RANDOMIZE_GARBAGE_ASSIGN
 `define RANDOMIZE
 `endif
@@ -4721,6 +4503,7 @@ module PipeAdder( // @[:@2450.2]
     rB <= io_b;
   end
 endmodule
+<<<<<<< HEAD
 module PipeAdder_8( // @[:@2562.2]
   input         clock, // @[:@2563.4]
   input  [17:0] io_a, // @[:@2565.4]
@@ -4734,6 +4517,19 @@ module PipeAdder_8( // @[:@2562.2]
   wire [17:0] _GEN_0; // @[Gemm.scala 39:13:@2572.4]
   assign _GEN_0 = {{8{rB[9]}},rB}; // @[Gemm.scala 39:13:@2572.4]
   assign io_y = $signed(rA) + $signed(_GEN_0); // @[Gemm.scala 40:8:@2574.4]
+=======
+module Adder_8( // @[:@2461.2]
+  input         clock, // @[:@2462.4]
+  input  [17:0] io_a, // @[:@2464.4]
+  input  [17:0] io_b, // @[:@2464.4]
+  output [18:0] io_y // @[:@2464.4]
+);
+  reg [17:0] rA; // @[Gemm.scala 36:19:@2467.4]
+  reg [31:0] _RAND_0;
+  reg [17:0] rB; // @[Gemm.scala 37:19:@2469.4]
+  reg [31:0] _RAND_1;
+  assign io_y = $signed(rA) + $signed(rB); // @[Gemm.scala 39:8:@2473.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
 `ifdef RANDOMIZE_GARBAGE_ASSIGN
 `define RANDOMIZE
 `endif
@@ -4773,6 +4569,7 @@ module PipeAdder_8( // @[:@2562.2]
     rB <= io_b;
   end
 endmodule
+<<<<<<< HEAD
 module PipeAdder_12( // @[:@2618.2]
   input         clock, // @[:@2619.4]
   input  [18:0] io_a, // @[:@2621.4]
@@ -4786,6 +4583,19 @@ module PipeAdder_12( // @[:@2618.2]
   wire [18:0] _GEN_0; // @[Gemm.scala 39:13:@2628.4]
   assign _GEN_0 = {{8{rB[10]}},rB}; // @[Gemm.scala 39:13:@2628.4]
   assign io_y = $signed(rA) + $signed(_GEN_0); // @[Gemm.scala 40:8:@2630.4]
+=======
+module Adder_12( // @[:@2517.2]
+  input         clock, // @[:@2518.4]
+  input  [18:0] io_a, // @[:@2520.4]
+  input  [18:0] io_b, // @[:@2520.4]
+  output [19:0] io_y // @[:@2520.4]
+);
+  reg [18:0] rA; // @[Gemm.scala 36:19:@2523.4]
+  reg [31:0] _RAND_0;
+  reg [18:0] rB; // @[Gemm.scala 37:19:@2525.4]
+  reg [31:0] _RAND_1;
+  assign io_y = $signed(rA) + $signed(rB); // @[Gemm.scala 39:8:@2529.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
 `ifdef RANDOMIZE_GARBAGE_ASSIGN
 `define RANDOMIZE
 `endif
@@ -4825,6 +4635,7 @@ module PipeAdder_12( // @[:@2618.2]
     rB <= io_b;
   end
 endmodule
+<<<<<<< HEAD
 module PipeAdder_14( // @[:@2646.2]
   input         clock, // @[:@2647.4]
   input  [19:0] io_a, // @[:@2649.4]
@@ -4838,6 +4649,19 @@ module PipeAdder_14( // @[:@2646.2]
   wire [19:0] _GEN_0; // @[Gemm.scala 39:13:@2656.4]
   assign _GEN_0 = {{8{rB[11]}},rB}; // @[Gemm.scala 39:13:@2656.4]
   assign io_y = $signed(rA) + $signed(_GEN_0); // @[Gemm.scala 40:8:@2658.4]
+=======
+module Adder_14( // @[:@2545.2]
+  input         clock, // @[:@2546.4]
+  input  [19:0] io_a, // @[:@2548.4]
+  input  [19:0] io_b, // @[:@2548.4]
+  output [20:0] io_y // @[:@2548.4]
+);
+  reg [19:0] rA; // @[Gemm.scala 36:19:@2551.4]
+  reg [31:0] _RAND_0;
+  reg [19:0] rB; // @[Gemm.scala 37:19:@2553.4]
+  reg [31:0] _RAND_1;
+  assign io_y = $signed(rA) + $signed(rB); // @[Gemm.scala 39:8:@2557.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
 `ifdef RANDOMIZE_GARBAGE_ASSIGN
 `define RANDOMIZE
 `endif
@@ -4877,6 +4701,7 @@ module PipeAdder_14( // @[:@2646.2]
     rB <= io_b;
   end
 endmodule
+<<<<<<< HEAD
 module DotProduct( // @[:@2660.2]
   input         clock, // @[:@2661.4]
   input  [15:0] io_b_0, // @[:@2663.4]
@@ -5061,207 +4886,431 @@ module DotProduct( // @[:@2660.2]
   wire [10:0] _GEN_21; // @[Gemm.scala 76:22:@2833.4]
   wire [11:0] _GEN_22; // @[Gemm.scala 76:22:@2835.4]
   MAC m_0 ( // @[Gemm.scala 55:32:@2665.4]
+=======
+module DotProduct( // @[:@2559.2]
+  input         clock, // @[:@2560.4]
+  input  [7:0]  io_b_0, // @[:@2562.4]
+  input  [7:0]  io_b_1, // @[:@2562.4]
+  input  [7:0]  io_b_2, // @[:@2562.4]
+  input  [7:0]  io_b_3, // @[:@2562.4]
+  input  [7:0]  io_b_4, // @[:@2562.4]
+  input  [7:0]  io_b_5, // @[:@2562.4]
+  input  [7:0]  io_b_6, // @[:@2562.4]
+  input  [7:0]  io_b_7, // @[:@2562.4]
+  input  [7:0]  io_b_8, // @[:@2562.4]
+  input  [7:0]  io_b_9, // @[:@2562.4]
+  input  [7:0]  io_b_10, // @[:@2562.4]
+  input  [7:0]  io_b_11, // @[:@2562.4]
+  input  [7:0]  io_b_12, // @[:@2562.4]
+  input  [7:0]  io_b_13, // @[:@2562.4]
+  input  [7:0]  io_b_14, // @[:@2562.4]
+  input  [7:0]  io_b_15, // @[:@2562.4]
+  output [20:0] io_y // @[:@2562.4]
+);
+  wire  m_0_clock; // @[Gemm.scala 56:32:@2564.4]
+  wire [7:0] m_0_io_a; // @[Gemm.scala 56:32:@2564.4]
+  wire [7:0] m_0_io_b; // @[Gemm.scala 56:32:@2564.4]
+  wire [15:0] m_0_io_c; // @[Gemm.scala 56:32:@2564.4]
+  wire [16:0] m_0_io_y; // @[Gemm.scala 56:32:@2564.4]
+  wire  m_1_clock; // @[Gemm.scala 56:32:@2567.4]
+  wire [7:0] m_1_io_a; // @[Gemm.scala 56:32:@2567.4]
+  wire [7:0] m_1_io_b; // @[Gemm.scala 56:32:@2567.4]
+  wire [15:0] m_1_io_c; // @[Gemm.scala 56:32:@2567.4]
+  wire [16:0] m_1_io_y; // @[Gemm.scala 56:32:@2567.4]
+  wire  m_2_clock; // @[Gemm.scala 56:32:@2570.4]
+  wire [7:0] m_2_io_a; // @[Gemm.scala 56:32:@2570.4]
+  wire [7:0] m_2_io_b; // @[Gemm.scala 56:32:@2570.4]
+  wire [15:0] m_2_io_c; // @[Gemm.scala 56:32:@2570.4]
+  wire [16:0] m_2_io_y; // @[Gemm.scala 56:32:@2570.4]
+  wire  m_3_clock; // @[Gemm.scala 56:32:@2573.4]
+  wire [7:0] m_3_io_a; // @[Gemm.scala 56:32:@2573.4]
+  wire [7:0] m_3_io_b; // @[Gemm.scala 56:32:@2573.4]
+  wire [15:0] m_3_io_c; // @[Gemm.scala 56:32:@2573.4]
+  wire [16:0] m_3_io_y; // @[Gemm.scala 56:32:@2573.4]
+  wire  m_4_clock; // @[Gemm.scala 56:32:@2576.4]
+  wire [7:0] m_4_io_a; // @[Gemm.scala 56:32:@2576.4]
+  wire [7:0] m_4_io_b; // @[Gemm.scala 56:32:@2576.4]
+  wire [15:0] m_4_io_c; // @[Gemm.scala 56:32:@2576.4]
+  wire [16:0] m_4_io_y; // @[Gemm.scala 56:32:@2576.4]
+  wire  m_5_clock; // @[Gemm.scala 56:32:@2579.4]
+  wire [7:0] m_5_io_a; // @[Gemm.scala 56:32:@2579.4]
+  wire [7:0] m_5_io_b; // @[Gemm.scala 56:32:@2579.4]
+  wire [15:0] m_5_io_c; // @[Gemm.scala 56:32:@2579.4]
+  wire [16:0] m_5_io_y; // @[Gemm.scala 56:32:@2579.4]
+  wire  m_6_clock; // @[Gemm.scala 56:32:@2582.4]
+  wire [7:0] m_6_io_a; // @[Gemm.scala 56:32:@2582.4]
+  wire [7:0] m_6_io_b; // @[Gemm.scala 56:32:@2582.4]
+  wire [15:0] m_6_io_c; // @[Gemm.scala 56:32:@2582.4]
+  wire [16:0] m_6_io_y; // @[Gemm.scala 56:32:@2582.4]
+  wire  m_7_clock; // @[Gemm.scala 56:32:@2585.4]
+  wire [7:0] m_7_io_a; // @[Gemm.scala 56:32:@2585.4]
+  wire [7:0] m_7_io_b; // @[Gemm.scala 56:32:@2585.4]
+  wire [15:0] m_7_io_c; // @[Gemm.scala 56:32:@2585.4]
+  wire [16:0] m_7_io_y; // @[Gemm.scala 56:32:@2585.4]
+  wire  m_8_clock; // @[Gemm.scala 56:32:@2588.4]
+  wire [7:0] m_8_io_a; // @[Gemm.scala 56:32:@2588.4]
+  wire [7:0] m_8_io_b; // @[Gemm.scala 56:32:@2588.4]
+  wire [15:0] m_8_io_c; // @[Gemm.scala 56:32:@2588.4]
+  wire [16:0] m_8_io_y; // @[Gemm.scala 56:32:@2588.4]
+  wire  m_9_clock; // @[Gemm.scala 56:32:@2591.4]
+  wire [7:0] m_9_io_a; // @[Gemm.scala 56:32:@2591.4]
+  wire [7:0] m_9_io_b; // @[Gemm.scala 56:32:@2591.4]
+  wire [15:0] m_9_io_c; // @[Gemm.scala 56:32:@2591.4]
+  wire [16:0] m_9_io_y; // @[Gemm.scala 56:32:@2591.4]
+  wire  m_10_clock; // @[Gemm.scala 56:32:@2594.4]
+  wire [7:0] m_10_io_a; // @[Gemm.scala 56:32:@2594.4]
+  wire [7:0] m_10_io_b; // @[Gemm.scala 56:32:@2594.4]
+  wire [15:0] m_10_io_c; // @[Gemm.scala 56:32:@2594.4]
+  wire [16:0] m_10_io_y; // @[Gemm.scala 56:32:@2594.4]
+  wire  m_11_clock; // @[Gemm.scala 56:32:@2597.4]
+  wire [7:0] m_11_io_a; // @[Gemm.scala 56:32:@2597.4]
+  wire [7:0] m_11_io_b; // @[Gemm.scala 56:32:@2597.4]
+  wire [15:0] m_11_io_c; // @[Gemm.scala 56:32:@2597.4]
+  wire [16:0] m_11_io_y; // @[Gemm.scala 56:32:@2597.4]
+  wire  m_12_clock; // @[Gemm.scala 56:32:@2600.4]
+  wire [7:0] m_12_io_a; // @[Gemm.scala 56:32:@2600.4]
+  wire [7:0] m_12_io_b; // @[Gemm.scala 56:32:@2600.4]
+  wire [15:0] m_12_io_c; // @[Gemm.scala 56:32:@2600.4]
+  wire [16:0] m_12_io_y; // @[Gemm.scala 56:32:@2600.4]
+  wire  m_13_clock; // @[Gemm.scala 56:32:@2603.4]
+  wire [7:0] m_13_io_a; // @[Gemm.scala 56:32:@2603.4]
+  wire [7:0] m_13_io_b; // @[Gemm.scala 56:32:@2603.4]
+  wire [15:0] m_13_io_c; // @[Gemm.scala 56:32:@2603.4]
+  wire [16:0] m_13_io_y; // @[Gemm.scala 56:32:@2603.4]
+  wire  m_14_clock; // @[Gemm.scala 56:32:@2606.4]
+  wire [7:0] m_14_io_a; // @[Gemm.scala 56:32:@2606.4]
+  wire [7:0] m_14_io_b; // @[Gemm.scala 56:32:@2606.4]
+  wire [15:0] m_14_io_c; // @[Gemm.scala 56:32:@2606.4]
+  wire [16:0] m_14_io_y; // @[Gemm.scala 56:32:@2606.4]
+  wire  m_15_clock; // @[Gemm.scala 56:32:@2609.4]
+  wire [7:0] m_15_io_a; // @[Gemm.scala 56:32:@2609.4]
+  wire [7:0] m_15_io_b; // @[Gemm.scala 56:32:@2609.4]
+  wire [15:0] m_15_io_c; // @[Gemm.scala 56:32:@2609.4]
+  wire [16:0] m_15_io_y; // @[Gemm.scala 56:32:@2609.4]
+  wire  a_0_0_clock; // @[Gemm.scala 58:30:@2612.4]
+  wire [16:0] a_0_0_io_a; // @[Gemm.scala 58:30:@2612.4]
+  wire [16:0] a_0_0_io_b; // @[Gemm.scala 58:30:@2612.4]
+  wire [17:0] a_0_0_io_y; // @[Gemm.scala 58:30:@2612.4]
+  wire  a_0_1_clock; // @[Gemm.scala 58:30:@2615.4]
+  wire [16:0] a_0_1_io_a; // @[Gemm.scala 58:30:@2615.4]
+  wire [16:0] a_0_1_io_b; // @[Gemm.scala 58:30:@2615.4]
+  wire [17:0] a_0_1_io_y; // @[Gemm.scala 58:30:@2615.4]
+  wire  a_0_2_clock; // @[Gemm.scala 58:30:@2618.4]
+  wire [16:0] a_0_2_io_a; // @[Gemm.scala 58:30:@2618.4]
+  wire [16:0] a_0_2_io_b; // @[Gemm.scala 58:30:@2618.4]
+  wire [17:0] a_0_2_io_y; // @[Gemm.scala 58:30:@2618.4]
+  wire  a_0_3_clock; // @[Gemm.scala 58:30:@2621.4]
+  wire [16:0] a_0_3_io_a; // @[Gemm.scala 58:30:@2621.4]
+  wire [16:0] a_0_3_io_b; // @[Gemm.scala 58:30:@2621.4]
+  wire [17:0] a_0_3_io_y; // @[Gemm.scala 58:30:@2621.4]
+  wire  a_0_4_clock; // @[Gemm.scala 58:30:@2624.4]
+  wire [16:0] a_0_4_io_a; // @[Gemm.scala 58:30:@2624.4]
+  wire [16:0] a_0_4_io_b; // @[Gemm.scala 58:30:@2624.4]
+  wire [17:0] a_0_4_io_y; // @[Gemm.scala 58:30:@2624.4]
+  wire  a_0_5_clock; // @[Gemm.scala 58:30:@2627.4]
+  wire [16:0] a_0_5_io_a; // @[Gemm.scala 58:30:@2627.4]
+  wire [16:0] a_0_5_io_b; // @[Gemm.scala 58:30:@2627.4]
+  wire [17:0] a_0_5_io_y; // @[Gemm.scala 58:30:@2627.4]
+  wire  a_0_6_clock; // @[Gemm.scala 58:30:@2630.4]
+  wire [16:0] a_0_6_io_a; // @[Gemm.scala 58:30:@2630.4]
+  wire [16:0] a_0_6_io_b; // @[Gemm.scala 58:30:@2630.4]
+  wire [17:0] a_0_6_io_y; // @[Gemm.scala 58:30:@2630.4]
+  wire  a_0_7_clock; // @[Gemm.scala 58:30:@2633.4]
+  wire [16:0] a_0_7_io_a; // @[Gemm.scala 58:30:@2633.4]
+  wire [16:0] a_0_7_io_b; // @[Gemm.scala 58:30:@2633.4]
+  wire [17:0] a_0_7_io_y; // @[Gemm.scala 58:30:@2633.4]
+  wire  a_1_0_clock; // @[Gemm.scala 58:30:@2636.4]
+  wire [17:0] a_1_0_io_a; // @[Gemm.scala 58:30:@2636.4]
+  wire [17:0] a_1_0_io_b; // @[Gemm.scala 58:30:@2636.4]
+  wire [18:0] a_1_0_io_y; // @[Gemm.scala 58:30:@2636.4]
+  wire  a_1_1_clock; // @[Gemm.scala 58:30:@2639.4]
+  wire [17:0] a_1_1_io_a; // @[Gemm.scala 58:30:@2639.4]
+  wire [17:0] a_1_1_io_b; // @[Gemm.scala 58:30:@2639.4]
+  wire [18:0] a_1_1_io_y; // @[Gemm.scala 58:30:@2639.4]
+  wire  a_1_2_clock; // @[Gemm.scala 58:30:@2642.4]
+  wire [17:0] a_1_2_io_a; // @[Gemm.scala 58:30:@2642.4]
+  wire [17:0] a_1_2_io_b; // @[Gemm.scala 58:30:@2642.4]
+  wire [18:0] a_1_2_io_y; // @[Gemm.scala 58:30:@2642.4]
+  wire  a_1_3_clock; // @[Gemm.scala 58:30:@2645.4]
+  wire [17:0] a_1_3_io_a; // @[Gemm.scala 58:30:@2645.4]
+  wire [17:0] a_1_3_io_b; // @[Gemm.scala 58:30:@2645.4]
+  wire [18:0] a_1_3_io_y; // @[Gemm.scala 58:30:@2645.4]
+  wire  a_2_0_clock; // @[Gemm.scala 58:30:@2648.4]
+  wire [18:0] a_2_0_io_a; // @[Gemm.scala 58:30:@2648.4]
+  wire [18:0] a_2_0_io_b; // @[Gemm.scala 58:30:@2648.4]
+  wire [19:0] a_2_0_io_y; // @[Gemm.scala 58:30:@2648.4]
+  wire  a_2_1_clock; // @[Gemm.scala 58:30:@2651.4]
+  wire [18:0] a_2_1_io_a; // @[Gemm.scala 58:30:@2651.4]
+  wire [18:0] a_2_1_io_b; // @[Gemm.scala 58:30:@2651.4]
+  wire [19:0] a_2_1_io_y; // @[Gemm.scala 58:30:@2651.4]
+  wire  a_3_0_clock; // @[Gemm.scala 58:30:@2654.4]
+  wire [19:0] a_3_0_io_a; // @[Gemm.scala 58:30:@2654.4]
+  wire [19:0] a_3_0_io_b; // @[Gemm.scala 58:30:@2654.4]
+  wire [20:0] a_3_0_io_y; // @[Gemm.scala 58:30:@2654.4]
+  MAC m_0 ( // @[Gemm.scala 56:32:@2564.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(m_0_clock),
     .io_a(m_0_io_a),
     .io_b(m_0_io_b),
     .io_c(m_0_io_c),
     .io_y(m_0_io_y)
   );
-  MAC m_1 ( // @[Gemm.scala 55:32:@2668.4]
+  MAC m_1 ( // @[Gemm.scala 56:32:@2567.4]
     .clock(m_1_clock),
     .io_a(m_1_io_a),
     .io_b(m_1_io_b),
     .io_c(m_1_io_c),
     .io_y(m_1_io_y)
   );
-  MAC m_2 ( // @[Gemm.scala 55:32:@2671.4]
+  MAC m_2 ( // @[Gemm.scala 56:32:@2570.4]
     .clock(m_2_clock),
     .io_a(m_2_io_a),
     .io_b(m_2_io_b),
     .io_c(m_2_io_c),
     .io_y(m_2_io_y)
   );
-  MAC m_3 ( // @[Gemm.scala 55:32:@2674.4]
+  MAC m_3 ( // @[Gemm.scala 56:32:@2573.4]
     .clock(m_3_clock),
     .io_a(m_3_io_a),
     .io_b(m_3_io_b),
     .io_c(m_3_io_c),
     .io_y(m_3_io_y)
   );
-  MAC m_4 ( // @[Gemm.scala 55:32:@2677.4]
+  MAC m_4 ( // @[Gemm.scala 56:32:@2576.4]
     .clock(m_4_clock),
     .io_a(m_4_io_a),
     .io_b(m_4_io_b),
     .io_c(m_4_io_c),
     .io_y(m_4_io_y)
   );
-  MAC m_5 ( // @[Gemm.scala 55:32:@2680.4]
+  MAC m_5 ( // @[Gemm.scala 56:32:@2579.4]
     .clock(m_5_clock),
     .io_a(m_5_io_a),
     .io_b(m_5_io_b),
     .io_c(m_5_io_c),
     .io_y(m_5_io_y)
   );
-  MAC m_6 ( // @[Gemm.scala 55:32:@2683.4]
+  MAC m_6 ( // @[Gemm.scala 56:32:@2582.4]
     .clock(m_6_clock),
     .io_a(m_6_io_a),
     .io_b(m_6_io_b),
     .io_c(m_6_io_c),
     .io_y(m_6_io_y)
   );
-  MAC m_7 ( // @[Gemm.scala 55:32:@2686.4]
+  MAC m_7 ( // @[Gemm.scala 56:32:@2585.4]
     .clock(m_7_clock),
     .io_a(m_7_io_a),
     .io_b(m_7_io_b),
     .io_c(m_7_io_c),
     .io_y(m_7_io_y)
   );
-  MAC m_8 ( // @[Gemm.scala 55:32:@2689.4]
+  MAC m_8 ( // @[Gemm.scala 56:32:@2588.4]
     .clock(m_8_clock),
     .io_a(m_8_io_a),
     .io_b(m_8_io_b),
     .io_c(m_8_io_c),
     .io_y(m_8_io_y)
   );
-  MAC m_9 ( // @[Gemm.scala 55:32:@2692.4]
+  MAC m_9 ( // @[Gemm.scala 56:32:@2591.4]
     .clock(m_9_clock),
     .io_a(m_9_io_a),
     .io_b(m_9_io_b),
     .io_c(m_9_io_c),
     .io_y(m_9_io_y)
   );
-  MAC m_10 ( // @[Gemm.scala 55:32:@2695.4]
+  MAC m_10 ( // @[Gemm.scala 56:32:@2594.4]
     .clock(m_10_clock),
     .io_a(m_10_io_a),
     .io_b(m_10_io_b),
     .io_c(m_10_io_c),
     .io_y(m_10_io_y)
   );
-  MAC m_11 ( // @[Gemm.scala 55:32:@2698.4]
+  MAC m_11 ( // @[Gemm.scala 56:32:@2597.4]
     .clock(m_11_clock),
     .io_a(m_11_io_a),
     .io_b(m_11_io_b),
     .io_c(m_11_io_c),
     .io_y(m_11_io_y)
   );
-  MAC m_12 ( // @[Gemm.scala 55:32:@2701.4]
+  MAC m_12 ( // @[Gemm.scala 56:32:@2600.4]
     .clock(m_12_clock),
     .io_a(m_12_io_a),
     .io_b(m_12_io_b),
     .io_c(m_12_io_c),
     .io_y(m_12_io_y)
   );
-  MAC m_13 ( // @[Gemm.scala 55:32:@2704.4]
+  MAC m_13 ( // @[Gemm.scala 56:32:@2603.4]
     .clock(m_13_clock),
     .io_a(m_13_io_a),
     .io_b(m_13_io_b),
     .io_c(m_13_io_c),
     .io_y(m_13_io_y)
   );
-  MAC m_14 ( // @[Gemm.scala 55:32:@2707.4]
+  MAC m_14 ( // @[Gemm.scala 56:32:@2606.4]
     .clock(m_14_clock),
     .io_a(m_14_io_a),
     .io_b(m_14_io_b),
     .io_c(m_14_io_c),
     .io_y(m_14_io_y)
   );
-  MAC m_15 ( // @[Gemm.scala 55:32:@2710.4]
+  MAC m_15 ( // @[Gemm.scala 56:32:@2609.4]
     .clock(m_15_clock),
     .io_a(m_15_io_a),
     .io_b(m_15_io_b),
     .io_c(m_15_io_c),
     .io_y(m_15_io_y)
   );
+<<<<<<< HEAD
   PipeAdder a_0_0 ( // @[Gemm.scala 57:30:@2713.4]
+=======
+  Adder a_0_0 ( // @[Gemm.scala 58:30:@2612.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(a_0_0_clock),
     .io_a(a_0_0_io_a),
     .io_b(a_0_0_io_b),
     .io_y(a_0_0_io_y)
   );
+<<<<<<< HEAD
   PipeAdder a_0_1 ( // @[Gemm.scala 57:30:@2716.4]
+=======
+  Adder a_0_1 ( // @[Gemm.scala 58:30:@2615.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(a_0_1_clock),
     .io_a(a_0_1_io_a),
     .io_b(a_0_1_io_b),
     .io_y(a_0_1_io_y)
   );
+<<<<<<< HEAD
   PipeAdder a_0_2 ( // @[Gemm.scala 57:30:@2719.4]
+=======
+  Adder a_0_2 ( // @[Gemm.scala 58:30:@2618.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(a_0_2_clock),
     .io_a(a_0_2_io_a),
     .io_b(a_0_2_io_b),
     .io_y(a_0_2_io_y)
   );
+<<<<<<< HEAD
   PipeAdder a_0_3 ( // @[Gemm.scala 57:30:@2722.4]
+=======
+  Adder a_0_3 ( // @[Gemm.scala 58:30:@2621.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(a_0_3_clock),
     .io_a(a_0_3_io_a),
     .io_b(a_0_3_io_b),
     .io_y(a_0_3_io_y)
   );
+<<<<<<< HEAD
   PipeAdder a_0_4 ( // @[Gemm.scala 57:30:@2725.4]
+=======
+  Adder a_0_4 ( // @[Gemm.scala 58:30:@2624.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(a_0_4_clock),
     .io_a(a_0_4_io_a),
     .io_b(a_0_4_io_b),
     .io_y(a_0_4_io_y)
   );
+<<<<<<< HEAD
   PipeAdder a_0_5 ( // @[Gemm.scala 57:30:@2728.4]
+=======
+  Adder a_0_5 ( // @[Gemm.scala 58:30:@2627.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(a_0_5_clock),
     .io_a(a_0_5_io_a),
     .io_b(a_0_5_io_b),
     .io_y(a_0_5_io_y)
   );
+<<<<<<< HEAD
   PipeAdder a_0_6 ( // @[Gemm.scala 57:30:@2731.4]
+=======
+  Adder a_0_6 ( // @[Gemm.scala 58:30:@2630.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(a_0_6_clock),
     .io_a(a_0_6_io_a),
     .io_b(a_0_6_io_b),
     .io_y(a_0_6_io_y)
   );
+<<<<<<< HEAD
   PipeAdder a_0_7 ( // @[Gemm.scala 57:30:@2734.4]
+=======
+  Adder a_0_7 ( // @[Gemm.scala 58:30:@2633.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(a_0_7_clock),
     .io_a(a_0_7_io_a),
     .io_b(a_0_7_io_b),
     .io_y(a_0_7_io_y)
   );
+<<<<<<< HEAD
   PipeAdder_8 a_1_0 ( // @[Gemm.scala 57:30:@2737.4]
+=======
+  Adder_8 a_1_0 ( // @[Gemm.scala 58:30:@2636.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(a_1_0_clock),
     .io_a(a_1_0_io_a),
     .io_b(a_1_0_io_b),
     .io_y(a_1_0_io_y)
   );
+<<<<<<< HEAD
   PipeAdder_8 a_1_1 ( // @[Gemm.scala 57:30:@2740.4]
+=======
+  Adder_8 a_1_1 ( // @[Gemm.scala 58:30:@2639.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(a_1_1_clock),
     .io_a(a_1_1_io_a),
     .io_b(a_1_1_io_b),
     .io_y(a_1_1_io_y)
   );
+<<<<<<< HEAD
   PipeAdder_8 a_1_2 ( // @[Gemm.scala 57:30:@2743.4]
+=======
+  Adder_8 a_1_2 ( // @[Gemm.scala 58:30:@2642.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(a_1_2_clock),
     .io_a(a_1_2_io_a),
     .io_b(a_1_2_io_b),
     .io_y(a_1_2_io_y)
   );
+<<<<<<< HEAD
   PipeAdder_8 a_1_3 ( // @[Gemm.scala 57:30:@2746.4]
+=======
+  Adder_8 a_1_3 ( // @[Gemm.scala 58:30:@2645.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(a_1_3_clock),
     .io_a(a_1_3_io_a),
     .io_b(a_1_3_io_b),
     .io_y(a_1_3_io_y)
   );
+<<<<<<< HEAD
   PipeAdder_12 a_2_0 ( // @[Gemm.scala 57:30:@2749.4]
+=======
+  Adder_12 a_2_0 ( // @[Gemm.scala 58:30:@2648.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(a_2_0_clock),
     .io_a(a_2_0_io_a),
     .io_b(a_2_0_io_b),
     .io_y(a_2_0_io_y)
   );
+<<<<<<< HEAD
   PipeAdder_12 a_2_1 ( // @[Gemm.scala 57:30:@2752.4]
+=======
+  Adder_12 a_2_1 ( // @[Gemm.scala 58:30:@2651.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(a_2_1_clock),
     .io_a(a_2_1_io_a),
     .io_b(a_2_1_io_b),
     .io_y(a_2_1_io_y)
   );
+<<<<<<< HEAD
   PipeAdder_14 a_3_0 ( // @[Gemm.scala 57:30:@2755.4]
+=======
+  Adder_14 a_3_0 ( // @[Gemm.scala 58:30:@2654.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(a_3_0_clock),
     .io_a(a_3_0_io_a),
     .io_b(a_3_0_io_b),
     .io_y(a_3_0_io_y)
   );
+<<<<<<< HEAD
   assign io_y = {{8{a_3_0_io_y[20]}},a_3_0_io_y}; // @[Gemm.scala 82:8:@2836.4]
   assign m_0_clock = clock; // @[:@2666.4]
   assign m_0_io_a = 8'sh0; // @[Gemm.scala 62:15:@2758.4]
@@ -5395,24 +5444,136 @@ module DotProduct( // @[:@2660.2]
   assign a_3_0_io_a = a_2_0_io_y; // @[Gemm.scala 75:22:@2834.4]
   assign _GEN_22 = a_2_1_io_y[11:0]; // @[Gemm.scala 76:22:@2835.4]
   assign a_3_0_io_b = $signed(_GEN_22); // @[Gemm.scala 76:22:@2835.4]
+=======
+  assign io_y = a_3_0_io_y; // @[Gemm.scala 83:8:@2735.4]
+  assign m_0_clock = clock; // @[:@2565.4]
+  assign m_0_io_a = 8'sh0; // @[Gemm.scala 63:15:@2657.4]
+  assign m_0_io_b = io_b_0; // @[Gemm.scala 64:15:@2658.4]
+  assign m_0_io_c = 16'sh0; // @[Gemm.scala 65:15:@2659.4]
+  assign m_1_clock = clock; // @[:@2568.4]
+  assign m_1_io_a = 8'sh1; // @[Gemm.scala 63:15:@2660.4]
+  assign m_1_io_b = io_b_1; // @[Gemm.scala 64:15:@2661.4]
+  assign m_1_io_c = 16'sh0; // @[Gemm.scala 65:15:@2662.4]
+  assign m_2_clock = clock; // @[:@2571.4]
+  assign m_2_io_a = 8'sh2; // @[Gemm.scala 63:15:@2663.4]
+  assign m_2_io_b = io_b_2; // @[Gemm.scala 64:15:@2664.4]
+  assign m_2_io_c = 16'sh0; // @[Gemm.scala 65:15:@2665.4]
+  assign m_3_clock = clock; // @[:@2574.4]
+  assign m_3_io_a = 8'sh3; // @[Gemm.scala 63:15:@2666.4]
+  assign m_3_io_b = io_b_3; // @[Gemm.scala 64:15:@2667.4]
+  assign m_3_io_c = 16'sh0; // @[Gemm.scala 65:15:@2668.4]
+  assign m_4_clock = clock; // @[:@2577.4]
+  assign m_4_io_a = 8'sh4; // @[Gemm.scala 63:15:@2669.4]
+  assign m_4_io_b = io_b_4; // @[Gemm.scala 64:15:@2670.4]
+  assign m_4_io_c = 16'sh0; // @[Gemm.scala 65:15:@2671.4]
+  assign m_5_clock = clock; // @[:@2580.4]
+  assign m_5_io_a = 8'sh5; // @[Gemm.scala 63:15:@2672.4]
+  assign m_5_io_b = io_b_5; // @[Gemm.scala 64:15:@2673.4]
+  assign m_5_io_c = 16'sh0; // @[Gemm.scala 65:15:@2674.4]
+  assign m_6_clock = clock; // @[:@2583.4]
+  assign m_6_io_a = 8'sh6; // @[Gemm.scala 63:15:@2675.4]
+  assign m_6_io_b = io_b_6; // @[Gemm.scala 64:15:@2676.4]
+  assign m_6_io_c = 16'sh0; // @[Gemm.scala 65:15:@2677.4]
+  assign m_7_clock = clock; // @[:@2586.4]
+  assign m_7_io_a = 8'sh7; // @[Gemm.scala 63:15:@2678.4]
+  assign m_7_io_b = io_b_7; // @[Gemm.scala 64:15:@2679.4]
+  assign m_7_io_c = 16'sh0; // @[Gemm.scala 65:15:@2680.4]
+  assign m_8_clock = clock; // @[:@2589.4]
+  assign m_8_io_a = 8'sh8; // @[Gemm.scala 63:15:@2681.4]
+  assign m_8_io_b = io_b_8; // @[Gemm.scala 64:15:@2682.4]
+  assign m_8_io_c = 16'sh0; // @[Gemm.scala 65:15:@2683.4]
+  assign m_9_clock = clock; // @[:@2592.4]
+  assign m_9_io_a = 8'sh9; // @[Gemm.scala 63:15:@2684.4]
+  assign m_9_io_b = io_b_9; // @[Gemm.scala 64:15:@2685.4]
+  assign m_9_io_c = 16'sh0; // @[Gemm.scala 65:15:@2686.4]
+  assign m_10_clock = clock; // @[:@2595.4]
+  assign m_10_io_a = 8'sha; // @[Gemm.scala 63:15:@2687.4]
+  assign m_10_io_b = io_b_10; // @[Gemm.scala 64:15:@2688.4]
+  assign m_10_io_c = 16'sh0; // @[Gemm.scala 65:15:@2689.4]
+  assign m_11_clock = clock; // @[:@2598.4]
+  assign m_11_io_a = 8'shb; // @[Gemm.scala 63:15:@2690.4]
+  assign m_11_io_b = io_b_11; // @[Gemm.scala 64:15:@2691.4]
+  assign m_11_io_c = 16'sh0; // @[Gemm.scala 65:15:@2692.4]
+  assign m_12_clock = clock; // @[:@2601.4]
+  assign m_12_io_a = 8'shc; // @[Gemm.scala 63:15:@2693.4]
+  assign m_12_io_b = io_b_12; // @[Gemm.scala 64:15:@2694.4]
+  assign m_12_io_c = 16'sh0; // @[Gemm.scala 65:15:@2695.4]
+  assign m_13_clock = clock; // @[:@2604.4]
+  assign m_13_io_a = 8'shd; // @[Gemm.scala 63:15:@2696.4]
+  assign m_13_io_b = io_b_13; // @[Gemm.scala 64:15:@2697.4]
+  assign m_13_io_c = 16'sh0; // @[Gemm.scala 65:15:@2698.4]
+  assign m_14_clock = clock; // @[:@2607.4]
+  assign m_14_io_a = 8'she; // @[Gemm.scala 63:15:@2699.4]
+  assign m_14_io_b = io_b_14; // @[Gemm.scala 64:15:@2700.4]
+  assign m_14_io_c = 16'sh0; // @[Gemm.scala 65:15:@2701.4]
+  assign m_15_clock = clock; // @[:@2610.4]
+  assign m_15_io_a = 8'shf; // @[Gemm.scala 63:15:@2702.4]
+  assign m_15_io_b = io_b_15; // @[Gemm.scala 64:15:@2703.4]
+  assign m_15_io_c = 16'sh0; // @[Gemm.scala 65:15:@2704.4]
+  assign a_0_0_clock = clock; // @[:@2613.4]
+  assign a_0_0_io_a = m_0_io_y; // @[Gemm.scala 73:22:@2705.4]
+  assign a_0_0_io_b = m_1_io_y; // @[Gemm.scala 74:22:@2706.4]
+  assign a_0_1_clock = clock; // @[:@2616.4]
+  assign a_0_1_io_a = m_2_io_y; // @[Gemm.scala 73:22:@2707.4]
+  assign a_0_1_io_b = m_3_io_y; // @[Gemm.scala 74:22:@2708.4]
+  assign a_0_2_clock = clock; // @[:@2619.4]
+  assign a_0_2_io_a = m_4_io_y; // @[Gemm.scala 73:22:@2709.4]
+  assign a_0_2_io_b = m_5_io_y; // @[Gemm.scala 74:22:@2710.4]
+  assign a_0_3_clock = clock; // @[:@2622.4]
+  assign a_0_3_io_a = m_6_io_y; // @[Gemm.scala 73:22:@2711.4]
+  assign a_0_3_io_b = m_7_io_y; // @[Gemm.scala 74:22:@2712.4]
+  assign a_0_4_clock = clock; // @[:@2625.4]
+  assign a_0_4_io_a = m_8_io_y; // @[Gemm.scala 73:22:@2713.4]
+  assign a_0_4_io_b = m_9_io_y; // @[Gemm.scala 74:22:@2714.4]
+  assign a_0_5_clock = clock; // @[:@2628.4]
+  assign a_0_5_io_a = m_10_io_y; // @[Gemm.scala 73:22:@2715.4]
+  assign a_0_5_io_b = m_11_io_y; // @[Gemm.scala 74:22:@2716.4]
+  assign a_0_6_clock = clock; // @[:@2631.4]
+  assign a_0_6_io_a = m_12_io_y; // @[Gemm.scala 73:22:@2717.4]
+  assign a_0_6_io_b = m_13_io_y; // @[Gemm.scala 74:22:@2718.4]
+  assign a_0_7_clock = clock; // @[:@2634.4]
+  assign a_0_7_io_a = m_14_io_y; // @[Gemm.scala 73:22:@2719.4]
+  assign a_0_7_io_b = m_15_io_y; // @[Gemm.scala 74:22:@2720.4]
+  assign a_1_0_clock = clock; // @[:@2637.4]
+  assign a_1_0_io_a = a_0_0_io_y; // @[Gemm.scala 76:22:@2721.4]
+  assign a_1_0_io_b = a_0_1_io_y; // @[Gemm.scala 77:22:@2722.4]
+  assign a_1_1_clock = clock; // @[:@2640.4]
+  assign a_1_1_io_a = a_0_2_io_y; // @[Gemm.scala 76:22:@2723.4]
+  assign a_1_1_io_b = a_0_3_io_y; // @[Gemm.scala 77:22:@2724.4]
+  assign a_1_2_clock = clock; // @[:@2643.4]
+  assign a_1_2_io_a = a_0_4_io_y; // @[Gemm.scala 76:22:@2725.4]
+  assign a_1_2_io_b = a_0_5_io_y; // @[Gemm.scala 77:22:@2726.4]
+  assign a_1_3_clock = clock; // @[:@2646.4]
+  assign a_1_3_io_a = a_0_6_io_y; // @[Gemm.scala 76:22:@2727.4]
+  assign a_1_3_io_b = a_0_7_io_y; // @[Gemm.scala 77:22:@2728.4]
+  assign a_2_0_clock = clock; // @[:@2649.4]
+  assign a_2_0_io_a = a_1_0_io_y; // @[Gemm.scala 76:22:@2729.4]
+  assign a_2_0_io_b = a_1_1_io_y; // @[Gemm.scala 77:22:@2730.4]
+  assign a_2_1_clock = clock; // @[:@2652.4]
+  assign a_2_1_io_a = a_1_2_io_y; // @[Gemm.scala 76:22:@2731.4]
+  assign a_2_1_io_b = a_1_3_io_y; // @[Gemm.scala 77:22:@2732.4]
+  assign a_3_0_clock = clock; // @[:@2655.4]
+  assign a_3_0_io_a = a_2_0_io_y; // @[Gemm.scala 76:22:@2733.4]
+  assign a_3_0_io_b = a_2_1_io_y; // @[Gemm.scala 77:22:@2734.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
 endmodule
-module Pipe( // @[:@13218.2]
-  input   clock, // @[:@13219.4]
-  input   reset, // @[:@13220.4]
-  input   io_enq_valid, // @[:@13221.4]
-  output  io_deq_valid // @[:@13221.4]
+module Pipe( // @[:@13117.2]
+  input   clock, // @[:@13118.4]
+  input   reset, // @[:@13119.4]
+  input   io_enq_valid, // @[:@13120.4]
+  output  io_deq_valid // @[:@13120.4]
 );
-  reg  _T_19; // @[Valid.scala 48:22:@13223.4]
+  reg  _T_19; // @[Valid.scala 48:22:@13122.4]
   reg [31:0] _RAND_0;
-  reg  _T_24; // @[Valid.scala 48:22:@13229.4]
+  reg  _T_24; // @[Valid.scala 48:22:@13128.4]
   reg [31:0] _RAND_1;
-  reg  _T_29; // @[Valid.scala 48:22:@13235.4]
+  reg  _T_29; // @[Valid.scala 48:22:@13134.4]
   reg [31:0] _RAND_2;
-  reg  _T_34; // @[Valid.scala 48:22:@13241.4]
+  reg  _T_34; // @[Valid.scala 48:22:@13140.4]
   reg [31:0] _RAND_3;
-  reg  _T_39; // @[Valid.scala 48:22:@13247.4]
+  reg  _T_39; // @[Valid.scala 48:22:@13146.4]
   reg [31:0] _RAND_4;
-  assign io_deq_valid = _T_39; // @[Valid.scala 70:10:@13257.4]
+  assign io_deq_valid = _T_39; // @[Valid.scala 70:10:@13156.4]
 `ifdef RANDOMIZE_GARBAGE_ASSIGN
 `define RANDOMIZE
 `endif
@@ -5487,30 +5648,31 @@ module Pipe( // @[:@13218.2]
     end
   end
 endmodule
-module MatrixVectorCore( // @[:@13874.2]
-  input         clock, // @[:@13875.4]
-  input         reset, // @[:@13876.4]
-  input         io_inp_valid, // @[:@13877.4]
-  input         io_wgt_valid, // @[:@13877.4]
-  input         io_acc_i_valid, // @[:@13877.4]
-  output        io_acc_o_valid, // @[:@13877.4]
-  output [31:0] io_acc_o_bits_0_0, // @[:@13877.4]
-  output [31:0] io_acc_o_bits_0_1, // @[:@13877.4]
-  output [31:0] io_acc_o_bits_0_2, // @[:@13877.4]
-  output [31:0] io_acc_o_bits_0_3, // @[:@13877.4]
-  output [31:0] io_acc_o_bits_0_4, // @[:@13877.4]
-  output [31:0] io_acc_o_bits_0_5, // @[:@13877.4]
-  output [31:0] io_acc_o_bits_0_6, // @[:@13877.4]
-  output [31:0] io_acc_o_bits_0_7, // @[:@13877.4]
-  output [31:0] io_acc_o_bits_0_8, // @[:@13877.4]
-  output [31:0] io_acc_o_bits_0_9, // @[:@13877.4]
-  output [31:0] io_acc_o_bits_0_10, // @[:@13877.4]
-  output [31:0] io_acc_o_bits_0_11, // @[:@13877.4]
-  output [31:0] io_acc_o_bits_0_12, // @[:@13877.4]
-  output [31:0] io_acc_o_bits_0_13, // @[:@13877.4]
-  output [31:0] io_acc_o_bits_0_14, // @[:@13877.4]
-  output [31:0] io_acc_o_bits_0_15 // @[:@13877.4]
+module MatrixVectorCore( // @[:@13773.2]
+  input         clock, // @[:@13774.4]
+  input         reset, // @[:@13775.4]
+  input         io_inp_valid, // @[:@13776.4]
+  input         io_wgt_valid, // @[:@13776.4]
+  input         io_acc_i_valid, // @[:@13776.4]
+  output        io_acc_o_valid, // @[:@13776.4]
+  output [31:0] io_acc_o_bits_0_0, // @[:@13776.4]
+  output [31:0] io_acc_o_bits_0_1, // @[:@13776.4]
+  output [31:0] io_acc_o_bits_0_2, // @[:@13776.4]
+  output [31:0] io_acc_o_bits_0_3, // @[:@13776.4]
+  output [31:0] io_acc_o_bits_0_4, // @[:@13776.4]
+  output [31:0] io_acc_o_bits_0_5, // @[:@13776.4]
+  output [31:0] io_acc_o_bits_0_6, // @[:@13776.4]
+  output [31:0] io_acc_o_bits_0_7, // @[:@13776.4]
+  output [31:0] io_acc_o_bits_0_8, // @[:@13776.4]
+  output [31:0] io_acc_o_bits_0_9, // @[:@13776.4]
+  output [31:0] io_acc_o_bits_0_10, // @[:@13776.4]
+  output [31:0] io_acc_o_bits_0_11, // @[:@13776.4]
+  output [31:0] io_acc_o_bits_0_12, // @[:@13776.4]
+  output [31:0] io_acc_o_bits_0_13, // @[:@13776.4]
+  output [31:0] io_acc_o_bits_0_14, // @[:@13776.4]
+  output [31:0] io_acc_o_bits_0_15 // @[:@13776.4]
 );
+<<<<<<< HEAD
   wire  dot_0_clock; // @[Gemm.scala 96:34:@13879.4]
   wire [15:0] dot_0_io_b_0; // @[Gemm.scala 96:34:@13879.4]
   wire [15:0] dot_0_io_b_1; // @[Gemm.scala 96:34:@13879.4]
@@ -5932,6 +6094,429 @@ module MatrixVectorCore( // @[:@13874.2]
   wire [15:0] _T_6734; // @[Gemm.scala 113:25:@15302.4]
   wire [15:0] _T_6735; // @[Gemm.scala 113:32:@15303.4]
   DotProduct dot_0 ( // @[Gemm.scala 96:34:@13879.4]
+=======
+  wire  dot_0_clock; // @[Gemm.scala 112:34:@13778.4]
+  wire [7:0] dot_0_io_b_0; // @[Gemm.scala 112:34:@13778.4]
+  wire [7:0] dot_0_io_b_1; // @[Gemm.scala 112:34:@13778.4]
+  wire [7:0] dot_0_io_b_2; // @[Gemm.scala 112:34:@13778.4]
+  wire [7:0] dot_0_io_b_3; // @[Gemm.scala 112:34:@13778.4]
+  wire [7:0] dot_0_io_b_4; // @[Gemm.scala 112:34:@13778.4]
+  wire [7:0] dot_0_io_b_5; // @[Gemm.scala 112:34:@13778.4]
+  wire [7:0] dot_0_io_b_6; // @[Gemm.scala 112:34:@13778.4]
+  wire [7:0] dot_0_io_b_7; // @[Gemm.scala 112:34:@13778.4]
+  wire [7:0] dot_0_io_b_8; // @[Gemm.scala 112:34:@13778.4]
+  wire [7:0] dot_0_io_b_9; // @[Gemm.scala 112:34:@13778.4]
+  wire [7:0] dot_0_io_b_10; // @[Gemm.scala 112:34:@13778.4]
+  wire [7:0] dot_0_io_b_11; // @[Gemm.scala 112:34:@13778.4]
+  wire [7:0] dot_0_io_b_12; // @[Gemm.scala 112:34:@13778.4]
+  wire [7:0] dot_0_io_b_13; // @[Gemm.scala 112:34:@13778.4]
+  wire [7:0] dot_0_io_b_14; // @[Gemm.scala 112:34:@13778.4]
+  wire [7:0] dot_0_io_b_15; // @[Gemm.scala 112:34:@13778.4]
+  wire [20:0] dot_0_io_y; // @[Gemm.scala 112:34:@13778.4]
+  wire  dot_1_clock; // @[Gemm.scala 112:34:@13781.4]
+  wire [7:0] dot_1_io_b_0; // @[Gemm.scala 112:34:@13781.4]
+  wire [7:0] dot_1_io_b_1; // @[Gemm.scala 112:34:@13781.4]
+  wire [7:0] dot_1_io_b_2; // @[Gemm.scala 112:34:@13781.4]
+  wire [7:0] dot_1_io_b_3; // @[Gemm.scala 112:34:@13781.4]
+  wire [7:0] dot_1_io_b_4; // @[Gemm.scala 112:34:@13781.4]
+  wire [7:0] dot_1_io_b_5; // @[Gemm.scala 112:34:@13781.4]
+  wire [7:0] dot_1_io_b_6; // @[Gemm.scala 112:34:@13781.4]
+  wire [7:0] dot_1_io_b_7; // @[Gemm.scala 112:34:@13781.4]
+  wire [7:0] dot_1_io_b_8; // @[Gemm.scala 112:34:@13781.4]
+  wire [7:0] dot_1_io_b_9; // @[Gemm.scala 112:34:@13781.4]
+  wire [7:0] dot_1_io_b_10; // @[Gemm.scala 112:34:@13781.4]
+  wire [7:0] dot_1_io_b_11; // @[Gemm.scala 112:34:@13781.4]
+  wire [7:0] dot_1_io_b_12; // @[Gemm.scala 112:34:@13781.4]
+  wire [7:0] dot_1_io_b_13; // @[Gemm.scala 112:34:@13781.4]
+  wire [7:0] dot_1_io_b_14; // @[Gemm.scala 112:34:@13781.4]
+  wire [7:0] dot_1_io_b_15; // @[Gemm.scala 112:34:@13781.4]
+  wire [20:0] dot_1_io_y; // @[Gemm.scala 112:34:@13781.4]
+  wire  dot_2_clock; // @[Gemm.scala 112:34:@13784.4]
+  wire [7:0] dot_2_io_b_0; // @[Gemm.scala 112:34:@13784.4]
+  wire [7:0] dot_2_io_b_1; // @[Gemm.scala 112:34:@13784.4]
+  wire [7:0] dot_2_io_b_2; // @[Gemm.scala 112:34:@13784.4]
+  wire [7:0] dot_2_io_b_3; // @[Gemm.scala 112:34:@13784.4]
+  wire [7:0] dot_2_io_b_4; // @[Gemm.scala 112:34:@13784.4]
+  wire [7:0] dot_2_io_b_5; // @[Gemm.scala 112:34:@13784.4]
+  wire [7:0] dot_2_io_b_6; // @[Gemm.scala 112:34:@13784.4]
+  wire [7:0] dot_2_io_b_7; // @[Gemm.scala 112:34:@13784.4]
+  wire [7:0] dot_2_io_b_8; // @[Gemm.scala 112:34:@13784.4]
+  wire [7:0] dot_2_io_b_9; // @[Gemm.scala 112:34:@13784.4]
+  wire [7:0] dot_2_io_b_10; // @[Gemm.scala 112:34:@13784.4]
+  wire [7:0] dot_2_io_b_11; // @[Gemm.scala 112:34:@13784.4]
+  wire [7:0] dot_2_io_b_12; // @[Gemm.scala 112:34:@13784.4]
+  wire [7:0] dot_2_io_b_13; // @[Gemm.scala 112:34:@13784.4]
+  wire [7:0] dot_2_io_b_14; // @[Gemm.scala 112:34:@13784.4]
+  wire [7:0] dot_2_io_b_15; // @[Gemm.scala 112:34:@13784.4]
+  wire [20:0] dot_2_io_y; // @[Gemm.scala 112:34:@13784.4]
+  wire  dot_3_clock; // @[Gemm.scala 112:34:@13787.4]
+  wire [7:0] dot_3_io_b_0; // @[Gemm.scala 112:34:@13787.4]
+  wire [7:0] dot_3_io_b_1; // @[Gemm.scala 112:34:@13787.4]
+  wire [7:0] dot_3_io_b_2; // @[Gemm.scala 112:34:@13787.4]
+  wire [7:0] dot_3_io_b_3; // @[Gemm.scala 112:34:@13787.4]
+  wire [7:0] dot_3_io_b_4; // @[Gemm.scala 112:34:@13787.4]
+  wire [7:0] dot_3_io_b_5; // @[Gemm.scala 112:34:@13787.4]
+  wire [7:0] dot_3_io_b_6; // @[Gemm.scala 112:34:@13787.4]
+  wire [7:0] dot_3_io_b_7; // @[Gemm.scala 112:34:@13787.4]
+  wire [7:0] dot_3_io_b_8; // @[Gemm.scala 112:34:@13787.4]
+  wire [7:0] dot_3_io_b_9; // @[Gemm.scala 112:34:@13787.4]
+  wire [7:0] dot_3_io_b_10; // @[Gemm.scala 112:34:@13787.4]
+  wire [7:0] dot_3_io_b_11; // @[Gemm.scala 112:34:@13787.4]
+  wire [7:0] dot_3_io_b_12; // @[Gemm.scala 112:34:@13787.4]
+  wire [7:0] dot_3_io_b_13; // @[Gemm.scala 112:34:@13787.4]
+  wire [7:0] dot_3_io_b_14; // @[Gemm.scala 112:34:@13787.4]
+  wire [7:0] dot_3_io_b_15; // @[Gemm.scala 112:34:@13787.4]
+  wire [20:0] dot_3_io_y; // @[Gemm.scala 112:34:@13787.4]
+  wire  dot_4_clock; // @[Gemm.scala 112:34:@13790.4]
+  wire [7:0] dot_4_io_b_0; // @[Gemm.scala 112:34:@13790.4]
+  wire [7:0] dot_4_io_b_1; // @[Gemm.scala 112:34:@13790.4]
+  wire [7:0] dot_4_io_b_2; // @[Gemm.scala 112:34:@13790.4]
+  wire [7:0] dot_4_io_b_3; // @[Gemm.scala 112:34:@13790.4]
+  wire [7:0] dot_4_io_b_4; // @[Gemm.scala 112:34:@13790.4]
+  wire [7:0] dot_4_io_b_5; // @[Gemm.scala 112:34:@13790.4]
+  wire [7:0] dot_4_io_b_6; // @[Gemm.scala 112:34:@13790.4]
+  wire [7:0] dot_4_io_b_7; // @[Gemm.scala 112:34:@13790.4]
+  wire [7:0] dot_4_io_b_8; // @[Gemm.scala 112:34:@13790.4]
+  wire [7:0] dot_4_io_b_9; // @[Gemm.scala 112:34:@13790.4]
+  wire [7:0] dot_4_io_b_10; // @[Gemm.scala 112:34:@13790.4]
+  wire [7:0] dot_4_io_b_11; // @[Gemm.scala 112:34:@13790.4]
+  wire [7:0] dot_4_io_b_12; // @[Gemm.scala 112:34:@13790.4]
+  wire [7:0] dot_4_io_b_13; // @[Gemm.scala 112:34:@13790.4]
+  wire [7:0] dot_4_io_b_14; // @[Gemm.scala 112:34:@13790.4]
+  wire [7:0] dot_4_io_b_15; // @[Gemm.scala 112:34:@13790.4]
+  wire [20:0] dot_4_io_y; // @[Gemm.scala 112:34:@13790.4]
+  wire  dot_5_clock; // @[Gemm.scala 112:34:@13793.4]
+  wire [7:0] dot_5_io_b_0; // @[Gemm.scala 112:34:@13793.4]
+  wire [7:0] dot_5_io_b_1; // @[Gemm.scala 112:34:@13793.4]
+  wire [7:0] dot_5_io_b_2; // @[Gemm.scala 112:34:@13793.4]
+  wire [7:0] dot_5_io_b_3; // @[Gemm.scala 112:34:@13793.4]
+  wire [7:0] dot_5_io_b_4; // @[Gemm.scala 112:34:@13793.4]
+  wire [7:0] dot_5_io_b_5; // @[Gemm.scala 112:34:@13793.4]
+  wire [7:0] dot_5_io_b_6; // @[Gemm.scala 112:34:@13793.4]
+  wire [7:0] dot_5_io_b_7; // @[Gemm.scala 112:34:@13793.4]
+  wire [7:0] dot_5_io_b_8; // @[Gemm.scala 112:34:@13793.4]
+  wire [7:0] dot_5_io_b_9; // @[Gemm.scala 112:34:@13793.4]
+  wire [7:0] dot_5_io_b_10; // @[Gemm.scala 112:34:@13793.4]
+  wire [7:0] dot_5_io_b_11; // @[Gemm.scala 112:34:@13793.4]
+  wire [7:0] dot_5_io_b_12; // @[Gemm.scala 112:34:@13793.4]
+  wire [7:0] dot_5_io_b_13; // @[Gemm.scala 112:34:@13793.4]
+  wire [7:0] dot_5_io_b_14; // @[Gemm.scala 112:34:@13793.4]
+  wire [7:0] dot_5_io_b_15; // @[Gemm.scala 112:34:@13793.4]
+  wire [20:0] dot_5_io_y; // @[Gemm.scala 112:34:@13793.4]
+  wire  dot_6_clock; // @[Gemm.scala 112:34:@13796.4]
+  wire [7:0] dot_6_io_b_0; // @[Gemm.scala 112:34:@13796.4]
+  wire [7:0] dot_6_io_b_1; // @[Gemm.scala 112:34:@13796.4]
+  wire [7:0] dot_6_io_b_2; // @[Gemm.scala 112:34:@13796.4]
+  wire [7:0] dot_6_io_b_3; // @[Gemm.scala 112:34:@13796.4]
+  wire [7:0] dot_6_io_b_4; // @[Gemm.scala 112:34:@13796.4]
+  wire [7:0] dot_6_io_b_5; // @[Gemm.scala 112:34:@13796.4]
+  wire [7:0] dot_6_io_b_6; // @[Gemm.scala 112:34:@13796.4]
+  wire [7:0] dot_6_io_b_7; // @[Gemm.scala 112:34:@13796.4]
+  wire [7:0] dot_6_io_b_8; // @[Gemm.scala 112:34:@13796.4]
+  wire [7:0] dot_6_io_b_9; // @[Gemm.scala 112:34:@13796.4]
+  wire [7:0] dot_6_io_b_10; // @[Gemm.scala 112:34:@13796.4]
+  wire [7:0] dot_6_io_b_11; // @[Gemm.scala 112:34:@13796.4]
+  wire [7:0] dot_6_io_b_12; // @[Gemm.scala 112:34:@13796.4]
+  wire [7:0] dot_6_io_b_13; // @[Gemm.scala 112:34:@13796.4]
+  wire [7:0] dot_6_io_b_14; // @[Gemm.scala 112:34:@13796.4]
+  wire [7:0] dot_6_io_b_15; // @[Gemm.scala 112:34:@13796.4]
+  wire [20:0] dot_6_io_y; // @[Gemm.scala 112:34:@13796.4]
+  wire  dot_7_clock; // @[Gemm.scala 112:34:@13799.4]
+  wire [7:0] dot_7_io_b_0; // @[Gemm.scala 112:34:@13799.4]
+  wire [7:0] dot_7_io_b_1; // @[Gemm.scala 112:34:@13799.4]
+  wire [7:0] dot_7_io_b_2; // @[Gemm.scala 112:34:@13799.4]
+  wire [7:0] dot_7_io_b_3; // @[Gemm.scala 112:34:@13799.4]
+  wire [7:0] dot_7_io_b_4; // @[Gemm.scala 112:34:@13799.4]
+  wire [7:0] dot_7_io_b_5; // @[Gemm.scala 112:34:@13799.4]
+  wire [7:0] dot_7_io_b_6; // @[Gemm.scala 112:34:@13799.4]
+  wire [7:0] dot_7_io_b_7; // @[Gemm.scala 112:34:@13799.4]
+  wire [7:0] dot_7_io_b_8; // @[Gemm.scala 112:34:@13799.4]
+  wire [7:0] dot_7_io_b_9; // @[Gemm.scala 112:34:@13799.4]
+  wire [7:0] dot_7_io_b_10; // @[Gemm.scala 112:34:@13799.4]
+  wire [7:0] dot_7_io_b_11; // @[Gemm.scala 112:34:@13799.4]
+  wire [7:0] dot_7_io_b_12; // @[Gemm.scala 112:34:@13799.4]
+  wire [7:0] dot_7_io_b_13; // @[Gemm.scala 112:34:@13799.4]
+  wire [7:0] dot_7_io_b_14; // @[Gemm.scala 112:34:@13799.4]
+  wire [7:0] dot_7_io_b_15; // @[Gemm.scala 112:34:@13799.4]
+  wire [20:0] dot_7_io_y; // @[Gemm.scala 112:34:@13799.4]
+  wire  dot_8_clock; // @[Gemm.scala 112:34:@13802.4]
+  wire [7:0] dot_8_io_b_0; // @[Gemm.scala 112:34:@13802.4]
+  wire [7:0] dot_8_io_b_1; // @[Gemm.scala 112:34:@13802.4]
+  wire [7:0] dot_8_io_b_2; // @[Gemm.scala 112:34:@13802.4]
+  wire [7:0] dot_8_io_b_3; // @[Gemm.scala 112:34:@13802.4]
+  wire [7:0] dot_8_io_b_4; // @[Gemm.scala 112:34:@13802.4]
+  wire [7:0] dot_8_io_b_5; // @[Gemm.scala 112:34:@13802.4]
+  wire [7:0] dot_8_io_b_6; // @[Gemm.scala 112:34:@13802.4]
+  wire [7:0] dot_8_io_b_7; // @[Gemm.scala 112:34:@13802.4]
+  wire [7:0] dot_8_io_b_8; // @[Gemm.scala 112:34:@13802.4]
+  wire [7:0] dot_8_io_b_9; // @[Gemm.scala 112:34:@13802.4]
+  wire [7:0] dot_8_io_b_10; // @[Gemm.scala 112:34:@13802.4]
+  wire [7:0] dot_8_io_b_11; // @[Gemm.scala 112:34:@13802.4]
+  wire [7:0] dot_8_io_b_12; // @[Gemm.scala 112:34:@13802.4]
+  wire [7:0] dot_8_io_b_13; // @[Gemm.scala 112:34:@13802.4]
+  wire [7:0] dot_8_io_b_14; // @[Gemm.scala 112:34:@13802.4]
+  wire [7:0] dot_8_io_b_15; // @[Gemm.scala 112:34:@13802.4]
+  wire [20:0] dot_8_io_y; // @[Gemm.scala 112:34:@13802.4]
+  wire  dot_9_clock; // @[Gemm.scala 112:34:@13805.4]
+  wire [7:0] dot_9_io_b_0; // @[Gemm.scala 112:34:@13805.4]
+  wire [7:0] dot_9_io_b_1; // @[Gemm.scala 112:34:@13805.4]
+  wire [7:0] dot_9_io_b_2; // @[Gemm.scala 112:34:@13805.4]
+  wire [7:0] dot_9_io_b_3; // @[Gemm.scala 112:34:@13805.4]
+  wire [7:0] dot_9_io_b_4; // @[Gemm.scala 112:34:@13805.4]
+  wire [7:0] dot_9_io_b_5; // @[Gemm.scala 112:34:@13805.4]
+  wire [7:0] dot_9_io_b_6; // @[Gemm.scala 112:34:@13805.4]
+  wire [7:0] dot_9_io_b_7; // @[Gemm.scala 112:34:@13805.4]
+  wire [7:0] dot_9_io_b_8; // @[Gemm.scala 112:34:@13805.4]
+  wire [7:0] dot_9_io_b_9; // @[Gemm.scala 112:34:@13805.4]
+  wire [7:0] dot_9_io_b_10; // @[Gemm.scala 112:34:@13805.4]
+  wire [7:0] dot_9_io_b_11; // @[Gemm.scala 112:34:@13805.4]
+  wire [7:0] dot_9_io_b_12; // @[Gemm.scala 112:34:@13805.4]
+  wire [7:0] dot_9_io_b_13; // @[Gemm.scala 112:34:@13805.4]
+  wire [7:0] dot_9_io_b_14; // @[Gemm.scala 112:34:@13805.4]
+  wire [7:0] dot_9_io_b_15; // @[Gemm.scala 112:34:@13805.4]
+  wire [20:0] dot_9_io_y; // @[Gemm.scala 112:34:@13805.4]
+  wire  dot_10_clock; // @[Gemm.scala 112:34:@13808.4]
+  wire [7:0] dot_10_io_b_0; // @[Gemm.scala 112:34:@13808.4]
+  wire [7:0] dot_10_io_b_1; // @[Gemm.scala 112:34:@13808.4]
+  wire [7:0] dot_10_io_b_2; // @[Gemm.scala 112:34:@13808.4]
+  wire [7:0] dot_10_io_b_3; // @[Gemm.scala 112:34:@13808.4]
+  wire [7:0] dot_10_io_b_4; // @[Gemm.scala 112:34:@13808.4]
+  wire [7:0] dot_10_io_b_5; // @[Gemm.scala 112:34:@13808.4]
+  wire [7:0] dot_10_io_b_6; // @[Gemm.scala 112:34:@13808.4]
+  wire [7:0] dot_10_io_b_7; // @[Gemm.scala 112:34:@13808.4]
+  wire [7:0] dot_10_io_b_8; // @[Gemm.scala 112:34:@13808.4]
+  wire [7:0] dot_10_io_b_9; // @[Gemm.scala 112:34:@13808.4]
+  wire [7:0] dot_10_io_b_10; // @[Gemm.scala 112:34:@13808.4]
+  wire [7:0] dot_10_io_b_11; // @[Gemm.scala 112:34:@13808.4]
+  wire [7:0] dot_10_io_b_12; // @[Gemm.scala 112:34:@13808.4]
+  wire [7:0] dot_10_io_b_13; // @[Gemm.scala 112:34:@13808.4]
+  wire [7:0] dot_10_io_b_14; // @[Gemm.scala 112:34:@13808.4]
+  wire [7:0] dot_10_io_b_15; // @[Gemm.scala 112:34:@13808.4]
+  wire [20:0] dot_10_io_y; // @[Gemm.scala 112:34:@13808.4]
+  wire  dot_11_clock; // @[Gemm.scala 112:34:@13811.4]
+  wire [7:0] dot_11_io_b_0; // @[Gemm.scala 112:34:@13811.4]
+  wire [7:0] dot_11_io_b_1; // @[Gemm.scala 112:34:@13811.4]
+  wire [7:0] dot_11_io_b_2; // @[Gemm.scala 112:34:@13811.4]
+  wire [7:0] dot_11_io_b_3; // @[Gemm.scala 112:34:@13811.4]
+  wire [7:0] dot_11_io_b_4; // @[Gemm.scala 112:34:@13811.4]
+  wire [7:0] dot_11_io_b_5; // @[Gemm.scala 112:34:@13811.4]
+  wire [7:0] dot_11_io_b_6; // @[Gemm.scala 112:34:@13811.4]
+  wire [7:0] dot_11_io_b_7; // @[Gemm.scala 112:34:@13811.4]
+  wire [7:0] dot_11_io_b_8; // @[Gemm.scala 112:34:@13811.4]
+  wire [7:0] dot_11_io_b_9; // @[Gemm.scala 112:34:@13811.4]
+  wire [7:0] dot_11_io_b_10; // @[Gemm.scala 112:34:@13811.4]
+  wire [7:0] dot_11_io_b_11; // @[Gemm.scala 112:34:@13811.4]
+  wire [7:0] dot_11_io_b_12; // @[Gemm.scala 112:34:@13811.4]
+  wire [7:0] dot_11_io_b_13; // @[Gemm.scala 112:34:@13811.4]
+  wire [7:0] dot_11_io_b_14; // @[Gemm.scala 112:34:@13811.4]
+  wire [7:0] dot_11_io_b_15; // @[Gemm.scala 112:34:@13811.4]
+  wire [20:0] dot_11_io_y; // @[Gemm.scala 112:34:@13811.4]
+  wire  dot_12_clock; // @[Gemm.scala 112:34:@13814.4]
+  wire [7:0] dot_12_io_b_0; // @[Gemm.scala 112:34:@13814.4]
+  wire [7:0] dot_12_io_b_1; // @[Gemm.scala 112:34:@13814.4]
+  wire [7:0] dot_12_io_b_2; // @[Gemm.scala 112:34:@13814.4]
+  wire [7:0] dot_12_io_b_3; // @[Gemm.scala 112:34:@13814.4]
+  wire [7:0] dot_12_io_b_4; // @[Gemm.scala 112:34:@13814.4]
+  wire [7:0] dot_12_io_b_5; // @[Gemm.scala 112:34:@13814.4]
+  wire [7:0] dot_12_io_b_6; // @[Gemm.scala 112:34:@13814.4]
+  wire [7:0] dot_12_io_b_7; // @[Gemm.scala 112:34:@13814.4]
+  wire [7:0] dot_12_io_b_8; // @[Gemm.scala 112:34:@13814.4]
+  wire [7:0] dot_12_io_b_9; // @[Gemm.scala 112:34:@13814.4]
+  wire [7:0] dot_12_io_b_10; // @[Gemm.scala 112:34:@13814.4]
+  wire [7:0] dot_12_io_b_11; // @[Gemm.scala 112:34:@13814.4]
+  wire [7:0] dot_12_io_b_12; // @[Gemm.scala 112:34:@13814.4]
+  wire [7:0] dot_12_io_b_13; // @[Gemm.scala 112:34:@13814.4]
+  wire [7:0] dot_12_io_b_14; // @[Gemm.scala 112:34:@13814.4]
+  wire [7:0] dot_12_io_b_15; // @[Gemm.scala 112:34:@13814.4]
+  wire [20:0] dot_12_io_y; // @[Gemm.scala 112:34:@13814.4]
+  wire  dot_13_clock; // @[Gemm.scala 112:34:@13817.4]
+  wire [7:0] dot_13_io_b_0; // @[Gemm.scala 112:34:@13817.4]
+  wire [7:0] dot_13_io_b_1; // @[Gemm.scala 112:34:@13817.4]
+  wire [7:0] dot_13_io_b_2; // @[Gemm.scala 112:34:@13817.4]
+  wire [7:0] dot_13_io_b_3; // @[Gemm.scala 112:34:@13817.4]
+  wire [7:0] dot_13_io_b_4; // @[Gemm.scala 112:34:@13817.4]
+  wire [7:0] dot_13_io_b_5; // @[Gemm.scala 112:34:@13817.4]
+  wire [7:0] dot_13_io_b_6; // @[Gemm.scala 112:34:@13817.4]
+  wire [7:0] dot_13_io_b_7; // @[Gemm.scala 112:34:@13817.4]
+  wire [7:0] dot_13_io_b_8; // @[Gemm.scala 112:34:@13817.4]
+  wire [7:0] dot_13_io_b_9; // @[Gemm.scala 112:34:@13817.4]
+  wire [7:0] dot_13_io_b_10; // @[Gemm.scala 112:34:@13817.4]
+  wire [7:0] dot_13_io_b_11; // @[Gemm.scala 112:34:@13817.4]
+  wire [7:0] dot_13_io_b_12; // @[Gemm.scala 112:34:@13817.4]
+  wire [7:0] dot_13_io_b_13; // @[Gemm.scala 112:34:@13817.4]
+  wire [7:0] dot_13_io_b_14; // @[Gemm.scala 112:34:@13817.4]
+  wire [7:0] dot_13_io_b_15; // @[Gemm.scala 112:34:@13817.4]
+  wire [20:0] dot_13_io_y; // @[Gemm.scala 112:34:@13817.4]
+  wire  dot_14_clock; // @[Gemm.scala 112:34:@13820.4]
+  wire [7:0] dot_14_io_b_0; // @[Gemm.scala 112:34:@13820.4]
+  wire [7:0] dot_14_io_b_1; // @[Gemm.scala 112:34:@13820.4]
+  wire [7:0] dot_14_io_b_2; // @[Gemm.scala 112:34:@13820.4]
+  wire [7:0] dot_14_io_b_3; // @[Gemm.scala 112:34:@13820.4]
+  wire [7:0] dot_14_io_b_4; // @[Gemm.scala 112:34:@13820.4]
+  wire [7:0] dot_14_io_b_5; // @[Gemm.scala 112:34:@13820.4]
+  wire [7:0] dot_14_io_b_6; // @[Gemm.scala 112:34:@13820.4]
+  wire [7:0] dot_14_io_b_7; // @[Gemm.scala 112:34:@13820.4]
+  wire [7:0] dot_14_io_b_8; // @[Gemm.scala 112:34:@13820.4]
+  wire [7:0] dot_14_io_b_9; // @[Gemm.scala 112:34:@13820.4]
+  wire [7:0] dot_14_io_b_10; // @[Gemm.scala 112:34:@13820.4]
+  wire [7:0] dot_14_io_b_11; // @[Gemm.scala 112:34:@13820.4]
+  wire [7:0] dot_14_io_b_12; // @[Gemm.scala 112:34:@13820.4]
+  wire [7:0] dot_14_io_b_13; // @[Gemm.scala 112:34:@13820.4]
+  wire [7:0] dot_14_io_b_14; // @[Gemm.scala 112:34:@13820.4]
+  wire [7:0] dot_14_io_b_15; // @[Gemm.scala 112:34:@13820.4]
+  wire [20:0] dot_14_io_y; // @[Gemm.scala 112:34:@13820.4]
+  wire  dot_15_clock; // @[Gemm.scala 112:34:@13823.4]
+  wire [7:0] dot_15_io_b_0; // @[Gemm.scala 112:34:@13823.4]
+  wire [7:0] dot_15_io_b_1; // @[Gemm.scala 112:34:@13823.4]
+  wire [7:0] dot_15_io_b_2; // @[Gemm.scala 112:34:@13823.4]
+  wire [7:0] dot_15_io_b_3; // @[Gemm.scala 112:34:@13823.4]
+  wire [7:0] dot_15_io_b_4; // @[Gemm.scala 112:34:@13823.4]
+  wire [7:0] dot_15_io_b_5; // @[Gemm.scala 112:34:@13823.4]
+  wire [7:0] dot_15_io_b_6; // @[Gemm.scala 112:34:@13823.4]
+  wire [7:0] dot_15_io_b_7; // @[Gemm.scala 112:34:@13823.4]
+  wire [7:0] dot_15_io_b_8; // @[Gemm.scala 112:34:@13823.4]
+  wire [7:0] dot_15_io_b_9; // @[Gemm.scala 112:34:@13823.4]
+  wire [7:0] dot_15_io_b_10; // @[Gemm.scala 112:34:@13823.4]
+  wire [7:0] dot_15_io_b_11; // @[Gemm.scala 112:34:@13823.4]
+  wire [7:0] dot_15_io_b_12; // @[Gemm.scala 112:34:@13823.4]
+  wire [7:0] dot_15_io_b_13; // @[Gemm.scala 112:34:@13823.4]
+  wire [7:0] dot_15_io_b_14; // @[Gemm.scala 112:34:@13823.4]
+  wire [7:0] dot_15_io_b_15; // @[Gemm.scala 112:34:@13823.4]
+  wire [20:0] dot_15_io_y; // @[Gemm.scala 112:34:@13823.4]
+  wire  acc_0_clock; // @[Gemm.scala 113:34:@13826.4]
+  wire  acc_0_reset; // @[Gemm.scala 113:34:@13826.4]
+  wire  acc_0_io_enq_valid; // @[Gemm.scala 113:34:@13826.4]
+  wire  acc_0_io_deq_valid; // @[Gemm.scala 113:34:@13826.4]
+  wire  acc_1_clock; // @[Gemm.scala 113:34:@13829.4]
+  wire  acc_1_reset; // @[Gemm.scala 113:34:@13829.4]
+  wire  acc_1_io_enq_valid; // @[Gemm.scala 113:34:@13829.4]
+  wire  acc_1_io_deq_valid; // @[Gemm.scala 113:34:@13829.4]
+  wire  acc_2_clock; // @[Gemm.scala 113:34:@13832.4]
+  wire  acc_2_reset; // @[Gemm.scala 113:34:@13832.4]
+  wire  acc_2_io_enq_valid; // @[Gemm.scala 113:34:@13832.4]
+  wire  acc_2_io_deq_valid; // @[Gemm.scala 113:34:@13832.4]
+  wire  acc_3_clock; // @[Gemm.scala 113:34:@13835.4]
+  wire  acc_3_reset; // @[Gemm.scala 113:34:@13835.4]
+  wire  acc_3_io_enq_valid; // @[Gemm.scala 113:34:@13835.4]
+  wire  acc_3_io_deq_valid; // @[Gemm.scala 113:34:@13835.4]
+  wire  acc_4_clock; // @[Gemm.scala 113:34:@13838.4]
+  wire  acc_4_reset; // @[Gemm.scala 113:34:@13838.4]
+  wire  acc_4_io_enq_valid; // @[Gemm.scala 113:34:@13838.4]
+  wire  acc_4_io_deq_valid; // @[Gemm.scala 113:34:@13838.4]
+  wire  acc_5_clock; // @[Gemm.scala 113:34:@13841.4]
+  wire  acc_5_reset; // @[Gemm.scala 113:34:@13841.4]
+  wire  acc_5_io_enq_valid; // @[Gemm.scala 113:34:@13841.4]
+  wire  acc_5_io_deq_valid; // @[Gemm.scala 113:34:@13841.4]
+  wire  acc_6_clock; // @[Gemm.scala 113:34:@13844.4]
+  wire  acc_6_reset; // @[Gemm.scala 113:34:@13844.4]
+  wire  acc_6_io_enq_valid; // @[Gemm.scala 113:34:@13844.4]
+  wire  acc_6_io_deq_valid; // @[Gemm.scala 113:34:@13844.4]
+  wire  acc_7_clock; // @[Gemm.scala 113:34:@13847.4]
+  wire  acc_7_reset; // @[Gemm.scala 113:34:@13847.4]
+  wire  acc_7_io_enq_valid; // @[Gemm.scala 113:34:@13847.4]
+  wire  acc_7_io_deq_valid; // @[Gemm.scala 113:34:@13847.4]
+  wire  acc_8_clock; // @[Gemm.scala 113:34:@13850.4]
+  wire  acc_8_reset; // @[Gemm.scala 113:34:@13850.4]
+  wire  acc_8_io_enq_valid; // @[Gemm.scala 113:34:@13850.4]
+  wire  acc_8_io_deq_valid; // @[Gemm.scala 113:34:@13850.4]
+  wire  acc_9_clock; // @[Gemm.scala 113:34:@13853.4]
+  wire  acc_9_reset; // @[Gemm.scala 113:34:@13853.4]
+  wire  acc_9_io_enq_valid; // @[Gemm.scala 113:34:@13853.4]
+  wire  acc_9_io_deq_valid; // @[Gemm.scala 113:34:@13853.4]
+  wire  acc_10_clock; // @[Gemm.scala 113:34:@13856.4]
+  wire  acc_10_reset; // @[Gemm.scala 113:34:@13856.4]
+  wire  acc_10_io_enq_valid; // @[Gemm.scala 113:34:@13856.4]
+  wire  acc_10_io_deq_valid; // @[Gemm.scala 113:34:@13856.4]
+  wire  acc_11_clock; // @[Gemm.scala 113:34:@13859.4]
+  wire  acc_11_reset; // @[Gemm.scala 113:34:@13859.4]
+  wire  acc_11_io_enq_valid; // @[Gemm.scala 113:34:@13859.4]
+  wire  acc_11_io_deq_valid; // @[Gemm.scala 113:34:@13859.4]
+  wire  acc_12_clock; // @[Gemm.scala 113:34:@13862.4]
+  wire  acc_12_reset; // @[Gemm.scala 113:34:@13862.4]
+  wire  acc_12_io_enq_valid; // @[Gemm.scala 113:34:@13862.4]
+  wire  acc_12_io_deq_valid; // @[Gemm.scala 113:34:@13862.4]
+  wire  acc_13_clock; // @[Gemm.scala 113:34:@13865.4]
+  wire  acc_13_reset; // @[Gemm.scala 113:34:@13865.4]
+  wire  acc_13_io_enq_valid; // @[Gemm.scala 113:34:@13865.4]
+  wire  acc_13_io_deq_valid; // @[Gemm.scala 113:34:@13865.4]
+  wire  acc_14_clock; // @[Gemm.scala 113:34:@13868.4]
+  wire  acc_14_reset; // @[Gemm.scala 113:34:@13868.4]
+  wire  acc_14_io_enq_valid; // @[Gemm.scala 113:34:@13868.4]
+  wire  acc_14_io_deq_valid; // @[Gemm.scala 113:34:@13868.4]
+  wire  acc_15_clock; // @[Gemm.scala 113:34:@13871.4]
+  wire  acc_15_reset; // @[Gemm.scala 113:34:@13871.4]
+  wire  acc_15_io_enq_valid; // @[Gemm.scala 113:34:@13871.4]
+  wire  acc_15_io_deq_valid; // @[Gemm.scala 113:34:@13871.4]
+  wire  _T_6016; // @[Gemm.scala 118:41:@13891.4]
+  wire [32:0] _T_6053; // @[Gemm.scala 124:41:@13962.4]
+  wire [31:0] _T_6054; // @[Gemm.scala 124:41:@13963.4]
+  wire [31:0] add_0; // @[Gemm.scala 124:41:@13964.4]
+  wire [32:0] _T_6097; // @[Gemm.scala 124:41:@14043.4]
+  wire [31:0] _T_6098; // @[Gemm.scala 124:41:@14044.4]
+  wire [31:0] add_1; // @[Gemm.scala 124:41:@14045.4]
+  wire [32:0] _T_6141; // @[Gemm.scala 124:41:@14124.4]
+  wire [31:0] _T_6142; // @[Gemm.scala 124:41:@14125.4]
+  wire [31:0] add_2; // @[Gemm.scala 124:41:@14126.4]
+  wire [32:0] _T_6185; // @[Gemm.scala 124:41:@14205.4]
+  wire [31:0] _T_6186; // @[Gemm.scala 124:41:@14206.4]
+  wire [31:0] add_3; // @[Gemm.scala 124:41:@14207.4]
+  wire [32:0] _T_6229; // @[Gemm.scala 124:41:@14286.4]
+  wire [31:0] _T_6230; // @[Gemm.scala 124:41:@14287.4]
+  wire [31:0] add_4; // @[Gemm.scala 124:41:@14288.4]
+  wire [32:0] _T_6273; // @[Gemm.scala 124:41:@14367.4]
+  wire [31:0] _T_6274; // @[Gemm.scala 124:41:@14368.4]
+  wire [31:0] add_5; // @[Gemm.scala 124:41:@14369.4]
+  wire [32:0] _T_6317; // @[Gemm.scala 124:41:@14448.4]
+  wire [31:0] _T_6318; // @[Gemm.scala 124:41:@14449.4]
+  wire [31:0] add_6; // @[Gemm.scala 124:41:@14450.4]
+  wire [32:0] _T_6361; // @[Gemm.scala 124:41:@14529.4]
+  wire [31:0] _T_6362; // @[Gemm.scala 124:41:@14530.4]
+  wire [31:0] add_7; // @[Gemm.scala 124:41:@14531.4]
+  wire [32:0] _T_6405; // @[Gemm.scala 124:41:@14610.4]
+  wire [31:0] _T_6406; // @[Gemm.scala 124:41:@14611.4]
+  wire [31:0] add_8; // @[Gemm.scala 124:41:@14612.4]
+  wire [32:0] _T_6449; // @[Gemm.scala 124:41:@14691.4]
+  wire [31:0] _T_6450; // @[Gemm.scala 124:41:@14692.4]
+  wire [31:0] add_9; // @[Gemm.scala 124:41:@14693.4]
+  wire [32:0] _T_6493; // @[Gemm.scala 124:41:@14772.4]
+  wire [31:0] _T_6494; // @[Gemm.scala 124:41:@14773.4]
+  wire [31:0] add_10; // @[Gemm.scala 124:41:@14774.4]
+  wire [32:0] _T_6537; // @[Gemm.scala 124:41:@14853.4]
+  wire [31:0] _T_6538; // @[Gemm.scala 124:41:@14854.4]
+  wire [31:0] add_11; // @[Gemm.scala 124:41:@14855.4]
+  wire [32:0] _T_6581; // @[Gemm.scala 124:41:@14934.4]
+  wire [31:0] _T_6582; // @[Gemm.scala 124:41:@14935.4]
+  wire [31:0] add_12; // @[Gemm.scala 124:41:@14936.4]
+  wire [32:0] _T_6625; // @[Gemm.scala 124:41:@15015.4]
+  wire [31:0] _T_6626; // @[Gemm.scala 124:41:@15016.4]
+  wire [31:0] add_13; // @[Gemm.scala 124:41:@15017.4]
+  wire [32:0] _T_6669; // @[Gemm.scala 124:41:@15096.4]
+  wire [31:0] _T_6670; // @[Gemm.scala 124:41:@15097.4]
+  wire [31:0] add_14; // @[Gemm.scala 124:41:@15098.4]
+  wire [32:0] _T_6713; // @[Gemm.scala 124:41:@15177.4]
+  wire [31:0] _T_6714; // @[Gemm.scala 124:41:@15178.4]
+  wire [31:0] add_15; // @[Gemm.scala 124:41:@15179.4]
+  wire  vld_1; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14052.4]
+  wire  vld_0; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@13971.4]
+  wire  vld_3; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14214.4]
+  wire  vld_2; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14133.4]
+  wire  vld_5; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14376.4]
+  wire  vld_4; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14295.4]
+  wire  vld_7; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14538.4]
+  wire  vld_6; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14457.4]
+  wire [7:0] _T_6726; // @[Gemm.scala 129:25:@15193.4]
+  wire  vld_9; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14700.4]
+  wire  vld_8; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14619.4]
+  wire  vld_11; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14862.4]
+  wire  vld_10; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14781.4]
+  wire  vld_13; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@15024.4]
+  wire  vld_12; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14943.4]
+  wire  vld_15; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@15186.4]
+  wire  vld_14; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@15105.4]
+  wire [15:0] _T_6734; // @[Gemm.scala 129:25:@15201.4]
+  wire [15:0] _T_6735; // @[Gemm.scala 129:32:@15202.4]
+  DotProduct dot_0 ( // @[Gemm.scala 112:34:@13778.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(dot_0_clock),
     .io_b_0(dot_0_io_b_0),
     .io_b_1(dot_0_io_b_1),
@@ -5951,7 +6536,11 @@ module MatrixVectorCore( // @[:@13874.2]
     .io_b_15(dot_0_io_b_15),
     .io_y(dot_0_io_y)
   );
+<<<<<<< HEAD
   DotProduct dot_1 ( // @[Gemm.scala 96:34:@13882.4]
+=======
+  DotProduct dot_1 ( // @[Gemm.scala 112:34:@13781.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(dot_1_clock),
     .io_b_0(dot_1_io_b_0),
     .io_b_1(dot_1_io_b_1),
@@ -5971,7 +6560,11 @@ module MatrixVectorCore( // @[:@13874.2]
     .io_b_15(dot_1_io_b_15),
     .io_y(dot_1_io_y)
   );
+<<<<<<< HEAD
   DotProduct dot_2 ( // @[Gemm.scala 96:34:@13885.4]
+=======
+  DotProduct dot_2 ( // @[Gemm.scala 112:34:@13784.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(dot_2_clock),
     .io_b_0(dot_2_io_b_0),
     .io_b_1(dot_2_io_b_1),
@@ -5991,7 +6584,11 @@ module MatrixVectorCore( // @[:@13874.2]
     .io_b_15(dot_2_io_b_15),
     .io_y(dot_2_io_y)
   );
+<<<<<<< HEAD
   DotProduct dot_3 ( // @[Gemm.scala 96:34:@13888.4]
+=======
+  DotProduct dot_3 ( // @[Gemm.scala 112:34:@13787.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(dot_3_clock),
     .io_b_0(dot_3_io_b_0),
     .io_b_1(dot_3_io_b_1),
@@ -6011,7 +6608,11 @@ module MatrixVectorCore( // @[:@13874.2]
     .io_b_15(dot_3_io_b_15),
     .io_y(dot_3_io_y)
   );
+<<<<<<< HEAD
   DotProduct dot_4 ( // @[Gemm.scala 96:34:@13891.4]
+=======
+  DotProduct dot_4 ( // @[Gemm.scala 112:34:@13790.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(dot_4_clock),
     .io_b_0(dot_4_io_b_0),
     .io_b_1(dot_4_io_b_1),
@@ -6031,7 +6632,11 @@ module MatrixVectorCore( // @[:@13874.2]
     .io_b_15(dot_4_io_b_15),
     .io_y(dot_4_io_y)
   );
+<<<<<<< HEAD
   DotProduct dot_5 ( // @[Gemm.scala 96:34:@13894.4]
+=======
+  DotProduct dot_5 ( // @[Gemm.scala 112:34:@13793.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(dot_5_clock),
     .io_b_0(dot_5_io_b_0),
     .io_b_1(dot_5_io_b_1),
@@ -6051,7 +6656,11 @@ module MatrixVectorCore( // @[:@13874.2]
     .io_b_15(dot_5_io_b_15),
     .io_y(dot_5_io_y)
   );
+<<<<<<< HEAD
   DotProduct dot_6 ( // @[Gemm.scala 96:34:@13897.4]
+=======
+  DotProduct dot_6 ( // @[Gemm.scala 112:34:@13796.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(dot_6_clock),
     .io_b_0(dot_6_io_b_0),
     .io_b_1(dot_6_io_b_1),
@@ -6071,7 +6680,11 @@ module MatrixVectorCore( // @[:@13874.2]
     .io_b_15(dot_6_io_b_15),
     .io_y(dot_6_io_y)
   );
+<<<<<<< HEAD
   DotProduct dot_7 ( // @[Gemm.scala 96:34:@13900.4]
+=======
+  DotProduct dot_7 ( // @[Gemm.scala 112:34:@13799.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(dot_7_clock),
     .io_b_0(dot_7_io_b_0),
     .io_b_1(dot_7_io_b_1),
@@ -6091,7 +6704,11 @@ module MatrixVectorCore( // @[:@13874.2]
     .io_b_15(dot_7_io_b_15),
     .io_y(dot_7_io_y)
   );
+<<<<<<< HEAD
   DotProduct dot_8 ( // @[Gemm.scala 96:34:@13903.4]
+=======
+  DotProduct dot_8 ( // @[Gemm.scala 112:34:@13802.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(dot_8_clock),
     .io_b_0(dot_8_io_b_0),
     .io_b_1(dot_8_io_b_1),
@@ -6111,7 +6728,11 @@ module MatrixVectorCore( // @[:@13874.2]
     .io_b_15(dot_8_io_b_15),
     .io_y(dot_8_io_y)
   );
+<<<<<<< HEAD
   DotProduct dot_9 ( // @[Gemm.scala 96:34:@13906.4]
+=======
+  DotProduct dot_9 ( // @[Gemm.scala 112:34:@13805.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(dot_9_clock),
     .io_b_0(dot_9_io_b_0),
     .io_b_1(dot_9_io_b_1),
@@ -6131,7 +6752,11 @@ module MatrixVectorCore( // @[:@13874.2]
     .io_b_15(dot_9_io_b_15),
     .io_y(dot_9_io_y)
   );
+<<<<<<< HEAD
   DotProduct dot_10 ( // @[Gemm.scala 96:34:@13909.4]
+=======
+  DotProduct dot_10 ( // @[Gemm.scala 112:34:@13808.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(dot_10_clock),
     .io_b_0(dot_10_io_b_0),
     .io_b_1(dot_10_io_b_1),
@@ -6151,7 +6776,11 @@ module MatrixVectorCore( // @[:@13874.2]
     .io_b_15(dot_10_io_b_15),
     .io_y(dot_10_io_y)
   );
+<<<<<<< HEAD
   DotProduct dot_11 ( // @[Gemm.scala 96:34:@13912.4]
+=======
+  DotProduct dot_11 ( // @[Gemm.scala 112:34:@13811.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(dot_11_clock),
     .io_b_0(dot_11_io_b_0),
     .io_b_1(dot_11_io_b_1),
@@ -6171,7 +6800,11 @@ module MatrixVectorCore( // @[:@13874.2]
     .io_b_15(dot_11_io_b_15),
     .io_y(dot_11_io_y)
   );
+<<<<<<< HEAD
   DotProduct dot_12 ( // @[Gemm.scala 96:34:@13915.4]
+=======
+  DotProduct dot_12 ( // @[Gemm.scala 112:34:@13814.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(dot_12_clock),
     .io_b_0(dot_12_io_b_0),
     .io_b_1(dot_12_io_b_1),
@@ -6191,7 +6824,11 @@ module MatrixVectorCore( // @[:@13874.2]
     .io_b_15(dot_12_io_b_15),
     .io_y(dot_12_io_y)
   );
+<<<<<<< HEAD
   DotProduct dot_13 ( // @[Gemm.scala 96:34:@13918.4]
+=======
+  DotProduct dot_13 ( // @[Gemm.scala 112:34:@13817.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(dot_13_clock),
     .io_b_0(dot_13_io_b_0),
     .io_b_1(dot_13_io_b_1),
@@ -6211,7 +6848,11 @@ module MatrixVectorCore( // @[:@13874.2]
     .io_b_15(dot_13_io_b_15),
     .io_y(dot_13_io_y)
   );
+<<<<<<< HEAD
   DotProduct dot_14 ( // @[Gemm.scala 96:34:@13921.4]
+=======
+  DotProduct dot_14 ( // @[Gemm.scala 112:34:@13820.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(dot_14_clock),
     .io_b_0(dot_14_io_b_0),
     .io_b_1(dot_14_io_b_1),
@@ -6231,7 +6872,11 @@ module MatrixVectorCore( // @[:@13874.2]
     .io_b_15(dot_14_io_b_15),
     .io_y(dot_14_io_y)
   );
+<<<<<<< HEAD
   DotProduct dot_15 ( // @[Gemm.scala 96:34:@13924.4]
+=======
+  DotProduct dot_15 ( // @[Gemm.scala 112:34:@13823.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(dot_15_clock),
     .io_b_0(dot_15_io_b_0),
     .io_b_1(dot_15_io_b_1),
@@ -6251,102 +6896,167 @@ module MatrixVectorCore( // @[:@13874.2]
     .io_b_15(dot_15_io_b_15),
     .io_y(dot_15_io_y)
   );
+<<<<<<< HEAD
   Pipe acc_0 ( // @[Gemm.scala 97:34:@13927.4]
+=======
+  Pipe acc_0 ( // @[Gemm.scala 113:34:@13826.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(acc_0_clock),
     .reset(acc_0_reset),
     .io_enq_valid(acc_0_io_enq_valid),
     .io_deq_valid(acc_0_io_deq_valid)
   );
+<<<<<<< HEAD
   Pipe acc_1 ( // @[Gemm.scala 97:34:@13930.4]
+=======
+  Pipe acc_1 ( // @[Gemm.scala 113:34:@13829.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(acc_1_clock),
     .reset(acc_1_reset),
     .io_enq_valid(acc_1_io_enq_valid),
     .io_deq_valid(acc_1_io_deq_valid)
   );
+<<<<<<< HEAD
   Pipe acc_2 ( // @[Gemm.scala 97:34:@13933.4]
+=======
+  Pipe acc_2 ( // @[Gemm.scala 113:34:@13832.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(acc_2_clock),
     .reset(acc_2_reset),
     .io_enq_valid(acc_2_io_enq_valid),
     .io_deq_valid(acc_2_io_deq_valid)
   );
+<<<<<<< HEAD
   Pipe acc_3 ( // @[Gemm.scala 97:34:@13936.4]
+=======
+  Pipe acc_3 ( // @[Gemm.scala 113:34:@13835.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(acc_3_clock),
     .reset(acc_3_reset),
     .io_enq_valid(acc_3_io_enq_valid),
     .io_deq_valid(acc_3_io_deq_valid)
   );
+<<<<<<< HEAD
   Pipe acc_4 ( // @[Gemm.scala 97:34:@13939.4]
+=======
+  Pipe acc_4 ( // @[Gemm.scala 113:34:@13838.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(acc_4_clock),
     .reset(acc_4_reset),
     .io_enq_valid(acc_4_io_enq_valid),
     .io_deq_valid(acc_4_io_deq_valid)
   );
+<<<<<<< HEAD
   Pipe acc_5 ( // @[Gemm.scala 97:34:@13942.4]
+=======
+  Pipe acc_5 ( // @[Gemm.scala 113:34:@13841.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(acc_5_clock),
     .reset(acc_5_reset),
     .io_enq_valid(acc_5_io_enq_valid),
     .io_deq_valid(acc_5_io_deq_valid)
   );
+<<<<<<< HEAD
   Pipe acc_6 ( // @[Gemm.scala 97:34:@13945.4]
+=======
+  Pipe acc_6 ( // @[Gemm.scala 113:34:@13844.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(acc_6_clock),
     .reset(acc_6_reset),
     .io_enq_valid(acc_6_io_enq_valid),
     .io_deq_valid(acc_6_io_deq_valid)
   );
+<<<<<<< HEAD
   Pipe acc_7 ( // @[Gemm.scala 97:34:@13948.4]
+=======
+  Pipe acc_7 ( // @[Gemm.scala 113:34:@13847.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(acc_7_clock),
     .reset(acc_7_reset),
     .io_enq_valid(acc_7_io_enq_valid),
     .io_deq_valid(acc_7_io_deq_valid)
   );
+<<<<<<< HEAD
   Pipe acc_8 ( // @[Gemm.scala 97:34:@13951.4]
+=======
+  Pipe acc_8 ( // @[Gemm.scala 113:34:@13850.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(acc_8_clock),
     .reset(acc_8_reset),
     .io_enq_valid(acc_8_io_enq_valid),
     .io_deq_valid(acc_8_io_deq_valid)
   );
+<<<<<<< HEAD
   Pipe acc_9 ( // @[Gemm.scala 97:34:@13954.4]
+=======
+  Pipe acc_9 ( // @[Gemm.scala 113:34:@13853.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(acc_9_clock),
     .reset(acc_9_reset),
     .io_enq_valid(acc_9_io_enq_valid),
     .io_deq_valid(acc_9_io_deq_valid)
   );
+<<<<<<< HEAD
   Pipe acc_10 ( // @[Gemm.scala 97:34:@13957.4]
+=======
+  Pipe acc_10 ( // @[Gemm.scala 113:34:@13856.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(acc_10_clock),
     .reset(acc_10_reset),
     .io_enq_valid(acc_10_io_enq_valid),
     .io_deq_valid(acc_10_io_deq_valid)
   );
+<<<<<<< HEAD
   Pipe acc_11 ( // @[Gemm.scala 97:34:@13960.4]
+=======
+  Pipe acc_11 ( // @[Gemm.scala 113:34:@13859.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(acc_11_clock),
     .reset(acc_11_reset),
     .io_enq_valid(acc_11_io_enq_valid),
     .io_deq_valid(acc_11_io_deq_valid)
   );
+<<<<<<< HEAD
   Pipe acc_12 ( // @[Gemm.scala 97:34:@13963.4]
+=======
+  Pipe acc_12 ( // @[Gemm.scala 113:34:@13862.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(acc_12_clock),
     .reset(acc_12_reset),
     .io_enq_valid(acc_12_io_enq_valid),
     .io_deq_valid(acc_12_io_deq_valid)
   );
+<<<<<<< HEAD
   Pipe acc_13 ( // @[Gemm.scala 97:34:@13966.4]
+=======
+  Pipe acc_13 ( // @[Gemm.scala 113:34:@13865.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(acc_13_clock),
     .reset(acc_13_reset),
     .io_enq_valid(acc_13_io_enq_valid),
     .io_deq_valid(acc_13_io_deq_valid)
   );
+<<<<<<< HEAD
   Pipe acc_14 ( // @[Gemm.scala 97:34:@13969.4]
+=======
+  Pipe acc_14 ( // @[Gemm.scala 113:34:@13868.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(acc_14_clock),
     .reset(acc_14_reset),
     .io_enq_valid(acc_14_io_enq_valid),
     .io_deq_valid(acc_14_io_deq_valid)
   );
+<<<<<<< HEAD
   Pipe acc_15 ( // @[Gemm.scala 97:34:@13972.4]
+=======
+  Pipe acc_15 ( // @[Gemm.scala 113:34:@13871.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     .clock(acc_15_clock),
     .reset(acc_15_reset),
     .io_enq_valid(acc_15_io_enq_valid),
     .io_deq_valid(acc_15_io_deq_valid)
   );
+<<<<<<< HEAD
   assign _T_6016 = io_inp_valid & io_wgt_valid; // @[Gemm.scala 102:41:@13992.4]
   assign _T_6053 = {{4{dot_0_io_y[28]}},dot_0_io_y}; // @[Gemm.scala 108:41:@14063.4]
   assign _T_6054 = _T_6053[31:0]; // @[Gemm.scala 108:41:@14064.4]
@@ -6752,71 +7462,476 @@ module MatrixVectorCore( // @[:@13874.2]
   assign acc_15_clock = clock; // @[:@13973.4]
   assign acc_15_reset = reset; // @[:@13974.4]
   assign acc_15_io_enq_valid = _T_6016 & io_acc_i_valid; // @[Gemm.scala 102:25:@15211.4]
+=======
+  assign _T_6016 = io_inp_valid & io_wgt_valid; // @[Gemm.scala 118:41:@13891.4]
+  assign _T_6053 = {{12{dot_0_io_y[20]}},dot_0_io_y}; // @[Gemm.scala 124:41:@13962.4]
+  assign _T_6054 = _T_6053[31:0]; // @[Gemm.scala 124:41:@13963.4]
+  assign add_0 = $signed(_T_6054); // @[Gemm.scala 124:41:@13964.4]
+  assign _T_6097 = {{12{dot_1_io_y[20]}},dot_1_io_y}; // @[Gemm.scala 124:41:@14043.4]
+  assign _T_6098 = _T_6097[31:0]; // @[Gemm.scala 124:41:@14044.4]
+  assign add_1 = $signed(_T_6098); // @[Gemm.scala 124:41:@14045.4]
+  assign _T_6141 = {{12{dot_2_io_y[20]}},dot_2_io_y}; // @[Gemm.scala 124:41:@14124.4]
+  assign _T_6142 = _T_6141[31:0]; // @[Gemm.scala 124:41:@14125.4]
+  assign add_2 = $signed(_T_6142); // @[Gemm.scala 124:41:@14126.4]
+  assign _T_6185 = {{12{dot_3_io_y[20]}},dot_3_io_y}; // @[Gemm.scala 124:41:@14205.4]
+  assign _T_6186 = _T_6185[31:0]; // @[Gemm.scala 124:41:@14206.4]
+  assign add_3 = $signed(_T_6186); // @[Gemm.scala 124:41:@14207.4]
+  assign _T_6229 = {{12{dot_4_io_y[20]}},dot_4_io_y}; // @[Gemm.scala 124:41:@14286.4]
+  assign _T_6230 = _T_6229[31:0]; // @[Gemm.scala 124:41:@14287.4]
+  assign add_4 = $signed(_T_6230); // @[Gemm.scala 124:41:@14288.4]
+  assign _T_6273 = {{12{dot_5_io_y[20]}},dot_5_io_y}; // @[Gemm.scala 124:41:@14367.4]
+  assign _T_6274 = _T_6273[31:0]; // @[Gemm.scala 124:41:@14368.4]
+  assign add_5 = $signed(_T_6274); // @[Gemm.scala 124:41:@14369.4]
+  assign _T_6317 = {{12{dot_6_io_y[20]}},dot_6_io_y}; // @[Gemm.scala 124:41:@14448.4]
+  assign _T_6318 = _T_6317[31:0]; // @[Gemm.scala 124:41:@14449.4]
+  assign add_6 = $signed(_T_6318); // @[Gemm.scala 124:41:@14450.4]
+  assign _T_6361 = {{12{dot_7_io_y[20]}},dot_7_io_y}; // @[Gemm.scala 124:41:@14529.4]
+  assign _T_6362 = _T_6361[31:0]; // @[Gemm.scala 124:41:@14530.4]
+  assign add_7 = $signed(_T_6362); // @[Gemm.scala 124:41:@14531.4]
+  assign _T_6405 = {{12{dot_8_io_y[20]}},dot_8_io_y}; // @[Gemm.scala 124:41:@14610.4]
+  assign _T_6406 = _T_6405[31:0]; // @[Gemm.scala 124:41:@14611.4]
+  assign add_8 = $signed(_T_6406); // @[Gemm.scala 124:41:@14612.4]
+  assign _T_6449 = {{12{dot_9_io_y[20]}},dot_9_io_y}; // @[Gemm.scala 124:41:@14691.4]
+  assign _T_6450 = _T_6449[31:0]; // @[Gemm.scala 124:41:@14692.4]
+  assign add_9 = $signed(_T_6450); // @[Gemm.scala 124:41:@14693.4]
+  assign _T_6493 = {{12{dot_10_io_y[20]}},dot_10_io_y}; // @[Gemm.scala 124:41:@14772.4]
+  assign _T_6494 = _T_6493[31:0]; // @[Gemm.scala 124:41:@14773.4]
+  assign add_10 = $signed(_T_6494); // @[Gemm.scala 124:41:@14774.4]
+  assign _T_6537 = {{12{dot_11_io_y[20]}},dot_11_io_y}; // @[Gemm.scala 124:41:@14853.4]
+  assign _T_6538 = _T_6537[31:0]; // @[Gemm.scala 124:41:@14854.4]
+  assign add_11 = $signed(_T_6538); // @[Gemm.scala 124:41:@14855.4]
+  assign _T_6581 = {{12{dot_12_io_y[20]}},dot_12_io_y}; // @[Gemm.scala 124:41:@14934.4]
+  assign _T_6582 = _T_6581[31:0]; // @[Gemm.scala 124:41:@14935.4]
+  assign add_12 = $signed(_T_6582); // @[Gemm.scala 124:41:@14936.4]
+  assign _T_6625 = {{12{dot_13_io_y[20]}},dot_13_io_y}; // @[Gemm.scala 124:41:@15015.4]
+  assign _T_6626 = _T_6625[31:0]; // @[Gemm.scala 124:41:@15016.4]
+  assign add_13 = $signed(_T_6626); // @[Gemm.scala 124:41:@15017.4]
+  assign _T_6669 = {{12{dot_14_io_y[20]}},dot_14_io_y}; // @[Gemm.scala 124:41:@15096.4]
+  assign _T_6670 = _T_6669[31:0]; // @[Gemm.scala 124:41:@15097.4]
+  assign add_14 = $signed(_T_6670); // @[Gemm.scala 124:41:@15098.4]
+  assign _T_6713 = {{12{dot_15_io_y[20]}},dot_15_io_y}; // @[Gemm.scala 124:41:@15177.4]
+  assign _T_6714 = _T_6713[31:0]; // @[Gemm.scala 124:41:@15178.4]
+  assign add_15 = $signed(_T_6714); // @[Gemm.scala 124:41:@15179.4]
+  assign vld_1 = acc_1_io_deq_valid; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14052.4]
+  assign vld_0 = acc_0_io_deq_valid; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@13971.4]
+  assign vld_3 = acc_3_io_deq_valid; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14214.4]
+  assign vld_2 = acc_2_io_deq_valid; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14133.4]
+  assign vld_5 = acc_5_io_deq_valid; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14376.4]
+  assign vld_4 = acc_4_io_deq_valid; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14295.4]
+  assign vld_7 = acc_7_io_deq_valid; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14538.4]
+  assign vld_6 = acc_6_io_deq_valid; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14457.4]
+  assign _T_6726 = {vld_7,vld_6,vld_5,vld_4,vld_3,vld_2,vld_1,vld_0}; // @[Gemm.scala 129:25:@15193.4]
+  assign vld_9 = acc_9_io_deq_valid; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14700.4]
+  assign vld_8 = acc_8_io_deq_valid; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14619.4]
+  assign vld_11 = acc_11_io_deq_valid; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14862.4]
+  assign vld_10 = acc_10_io_deq_valid; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14781.4]
+  assign vld_13 = acc_13_io_deq_valid; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@15024.4]
+  assign vld_12 = acc_12_io_deq_valid; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@14943.4]
+  assign vld_15 = acc_15_io_deq_valid; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@15186.4]
+  assign vld_14 = acc_14_io_deq_valid; // @[Gemm.scala 115:17:@13890.4 Gemm.scala 127:12:@15105.4]
+  assign _T_6734 = {vld_15,vld_14,vld_13,vld_12,vld_11,vld_10,vld_9,vld_8,_T_6726}; // @[Gemm.scala 129:25:@15201.4]
+  assign _T_6735 = ~ _T_6734; // @[Gemm.scala 129:32:@15202.4]
+  assign io_acc_o_valid = _T_6735 == 16'h0; // @[Gemm.scala 129:18:@15205.4]
+  assign io_acc_o_bits_0_0 = $unsigned(add_0); // @[Gemm.scala 125:25:@13968.4]
+  assign io_acc_o_bits_0_1 = $unsigned(add_1); // @[Gemm.scala 125:25:@14049.4]
+  assign io_acc_o_bits_0_2 = $unsigned(add_2); // @[Gemm.scala 125:25:@14130.4]
+  assign io_acc_o_bits_0_3 = $unsigned(add_3); // @[Gemm.scala 125:25:@14211.4]
+  assign io_acc_o_bits_0_4 = $unsigned(add_4); // @[Gemm.scala 125:25:@14292.4]
+  assign io_acc_o_bits_0_5 = $unsigned(add_5); // @[Gemm.scala 125:25:@14373.4]
+  assign io_acc_o_bits_0_6 = $unsigned(add_6); // @[Gemm.scala 125:25:@14454.4]
+  assign io_acc_o_bits_0_7 = $unsigned(add_7); // @[Gemm.scala 125:25:@14535.4]
+  assign io_acc_o_bits_0_8 = $unsigned(add_8); // @[Gemm.scala 125:25:@14616.4]
+  assign io_acc_o_bits_0_9 = $unsigned(add_9); // @[Gemm.scala 125:25:@14697.4]
+  assign io_acc_o_bits_0_10 = $unsigned(add_10); // @[Gemm.scala 125:25:@14778.4]
+  assign io_acc_o_bits_0_11 = $unsigned(add_11); // @[Gemm.scala 125:25:@14859.4]
+  assign io_acc_o_bits_0_12 = $unsigned(add_12); // @[Gemm.scala 125:25:@14940.4]
+  assign io_acc_o_bits_0_13 = $unsigned(add_13); // @[Gemm.scala 125:25:@15021.4]
+  assign io_acc_o_bits_0_14 = $unsigned(add_14); // @[Gemm.scala 125:25:@15102.4]
+  assign io_acc_o_bits_0_15 = $unsigned(add_15); // @[Gemm.scala 125:25:@15183.4]
+  assign dot_0_clock = clock; // @[:@13779.4]
+  assign dot_0_io_b_0 = 8'sh0; // @[Gemm.scala 122:22:@13900.4]
+  assign dot_0_io_b_1 = 8'sh1; // @[Gemm.scala 122:22:@13904.4]
+  assign dot_0_io_b_2 = 8'sh2; // @[Gemm.scala 122:22:@13908.4]
+  assign dot_0_io_b_3 = 8'sh3; // @[Gemm.scala 122:22:@13912.4]
+  assign dot_0_io_b_4 = 8'sh4; // @[Gemm.scala 122:22:@13916.4]
+  assign dot_0_io_b_5 = 8'sh5; // @[Gemm.scala 122:22:@13920.4]
+  assign dot_0_io_b_6 = 8'sh6; // @[Gemm.scala 122:22:@13924.4]
+  assign dot_0_io_b_7 = 8'sh7; // @[Gemm.scala 122:22:@13928.4]
+  assign dot_0_io_b_8 = 8'sh8; // @[Gemm.scala 122:22:@13932.4]
+  assign dot_0_io_b_9 = 8'sh9; // @[Gemm.scala 122:22:@13936.4]
+  assign dot_0_io_b_10 = 8'sha; // @[Gemm.scala 122:22:@13940.4]
+  assign dot_0_io_b_11 = 8'shb; // @[Gemm.scala 122:22:@13944.4]
+  assign dot_0_io_b_12 = 8'shc; // @[Gemm.scala 122:22:@13948.4]
+  assign dot_0_io_b_13 = 8'shd; // @[Gemm.scala 122:22:@13952.4]
+  assign dot_0_io_b_14 = 8'she; // @[Gemm.scala 122:22:@13956.4]
+  assign dot_0_io_b_15 = 8'shf; // @[Gemm.scala 122:22:@13960.4]
+  assign dot_1_clock = clock; // @[:@13782.4]
+  assign dot_1_io_b_0 = 8'sh1; // @[Gemm.scala 122:22:@13981.4]
+  assign dot_1_io_b_1 = 8'sh2; // @[Gemm.scala 122:22:@13985.4]
+  assign dot_1_io_b_2 = 8'sh3; // @[Gemm.scala 122:22:@13989.4]
+  assign dot_1_io_b_3 = 8'sh4; // @[Gemm.scala 122:22:@13993.4]
+  assign dot_1_io_b_4 = 8'sh5; // @[Gemm.scala 122:22:@13997.4]
+  assign dot_1_io_b_5 = 8'sh6; // @[Gemm.scala 122:22:@14001.4]
+  assign dot_1_io_b_6 = 8'sh7; // @[Gemm.scala 122:22:@14005.4]
+  assign dot_1_io_b_7 = 8'sh8; // @[Gemm.scala 122:22:@14009.4]
+  assign dot_1_io_b_8 = 8'sh9; // @[Gemm.scala 122:22:@14013.4]
+  assign dot_1_io_b_9 = 8'sha; // @[Gemm.scala 122:22:@14017.4]
+  assign dot_1_io_b_10 = 8'shb; // @[Gemm.scala 122:22:@14021.4]
+  assign dot_1_io_b_11 = 8'shc; // @[Gemm.scala 122:22:@14025.4]
+  assign dot_1_io_b_12 = 8'shd; // @[Gemm.scala 122:22:@14029.4]
+  assign dot_1_io_b_13 = 8'she; // @[Gemm.scala 122:22:@14033.4]
+  assign dot_1_io_b_14 = 8'shf; // @[Gemm.scala 122:22:@14037.4]
+  assign dot_1_io_b_15 = 8'sh10; // @[Gemm.scala 122:22:@14041.4]
+  assign dot_2_clock = clock; // @[:@13785.4]
+  assign dot_2_io_b_0 = 8'sh2; // @[Gemm.scala 122:22:@14062.4]
+  assign dot_2_io_b_1 = 8'sh3; // @[Gemm.scala 122:22:@14066.4]
+  assign dot_2_io_b_2 = 8'sh4; // @[Gemm.scala 122:22:@14070.4]
+  assign dot_2_io_b_3 = 8'sh5; // @[Gemm.scala 122:22:@14074.4]
+  assign dot_2_io_b_4 = 8'sh6; // @[Gemm.scala 122:22:@14078.4]
+  assign dot_2_io_b_5 = 8'sh7; // @[Gemm.scala 122:22:@14082.4]
+  assign dot_2_io_b_6 = 8'sh8; // @[Gemm.scala 122:22:@14086.4]
+  assign dot_2_io_b_7 = 8'sh9; // @[Gemm.scala 122:22:@14090.4]
+  assign dot_2_io_b_8 = 8'sha; // @[Gemm.scala 122:22:@14094.4]
+  assign dot_2_io_b_9 = 8'shb; // @[Gemm.scala 122:22:@14098.4]
+  assign dot_2_io_b_10 = 8'shc; // @[Gemm.scala 122:22:@14102.4]
+  assign dot_2_io_b_11 = 8'shd; // @[Gemm.scala 122:22:@14106.4]
+  assign dot_2_io_b_12 = 8'she; // @[Gemm.scala 122:22:@14110.4]
+  assign dot_2_io_b_13 = 8'shf; // @[Gemm.scala 122:22:@14114.4]
+  assign dot_2_io_b_14 = 8'sh10; // @[Gemm.scala 122:22:@14118.4]
+  assign dot_2_io_b_15 = 8'sh11; // @[Gemm.scala 122:22:@14122.4]
+  assign dot_3_clock = clock; // @[:@13788.4]
+  assign dot_3_io_b_0 = 8'sh3; // @[Gemm.scala 122:22:@14143.4]
+  assign dot_3_io_b_1 = 8'sh4; // @[Gemm.scala 122:22:@14147.4]
+  assign dot_3_io_b_2 = 8'sh5; // @[Gemm.scala 122:22:@14151.4]
+  assign dot_3_io_b_3 = 8'sh6; // @[Gemm.scala 122:22:@14155.4]
+  assign dot_3_io_b_4 = 8'sh7; // @[Gemm.scala 122:22:@14159.4]
+  assign dot_3_io_b_5 = 8'sh8; // @[Gemm.scala 122:22:@14163.4]
+  assign dot_3_io_b_6 = 8'sh9; // @[Gemm.scala 122:22:@14167.4]
+  assign dot_3_io_b_7 = 8'sha; // @[Gemm.scala 122:22:@14171.4]
+  assign dot_3_io_b_8 = 8'shb; // @[Gemm.scala 122:22:@14175.4]
+  assign dot_3_io_b_9 = 8'shc; // @[Gemm.scala 122:22:@14179.4]
+  assign dot_3_io_b_10 = 8'shd; // @[Gemm.scala 122:22:@14183.4]
+  assign dot_3_io_b_11 = 8'she; // @[Gemm.scala 122:22:@14187.4]
+  assign dot_3_io_b_12 = 8'shf; // @[Gemm.scala 122:22:@14191.4]
+  assign dot_3_io_b_13 = 8'sh10; // @[Gemm.scala 122:22:@14195.4]
+  assign dot_3_io_b_14 = 8'sh11; // @[Gemm.scala 122:22:@14199.4]
+  assign dot_3_io_b_15 = 8'sh12; // @[Gemm.scala 122:22:@14203.4]
+  assign dot_4_clock = clock; // @[:@13791.4]
+  assign dot_4_io_b_0 = 8'sh4; // @[Gemm.scala 122:22:@14224.4]
+  assign dot_4_io_b_1 = 8'sh5; // @[Gemm.scala 122:22:@14228.4]
+  assign dot_4_io_b_2 = 8'sh6; // @[Gemm.scala 122:22:@14232.4]
+  assign dot_4_io_b_3 = 8'sh7; // @[Gemm.scala 122:22:@14236.4]
+  assign dot_4_io_b_4 = 8'sh8; // @[Gemm.scala 122:22:@14240.4]
+  assign dot_4_io_b_5 = 8'sh9; // @[Gemm.scala 122:22:@14244.4]
+  assign dot_4_io_b_6 = 8'sha; // @[Gemm.scala 122:22:@14248.4]
+  assign dot_4_io_b_7 = 8'shb; // @[Gemm.scala 122:22:@14252.4]
+  assign dot_4_io_b_8 = 8'shc; // @[Gemm.scala 122:22:@14256.4]
+  assign dot_4_io_b_9 = 8'shd; // @[Gemm.scala 122:22:@14260.4]
+  assign dot_4_io_b_10 = 8'she; // @[Gemm.scala 122:22:@14264.4]
+  assign dot_4_io_b_11 = 8'shf; // @[Gemm.scala 122:22:@14268.4]
+  assign dot_4_io_b_12 = 8'sh10; // @[Gemm.scala 122:22:@14272.4]
+  assign dot_4_io_b_13 = 8'sh11; // @[Gemm.scala 122:22:@14276.4]
+  assign dot_4_io_b_14 = 8'sh12; // @[Gemm.scala 122:22:@14280.4]
+  assign dot_4_io_b_15 = 8'sh13; // @[Gemm.scala 122:22:@14284.4]
+  assign dot_5_clock = clock; // @[:@13794.4]
+  assign dot_5_io_b_0 = 8'sh5; // @[Gemm.scala 122:22:@14305.4]
+  assign dot_5_io_b_1 = 8'sh6; // @[Gemm.scala 122:22:@14309.4]
+  assign dot_5_io_b_2 = 8'sh7; // @[Gemm.scala 122:22:@14313.4]
+  assign dot_5_io_b_3 = 8'sh8; // @[Gemm.scala 122:22:@14317.4]
+  assign dot_5_io_b_4 = 8'sh9; // @[Gemm.scala 122:22:@14321.4]
+  assign dot_5_io_b_5 = 8'sha; // @[Gemm.scala 122:22:@14325.4]
+  assign dot_5_io_b_6 = 8'shb; // @[Gemm.scala 122:22:@14329.4]
+  assign dot_5_io_b_7 = 8'shc; // @[Gemm.scala 122:22:@14333.4]
+  assign dot_5_io_b_8 = 8'shd; // @[Gemm.scala 122:22:@14337.4]
+  assign dot_5_io_b_9 = 8'she; // @[Gemm.scala 122:22:@14341.4]
+  assign dot_5_io_b_10 = 8'shf; // @[Gemm.scala 122:22:@14345.4]
+  assign dot_5_io_b_11 = 8'sh10; // @[Gemm.scala 122:22:@14349.4]
+  assign dot_5_io_b_12 = 8'sh11; // @[Gemm.scala 122:22:@14353.4]
+  assign dot_5_io_b_13 = 8'sh12; // @[Gemm.scala 122:22:@14357.4]
+  assign dot_5_io_b_14 = 8'sh13; // @[Gemm.scala 122:22:@14361.4]
+  assign dot_5_io_b_15 = 8'sh14; // @[Gemm.scala 122:22:@14365.4]
+  assign dot_6_clock = clock; // @[:@13797.4]
+  assign dot_6_io_b_0 = 8'sh6; // @[Gemm.scala 122:22:@14386.4]
+  assign dot_6_io_b_1 = 8'sh7; // @[Gemm.scala 122:22:@14390.4]
+  assign dot_6_io_b_2 = 8'sh8; // @[Gemm.scala 122:22:@14394.4]
+  assign dot_6_io_b_3 = 8'sh9; // @[Gemm.scala 122:22:@14398.4]
+  assign dot_6_io_b_4 = 8'sha; // @[Gemm.scala 122:22:@14402.4]
+  assign dot_6_io_b_5 = 8'shb; // @[Gemm.scala 122:22:@14406.4]
+  assign dot_6_io_b_6 = 8'shc; // @[Gemm.scala 122:22:@14410.4]
+  assign dot_6_io_b_7 = 8'shd; // @[Gemm.scala 122:22:@14414.4]
+  assign dot_6_io_b_8 = 8'she; // @[Gemm.scala 122:22:@14418.4]
+  assign dot_6_io_b_9 = 8'shf; // @[Gemm.scala 122:22:@14422.4]
+  assign dot_6_io_b_10 = 8'sh10; // @[Gemm.scala 122:22:@14426.4]
+  assign dot_6_io_b_11 = 8'sh11; // @[Gemm.scala 122:22:@14430.4]
+  assign dot_6_io_b_12 = 8'sh12; // @[Gemm.scala 122:22:@14434.4]
+  assign dot_6_io_b_13 = 8'sh13; // @[Gemm.scala 122:22:@14438.4]
+  assign dot_6_io_b_14 = 8'sh14; // @[Gemm.scala 122:22:@14442.4]
+  assign dot_6_io_b_15 = 8'sh15; // @[Gemm.scala 122:22:@14446.4]
+  assign dot_7_clock = clock; // @[:@13800.4]
+  assign dot_7_io_b_0 = 8'sh7; // @[Gemm.scala 122:22:@14467.4]
+  assign dot_7_io_b_1 = 8'sh8; // @[Gemm.scala 122:22:@14471.4]
+  assign dot_7_io_b_2 = 8'sh9; // @[Gemm.scala 122:22:@14475.4]
+  assign dot_7_io_b_3 = 8'sha; // @[Gemm.scala 122:22:@14479.4]
+  assign dot_7_io_b_4 = 8'shb; // @[Gemm.scala 122:22:@14483.4]
+  assign dot_7_io_b_5 = 8'shc; // @[Gemm.scala 122:22:@14487.4]
+  assign dot_7_io_b_6 = 8'shd; // @[Gemm.scala 122:22:@14491.4]
+  assign dot_7_io_b_7 = 8'she; // @[Gemm.scala 122:22:@14495.4]
+  assign dot_7_io_b_8 = 8'shf; // @[Gemm.scala 122:22:@14499.4]
+  assign dot_7_io_b_9 = 8'sh10; // @[Gemm.scala 122:22:@14503.4]
+  assign dot_7_io_b_10 = 8'sh11; // @[Gemm.scala 122:22:@14507.4]
+  assign dot_7_io_b_11 = 8'sh12; // @[Gemm.scala 122:22:@14511.4]
+  assign dot_7_io_b_12 = 8'sh13; // @[Gemm.scala 122:22:@14515.4]
+  assign dot_7_io_b_13 = 8'sh14; // @[Gemm.scala 122:22:@14519.4]
+  assign dot_7_io_b_14 = 8'sh15; // @[Gemm.scala 122:22:@14523.4]
+  assign dot_7_io_b_15 = 8'sh16; // @[Gemm.scala 122:22:@14527.4]
+  assign dot_8_clock = clock; // @[:@13803.4]
+  assign dot_8_io_b_0 = 8'sh8; // @[Gemm.scala 122:22:@14548.4]
+  assign dot_8_io_b_1 = 8'sh9; // @[Gemm.scala 122:22:@14552.4]
+  assign dot_8_io_b_2 = 8'sha; // @[Gemm.scala 122:22:@14556.4]
+  assign dot_8_io_b_3 = 8'shb; // @[Gemm.scala 122:22:@14560.4]
+  assign dot_8_io_b_4 = 8'shc; // @[Gemm.scala 122:22:@14564.4]
+  assign dot_8_io_b_5 = 8'shd; // @[Gemm.scala 122:22:@14568.4]
+  assign dot_8_io_b_6 = 8'she; // @[Gemm.scala 122:22:@14572.4]
+  assign dot_8_io_b_7 = 8'shf; // @[Gemm.scala 122:22:@14576.4]
+  assign dot_8_io_b_8 = 8'sh10; // @[Gemm.scala 122:22:@14580.4]
+  assign dot_8_io_b_9 = 8'sh11; // @[Gemm.scala 122:22:@14584.4]
+  assign dot_8_io_b_10 = 8'sh12; // @[Gemm.scala 122:22:@14588.4]
+  assign dot_8_io_b_11 = 8'sh13; // @[Gemm.scala 122:22:@14592.4]
+  assign dot_8_io_b_12 = 8'sh14; // @[Gemm.scala 122:22:@14596.4]
+  assign dot_8_io_b_13 = 8'sh15; // @[Gemm.scala 122:22:@14600.4]
+  assign dot_8_io_b_14 = 8'sh16; // @[Gemm.scala 122:22:@14604.4]
+  assign dot_8_io_b_15 = 8'sh17; // @[Gemm.scala 122:22:@14608.4]
+  assign dot_9_clock = clock; // @[:@13806.4]
+  assign dot_9_io_b_0 = 8'sh9; // @[Gemm.scala 122:22:@14629.4]
+  assign dot_9_io_b_1 = 8'sha; // @[Gemm.scala 122:22:@14633.4]
+  assign dot_9_io_b_2 = 8'shb; // @[Gemm.scala 122:22:@14637.4]
+  assign dot_9_io_b_3 = 8'shc; // @[Gemm.scala 122:22:@14641.4]
+  assign dot_9_io_b_4 = 8'shd; // @[Gemm.scala 122:22:@14645.4]
+  assign dot_9_io_b_5 = 8'she; // @[Gemm.scala 122:22:@14649.4]
+  assign dot_9_io_b_6 = 8'shf; // @[Gemm.scala 122:22:@14653.4]
+  assign dot_9_io_b_7 = 8'sh10; // @[Gemm.scala 122:22:@14657.4]
+  assign dot_9_io_b_8 = 8'sh11; // @[Gemm.scala 122:22:@14661.4]
+  assign dot_9_io_b_9 = 8'sh12; // @[Gemm.scala 122:22:@14665.4]
+  assign dot_9_io_b_10 = 8'sh13; // @[Gemm.scala 122:22:@14669.4]
+  assign dot_9_io_b_11 = 8'sh14; // @[Gemm.scala 122:22:@14673.4]
+  assign dot_9_io_b_12 = 8'sh15; // @[Gemm.scala 122:22:@14677.4]
+  assign dot_9_io_b_13 = 8'sh16; // @[Gemm.scala 122:22:@14681.4]
+  assign dot_9_io_b_14 = 8'sh17; // @[Gemm.scala 122:22:@14685.4]
+  assign dot_9_io_b_15 = 8'sh18; // @[Gemm.scala 122:22:@14689.4]
+  assign dot_10_clock = clock; // @[:@13809.4]
+  assign dot_10_io_b_0 = 8'sha; // @[Gemm.scala 122:22:@14710.4]
+  assign dot_10_io_b_1 = 8'shb; // @[Gemm.scala 122:22:@14714.4]
+  assign dot_10_io_b_2 = 8'shc; // @[Gemm.scala 122:22:@14718.4]
+  assign dot_10_io_b_3 = 8'shd; // @[Gemm.scala 122:22:@14722.4]
+  assign dot_10_io_b_4 = 8'she; // @[Gemm.scala 122:22:@14726.4]
+  assign dot_10_io_b_5 = 8'shf; // @[Gemm.scala 122:22:@14730.4]
+  assign dot_10_io_b_6 = 8'sh10; // @[Gemm.scala 122:22:@14734.4]
+  assign dot_10_io_b_7 = 8'sh11; // @[Gemm.scala 122:22:@14738.4]
+  assign dot_10_io_b_8 = 8'sh12; // @[Gemm.scala 122:22:@14742.4]
+  assign dot_10_io_b_9 = 8'sh13; // @[Gemm.scala 122:22:@14746.4]
+  assign dot_10_io_b_10 = 8'sh14; // @[Gemm.scala 122:22:@14750.4]
+  assign dot_10_io_b_11 = 8'sh15; // @[Gemm.scala 122:22:@14754.4]
+  assign dot_10_io_b_12 = 8'sh16; // @[Gemm.scala 122:22:@14758.4]
+  assign dot_10_io_b_13 = 8'sh17; // @[Gemm.scala 122:22:@14762.4]
+  assign dot_10_io_b_14 = 8'sh18; // @[Gemm.scala 122:22:@14766.4]
+  assign dot_10_io_b_15 = 8'sh19; // @[Gemm.scala 122:22:@14770.4]
+  assign dot_11_clock = clock; // @[:@13812.4]
+  assign dot_11_io_b_0 = 8'shb; // @[Gemm.scala 122:22:@14791.4]
+  assign dot_11_io_b_1 = 8'shc; // @[Gemm.scala 122:22:@14795.4]
+  assign dot_11_io_b_2 = 8'shd; // @[Gemm.scala 122:22:@14799.4]
+  assign dot_11_io_b_3 = 8'she; // @[Gemm.scala 122:22:@14803.4]
+  assign dot_11_io_b_4 = 8'shf; // @[Gemm.scala 122:22:@14807.4]
+  assign dot_11_io_b_5 = 8'sh10; // @[Gemm.scala 122:22:@14811.4]
+  assign dot_11_io_b_6 = 8'sh11; // @[Gemm.scala 122:22:@14815.4]
+  assign dot_11_io_b_7 = 8'sh12; // @[Gemm.scala 122:22:@14819.4]
+  assign dot_11_io_b_8 = 8'sh13; // @[Gemm.scala 122:22:@14823.4]
+  assign dot_11_io_b_9 = 8'sh14; // @[Gemm.scala 122:22:@14827.4]
+  assign dot_11_io_b_10 = 8'sh15; // @[Gemm.scala 122:22:@14831.4]
+  assign dot_11_io_b_11 = 8'sh16; // @[Gemm.scala 122:22:@14835.4]
+  assign dot_11_io_b_12 = 8'sh17; // @[Gemm.scala 122:22:@14839.4]
+  assign dot_11_io_b_13 = 8'sh18; // @[Gemm.scala 122:22:@14843.4]
+  assign dot_11_io_b_14 = 8'sh19; // @[Gemm.scala 122:22:@14847.4]
+  assign dot_11_io_b_15 = 8'sh1a; // @[Gemm.scala 122:22:@14851.4]
+  assign dot_12_clock = clock; // @[:@13815.4]
+  assign dot_12_io_b_0 = 8'shc; // @[Gemm.scala 122:22:@14872.4]
+  assign dot_12_io_b_1 = 8'shd; // @[Gemm.scala 122:22:@14876.4]
+  assign dot_12_io_b_2 = 8'she; // @[Gemm.scala 122:22:@14880.4]
+  assign dot_12_io_b_3 = 8'shf; // @[Gemm.scala 122:22:@14884.4]
+  assign dot_12_io_b_4 = 8'sh10; // @[Gemm.scala 122:22:@14888.4]
+  assign dot_12_io_b_5 = 8'sh11; // @[Gemm.scala 122:22:@14892.4]
+  assign dot_12_io_b_6 = 8'sh12; // @[Gemm.scala 122:22:@14896.4]
+  assign dot_12_io_b_7 = 8'sh13; // @[Gemm.scala 122:22:@14900.4]
+  assign dot_12_io_b_8 = 8'sh14; // @[Gemm.scala 122:22:@14904.4]
+  assign dot_12_io_b_9 = 8'sh15; // @[Gemm.scala 122:22:@14908.4]
+  assign dot_12_io_b_10 = 8'sh16; // @[Gemm.scala 122:22:@14912.4]
+  assign dot_12_io_b_11 = 8'sh17; // @[Gemm.scala 122:22:@14916.4]
+  assign dot_12_io_b_12 = 8'sh18; // @[Gemm.scala 122:22:@14920.4]
+  assign dot_12_io_b_13 = 8'sh19; // @[Gemm.scala 122:22:@14924.4]
+  assign dot_12_io_b_14 = 8'sh1a; // @[Gemm.scala 122:22:@14928.4]
+  assign dot_12_io_b_15 = 8'sh1b; // @[Gemm.scala 122:22:@14932.4]
+  assign dot_13_clock = clock; // @[:@13818.4]
+  assign dot_13_io_b_0 = 8'shd; // @[Gemm.scala 122:22:@14953.4]
+  assign dot_13_io_b_1 = 8'she; // @[Gemm.scala 122:22:@14957.4]
+  assign dot_13_io_b_2 = 8'shf; // @[Gemm.scala 122:22:@14961.4]
+  assign dot_13_io_b_3 = 8'sh10; // @[Gemm.scala 122:22:@14965.4]
+  assign dot_13_io_b_4 = 8'sh11; // @[Gemm.scala 122:22:@14969.4]
+  assign dot_13_io_b_5 = 8'sh12; // @[Gemm.scala 122:22:@14973.4]
+  assign dot_13_io_b_6 = 8'sh13; // @[Gemm.scala 122:22:@14977.4]
+  assign dot_13_io_b_7 = 8'sh14; // @[Gemm.scala 122:22:@14981.4]
+  assign dot_13_io_b_8 = 8'sh15; // @[Gemm.scala 122:22:@14985.4]
+  assign dot_13_io_b_9 = 8'sh16; // @[Gemm.scala 122:22:@14989.4]
+  assign dot_13_io_b_10 = 8'sh17; // @[Gemm.scala 122:22:@14993.4]
+  assign dot_13_io_b_11 = 8'sh18; // @[Gemm.scala 122:22:@14997.4]
+  assign dot_13_io_b_12 = 8'sh19; // @[Gemm.scala 122:22:@15001.4]
+  assign dot_13_io_b_13 = 8'sh1a; // @[Gemm.scala 122:22:@15005.4]
+  assign dot_13_io_b_14 = 8'sh1b; // @[Gemm.scala 122:22:@15009.4]
+  assign dot_13_io_b_15 = 8'sh1c; // @[Gemm.scala 122:22:@15013.4]
+  assign dot_14_clock = clock; // @[:@13821.4]
+  assign dot_14_io_b_0 = 8'she; // @[Gemm.scala 122:22:@15034.4]
+  assign dot_14_io_b_1 = 8'shf; // @[Gemm.scala 122:22:@15038.4]
+  assign dot_14_io_b_2 = 8'sh10; // @[Gemm.scala 122:22:@15042.4]
+  assign dot_14_io_b_3 = 8'sh11; // @[Gemm.scala 122:22:@15046.4]
+  assign dot_14_io_b_4 = 8'sh12; // @[Gemm.scala 122:22:@15050.4]
+  assign dot_14_io_b_5 = 8'sh13; // @[Gemm.scala 122:22:@15054.4]
+  assign dot_14_io_b_6 = 8'sh14; // @[Gemm.scala 122:22:@15058.4]
+  assign dot_14_io_b_7 = 8'sh15; // @[Gemm.scala 122:22:@15062.4]
+  assign dot_14_io_b_8 = 8'sh16; // @[Gemm.scala 122:22:@15066.4]
+  assign dot_14_io_b_9 = 8'sh17; // @[Gemm.scala 122:22:@15070.4]
+  assign dot_14_io_b_10 = 8'sh18; // @[Gemm.scala 122:22:@15074.4]
+  assign dot_14_io_b_11 = 8'sh19; // @[Gemm.scala 122:22:@15078.4]
+  assign dot_14_io_b_12 = 8'sh1a; // @[Gemm.scala 122:22:@15082.4]
+  assign dot_14_io_b_13 = 8'sh1b; // @[Gemm.scala 122:22:@15086.4]
+  assign dot_14_io_b_14 = 8'sh1c; // @[Gemm.scala 122:22:@15090.4]
+  assign dot_14_io_b_15 = 8'sh1d; // @[Gemm.scala 122:22:@15094.4]
+  assign dot_15_clock = clock; // @[:@13824.4]
+  assign dot_15_io_b_0 = 8'shf; // @[Gemm.scala 122:22:@15115.4]
+  assign dot_15_io_b_1 = 8'sh10; // @[Gemm.scala 122:22:@15119.4]
+  assign dot_15_io_b_2 = 8'sh11; // @[Gemm.scala 122:22:@15123.4]
+  assign dot_15_io_b_3 = 8'sh12; // @[Gemm.scala 122:22:@15127.4]
+  assign dot_15_io_b_4 = 8'sh13; // @[Gemm.scala 122:22:@15131.4]
+  assign dot_15_io_b_5 = 8'sh14; // @[Gemm.scala 122:22:@15135.4]
+  assign dot_15_io_b_6 = 8'sh15; // @[Gemm.scala 122:22:@15139.4]
+  assign dot_15_io_b_7 = 8'sh16; // @[Gemm.scala 122:22:@15143.4]
+  assign dot_15_io_b_8 = 8'sh17; // @[Gemm.scala 122:22:@15147.4]
+  assign dot_15_io_b_9 = 8'sh18; // @[Gemm.scala 122:22:@15151.4]
+  assign dot_15_io_b_10 = 8'sh19; // @[Gemm.scala 122:22:@15155.4]
+  assign dot_15_io_b_11 = 8'sh1a; // @[Gemm.scala 122:22:@15159.4]
+  assign dot_15_io_b_12 = 8'sh1b; // @[Gemm.scala 122:22:@15163.4]
+  assign dot_15_io_b_13 = 8'sh1c; // @[Gemm.scala 122:22:@15167.4]
+  assign dot_15_io_b_14 = 8'sh1d; // @[Gemm.scala 122:22:@15171.4]
+  assign dot_15_io_b_15 = 8'sh1e; // @[Gemm.scala 122:22:@15175.4]
+  assign acc_0_clock = clock; // @[:@13827.4]
+  assign acc_0_reset = reset; // @[:@13828.4]
+  assign acc_0_io_enq_valid = _T_6016 & io_acc_i_valid; // @[Gemm.scala 118:25:@13895.4]
+  assign acc_1_clock = clock; // @[:@13830.4]
+  assign acc_1_reset = reset; // @[:@13831.4]
+  assign acc_1_io_enq_valid = _T_6016 & io_acc_i_valid; // @[Gemm.scala 118:25:@13976.4]
+  assign acc_2_clock = clock; // @[:@13833.4]
+  assign acc_2_reset = reset; // @[:@13834.4]
+  assign acc_2_io_enq_valid = _T_6016 & io_acc_i_valid; // @[Gemm.scala 118:25:@14057.4]
+  assign acc_3_clock = clock; // @[:@13836.4]
+  assign acc_3_reset = reset; // @[:@13837.4]
+  assign acc_3_io_enq_valid = _T_6016 & io_acc_i_valid; // @[Gemm.scala 118:25:@14138.4]
+  assign acc_4_clock = clock; // @[:@13839.4]
+  assign acc_4_reset = reset; // @[:@13840.4]
+  assign acc_4_io_enq_valid = _T_6016 & io_acc_i_valid; // @[Gemm.scala 118:25:@14219.4]
+  assign acc_5_clock = clock; // @[:@13842.4]
+  assign acc_5_reset = reset; // @[:@13843.4]
+  assign acc_5_io_enq_valid = _T_6016 & io_acc_i_valid; // @[Gemm.scala 118:25:@14300.4]
+  assign acc_6_clock = clock; // @[:@13845.4]
+  assign acc_6_reset = reset; // @[:@13846.4]
+  assign acc_6_io_enq_valid = _T_6016 & io_acc_i_valid; // @[Gemm.scala 118:25:@14381.4]
+  assign acc_7_clock = clock; // @[:@13848.4]
+  assign acc_7_reset = reset; // @[:@13849.4]
+  assign acc_7_io_enq_valid = _T_6016 & io_acc_i_valid; // @[Gemm.scala 118:25:@14462.4]
+  assign acc_8_clock = clock; // @[:@13851.4]
+  assign acc_8_reset = reset; // @[:@13852.4]
+  assign acc_8_io_enq_valid = _T_6016 & io_acc_i_valid; // @[Gemm.scala 118:25:@14543.4]
+  assign acc_9_clock = clock; // @[:@13854.4]
+  assign acc_9_reset = reset; // @[:@13855.4]
+  assign acc_9_io_enq_valid = _T_6016 & io_acc_i_valid; // @[Gemm.scala 118:25:@14624.4]
+  assign acc_10_clock = clock; // @[:@13857.4]
+  assign acc_10_reset = reset; // @[:@13858.4]
+  assign acc_10_io_enq_valid = _T_6016 & io_acc_i_valid; // @[Gemm.scala 118:25:@14705.4]
+  assign acc_11_clock = clock; // @[:@13860.4]
+  assign acc_11_reset = reset; // @[:@13861.4]
+  assign acc_11_io_enq_valid = _T_6016 & io_acc_i_valid; // @[Gemm.scala 118:25:@14786.4]
+  assign acc_12_clock = clock; // @[:@13863.4]
+  assign acc_12_reset = reset; // @[:@13864.4]
+  assign acc_12_io_enq_valid = _T_6016 & io_acc_i_valid; // @[Gemm.scala 118:25:@14867.4]
+  assign acc_13_clock = clock; // @[:@13866.4]
+  assign acc_13_reset = reset; // @[:@13867.4]
+  assign acc_13_io_enq_valid = _T_6016 & io_acc_i_valid; // @[Gemm.scala 118:25:@14948.4]
+  assign acc_14_clock = clock; // @[:@13869.4]
+  assign acc_14_reset = reset; // @[:@13870.4]
+  assign acc_14_io_enq_valid = _T_6016 & io_acc_i_valid; // @[Gemm.scala 118:25:@15029.4]
+  assign acc_15_clock = clock; // @[:@13872.4]
+  assign acc_15_reset = reset; // @[:@13873.4]
+  assign acc_15_io_enq_valid = _T_6016 & io_acc_i_valid; // @[Gemm.scala 118:25:@15110.4]
+>>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
 endmodule
-module PrintVec( // @[:@15326.2]
-  input         clock, // @[:@15327.4]
-  input         reset, // @[:@15328.4]
-  input         io_vec_valid, // @[:@15329.4]
-  input  [31:0] io_vec_bits_0_0, // @[:@15329.4]
-  input  [31:0] io_vec_bits_0_1, // @[:@15329.4]
-  input  [31:0] io_vec_bits_0_2, // @[:@15329.4]
-  input  [31:0] io_vec_bits_0_3, // @[:@15329.4]
-  input  [31:0] io_vec_bits_0_4, // @[:@15329.4]
-  input  [31:0] io_vec_bits_0_5, // @[:@15329.4]
-  input  [31:0] io_vec_bits_0_6, // @[:@15329.4]
-  input  [31:0] io_vec_bits_0_7, // @[:@15329.4]
-  input  [31:0] io_vec_bits_0_8, // @[:@15329.4]
-  input  [31:0] io_vec_bits_0_9, // @[:@15329.4]
-  input  [31:0] io_vec_bits_0_10, // @[:@15329.4]
-  input  [31:0] io_vec_bits_0_11, // @[:@15329.4]
-  input  [31:0] io_vec_bits_0_12, // @[:@15329.4]
-  input  [31:0] io_vec_bits_0_13, // @[:@15329.4]
-  input  [31:0] io_vec_bits_0_14, // @[:@15329.4]
-  input  [31:0] io_vec_bits_0_15 // @[:@15329.4]
+module PrintVec( // @[:@15225.2]
+  input         clock, // @[:@15226.4]
+  input         reset, // @[:@15227.4]
+  input         io_vec_valid, // @[:@15228.4]
+  input  [31:0] io_vec_bits_0_0, // @[:@15228.4]
+  input  [31:0] io_vec_bits_0_1, // @[:@15228.4]
+  input  [31:0] io_vec_bits_0_2, // @[:@15228.4]
+  input  [31:0] io_vec_bits_0_3, // @[:@15228.4]
+  input  [31:0] io_vec_bits_0_4, // @[:@15228.4]
+  input  [31:0] io_vec_bits_0_5, // @[:@15228.4]
+  input  [31:0] io_vec_bits_0_6, // @[:@15228.4]
+  input  [31:0] io_vec_bits_0_7, // @[:@15228.4]
+  input  [31:0] io_vec_bits_0_8, // @[:@15228.4]
+  input  [31:0] io_vec_bits_0_9, // @[:@15228.4]
+  input  [31:0] io_vec_bits_0_10, // @[:@15228.4]
+  input  [31:0] io_vec_bits_0_11, // @[:@15228.4]
+  input  [31:0] io_vec_bits_0_12, // @[:@15228.4]
+  input  [31:0] io_vec_bits_0_13, // @[:@15228.4]
+  input  [31:0] io_vec_bits_0_14, // @[:@15228.4]
+  input  [31:0] io_vec_bits_0_15 // @[:@15228.4]
 );
-  wire  _T_530; // @[Test.scala 77:15:@15331.4]
-  wire  _T_533; // @[Test.scala 78:23:@15334.6]
-  wire [31:0] _T_534; // @[Test.scala 80:50:@15338.6]
-  wire [31:0] _T_538; // @[Test.scala 80:50:@15344.6]
-  wire [31:0] _T_542; // @[Test.scala 80:50:@15350.6]
-  wire [31:0] _T_546; // @[Test.scala 80:50:@15356.6]
-  wire [31:0] _T_550; // @[Test.scala 80:50:@15362.6]
-  wire [31:0] _T_554; // @[Test.scala 80:50:@15368.6]
-  wire [31:0] _T_558; // @[Test.scala 80:50:@15374.6]
-  wire [31:0] _T_562; // @[Test.scala 80:50:@15380.6]
-  wire [31:0] _T_566; // @[Test.scala 80:50:@15386.6]
-  wire [31:0] _T_570; // @[Test.scala 80:50:@15392.6]
-  wire [31:0] _T_574; // @[Test.scala 80:50:@15398.6]
-  wire [31:0] _T_578; // @[Test.scala 80:50:@15404.6]
-  wire [31:0] _T_582; // @[Test.scala 80:50:@15410.6]
-  wire [31:0] _T_586; // @[Test.scala 80:50:@15416.6]
-  wire [31:0] _T_590; // @[Test.scala 80:50:@15422.6]
-  wire [31:0] _T_594; // @[Test.scala 80:50:@15428.6]
-  assign _T_530 = io_vec_valid == 1'h0; // @[Test.scala 77:15:@15331.4]
-  assign _T_533 = reset == 1'h0; // @[Test.scala 78:23:@15334.6]
-  assign _T_534 = $signed(io_vec_bits_0_0); // @[Test.scala 80:50:@15338.6]
-  assign _T_538 = $signed(io_vec_bits_0_1); // @[Test.scala 80:50:@15344.6]
-  assign _T_542 = $signed(io_vec_bits_0_2); // @[Test.scala 80:50:@15350.6]
-  assign _T_546 = $signed(io_vec_bits_0_3); // @[Test.scala 80:50:@15356.6]
-  assign _T_550 = $signed(io_vec_bits_0_4); // @[Test.scala 80:50:@15362.6]
-  assign _T_554 = $signed(io_vec_bits_0_5); // @[Test.scala 80:50:@15368.6]
-  assign _T_558 = $signed(io_vec_bits_0_6); // @[Test.scala 80:50:@15374.6]
-  assign _T_562 = $signed(io_vec_bits_0_7); // @[Test.scala 80:50:@15380.6]
-  assign _T_566 = $signed(io_vec_bits_0_8); // @[Test.scala 80:50:@15386.6]
-  assign _T_570 = $signed(io_vec_bits_0_9); // @[Test.scala 80:50:@15392.6]
-  assign _T_574 = $signed(io_vec_bits_0_10); // @[Test.scala 80:50:@15398.6]
-  assign _T_578 = $signed(io_vec_bits_0_11); // @[Test.scala 80:50:@15404.6]
-  assign _T_582 = $signed(io_vec_bits_0_12); // @[Test.scala 80:50:@15410.6]
-  assign _T_586 = $signed(io_vec_bits_0_13); // @[Test.scala 80:50:@15416.6]
-  assign _T_590 = $signed(io_vec_bits_0_14); // @[Test.scala 80:50:@15422.6]
-  assign _T_594 = $signed(io_vec_bits_0_15); // @[Test.scala 80:50:@15428.6]
+  wire  _T_531; // @[Test.scala 73:23:@15232.6]
+  wire [31:0] _T_532; // @[Test.scala 75:50:@15236.6]
+  wire [31:0] _T_536; // @[Test.scala 75:50:@15242.6]
+  wire [31:0] _T_540; // @[Test.scala 75:50:@15248.6]
+  wire [31:0] _T_544; // @[Test.scala 75:50:@15254.6]
+  wire [31:0] _T_548; // @[Test.scala 75:50:@15260.6]
+  wire [31:0] _T_552; // @[Test.scala 75:50:@15266.6]
+  wire [31:0] _T_556; // @[Test.scala 75:50:@15272.6]
+  wire [31:0] _T_560; // @[Test.scala 75:50:@15278.6]
+  wire [31:0] _T_564; // @[Test.scala 75:50:@15284.6]
+  wire [31:0] _T_568; // @[Test.scala 75:50:@15290.6]
+  wire [31:0] _T_572; // @[Test.scala 75:50:@15296.6]
+  wire [31:0] _T_576; // @[Test.scala 75:50:@15302.6]
+  wire [31:0] _T_580; // @[Test.scala 75:50:@15308.6]
+  wire [31:0] _T_584; // @[Test.scala 75:50:@15314.6]
+  wire [31:0] _T_588; // @[Test.scala 75:50:@15320.6]
+  wire [31:0] _T_592; // @[Test.scala 75:50:@15326.6]
+  assign _T_531 = reset == 1'h0; // @[Test.scala 73:23:@15232.6]
+  assign _T_532 = $signed(io_vec_bits_0_0); // @[Test.scala 75:50:@15236.6]
+  assign _T_536 = $signed(io_vec_bits_0_1); // @[Test.scala 75:50:@15242.6]
+  assign _T_540 = $signed(io_vec_bits_0_2); // @[Test.scala 75:50:@15248.6]
+  assign _T_544 = $signed(io_vec_bits_0_3); // @[Test.scala 75:50:@15254.6]
+  assign _T_548 = $signed(io_vec_bits_0_4); // @[Test.scala 75:50:@15260.6]
+  assign _T_552 = $signed(io_vec_bits_0_5); // @[Test.scala 75:50:@15266.6]
+  assign _T_556 = $signed(io_vec_bits_0_6); // @[Test.scala 75:50:@15272.6]
+  assign _T_560 = $signed(io_vec_bits_0_7); // @[Test.scala 75:50:@15278.6]
+  assign _T_564 = $signed(io_vec_bits_0_8); // @[Test.scala 75:50:@15284.6]
+  assign _T_568 = $signed(io_vec_bits_0_9); // @[Test.scala 75:50:@15290.6]
+  assign _T_572 = $signed(io_vec_bits_0_10); // @[Test.scala 75:50:@15296.6]
+  assign _T_576 = $signed(io_vec_bits_0_11); // @[Test.scala 75:50:@15302.6]
+  assign _T_580 = $signed(io_vec_bits_0_12); // @[Test.scala 75:50:@15308.6]
+  assign _T_584 = $signed(io_vec_bits_0_13); // @[Test.scala 75:50:@15314.6]
+  assign _T_588 = $signed(io_vec_bits_0_14); // @[Test.scala 75:50:@15320.6]
+  assign _T_592 = $signed(io_vec_bits_0_15); // @[Test.scala 75:50:@15326.6]
   always @(posedge clock) begin
     `ifndef SYNTHESIS
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_530 & _T_533) begin
-          $fwrite(32'h80000002,"\nvec: "); // @[Test.scala 78:23:@15336.8]
+        if (io_vec_valid & _T_531) begin
+          $fwrite(32'h80000002,"\nvec: "); // @[Test.scala 73:23:@15234.8]
         end
     `ifdef PRINTF_COND
       end
@@ -6826,8 +7941,8 @@ module PrintVec( // @[:@15326.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_530 & _T_533) begin
-          $fwrite(32'h80000002,"%d, ",_T_534); // @[Test.scala 80:23:@15342.8]
+        if (io_vec_valid & _T_531) begin
+          $fwrite(32'h80000002,"%d, ",_T_532); // @[Test.scala 75:23:@15240.8]
         end
     `ifdef PRINTF_COND
       end
@@ -6837,8 +7952,8 @@ module PrintVec( // @[:@15326.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_530 & _T_533) begin
-          $fwrite(32'h80000002,"%d, ",_T_538); // @[Test.scala 80:23:@15348.8]
+        if (io_vec_valid & _T_531) begin
+          $fwrite(32'h80000002,"%d, ",_T_536); // @[Test.scala 75:23:@15246.8]
         end
     `ifdef PRINTF_COND
       end
@@ -6848,8 +7963,8 @@ module PrintVec( // @[:@15326.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_530 & _T_533) begin
-          $fwrite(32'h80000002,"%d, ",_T_542); // @[Test.scala 80:23:@15354.8]
+        if (io_vec_valid & _T_531) begin
+          $fwrite(32'h80000002,"%d, ",_T_540); // @[Test.scala 75:23:@15252.8]
         end
     `ifdef PRINTF_COND
       end
@@ -6859,8 +7974,8 @@ module PrintVec( // @[:@15326.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_530 & _T_533) begin
-          $fwrite(32'h80000002,"%d, ",_T_546); // @[Test.scala 80:23:@15360.8]
+        if (io_vec_valid & _T_531) begin
+          $fwrite(32'h80000002,"%d, ",_T_544); // @[Test.scala 75:23:@15258.8]
         end
     `ifdef PRINTF_COND
       end
@@ -6870,8 +7985,8 @@ module PrintVec( // @[:@15326.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_530 & _T_533) begin
-          $fwrite(32'h80000002,"%d, ",_T_550); // @[Test.scala 80:23:@15366.8]
+        if (io_vec_valid & _T_531) begin
+          $fwrite(32'h80000002,"%d, ",_T_548); // @[Test.scala 75:23:@15264.8]
         end
     `ifdef PRINTF_COND
       end
@@ -6881,8 +7996,8 @@ module PrintVec( // @[:@15326.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_530 & _T_533) begin
-          $fwrite(32'h80000002,"%d, ",_T_554); // @[Test.scala 80:23:@15372.8]
+        if (io_vec_valid & _T_531) begin
+          $fwrite(32'h80000002,"%d, ",_T_552); // @[Test.scala 75:23:@15270.8]
         end
     `ifdef PRINTF_COND
       end
@@ -6892,8 +8007,8 @@ module PrintVec( // @[:@15326.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_530 & _T_533) begin
-          $fwrite(32'h80000002,"%d, ",_T_558); // @[Test.scala 80:23:@15378.8]
+        if (io_vec_valid & _T_531) begin
+          $fwrite(32'h80000002,"%d, ",_T_556); // @[Test.scala 75:23:@15276.8]
         end
     `ifdef PRINTF_COND
       end
@@ -6903,8 +8018,8 @@ module PrintVec( // @[:@15326.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_530 & _T_533) begin
-          $fwrite(32'h80000002,"%d, ",_T_562); // @[Test.scala 80:23:@15384.8]
+        if (io_vec_valid & _T_531) begin
+          $fwrite(32'h80000002,"%d, ",_T_560); // @[Test.scala 75:23:@15282.8]
         end
     `ifdef PRINTF_COND
       end
@@ -6914,8 +8029,8 @@ module PrintVec( // @[:@15326.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_530 & _T_533) begin
-          $fwrite(32'h80000002,"%d, ",_T_566); // @[Test.scala 80:23:@15390.8]
+        if (io_vec_valid & _T_531) begin
+          $fwrite(32'h80000002,"%d, ",_T_564); // @[Test.scala 75:23:@15288.8]
         end
     `ifdef PRINTF_COND
       end
@@ -6925,8 +8040,8 @@ module PrintVec( // @[:@15326.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_530 & _T_533) begin
-          $fwrite(32'h80000002,"%d, ",_T_570); // @[Test.scala 80:23:@15396.8]
+        if (io_vec_valid & _T_531) begin
+          $fwrite(32'h80000002,"%d, ",_T_568); // @[Test.scala 75:23:@15294.8]
         end
     `ifdef PRINTF_COND
       end
@@ -6936,8 +8051,8 @@ module PrintVec( // @[:@15326.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_530 & _T_533) begin
-          $fwrite(32'h80000002,"%d, ",_T_574); // @[Test.scala 80:23:@15402.8]
+        if (io_vec_valid & _T_531) begin
+          $fwrite(32'h80000002,"%d, ",_T_572); // @[Test.scala 75:23:@15300.8]
         end
     `ifdef PRINTF_COND
       end
@@ -6947,8 +8062,8 @@ module PrintVec( // @[:@15326.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_530 & _T_533) begin
-          $fwrite(32'h80000002,"%d, ",_T_578); // @[Test.scala 80:23:@15408.8]
+        if (io_vec_valid & _T_531) begin
+          $fwrite(32'h80000002,"%d, ",_T_576); // @[Test.scala 75:23:@15306.8]
         end
     `ifdef PRINTF_COND
       end
@@ -6958,8 +8073,8 @@ module PrintVec( // @[:@15326.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_530 & _T_533) begin
-          $fwrite(32'h80000002,"%d, ",_T_582); // @[Test.scala 80:23:@15414.8]
+        if (io_vec_valid & _T_531) begin
+          $fwrite(32'h80000002,"%d, ",_T_580); // @[Test.scala 75:23:@15312.8]
         end
     `ifdef PRINTF_COND
       end
@@ -6969,8 +8084,8 @@ module PrintVec( // @[:@15326.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_530 & _T_533) begin
-          $fwrite(32'h80000002,"%d, ",_T_586); // @[Test.scala 80:23:@15420.8]
+        if (io_vec_valid & _T_531) begin
+          $fwrite(32'h80000002,"%d, ",_T_584); // @[Test.scala 75:23:@15318.8]
         end
     `ifdef PRINTF_COND
       end
@@ -6980,8 +8095,8 @@ module PrintVec( // @[:@15326.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_530 & _T_533) begin
-          $fwrite(32'h80000002,"%d, ",_T_590); // @[Test.scala 80:23:@15426.8]
+        if (io_vec_valid & _T_531) begin
+          $fwrite(32'h80000002,"%d, ",_T_588); // @[Test.scala 75:23:@15324.8]
         end
     `ifdef PRINTF_COND
       end
@@ -6991,8 +8106,8 @@ module PrintVec( // @[:@15326.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_530 & _T_533) begin
-          $fwrite(32'h80000002,"%d, ",_T_594); // @[Test.scala 80:23:@15432.8]
+        if (io_vec_valid & _T_531) begin
+          $fwrite(32'h80000002,"%d, ",_T_592); // @[Test.scala 75:23:@15330.8]
         end
     `ifdef PRINTF_COND
       end
@@ -7002,8 +8117,8 @@ module PrintVec( // @[:@15326.2]
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_530 & _T_533) begin
-          $fwrite(32'h80000002,"\n"); // @[Test.scala 82:23:@15437.8]
+        if (io_vec_valid & _T_531) begin
+          $fwrite(32'h80000002,"\n"); // @[Test.scala 77:23:@15335.8]
         end
     `ifdef PRINTF_COND
       end
@@ -7011,345 +8126,329 @@ module PrintVec( // @[:@15326.2]
     `endif // SYNTHESIS
   end
 endmodule
-module Test( // @[:@15441.2]
-  input   clock, // @[:@15442.4]
-  input   reset // @[:@15443.4]
+module Test( // @[:@15339.2]
+  input   clock, // @[:@15340.4]
+  input   reset // @[:@15341.4]
 );
-  wire  mvgen_clock; // @[Test.scala 98:27:@15446.4]
-  wire  mvgen_reset; // @[Test.scala 98:27:@15446.4]
-  wire  mvgen_io_inp_valid; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_inp_bits_0_0; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_inp_bits_0_1; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_inp_bits_0_2; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_inp_bits_0_3; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_inp_bits_0_4; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_inp_bits_0_5; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_inp_bits_0_6; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_inp_bits_0_7; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_inp_bits_0_8; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_inp_bits_0_9; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_inp_bits_0_10; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_inp_bits_0_11; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_inp_bits_0_12; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_inp_bits_0_13; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_inp_bits_0_14; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_inp_bits_0_15; // @[Test.scala 98:27:@15446.4]
-  wire  mvgen_io_wgt_valid; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_0_0; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_0_1; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_0_2; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_0_3; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_0_4; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_0_5; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_0_6; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_0_7; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_0_8; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_0_9; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_0_10; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_0_11; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_0_12; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_0_13; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_0_14; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_0_15; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_1_0; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_1_1; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_1_2; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_1_3; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_1_4; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_1_5; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_1_6; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_1_7; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_1_8; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_1_9; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_1_10; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_1_11; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_1_12; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_1_13; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_1_14; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_1_15; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_2_0; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_2_1; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_2_2; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_2_3; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_2_4; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_2_5; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_2_6; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_2_7; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_2_8; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_2_9; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_2_10; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_2_11; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_2_12; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_2_13; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_2_14; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_2_15; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_3_0; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_3_1; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_3_2; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_3_3; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_3_4; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_3_5; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_3_6; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_3_7; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_3_8; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_3_9; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_3_10; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_3_11; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_3_12; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_3_13; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_3_14; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_3_15; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_4_0; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_4_1; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_4_2; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_4_3; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_4_4; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_4_5; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_4_6; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_4_7; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_4_8; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_4_9; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_4_10; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_4_11; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_4_12; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_4_13; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_4_14; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_4_15; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_5_0; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_5_1; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_5_2; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_5_3; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_5_4; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_5_5; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_5_6; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_5_7; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_5_8; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_5_9; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_5_10; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_5_11; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_5_12; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_5_13; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_5_14; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_5_15; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_6_0; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_6_1; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_6_2; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_6_3; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_6_4; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_6_5; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_6_6; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_6_7; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_6_8; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_6_9; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_6_10; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_6_11; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_6_12; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_6_13; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_6_14; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_6_15; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_7_0; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_7_1; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_7_2; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_7_3; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_7_4; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_7_5; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_7_6; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_7_7; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_7_8; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_7_9; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_7_10; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_7_11; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_7_12; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_7_13; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_7_14; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_7_15; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_8_0; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_8_1; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_8_2; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_8_3; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_8_4; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_8_5; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_8_6; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_8_7; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_8_8; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_8_9; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_8_10; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_8_11; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_8_12; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_8_13; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_8_14; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_8_15; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_9_0; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_9_1; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_9_2; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_9_3; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_9_4; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_9_5; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_9_6; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_9_7; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_9_8; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_9_9; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_9_10; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_9_11; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_9_12; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_9_13; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_9_14; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_9_15; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_10_0; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_10_1; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_10_2; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_10_3; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_10_4; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_10_5; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_10_6; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_10_7; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_10_8; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_10_9; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_10_10; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_10_11; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_10_12; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_10_13; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_10_14; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_10_15; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_11_0; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_11_1; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_11_2; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_11_3; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_11_4; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_11_5; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_11_6; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_11_7; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_11_8; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_11_9; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_11_10; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_11_11; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_11_12; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_11_13; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_11_14; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_11_15; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_12_0; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_12_1; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_12_2; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_12_3; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_12_4; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_12_5; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_12_6; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_12_7; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_12_8; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_12_9; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_12_10; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_12_11; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_12_12; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_12_13; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_12_14; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_12_15; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_13_0; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_13_1; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_13_2; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_13_3; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_13_4; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_13_5; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_13_6; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_13_7; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_13_8; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_13_9; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_13_10; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_13_11; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_13_12; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_13_13; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_13_14; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_13_15; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_14_0; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_14_1; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_14_2; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_14_3; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_14_4; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_14_5; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_14_6; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_14_7; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_14_8; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_14_9; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_14_10; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_14_11; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_14_12; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_14_13; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_14_14; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_14_15; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_15_0; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_15_1; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_15_2; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_15_3; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_15_4; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_15_5; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_15_6; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_15_7; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_15_8; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_15_9; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_15_10; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_15_11; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_15_12; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_15_13; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_15_14; // @[Test.scala 98:27:@15446.4]
-  wire [7:0] mvgen_io_wgt_bits_15_15; // @[Test.scala 98:27:@15446.4]
-  wire  mvgen_io_acc_i_valid; // @[Test.scala 98:27:@15446.4]
-  wire [31:0] mvgen_io_acc_i_bits_0_0; // @[Test.scala 98:27:@15446.4]
-  wire [31:0] mvgen_io_acc_i_bits_0_1; // @[Test.scala 98:27:@15446.4]
-  wire [31:0] mvgen_io_acc_i_bits_0_2; // @[Test.scala 98:27:@15446.4]
-  wire [31:0] mvgen_io_acc_i_bits_0_3; // @[Test.scala 98:27:@15446.4]
-  wire [31:0] mvgen_io_acc_i_bits_0_4; // @[Test.scala 98:27:@15446.4]
-  wire [31:0] mvgen_io_acc_i_bits_0_5; // @[Test.scala 98:27:@15446.4]
-  wire [31:0] mvgen_io_acc_i_bits_0_6; // @[Test.scala 98:27:@15446.4]
-  wire [31:0] mvgen_io_acc_i_bits_0_7; // @[Test.scala 98:27:@15446.4]
-  wire [31:0] mvgen_io_acc_i_bits_0_8; // @[Test.scala 98:27:@15446.4]
-  wire [31:0] mvgen_io_acc_i_bits_0_9; // @[Test.scala 98:27:@15446.4]
-  wire [31:0] mvgen_io_acc_i_bits_0_10; // @[Test.scala 98:27:@15446.4]
-  wire [31:0] mvgen_io_acc_i_bits_0_11; // @[Test.scala 98:27:@15446.4]
-  wire [31:0] mvgen_io_acc_i_bits_0_12; // @[Test.scala 98:27:@15446.4]
-  wire [31:0] mvgen_io_acc_i_bits_0_13; // @[Test.scala 98:27:@15446.4]
-  wire [31:0] mvgen_io_acc_i_bits_0_14; // @[Test.scala 98:27:@15446.4]
-  wire [31:0] mvgen_io_acc_i_bits_0_15; // @[Test.scala 98:27:@15446.4]
-  wire  mvcore_clock; // @[Test.scala 99:28:@15449.4]
-  wire  mvcore_reset; // @[Test.scala 99:28:@15449.4]
-  wire  mvcore_io_inp_valid; // @[Test.scala 99:28:@15449.4]
-  wire  mvcore_io_wgt_valid; // @[Test.scala 99:28:@15449.4]
-  wire  mvcore_io_acc_i_valid; // @[Test.scala 99:28:@15449.4]
-  wire  mvcore_io_acc_o_valid; // @[Test.scala 99:28:@15449.4]
-  wire [31:0] mvcore_io_acc_o_bits_0_0; // @[Test.scala 99:28:@15449.4]
-  wire [31:0] mvcore_io_acc_o_bits_0_1; // @[Test.scala 99:28:@15449.4]
-  wire [31:0] mvcore_io_acc_o_bits_0_2; // @[Test.scala 99:28:@15449.4]
-  wire [31:0] mvcore_io_acc_o_bits_0_3; // @[Test.scala 99:28:@15449.4]
-  wire [31:0] mvcore_io_acc_o_bits_0_4; // @[Test.scala 99:28:@15449.4]
-  wire [31:0] mvcore_io_acc_o_bits_0_5; // @[Test.scala 99:28:@15449.4]
-  wire [31:0] mvcore_io_acc_o_bits_0_6; // @[Test.scala 99:28:@15449.4]
-  wire [31:0] mvcore_io_acc_o_bits_0_7; // @[Test.scala 99:28:@15449.4]
-  wire [31:0] mvcore_io_acc_o_bits_0_8; // @[Test.scala 99:28:@15449.4]
-  wire [31:0] mvcore_io_acc_o_bits_0_9; // @[Test.scala 99:28:@15449.4]
-  wire [31:0] mvcore_io_acc_o_bits_0_10; // @[Test.scala 99:28:@15449.4]
-  wire [31:0] mvcore_io_acc_o_bits_0_11; // @[Test.scala 99:28:@15449.4]
-  wire [31:0] mvcore_io_acc_o_bits_0_12; // @[Test.scala 99:28:@15449.4]
-  wire [31:0] mvcore_io_acc_o_bits_0_13; // @[Test.scala 99:28:@15449.4]
-  wire [31:0] mvcore_io_acc_o_bits_0_14; // @[Test.scala 99:28:@15449.4]
-  wire [31:0] mvcore_io_acc_o_bits_0_15; // @[Test.scala 99:28:@15449.4]
-  wire  pv_clock; // @[Test.scala 100:24:@15452.4]
-  wire  pv_reset; // @[Test.scala 100:24:@15452.4]
-  wire  pv_io_vec_valid; // @[Test.scala 100:24:@15452.4]
-  wire [31:0] pv_io_vec_bits_0_0; // @[Test.scala 100:24:@15452.4]
-  wire [31:0] pv_io_vec_bits_0_1; // @[Test.scala 100:24:@15452.4]
-  wire [31:0] pv_io_vec_bits_0_2; // @[Test.scala 100:24:@15452.4]
-  wire [31:0] pv_io_vec_bits_0_3; // @[Test.scala 100:24:@15452.4]
-  wire [31:0] pv_io_vec_bits_0_4; // @[Test.scala 100:24:@15452.4]
-  wire [31:0] pv_io_vec_bits_0_5; // @[Test.scala 100:24:@15452.4]
-  wire [31:0] pv_io_vec_bits_0_6; // @[Test.scala 100:24:@15452.4]
-  wire [31:0] pv_io_vec_bits_0_7; // @[Test.scala 100:24:@15452.4]
-  wire [31:0] pv_io_vec_bits_0_8; // @[Test.scala 100:24:@15452.4]
-  wire [31:0] pv_io_vec_bits_0_9; // @[Test.scala 100:24:@15452.4]
-  wire [31:0] pv_io_vec_bits_0_10; // @[Test.scala 100:24:@15452.4]
-  wire [31:0] pv_io_vec_bits_0_11; // @[Test.scala 100:24:@15452.4]
-  wire [31:0] pv_io_vec_bits_0_12; // @[Test.scala 100:24:@15452.4]
-  wire [31:0] pv_io_vec_bits_0_13; // @[Test.scala 100:24:@15452.4]
-  wire [31:0] pv_io_vec_bits_0_14; // @[Test.scala 100:24:@15452.4]
-  wire [31:0] pv_io_vec_bits_0_15; // @[Test.scala 100:24:@15452.4]
-  MVCoreGen mvgen ( // @[Test.scala 98:27:@15446.4]
+  wire  mvgen_clock; // @[Test.scala 93:27:@15344.4]
+  wire  mvgen_reset; // @[Test.scala 93:27:@15344.4]
+  wire  mvgen_io_inp_valid; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_inp_bits_0_0; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_inp_bits_0_1; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_inp_bits_0_2; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_inp_bits_0_3; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_inp_bits_0_4; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_inp_bits_0_5; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_inp_bits_0_6; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_inp_bits_0_7; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_inp_bits_0_8; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_inp_bits_0_9; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_inp_bits_0_10; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_inp_bits_0_11; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_inp_bits_0_12; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_inp_bits_0_13; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_inp_bits_0_14; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_inp_bits_0_15; // @[Test.scala 93:27:@15344.4]
+  wire  mvgen_io_wgt_valid; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_0_0; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_0_1; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_0_2; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_0_3; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_0_4; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_0_5; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_0_6; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_0_7; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_0_8; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_0_9; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_0_10; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_0_11; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_0_12; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_0_13; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_0_14; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_0_15; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_1_0; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_1_1; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_1_2; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_1_3; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_1_4; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_1_5; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_1_6; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_1_7; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_1_8; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_1_9; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_1_10; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_1_11; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_1_12; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_1_13; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_1_14; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_1_15; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_2_0; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_2_1; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_2_2; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_2_3; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_2_4; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_2_5; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_2_6; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_2_7; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_2_8; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_2_9; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_2_10; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_2_11; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_2_12; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_2_13; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_2_14; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_2_15; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_3_0; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_3_1; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_3_2; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_3_3; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_3_4; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_3_5; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_3_6; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_3_7; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_3_8; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_3_9; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_3_10; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_3_11; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_3_12; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_3_13; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_3_14; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_3_15; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_4_0; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_4_1; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_4_2; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_4_3; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_4_4; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_4_5; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_4_6; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_4_7; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_4_8; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_4_9; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_4_10; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_4_11; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_4_12; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_4_13; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_4_14; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_4_15; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_5_0; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_5_1; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_5_2; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_5_3; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_5_4; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_5_5; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_5_6; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_5_7; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_5_8; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_5_9; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_5_10; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_5_11; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_5_12; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_5_13; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_5_14; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_5_15; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_6_0; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_6_1; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_6_2; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_6_3; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_6_4; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_6_5; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_6_6; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_6_7; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_6_8; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_6_9; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_6_10; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_6_11; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_6_12; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_6_13; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_6_14; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_6_15; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_7_0; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_7_1; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_7_2; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_7_3; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_7_4; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_7_5; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_7_6; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_7_7; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_7_8; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_7_9; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_7_10; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_7_11; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_7_12; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_7_13; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_7_14; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_7_15; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_8_0; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_8_1; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_8_2; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_8_3; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_8_4; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_8_5; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_8_6; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_8_7; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_8_8; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_8_9; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_8_10; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_8_11; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_8_12; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_8_13; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_8_14; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_8_15; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_9_0; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_9_1; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_9_2; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_9_3; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_9_4; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_9_5; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_9_6; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_9_7; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_9_8; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_9_9; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_9_10; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_9_11; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_9_12; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_9_13; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_9_14; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_9_15; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_10_0; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_10_1; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_10_2; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_10_3; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_10_4; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_10_5; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_10_6; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_10_7; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_10_8; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_10_9; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_10_10; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_10_11; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_10_12; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_10_13; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_10_14; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_10_15; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_11_0; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_11_1; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_11_2; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_11_3; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_11_4; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_11_5; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_11_6; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_11_7; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_11_8; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_11_9; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_11_10; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_11_11; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_11_12; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_11_13; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_11_14; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_11_15; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_12_0; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_12_1; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_12_2; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_12_3; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_12_4; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_12_5; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_12_6; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_12_7; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_12_8; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_12_9; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_12_10; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_12_11; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_12_12; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_12_13; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_12_14; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_12_15; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_13_0; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_13_1; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_13_2; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_13_3; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_13_4; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_13_5; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_13_6; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_13_7; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_13_8; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_13_9; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_13_10; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_13_11; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_13_12; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_13_13; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_13_14; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_13_15; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_14_0; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_14_1; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_14_2; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_14_3; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_14_4; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_14_5; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_14_6; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_14_7; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_14_8; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_14_9; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_14_10; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_14_11; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_14_12; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_14_13; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_14_14; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_14_15; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_15_0; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_15_1; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_15_2; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_15_3; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_15_4; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_15_5; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_15_6; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_15_7; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_15_8; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_15_9; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_15_10; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_15_11; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_15_12; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_15_13; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_15_14; // @[Test.scala 93:27:@15344.4]
+  wire [7:0] mvgen_io_wgt_bits_15_15; // @[Test.scala 93:27:@15344.4]
+  wire  mvgen_io_acc_i_valid; // @[Test.scala 93:27:@15344.4]
+  wire  mvcore_clock; // @[Test.scala 94:28:@15347.4]
+  wire  mvcore_reset; // @[Test.scala 94:28:@15347.4]
+  wire  mvcore_io_inp_valid; // @[Test.scala 94:28:@15347.4]
+  wire  mvcore_io_wgt_valid; // @[Test.scala 94:28:@15347.4]
+  wire  mvcore_io_acc_i_valid; // @[Test.scala 94:28:@15347.4]
+  wire  mvcore_io_acc_o_valid; // @[Test.scala 94:28:@15347.4]
+  wire [31:0] mvcore_io_acc_o_bits_0_0; // @[Test.scala 94:28:@15347.4]
+  wire [31:0] mvcore_io_acc_o_bits_0_1; // @[Test.scala 94:28:@15347.4]
+  wire [31:0] mvcore_io_acc_o_bits_0_2; // @[Test.scala 94:28:@15347.4]
+  wire [31:0] mvcore_io_acc_o_bits_0_3; // @[Test.scala 94:28:@15347.4]
+  wire [31:0] mvcore_io_acc_o_bits_0_4; // @[Test.scala 94:28:@15347.4]
+  wire [31:0] mvcore_io_acc_o_bits_0_5; // @[Test.scala 94:28:@15347.4]
+  wire [31:0] mvcore_io_acc_o_bits_0_6; // @[Test.scala 94:28:@15347.4]
+  wire [31:0] mvcore_io_acc_o_bits_0_7; // @[Test.scala 94:28:@15347.4]
+  wire [31:0] mvcore_io_acc_o_bits_0_8; // @[Test.scala 94:28:@15347.4]
+  wire [31:0] mvcore_io_acc_o_bits_0_9; // @[Test.scala 94:28:@15347.4]
+  wire [31:0] mvcore_io_acc_o_bits_0_10; // @[Test.scala 94:28:@15347.4]
+  wire [31:0] mvcore_io_acc_o_bits_0_11; // @[Test.scala 94:28:@15347.4]
+  wire [31:0] mvcore_io_acc_o_bits_0_12; // @[Test.scala 94:28:@15347.4]
+  wire [31:0] mvcore_io_acc_o_bits_0_13; // @[Test.scala 94:28:@15347.4]
+  wire [31:0] mvcore_io_acc_o_bits_0_14; // @[Test.scala 94:28:@15347.4]
+  wire [31:0] mvcore_io_acc_o_bits_0_15; // @[Test.scala 94:28:@15347.4]
+  wire  pv_clock; // @[Test.scala 95:24:@15350.4]
+  wire  pv_reset; // @[Test.scala 95:24:@15350.4]
+  wire  pv_io_vec_valid; // @[Test.scala 95:24:@15350.4]
+  wire [31:0] pv_io_vec_bits_0_0; // @[Test.scala 95:24:@15350.4]
+  wire [31:0] pv_io_vec_bits_0_1; // @[Test.scala 95:24:@15350.4]
+  wire [31:0] pv_io_vec_bits_0_2; // @[Test.scala 95:24:@15350.4]
+  wire [31:0] pv_io_vec_bits_0_3; // @[Test.scala 95:24:@15350.4]
+  wire [31:0] pv_io_vec_bits_0_4; // @[Test.scala 95:24:@15350.4]
+  wire [31:0] pv_io_vec_bits_0_5; // @[Test.scala 95:24:@15350.4]
+  wire [31:0] pv_io_vec_bits_0_6; // @[Test.scala 95:24:@15350.4]
+  wire [31:0] pv_io_vec_bits_0_7; // @[Test.scala 95:24:@15350.4]
+  wire [31:0] pv_io_vec_bits_0_8; // @[Test.scala 95:24:@15350.4]
+  wire [31:0] pv_io_vec_bits_0_9; // @[Test.scala 95:24:@15350.4]
+  wire [31:0] pv_io_vec_bits_0_10; // @[Test.scala 95:24:@15350.4]
+  wire [31:0] pv_io_vec_bits_0_11; // @[Test.scala 95:24:@15350.4]
+  wire [31:0] pv_io_vec_bits_0_12; // @[Test.scala 95:24:@15350.4]
+  wire [31:0] pv_io_vec_bits_0_13; // @[Test.scala 95:24:@15350.4]
+  wire [31:0] pv_io_vec_bits_0_14; // @[Test.scala 95:24:@15350.4]
+  wire [31:0] pv_io_vec_bits_0_15; // @[Test.scala 95:24:@15350.4]
+  MVCoreGen mvgen ( // @[Test.scala 93:27:@15344.4]
     .clock(mvgen_clock),
     .reset(mvgen_reset),
     .io_inp_valid(mvgen_io_inp_valid),
@@ -7626,25 +8725,9 @@ module Test( // @[:@15441.2]
     .io_wgt_bits_15_13(mvgen_io_wgt_bits_15_13),
     .io_wgt_bits_15_14(mvgen_io_wgt_bits_15_14),
     .io_wgt_bits_15_15(mvgen_io_wgt_bits_15_15),
-    .io_acc_i_valid(mvgen_io_acc_i_valid),
-    .io_acc_i_bits_0_0(mvgen_io_acc_i_bits_0_0),
-    .io_acc_i_bits_0_1(mvgen_io_acc_i_bits_0_1),
-    .io_acc_i_bits_0_2(mvgen_io_acc_i_bits_0_2),
-    .io_acc_i_bits_0_3(mvgen_io_acc_i_bits_0_3),
-    .io_acc_i_bits_0_4(mvgen_io_acc_i_bits_0_4),
-    .io_acc_i_bits_0_5(mvgen_io_acc_i_bits_0_5),
-    .io_acc_i_bits_0_6(mvgen_io_acc_i_bits_0_6),
-    .io_acc_i_bits_0_7(mvgen_io_acc_i_bits_0_7),
-    .io_acc_i_bits_0_8(mvgen_io_acc_i_bits_0_8),
-    .io_acc_i_bits_0_9(mvgen_io_acc_i_bits_0_9),
-    .io_acc_i_bits_0_10(mvgen_io_acc_i_bits_0_10),
-    .io_acc_i_bits_0_11(mvgen_io_acc_i_bits_0_11),
-    .io_acc_i_bits_0_12(mvgen_io_acc_i_bits_0_12),
-    .io_acc_i_bits_0_13(mvgen_io_acc_i_bits_0_13),
-    .io_acc_i_bits_0_14(mvgen_io_acc_i_bits_0_14),
-    .io_acc_i_bits_0_15(mvgen_io_acc_i_bits_0_15)
+    .io_acc_i_valid(mvgen_io_acc_i_valid)
   );
-  MatrixVectorCore mvcore ( // @[Test.scala 99:28:@15449.4]
+  MatrixVectorCore mvcore ( // @[Test.scala 94:28:@15347.4]
     .clock(mvcore_clock),
     .reset(mvcore_reset),
     .io_inp_valid(mvcore_io_inp_valid),
@@ -7668,7 +8751,7 @@ module Test( // @[:@15441.2]
     .io_acc_o_bits_0_14(mvcore_io_acc_o_bits_0_14),
     .io_acc_o_bits_0_15(mvcore_io_acc_o_bits_0_15)
   );
-  PrintVec pv ( // @[Test.scala 100:24:@15452.4]
+  PrintVec pv ( // @[Test.scala 95:24:@15350.4]
     .clock(pv_clock),
     .reset(pv_reset),
     .io_vec_valid(pv_io_vec_valid),
@@ -7689,30 +8772,30 @@ module Test( // @[:@15441.2]
     .io_vec_bits_0_14(pv_io_vec_bits_0_14),
     .io_vec_bits_0_15(pv_io_vec_bits_0_15)
   );
-  assign mvgen_clock = clock; // @[:@15447.4]
-  assign mvgen_reset = reset; // @[:@15448.4]
-  assign mvcore_clock = clock; // @[:@15450.4]
-  assign mvcore_reset = reset; // @[:@15451.4]
-  assign mvcore_io_inp_valid = mvgen_io_inp_valid; // @[Test.scala 103:23:@15472.4]
-  assign mvcore_io_wgt_valid = mvgen_io_wgt_valid; // @[Test.scala 104:23:@15729.4]
-  assign mvcore_io_acc_i_valid = mvgen_io_acc_i_valid; // @[Test.scala 105:25:@15746.4]
-  assign pv_clock = clock; // @[:@15453.4]
-  assign pv_reset = reset; // @[:@15454.4]
-  assign pv_io_vec_valid = mvcore_io_acc_o_valid; // @[Test.scala 106:13:@15763.4]
-  assign pv_io_vec_bits_0_0 = mvcore_io_acc_o_bits_0_0; // @[Test.scala 106:13:@15747.4]
-  assign pv_io_vec_bits_0_1 = mvcore_io_acc_o_bits_0_1; // @[Test.scala 106:13:@15748.4]
-  assign pv_io_vec_bits_0_2 = mvcore_io_acc_o_bits_0_2; // @[Test.scala 106:13:@15749.4]
-  assign pv_io_vec_bits_0_3 = mvcore_io_acc_o_bits_0_3; // @[Test.scala 106:13:@15750.4]
-  assign pv_io_vec_bits_0_4 = mvcore_io_acc_o_bits_0_4; // @[Test.scala 106:13:@15751.4]
-  assign pv_io_vec_bits_0_5 = mvcore_io_acc_o_bits_0_5; // @[Test.scala 106:13:@15752.4]
-  assign pv_io_vec_bits_0_6 = mvcore_io_acc_o_bits_0_6; // @[Test.scala 106:13:@15753.4]
-  assign pv_io_vec_bits_0_7 = mvcore_io_acc_o_bits_0_7; // @[Test.scala 106:13:@15754.4]
-  assign pv_io_vec_bits_0_8 = mvcore_io_acc_o_bits_0_8; // @[Test.scala 106:13:@15755.4]
-  assign pv_io_vec_bits_0_9 = mvcore_io_acc_o_bits_0_9; // @[Test.scala 106:13:@15756.4]
-  assign pv_io_vec_bits_0_10 = mvcore_io_acc_o_bits_0_10; // @[Test.scala 106:13:@15757.4]
-  assign pv_io_vec_bits_0_11 = mvcore_io_acc_o_bits_0_11; // @[Test.scala 106:13:@15758.4]
-  assign pv_io_vec_bits_0_12 = mvcore_io_acc_o_bits_0_12; // @[Test.scala 106:13:@15759.4]
-  assign pv_io_vec_bits_0_13 = mvcore_io_acc_o_bits_0_13; // @[Test.scala 106:13:@15760.4]
-  assign pv_io_vec_bits_0_14 = mvcore_io_acc_o_bits_0_14; // @[Test.scala 106:13:@15761.4]
-  assign pv_io_vec_bits_0_15 = mvcore_io_acc_o_bits_0_15; // @[Test.scala 106:13:@15762.4]
+  assign mvgen_clock = clock; // @[:@15345.4]
+  assign mvgen_reset = reset; // @[:@15346.4]
+  assign mvcore_clock = clock; // @[:@15348.4]
+  assign mvcore_reset = reset; // @[:@15349.4]
+  assign mvcore_io_inp_valid = mvgen_io_inp_valid; // @[Test.scala 98:23:@15370.4]
+  assign mvcore_io_wgt_valid = mvgen_io_wgt_valid; // @[Test.scala 99:23:@15627.4]
+  assign mvcore_io_acc_i_valid = mvgen_io_acc_i_valid; // @[Test.scala 100:25:@15644.4]
+  assign pv_clock = clock; // @[:@15351.4]
+  assign pv_reset = reset; // @[:@15352.4]
+  assign pv_io_vec_valid = mvcore_io_acc_o_valid; // @[Test.scala 101:13:@15661.4]
+  assign pv_io_vec_bits_0_0 = mvcore_io_acc_o_bits_0_0; // @[Test.scala 101:13:@15645.4]
+  assign pv_io_vec_bits_0_1 = mvcore_io_acc_o_bits_0_1; // @[Test.scala 101:13:@15646.4]
+  assign pv_io_vec_bits_0_2 = mvcore_io_acc_o_bits_0_2; // @[Test.scala 101:13:@15647.4]
+  assign pv_io_vec_bits_0_3 = mvcore_io_acc_o_bits_0_3; // @[Test.scala 101:13:@15648.4]
+  assign pv_io_vec_bits_0_4 = mvcore_io_acc_o_bits_0_4; // @[Test.scala 101:13:@15649.4]
+  assign pv_io_vec_bits_0_5 = mvcore_io_acc_o_bits_0_5; // @[Test.scala 101:13:@15650.4]
+  assign pv_io_vec_bits_0_6 = mvcore_io_acc_o_bits_0_6; // @[Test.scala 101:13:@15651.4]
+  assign pv_io_vec_bits_0_7 = mvcore_io_acc_o_bits_0_7; // @[Test.scala 101:13:@15652.4]
+  assign pv_io_vec_bits_0_8 = mvcore_io_acc_o_bits_0_8; // @[Test.scala 101:13:@15653.4]
+  assign pv_io_vec_bits_0_9 = mvcore_io_acc_o_bits_0_9; // @[Test.scala 101:13:@15654.4]
+  assign pv_io_vec_bits_0_10 = mvcore_io_acc_o_bits_0_10; // @[Test.scala 101:13:@15655.4]
+  assign pv_io_vec_bits_0_11 = mvcore_io_acc_o_bits_0_11; // @[Test.scala 101:13:@15656.4]
+  assign pv_io_vec_bits_0_12 = mvcore_io_acc_o_bits_0_12; // @[Test.scala 101:13:@15657.4]
+  assign pv_io_vec_bits_0_13 = mvcore_io_acc_o_bits_0_13; // @[Test.scala 101:13:@15658.4]
+  assign pv_io_vec_bits_0_14 = mvcore_io_acc_o_bits_0_14; // @[Test.scala 101:13:@15659.4]
+  assign pv_io_vec_bits_0_15 = mvcore_io_acc_o_bits_0_15; // @[Test.scala 101:13:@15660.4]
 endmodule
