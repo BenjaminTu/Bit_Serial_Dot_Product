@@ -15,8 +15,8 @@ class VectorGen(inpBits: Int = 8, wgtBits: Int = 8, vectorLength: Int = 16) exte
   val max = (1 << Math.min(inpBits, wgtBits))
   val offset = max >> 1;
   // fill vector with random generated numbers
-   io.a := VecInit(Seq.fill(vectorLength)(200.S))
-   io.b := VecInit(Seq.fill(vectorLength)(200.S)) 
+   io.a := VecInit(Seq.fill(vectorLength)(10.S))
+   io.b := VecInit(Seq.fill(vectorLength)(20.S)) 
 //  io.a := VecInit(Seq.fill(vectorLength)(rand.nextInt(max).S))
 //	io.b := VecInit(Seq.fill(vectorLength)(rand.nextInt(max).S))
 }
@@ -80,7 +80,7 @@ class PrintVec(dataBits: Int = 8, size: Int = 16) extends Module {
 
 class Test(inpBits: Int = 8, wgtBits: Int = 8, vectorLength: Int = 16) extends Module {
   val io = IO(new Bundle {})
- 	/*
+ 	
 	val gen = Module(new VectorGen(inpBits, wgtBits, vectorLength))
   val dp = Module(new DotProduct(inpBits, wgtBits, vectorLength))
   val pn = Module(new PrintNum)
@@ -88,8 +88,8 @@ class Test(inpBits: Int = 8, wgtBits: Int = 8, vectorLength: Int = 16) extends M
 	dp.io.a := gen.io.a
   dp.io.b := gen.io.b
 	pn.io.num := dp.io.y
-	*/	
-	
+		
+	/*
 	val mvgen = Module(new MVCoreGen(inpBits, wgtBits, 32, vectorLength))
 	val mvcore = Module(new MatrixVectorCore(inpBits, wgtBits, vectorLength))
 	val pv = Module(new PrintVec(32, vectorLength))
@@ -99,9 +99,9 @@ class Test(inpBits: Int = 8, wgtBits: Int = 8, vectorLength: Int = 16) extends M
 	mvcore.io.wgt := mvgen.io.wgt
 	mvcore.io.acc_i := mvgen.io.acc_i
   pv.io.vec := mvcore.io.acc_o
-
+*/
 }
 
 object Elaborate extends App {
-  chisel3.Driver.execute(args, () => new Test(8, 8))
+  chisel3.Driver.execute(args, () => new Test(8, 8, 32))
 }
