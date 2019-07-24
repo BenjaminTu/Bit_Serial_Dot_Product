@@ -29,8 +29,8 @@ class MAC(aBits: Int = 8, bBits: Int = 8, cBits: Int = 16) extends Module {
 class PipeAdder(aBits: Int = 8, bBits: Int = 8) extends Module {
   val outBits = Math.max(aBits, bBits) + 1
   val io = IO(new Bundle {
-    val a = Input(SInt(bBits.W))
-    val b = Input(SInt(aBits.W))
+    val a = Input(SInt(aBits.W))
+    val b = Input(SInt(bBits.W))
     val y = Output(SInt(outBits.W))
   })
   val add = Wire(SInt(outBits.W))
@@ -44,17 +44,18 @@ class PipeAdder(aBits: Int = 8, bBits: Int = 8) extends Module {
 class DotProduct(aBits: Int = 8, bBits: Int = 8, size: Int = 16) extends Module {
   val errMsg = s"\n\n[VTA] [DotProduct] size must be greater than 4 and a power of 2\n\n"
   require(size >= 4 && isPow2(size), errMsg)
-  val outBits = aBits + bBits + log2Ceil(size) + 1
+	val b = aBits + bBits
+  val outBits = b + log2Ceil(size) + 1
   val io = IO(new Bundle {
     val a = Input(Vec(size, SInt(aBits.W)))
     val b = Input(Vec(size, SInt(bBits.W)))
     val y = Output(SInt(outBits.W))
   })
   val s = Seq.tabulate(log2Ceil(size + 1))(i => pow(2, log2Ceil(size) - i).toInt) // # of total layers
-  val p = log2Ceil(size/2) + 1 // # of adder layers
+  val p = log2Ceil(size / 2) + 1 // # of adder layers
   val m = Seq.fill(s(0))(Module(new MAC(aBits, bBits, cBits = 1))) // # of total vector pairs
   val a = Seq.tabulate(p)(i =>
-    Seq.fill(s(i + 1))(Module(new PipeAdder(aBits + i + 1, bBits + i + 1)))
+    Seq.fill(s(i + 1))(Module(new PipeAdder(b + i + 1, b + i + 1)))
   ) // # adders within each layer
 
   // Vector MACs

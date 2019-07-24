@@ -256,7 +256,7 @@ VL_MODULE(VTest) {
   private:
     static QData _change_request(VTest__Syms* __restrict vlSymsp);
     static QData _change_request_1(VTest__Syms* __restrict vlSymsp);
-    void _ctor_var_reset() VL_ATTR_COLD;
+    void _ctor_var_reset();
   public:
     static void _eval(VTest__Syms* __restrict vlSymsp);
   private:
@@ -264,11 +264,11 @@ VL_MODULE(VTest) {
     void _eval_debug_assertions();
 #endif // VL_DEBUG
   public:
-    static void _eval_initial(VTest__Syms* __restrict vlSymsp) VL_ATTR_COLD;
-    static void _eval_settle(VTest__Syms* __restrict vlSymsp) VL_ATTR_COLD;
-    static void _initial__TOP__2(VTest__Syms* __restrict vlSymsp) VL_ATTR_COLD;
+    static void _eval_initial(VTest__Syms* __restrict vlSymsp);
+    static void _eval_settle(VTest__Syms* __restrict vlSymsp);
+    static void _initial__TOP__2(VTest__Syms* __restrict vlSymsp);
     static void _sequent__TOP__1(VTest__Syms* __restrict vlSymsp);
-    static void _settle__TOP__3(VTest__Syms* __restrict vlSymsp) VL_ATTR_COLD;
+    static void _settle__TOP__3(VTest__Syms* __restrict vlSymsp);
 } VL_ATTR_ALIGNED(128);
 
 #endif // guard

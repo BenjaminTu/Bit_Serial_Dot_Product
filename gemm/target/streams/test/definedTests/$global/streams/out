@@ -1,7 +1,2 @@
-<<<<<<< HEAD
-[0m[[0m[0mdebug[0m] [0m[0mSubclass fingerprints: List((org.scalacheck.Properties,false,org.scalacheck.ScalaCheckFramework$$anon$3@326b0d31), (org.scalacheck.Prop,false,org.scalacheck.ScalaCheckFramework$$anon$3@4fae5470), (org.scalacheck.Properties,true,org.scalacheck.ScalaCheckFramework$$anon$3@5722322a), (org.scalacheck.Prop,true,org.scalacheck.ScalaCheckFramework$$anon$3@6d4e4d13), (org.scalatest.Suite,false,org.scalatest.tools.Framework$$anon$1@7a6c70e))[0m
-[0m[[0m[0mdebug[0m] [0m[0mAnnotation fingerprints: List((org.scalatest.WrapWith,false,org.scalatest.tools.Framework$$anon$2@7c63d854))[0m
-=======
-[0m[[0m[0mdebug[0m] [0m[0mSubclass fingerprints: List((org.scalacheck.Properties,false,org.scalacheck.ScalaCheckFramework$$anon$3@233da87d), (org.scalacheck.Prop,false,org.scalacheck.ScalaCheckFramework$$anon$3@618e7b58), (org.scalacheck.Properties,true,org.scalacheck.ScalaCheckFramework$$anon$3@6d07fb90), (org.scalacheck.Prop,true,org.scalacheck.ScalaCheckFramework$$anon$3@7543356e), (org.scalatest.Suite,false,org.scalatest.tools.Framework$$anon$1@3bf315fb))[0m
-[0m[[0m[0mdebug[0m] [0m[0mAnnotation fingerprints: List((org.scalatest.WrapWith,false,org.scalatest.tools.Framework$$anon$2@7b3c48ab))[0m
->>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
+[0m[[0m[0mdebug[0m] [0m[0mSubclass fingerprints: List((org.scalacheck.Properties,false,org.scalacheck.ScalaCheckFramework$$anon$3@1d5e195a), (org.scalacheck.Prop,false,org.scalacheck.ScalaCheckFramework$$anon$3@110d042c), (org.scalacheck.Properties,true,org.scalacheck.ScalaCheckFramework$$anon$3@7cea0171), (org.scalacheck.Prop,true,org.scalacheck.ScalaCheckFramework$$anon$3@253c7ca5), (org.scalatest.Suite,false,org.scalatest.tools.Framework$$anon$1@48453591))[0m
+[0m[[0m[0mdebug[0m] [0m[0mAnnotation fingerprints: List((org.scalatest.WrapWith,false,org.scalatest.tools.Framework$$anon$2@1ddd1a0b))[0m

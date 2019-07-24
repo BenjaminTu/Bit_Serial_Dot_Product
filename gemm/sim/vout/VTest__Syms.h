@@ -48,4 +48,4 @@ class VTest__Syms : public VerilatedSyms {
     
 } VL_ATTR_ALIGNED(64);
 
-#endif  // guard
+#endif // guard

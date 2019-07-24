@@ -53,11 +53,7 @@ void VTest::_initial__TOP__2(VTest__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VTest::_initial__TOP__2\n"); );
     VTest* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-<<<<<<< HEAD
-    // INITIAL at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5433
-=======
-    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5124
->>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
+    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5126
     vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___RAND_0 
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_19 
@@ -78,11 +74,7 @@ void VTest::_initial__TOP__2(VTest__Syms* __restrict vlSymsp) {
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_39 
 	= (1U & vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___RAND_4);
-<<<<<<< HEAD
-    // INITIAL at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5433
-=======
-    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5124
->>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
+    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5126
     vlTOPp->Test__DOT__mvcore__DOT__acc_1__DOT___RAND_0 
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_1__DOT___T_19 
@@ -103,11 +95,7 @@ void VTest::_initial__TOP__2(VTest__Syms* __restrict vlSymsp) {
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_1__DOT___T_39 
 	= (1U & vlTOPp->Test__DOT__mvcore__DOT__acc_1__DOT___RAND_4);
-<<<<<<< HEAD
-    // INITIAL at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5433
-=======
-    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5124
->>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
+    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5126
     vlTOPp->Test__DOT__mvcore__DOT__acc_2__DOT___RAND_0 
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_2__DOT___T_19 
@@ -128,11 +116,7 @@ void VTest::_initial__TOP__2(VTest__Syms* __restrict vlSymsp) {
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_2__DOT___T_39 
 	= (1U & vlTOPp->Test__DOT__mvcore__DOT__acc_2__DOT___RAND_4);
-<<<<<<< HEAD
-    // INITIAL at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5433
-=======
-    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5124
->>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
+    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5126
     vlTOPp->Test__DOT__mvcore__DOT__acc_3__DOT___RAND_0 
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_3__DOT___T_19 
@@ -153,11 +137,7 @@ void VTest::_initial__TOP__2(VTest__Syms* __restrict vlSymsp) {
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_3__DOT___T_39 
 	= (1U & vlTOPp->Test__DOT__mvcore__DOT__acc_3__DOT___RAND_4);
-<<<<<<< HEAD
-    // INITIAL at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5433
-=======
-    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5124
->>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
+    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5126
     vlTOPp->Test__DOT__mvcore__DOT__acc_4__DOT___RAND_0 
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_4__DOT___T_19 
@@ -178,11 +158,7 @@ void VTest::_initial__TOP__2(VTest__Syms* __restrict vlSymsp) {
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_4__DOT___T_39 
 	= (1U & vlTOPp->Test__DOT__mvcore__DOT__acc_4__DOT___RAND_4);
-<<<<<<< HEAD
-    // INITIAL at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5433
-=======
-    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5124
->>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
+    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5126
     vlTOPp->Test__DOT__mvcore__DOT__acc_5__DOT___RAND_0 
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_5__DOT___T_19 
@@ -203,11 +179,7 @@ void VTest::_initial__TOP__2(VTest__Syms* __restrict vlSymsp) {
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_5__DOT___T_39 
 	= (1U & vlTOPp->Test__DOT__mvcore__DOT__acc_5__DOT___RAND_4);
-<<<<<<< HEAD
-    // INITIAL at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5433
-=======
-    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5124
->>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
+    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5126
     vlTOPp->Test__DOT__mvcore__DOT__acc_6__DOT___RAND_0 
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_6__DOT___T_19 
@@ -228,11 +200,7 @@ void VTest::_initial__TOP__2(VTest__Syms* __restrict vlSymsp) {
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_6__DOT___T_39 
 	= (1U & vlTOPp->Test__DOT__mvcore__DOT__acc_6__DOT___RAND_4);
-<<<<<<< HEAD
-    // INITIAL at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5433
-=======
-    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5124
->>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
+    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5126
     vlTOPp->Test__DOT__mvcore__DOT__acc_7__DOT___RAND_0 
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_7__DOT___T_19 
@@ -253,11 +221,7 @@ void VTest::_initial__TOP__2(VTest__Syms* __restrict vlSymsp) {
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_7__DOT___T_39 
 	= (1U & vlTOPp->Test__DOT__mvcore__DOT__acc_7__DOT___RAND_4);
-<<<<<<< HEAD
-    // INITIAL at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5433
-=======
-    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5124
->>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
+    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5126
     vlTOPp->Test__DOT__mvcore__DOT__acc_8__DOT___RAND_0 
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_8__DOT___T_19 
@@ -278,11 +242,7 @@ void VTest::_initial__TOP__2(VTest__Syms* __restrict vlSymsp) {
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_8__DOT___T_39 
 	= (1U & vlTOPp->Test__DOT__mvcore__DOT__acc_8__DOT___RAND_4);
-<<<<<<< HEAD
-    // INITIAL at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5433
-=======
-    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5124
->>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
+    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5126
     vlTOPp->Test__DOT__mvcore__DOT__acc_9__DOT___RAND_0 
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_9__DOT___T_19 
@@ -303,11 +263,7 @@ void VTest::_initial__TOP__2(VTest__Syms* __restrict vlSymsp) {
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_9__DOT___T_39 
 	= (1U & vlTOPp->Test__DOT__mvcore__DOT__acc_9__DOT___RAND_4);
-<<<<<<< HEAD
-    // INITIAL at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5433
-=======
-    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5124
->>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
+    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5126
     vlTOPp->Test__DOT__mvcore__DOT__acc_10__DOT___RAND_0 
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_10__DOT___T_19 
@@ -328,11 +284,7 @@ void VTest::_initial__TOP__2(VTest__Syms* __restrict vlSymsp) {
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_10__DOT___T_39 
 	= (1U & vlTOPp->Test__DOT__mvcore__DOT__acc_10__DOT___RAND_4);
-<<<<<<< HEAD
-    // INITIAL at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5433
-=======
-    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5124
->>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
+    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5126
     vlTOPp->Test__DOT__mvcore__DOT__acc_11__DOT___RAND_0 
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_11__DOT___T_19 
@@ -353,11 +305,7 @@ void VTest::_initial__TOP__2(VTest__Syms* __restrict vlSymsp) {
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_11__DOT___T_39 
 	= (1U & vlTOPp->Test__DOT__mvcore__DOT__acc_11__DOT___RAND_4);
-<<<<<<< HEAD
-    // INITIAL at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5433
-=======
-    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5124
->>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
+    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5126
     vlTOPp->Test__DOT__mvcore__DOT__acc_12__DOT___RAND_0 
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_12__DOT___T_19 
@@ -378,11 +326,7 @@ void VTest::_initial__TOP__2(VTest__Syms* __restrict vlSymsp) {
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_12__DOT___T_39 
 	= (1U & vlTOPp->Test__DOT__mvcore__DOT__acc_12__DOT___RAND_4);
-<<<<<<< HEAD
-    // INITIAL at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5433
-=======
-    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5124
->>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
+    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5126
     vlTOPp->Test__DOT__mvcore__DOT__acc_13__DOT___RAND_0 
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_13__DOT___T_19 
@@ -403,11 +347,7 @@ void VTest::_initial__TOP__2(VTest__Syms* __restrict vlSymsp) {
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_13__DOT___T_39 
 	= (1U & vlTOPp->Test__DOT__mvcore__DOT__acc_13__DOT___RAND_4);
-<<<<<<< HEAD
-    // INITIAL at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5433
-=======
-    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5124
->>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
+    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5126
     vlTOPp->Test__DOT__mvcore__DOT__acc_14__DOT___RAND_0 
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_14__DOT___T_19 
@@ -428,11 +368,7 @@ void VTest::_initial__TOP__2(VTest__Syms* __restrict vlSymsp) {
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_14__DOT___T_39 
 	= (1U & vlTOPp->Test__DOT__mvcore__DOT__acc_14__DOT___RAND_4);
-<<<<<<< HEAD
-    // INITIAL at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5433
-=======
-    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5124
->>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
+    // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5126
     vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___RAND_0 
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_19 
@@ -453,11 +389,7 @@ void VTest::_initial__TOP__2(VTest__Syms* __restrict vlSymsp) {
 	= VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_39 
 	= (1U & vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___RAND_4);
-<<<<<<< HEAD
-    // INITIAL at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:1188
-=======
     // INITIAL at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:1124
->>>>>>> 9e346c1f5bec17ad400c8a9310860d510b8a5038
     vlTOPp->Test__DOT__mvgen__DOT___RAND_0 = VL_RANDOM_I(32);
     vlTOPp->Test__DOT__mvgen__DOT__value = (0xffU & vlTOPp->Test__DOT__mvgen__DOT___RAND_0);
 }
