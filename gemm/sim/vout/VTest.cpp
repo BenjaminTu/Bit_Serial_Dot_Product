@@ -69,7 +69,7 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VTest::_sequent__TOP__1\n"); );
     VTest* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:1201
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:1201
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
 	VL_FWRITEF(0x80000002U,"inp: \n");
     }
@@ -997,7 +997,7 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
     if (VL_UNLIKELY((1U & (~ (IData)(vlTOPp->reset))))) {
 	VL_FWRITEF(0x80000002U,"         0, ");
     }
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:6755
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:6813
     if (VL_UNLIKELY(((0U != (0xffffU & (~ (((IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_39) 
 					    << 0xfU) 
 					   | (((IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_14__DOT___T_39) 
@@ -1064,18 +1064,47 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 										<< 1U) 
 										| (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_39))))))))))))))))))) 
 		     & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xffe00000U 
+	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xe0000000U 
 					     & (VL_NEGATE_I((IData)(
 								    (1U 
 								     & ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_0.__PVT__a_3_0__DOT__rA) 
 									 + 
-									 VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_0.__PVT__a_3_0__DOT__rB)) 
+									 VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_0.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_0.__PVT__a_3_0__DOT__rB)))) 
 									>> 0x14U)))) 
-						<< 0x15U)) 
-					    | (0x1fffffU 
-					       & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_0.__PVT__a_3_0__DOT__rA) 
-						  + 
-						  VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_0.__PVT__a_3_0__DOT__rB)))));
+						<< 0x1dU)) 
+					    | ((0x1fe00000U 
+						& (VL_NEGATE_I((IData)(
+								       (1U 
+									& ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_0.__PVT__a_3_0__DOT__rA) 
+									    + 
+									    VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_0.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_0.__PVT__a_3_0__DOT__rB)))) 
+									   >> 0x14U)))) 
+						   << 0x15U)) 
+					       | (0x1fffffU 
+						  & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_0.__PVT__a_3_0__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(21,20, 
+								   ((0xff000U 
+								     & (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_0.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+									<< 0xcU)) 
+								    | (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_0.__PVT__a_3_0__DOT__rB))))))));
     }
     if (VL_UNLIKELY(((0U != (0xffffU & (~ (((IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_39) 
 					    << 0xfU) 
@@ -1109,18 +1138,47 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 										<< 1U) 
 										| (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_39))))))))))))))))))) 
 		     & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xffe00000U 
+	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xe0000000U 
 					     & (VL_NEGATE_I((IData)(
 								    (1U 
 								     & ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_1.__PVT__a_3_0__DOT__rA) 
 									 + 
-									 VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_1.__PVT__a_3_0__DOT__rB)) 
+									 VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_1.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_1.__PVT__a_3_0__DOT__rB)))) 
 									>> 0x14U)))) 
-						<< 0x15U)) 
-					    | (0x1fffffU 
-					       & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_1.__PVT__a_3_0__DOT__rA) 
-						  + 
-						  VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_1.__PVT__a_3_0__DOT__rB)))));
+						<< 0x1dU)) 
+					    | ((0x1fe00000U 
+						& (VL_NEGATE_I((IData)(
+								       (1U 
+									& ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_1.__PVT__a_3_0__DOT__rA) 
+									    + 
+									    VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_1.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_1.__PVT__a_3_0__DOT__rB)))) 
+									   >> 0x14U)))) 
+						   << 0x15U)) 
+					       | (0x1fffffU 
+						  & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_1.__PVT__a_3_0__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(21,20, 
+								   ((0xff000U 
+								     & (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_1.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+									<< 0xcU)) 
+								    | (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_1.__PVT__a_3_0__DOT__rB))))))));
     }
     if (VL_UNLIKELY(((0U != (0xffffU & (~ (((IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_39) 
 					    << 0xfU) 
@@ -1154,18 +1212,47 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 										<< 1U) 
 										| (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_39))))))))))))))))))) 
 		     & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xffe00000U 
+	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xe0000000U 
 					     & (VL_NEGATE_I((IData)(
 								    (1U 
 								     & ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_2.__PVT__a_3_0__DOT__rA) 
 									 + 
-									 VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_2.__PVT__a_3_0__DOT__rB)) 
+									 VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_2.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_2.__PVT__a_3_0__DOT__rB)))) 
 									>> 0x14U)))) 
-						<< 0x15U)) 
-					    | (0x1fffffU 
-					       & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_2.__PVT__a_3_0__DOT__rA) 
-						  + 
-						  VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_2.__PVT__a_3_0__DOT__rB)))));
+						<< 0x1dU)) 
+					    | ((0x1fe00000U 
+						& (VL_NEGATE_I((IData)(
+								       (1U 
+									& ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_2.__PVT__a_3_0__DOT__rA) 
+									    + 
+									    VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_2.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_2.__PVT__a_3_0__DOT__rB)))) 
+									   >> 0x14U)))) 
+						   << 0x15U)) 
+					       | (0x1fffffU 
+						  & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_2.__PVT__a_3_0__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(21,20, 
+								   ((0xff000U 
+								     & (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_2.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+									<< 0xcU)) 
+								    | (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_2.__PVT__a_3_0__DOT__rB))))))));
     }
     if (VL_UNLIKELY(((0U != (0xffffU & (~ (((IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_39) 
 					    << 0xfU) 
@@ -1199,18 +1286,47 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 										<< 1U) 
 										| (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_39))))))))))))))))))) 
 		     & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xffe00000U 
+	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xe0000000U 
 					     & (VL_NEGATE_I((IData)(
 								    (1U 
 								     & ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_3.__PVT__a_3_0__DOT__rA) 
 									 + 
-									 VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_3.__PVT__a_3_0__DOT__rB)) 
+									 VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_3.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_3.__PVT__a_3_0__DOT__rB)))) 
 									>> 0x14U)))) 
-						<< 0x15U)) 
-					    | (0x1fffffU 
-					       & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_3.__PVT__a_3_0__DOT__rA) 
-						  + 
-						  VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_3.__PVT__a_3_0__DOT__rB)))));
+						<< 0x1dU)) 
+					    | ((0x1fe00000U 
+						& (VL_NEGATE_I((IData)(
+								       (1U 
+									& ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_3.__PVT__a_3_0__DOT__rA) 
+									    + 
+									    VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_3.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_3.__PVT__a_3_0__DOT__rB)))) 
+									   >> 0x14U)))) 
+						   << 0x15U)) 
+					       | (0x1fffffU 
+						  & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_3.__PVT__a_3_0__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(21,20, 
+								   ((0xff000U 
+								     & (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_3.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+									<< 0xcU)) 
+								    | (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_3.__PVT__a_3_0__DOT__rB))))))));
     }
     if (VL_UNLIKELY(((0U != (0xffffU & (~ (((IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_39) 
 					    << 0xfU) 
@@ -1244,18 +1360,47 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 										<< 1U) 
 										| (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_39))))))))))))))))))) 
 		     & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xffe00000U 
+	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xe0000000U 
 					     & (VL_NEGATE_I((IData)(
 								    (1U 
 								     & ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_4.__PVT__a_3_0__DOT__rA) 
 									 + 
-									 VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_4.__PVT__a_3_0__DOT__rB)) 
+									 VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_4.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_4.__PVT__a_3_0__DOT__rB)))) 
 									>> 0x14U)))) 
-						<< 0x15U)) 
-					    | (0x1fffffU 
-					       & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_4.__PVT__a_3_0__DOT__rA) 
-						  + 
-						  VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_4.__PVT__a_3_0__DOT__rB)))));
+						<< 0x1dU)) 
+					    | ((0x1fe00000U 
+						& (VL_NEGATE_I((IData)(
+								       (1U 
+									& ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_4.__PVT__a_3_0__DOT__rA) 
+									    + 
+									    VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_4.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_4.__PVT__a_3_0__DOT__rB)))) 
+									   >> 0x14U)))) 
+						   << 0x15U)) 
+					       | (0x1fffffU 
+						  & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_4.__PVT__a_3_0__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(21,20, 
+								   ((0xff000U 
+								     & (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_4.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+									<< 0xcU)) 
+								    | (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_4.__PVT__a_3_0__DOT__rB))))))));
     }
     if (VL_UNLIKELY(((0U != (0xffffU & (~ (((IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_39) 
 					    << 0xfU) 
@@ -1289,18 +1434,47 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 										<< 1U) 
 										| (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_39))))))))))))))))))) 
 		     & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xffe00000U 
+	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xe0000000U 
 					     & (VL_NEGATE_I((IData)(
 								    (1U 
 								     & ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_5.__PVT__a_3_0__DOT__rA) 
 									 + 
-									 VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_5.__PVT__a_3_0__DOT__rB)) 
+									 VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_5.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_5.__PVT__a_3_0__DOT__rB)))) 
 									>> 0x14U)))) 
-						<< 0x15U)) 
-					    | (0x1fffffU 
-					       & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_5.__PVT__a_3_0__DOT__rA) 
-						  + 
-						  VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_5.__PVT__a_3_0__DOT__rB)))));
+						<< 0x1dU)) 
+					    | ((0x1fe00000U 
+						& (VL_NEGATE_I((IData)(
+								       (1U 
+									& ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_5.__PVT__a_3_0__DOT__rA) 
+									    + 
+									    VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_5.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_5.__PVT__a_3_0__DOT__rB)))) 
+									   >> 0x14U)))) 
+						   << 0x15U)) 
+					       | (0x1fffffU 
+						  & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_5.__PVT__a_3_0__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(21,20, 
+								   ((0xff000U 
+								     & (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_5.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+									<< 0xcU)) 
+								    | (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_5.__PVT__a_3_0__DOT__rB))))))));
     }
     if (VL_UNLIKELY(((0U != (0xffffU & (~ (((IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_39) 
 					    << 0xfU) 
@@ -1334,18 +1508,47 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 										<< 1U) 
 										| (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_39))))))))))))))))))) 
 		     & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xffe00000U 
+	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xe0000000U 
 					     & (VL_NEGATE_I((IData)(
 								    (1U 
 								     & ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_6.__PVT__a_3_0__DOT__rA) 
 									 + 
-									 VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_6.__PVT__a_3_0__DOT__rB)) 
+									 VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_6.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_6.__PVT__a_3_0__DOT__rB)))) 
 									>> 0x14U)))) 
-						<< 0x15U)) 
-					    | (0x1fffffU 
-					       & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_6.__PVT__a_3_0__DOT__rA) 
-						  + 
-						  VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_6.__PVT__a_3_0__DOT__rB)))));
+						<< 0x1dU)) 
+					    | ((0x1fe00000U 
+						& (VL_NEGATE_I((IData)(
+								       (1U 
+									& ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_6.__PVT__a_3_0__DOT__rA) 
+									    + 
+									    VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_6.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_6.__PVT__a_3_0__DOT__rB)))) 
+									   >> 0x14U)))) 
+						   << 0x15U)) 
+					       | (0x1fffffU 
+						  & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_6.__PVT__a_3_0__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(21,20, 
+								   ((0xff000U 
+								     & (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_6.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+									<< 0xcU)) 
+								    | (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_6.__PVT__a_3_0__DOT__rB))))))));
     }
     if (VL_UNLIKELY(((0U != (0xffffU & (~ (((IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_39) 
 					    << 0xfU) 
@@ -1379,18 +1582,47 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 										<< 1U) 
 										| (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_39))))))))))))))))))) 
 		     & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xffe00000U 
+	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xe0000000U 
 					     & (VL_NEGATE_I((IData)(
 								    (1U 
 								     & ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_7.__PVT__a_3_0__DOT__rA) 
 									 + 
-									 VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_7.__PVT__a_3_0__DOT__rB)) 
+									 VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_7.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_7.__PVT__a_3_0__DOT__rB)))) 
 									>> 0x14U)))) 
-						<< 0x15U)) 
-					    | (0x1fffffU 
-					       & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_7.__PVT__a_3_0__DOT__rA) 
-						  + 
-						  VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_7.__PVT__a_3_0__DOT__rB)))));
+						<< 0x1dU)) 
+					    | ((0x1fe00000U 
+						& (VL_NEGATE_I((IData)(
+								       (1U 
+									& ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_7.__PVT__a_3_0__DOT__rA) 
+									    + 
+									    VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_7.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_7.__PVT__a_3_0__DOT__rB)))) 
+									   >> 0x14U)))) 
+						   << 0x15U)) 
+					       | (0x1fffffU 
+						  & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_7.__PVT__a_3_0__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(21,20, 
+								   ((0xff000U 
+								     & (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_7.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+									<< 0xcU)) 
+								    | (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_7.__PVT__a_3_0__DOT__rB))))))));
     }
     if (VL_UNLIKELY(((0U != (0xffffU & (~ (((IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_39) 
 					    << 0xfU) 
@@ -1424,18 +1656,47 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 										<< 1U) 
 										| (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_39))))))))))))))))))) 
 		     & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xffe00000U 
+	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xe0000000U 
 					     & (VL_NEGATE_I((IData)(
 								    (1U 
 								     & ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_8.__PVT__a_3_0__DOT__rA) 
 									 + 
-									 VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_8.__PVT__a_3_0__DOT__rB)) 
+									 VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_8.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_8.__PVT__a_3_0__DOT__rB)))) 
 									>> 0x14U)))) 
-						<< 0x15U)) 
-					    | (0x1fffffU 
-					       & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_8.__PVT__a_3_0__DOT__rA) 
-						  + 
-						  VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_8.__PVT__a_3_0__DOT__rB)))));
+						<< 0x1dU)) 
+					    | ((0x1fe00000U 
+						& (VL_NEGATE_I((IData)(
+								       (1U 
+									& ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_8.__PVT__a_3_0__DOT__rA) 
+									    + 
+									    VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_8.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_8.__PVT__a_3_0__DOT__rB)))) 
+									   >> 0x14U)))) 
+						   << 0x15U)) 
+					       | (0x1fffffU 
+						  & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_8.__PVT__a_3_0__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(21,20, 
+								   ((0xff000U 
+								     & (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_8.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+									<< 0xcU)) 
+								    | (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_8.__PVT__a_3_0__DOT__rB))))))));
     }
     if (VL_UNLIKELY(((0U != (0xffffU & (~ (((IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_39) 
 					    << 0xfU) 
@@ -1469,18 +1730,47 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 										<< 1U) 
 										| (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_39))))))))))))))))))) 
 		     & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xffe00000U 
+	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xe0000000U 
 					     & (VL_NEGATE_I((IData)(
 								    (1U 
 								     & ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_9.__PVT__a_3_0__DOT__rA) 
 									 + 
-									 VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_9.__PVT__a_3_0__DOT__rB)) 
+									 VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_9.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_9.__PVT__a_3_0__DOT__rB)))) 
 									>> 0x14U)))) 
-						<< 0x15U)) 
-					    | (0x1fffffU 
-					       & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_9.__PVT__a_3_0__DOT__rA) 
-						  + 
-						  VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_9.__PVT__a_3_0__DOT__rB)))));
+						<< 0x1dU)) 
+					    | ((0x1fe00000U 
+						& (VL_NEGATE_I((IData)(
+								       (1U 
+									& ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_9.__PVT__a_3_0__DOT__rA) 
+									    + 
+									    VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_9.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_9.__PVT__a_3_0__DOT__rB)))) 
+									   >> 0x14U)))) 
+						   << 0x15U)) 
+					       | (0x1fffffU 
+						  & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_9.__PVT__a_3_0__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(21,20, 
+								   ((0xff000U 
+								     & (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_9.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+									<< 0xcU)) 
+								    | (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_9.__PVT__a_3_0__DOT__rB))))))));
     }
     if (VL_UNLIKELY(((0U != (0xffffU & (~ (((IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_39) 
 					    << 0xfU) 
@@ -1514,18 +1804,47 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 										<< 1U) 
 										| (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_39))))))))))))))))))) 
 		     & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xffe00000U 
+	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xe0000000U 
 					     & (VL_NEGATE_I((IData)(
 								    (1U 
 								     & ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_10.__PVT__a_3_0__DOT__rA) 
 									 + 
-									 VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_10.__PVT__a_3_0__DOT__rB)) 
+									 VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_10.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_10.__PVT__a_3_0__DOT__rB)))) 
 									>> 0x14U)))) 
-						<< 0x15U)) 
-					    | (0x1fffffU 
-					       & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_10.__PVT__a_3_0__DOT__rA) 
-						  + 
-						  VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_10.__PVT__a_3_0__DOT__rB)))));
+						<< 0x1dU)) 
+					    | ((0x1fe00000U 
+						& (VL_NEGATE_I((IData)(
+								       (1U 
+									& ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_10.__PVT__a_3_0__DOT__rA) 
+									    + 
+									    VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_10.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_10.__PVT__a_3_0__DOT__rB)))) 
+									   >> 0x14U)))) 
+						   << 0x15U)) 
+					       | (0x1fffffU 
+						  & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_10.__PVT__a_3_0__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(21,20, 
+								   ((0xff000U 
+								     & (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_10.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+									<< 0xcU)) 
+								    | (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_10.__PVT__a_3_0__DOT__rB))))))));
     }
     if (VL_UNLIKELY(((0U != (0xffffU & (~ (((IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_39) 
 					    << 0xfU) 
@@ -1559,18 +1878,47 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 										<< 1U) 
 										| (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_39))))))))))))))))))) 
 		     & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xffe00000U 
+	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xe0000000U 
 					     & (VL_NEGATE_I((IData)(
 								    (1U 
 								     & ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_11.__PVT__a_3_0__DOT__rA) 
 									 + 
-									 VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_11.__PVT__a_3_0__DOT__rB)) 
+									 VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_11.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_11.__PVT__a_3_0__DOT__rB)))) 
 									>> 0x14U)))) 
-						<< 0x15U)) 
-					    | (0x1fffffU 
-					       & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_11.__PVT__a_3_0__DOT__rA) 
-						  + 
-						  VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_11.__PVT__a_3_0__DOT__rB)))));
+						<< 0x1dU)) 
+					    | ((0x1fe00000U 
+						& (VL_NEGATE_I((IData)(
+								       (1U 
+									& ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_11.__PVT__a_3_0__DOT__rA) 
+									    + 
+									    VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_11.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_11.__PVT__a_3_0__DOT__rB)))) 
+									   >> 0x14U)))) 
+						   << 0x15U)) 
+					       | (0x1fffffU 
+						  & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_11.__PVT__a_3_0__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(21,20, 
+								   ((0xff000U 
+								     & (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_11.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+									<< 0xcU)) 
+								    | (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_11.__PVT__a_3_0__DOT__rB))))))));
     }
     if (VL_UNLIKELY(((0U != (0xffffU & (~ (((IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_39) 
 					    << 0xfU) 
@@ -1604,18 +1952,47 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 										<< 1U) 
 										| (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_39))))))))))))))))))) 
 		     & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xffe00000U 
+	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xe0000000U 
 					     & (VL_NEGATE_I((IData)(
 								    (1U 
 								     & ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_12.__PVT__a_3_0__DOT__rA) 
 									 + 
-									 VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_12.__PVT__a_3_0__DOT__rB)) 
+									 VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_12.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_12.__PVT__a_3_0__DOT__rB)))) 
 									>> 0x14U)))) 
-						<< 0x15U)) 
-					    | (0x1fffffU 
-					       & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_12.__PVT__a_3_0__DOT__rA) 
-						  + 
-						  VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_12.__PVT__a_3_0__DOT__rB)))));
+						<< 0x1dU)) 
+					    | ((0x1fe00000U 
+						& (VL_NEGATE_I((IData)(
+								       (1U 
+									& ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_12.__PVT__a_3_0__DOT__rA) 
+									    + 
+									    VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_12.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_12.__PVT__a_3_0__DOT__rB)))) 
+									   >> 0x14U)))) 
+						   << 0x15U)) 
+					       | (0x1fffffU 
+						  & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_12.__PVT__a_3_0__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(21,20, 
+								   ((0xff000U 
+								     & (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_12.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+									<< 0xcU)) 
+								    | (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_12.__PVT__a_3_0__DOT__rB))))))));
     }
     if (VL_UNLIKELY(((0U != (0xffffU & (~ (((IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_39) 
 					    << 0xfU) 
@@ -1649,18 +2026,47 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 										<< 1U) 
 										| (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_39))))))))))))))))))) 
 		     & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xffe00000U 
+	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xe0000000U 
 					     & (VL_NEGATE_I((IData)(
 								    (1U 
 								     & ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_13.__PVT__a_3_0__DOT__rA) 
 									 + 
-									 VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_13.__PVT__a_3_0__DOT__rB)) 
+									 VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_13.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_13.__PVT__a_3_0__DOT__rB)))) 
 									>> 0x14U)))) 
-						<< 0x15U)) 
-					    | (0x1fffffU 
-					       & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_13.__PVT__a_3_0__DOT__rA) 
-						  + 
-						  VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_13.__PVT__a_3_0__DOT__rB)))));
+						<< 0x1dU)) 
+					    | ((0x1fe00000U 
+						& (VL_NEGATE_I((IData)(
+								       (1U 
+									& ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_13.__PVT__a_3_0__DOT__rA) 
+									    + 
+									    VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_13.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_13.__PVT__a_3_0__DOT__rB)))) 
+									   >> 0x14U)))) 
+						   << 0x15U)) 
+					       | (0x1fffffU 
+						  & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_13.__PVT__a_3_0__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(21,20, 
+								   ((0xff000U 
+								     & (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_13.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+									<< 0xcU)) 
+								    | (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_13.__PVT__a_3_0__DOT__rB))))))));
     }
     if (VL_UNLIKELY(((0U != (0xffffU & (~ (((IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_39) 
 					    << 0xfU) 
@@ -1694,18 +2100,47 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 										<< 1U) 
 										| (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_39))))))))))))))))))) 
 		     & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xffe00000U 
+	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xe0000000U 
 					     & (VL_NEGATE_I((IData)(
 								    (1U 
 								     & ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_14.__PVT__a_3_0__DOT__rA) 
 									 + 
-									 VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_14.__PVT__a_3_0__DOT__rB)) 
+									 VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_14.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_14.__PVT__a_3_0__DOT__rB)))) 
 									>> 0x14U)))) 
-						<< 0x15U)) 
-					    | (0x1fffffU 
-					       & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_14.__PVT__a_3_0__DOT__rA) 
-						  + 
-						  VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_14.__PVT__a_3_0__DOT__rB)))));
+						<< 0x1dU)) 
+					    | ((0x1fe00000U 
+						& (VL_NEGATE_I((IData)(
+								       (1U 
+									& ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_14.__PVT__a_3_0__DOT__rA) 
+									    + 
+									    VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_14.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_14.__PVT__a_3_0__DOT__rB)))) 
+									   >> 0x14U)))) 
+						   << 0x15U)) 
+					       | (0x1fffffU 
+						  & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_14.__PVT__a_3_0__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(21,20, 
+								   ((0xff000U 
+								     & (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_14.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+									<< 0xcU)) 
+								    | (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_14.__PVT__a_3_0__DOT__rB))))))));
     }
     if (VL_UNLIKELY(((0U != (0xffffU & (~ (((IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_39) 
 					    << 0xfU) 
@@ -1739,18 +2174,47 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 										<< 1U) 
 										| (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_39))))))))))))))))))) 
 		     & (~ (IData)(vlTOPp->reset))))) {
-	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xffe00000U 
+	VL_FWRITEF(0x80000002U,"%10#, ",32,((0xe0000000U 
 					     & (VL_NEGATE_I((IData)(
 								    (1U 
 								     & ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_15.__PVT__a_3_0__DOT__rA) 
 									 + 
-									 VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_15.__PVT__a_3_0__DOT__rB)) 
+									 VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_15.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_15.__PVT__a_3_0__DOT__rB)))) 
 									>> 0x14U)))) 
-						<< 0x15U)) 
-					    | (0x1fffffU 
-					       & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_15.__PVT__a_3_0__DOT__rA) 
-						  + 
-						  VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_15.__PVT__a_3_0__DOT__rB)))));
+						<< 0x1dU)) 
+					    | ((0x1fe00000U 
+						& (VL_NEGATE_I((IData)(
+								       (1U 
+									& ((VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_15.__PVT__a_3_0__DOT__rA) 
+									    + 
+									    VL_EXTENDS_II(21,20, 
+										((0xff000U 
+										& (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_15.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+										<< 0xcU)) 
+										| (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_15.__PVT__a_3_0__DOT__rB)))) 
+									   >> 0x14U)))) 
+						   << 0x15U)) 
+					       | (0x1fffffU 
+						  & (VL_EXTENDS_II(21,20, vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_15.__PVT__a_3_0__DOT__rA) 
+						     + 
+						     VL_EXTENDS_II(21,20, 
+								   ((0xff000U 
+								     & (VL_NEGATE_I((IData)(
+										(1U 
+										& ((IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_15.__PVT__a_3_0__DOT__rB) 
+										>> 0xbU)))) 
+									<< 0xcU)) 
+								    | (IData)(vlSymsp->TOP__Test__DOT__mvcore__DOT__dot_15.__PVT__a_3_0__DOT__rB))))))));
     }
     if (VL_UNLIKELY(((0U != (0xffffU & (~ (((IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_39) 
 					    << 0xfU) 
@@ -1786,263 +2250,263 @@ VL_INLINE_OPT void VTest::_sequent__TOP__1(VTest__Syms* __restrict vlSymsp) {
 		     & (~ (IData)(vlTOPp->reset))))) {
 	VL_FWRITEF(0x80000002U,"\n");
     }
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_39 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_34));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_14__DOT___T_39 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_14__DOT___T_34));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_13__DOT___T_39 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_13__DOT___T_34));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_12__DOT___T_39 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_12__DOT___T_34));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_11__DOT___T_39 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_11__DOT___T_34));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_10__DOT___T_39 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_10__DOT___T_34));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_9__DOT___T_39 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_9__DOT___T_34));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_8__DOT___T_39 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_8__DOT___T_34));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_7__DOT___T_39 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_7__DOT___T_34));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_6__DOT___T_39 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_6__DOT___T_34));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_5__DOT___T_39 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_5__DOT___T_34));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_4__DOT___T_39 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_4__DOT___T_34));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_3__DOT___T_39 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_3__DOT___T_34));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_2__DOT___T_39 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_2__DOT___T_34));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_1__DOT___T_39 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_1__DOT___T_34));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_39 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_34));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_34 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_29));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_14__DOT___T_34 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_14__DOT___T_29));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_13__DOT___T_34 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_13__DOT___T_29));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_12__DOT___T_34 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_12__DOT___T_29));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_11__DOT___T_34 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_11__DOT___T_29));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_10__DOT___T_34 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_10__DOT___T_29));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_9__DOT___T_34 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_9__DOT___T_29));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_8__DOT___T_34 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_8__DOT___T_29));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_7__DOT___T_34 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_7__DOT___T_29));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_6__DOT___T_34 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_6__DOT___T_29));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_5__DOT___T_34 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_5__DOT___T_29));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_4__DOT___T_34 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_4__DOT___T_29));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_3__DOT___T_34 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_3__DOT___T_29));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_2__DOT___T_34 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_2__DOT___T_29));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_1__DOT___T_34 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_1__DOT___T_29));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_34 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_29));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_29 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_24));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_14__DOT___T_29 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_14__DOT___T_24));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_13__DOT___T_29 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_13__DOT___T_24));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_12__DOT___T_29 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_12__DOT___T_24));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_11__DOT___T_29 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_11__DOT___T_24));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_10__DOT___T_29 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_10__DOT___T_24));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_9__DOT___T_29 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_9__DOT___T_24));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_8__DOT___T_29 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_8__DOT___T_24));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_7__DOT___T_29 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_7__DOT___T_24));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_6__DOT___T_29 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_6__DOT___T_24));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_5__DOT___T_29 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_5__DOT___T_24));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_4__DOT___T_29 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_4__DOT___T_24));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_3__DOT___T_29 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_3__DOT___T_24));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_2__DOT___T_29 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_2__DOT___T_24));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_1__DOT___T_29 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_1__DOT___T_24));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_29 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_24));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_24 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_19));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_14__DOT___T_24 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_14__DOT___T_19));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_13__DOT___T_24 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_13__DOT___T_19));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_12__DOT___T_24 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_12__DOT___T_19));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_11__DOT___T_24 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_11__DOT___T_19));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_10__DOT___T_24 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_10__DOT___T_19));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_9__DOT___T_24 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_9__DOT___T_19));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_8__DOT___T_24 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_8__DOT___T_19));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_7__DOT___T_24 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_7__DOT___T_19));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_6__DOT___T_24 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_6__DOT___T_19));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_5__DOT___T_24 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_5__DOT___T_19));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_4__DOT___T_24 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_4__DOT___T_19));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_3__DOT___T_24 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_3__DOT___T_19));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_2__DOT___T_24 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_2__DOT___T_19));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_1__DOT___T_24 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_1__DOT___T_19));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_24 
 	= ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_19));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_15__DOT___T_19 
 	= ((~ (IData)(vlTOPp->reset)) & ((IData)(vlTOPp->Test__DOT__mvcore__DOT___T_6016) 
 					 & (0xaU == (IData)(vlTOPp->Test__DOT__mvgen__DOT__value))));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_14__DOT___T_19 
 	= ((~ (IData)(vlTOPp->reset)) & ((IData)(vlTOPp->Test__DOT__mvcore__DOT___T_6016) 
 					 & (0xaU == (IData)(vlTOPp->Test__DOT__mvgen__DOT__value))));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_13__DOT___T_19 
 	= ((~ (IData)(vlTOPp->reset)) & ((IData)(vlTOPp->Test__DOT__mvcore__DOT___T_6016) 
 					 & (0xaU == (IData)(vlTOPp->Test__DOT__mvgen__DOT__value))));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_12__DOT___T_19 
 	= ((~ (IData)(vlTOPp->reset)) & ((IData)(vlTOPp->Test__DOT__mvcore__DOT___T_6016) 
 					 & (0xaU == (IData)(vlTOPp->Test__DOT__mvgen__DOT__value))));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_11__DOT___T_19 
 	= ((~ (IData)(vlTOPp->reset)) & ((IData)(vlTOPp->Test__DOT__mvcore__DOT___T_6016) 
 					 & (0xaU == (IData)(vlTOPp->Test__DOT__mvgen__DOT__value))));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_10__DOT___T_19 
 	= ((~ (IData)(vlTOPp->reset)) & ((IData)(vlTOPp->Test__DOT__mvcore__DOT___T_6016) 
 					 & (0xaU == (IData)(vlTOPp->Test__DOT__mvgen__DOT__value))));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_9__DOT___T_19 
 	= ((~ (IData)(vlTOPp->reset)) & ((IData)(vlTOPp->Test__DOT__mvcore__DOT___T_6016) 
 					 & (0xaU == (IData)(vlTOPp->Test__DOT__mvgen__DOT__value))));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_8__DOT___T_19 
 	= ((~ (IData)(vlTOPp->reset)) & ((IData)(vlTOPp->Test__DOT__mvcore__DOT___T_6016) 
 					 & (0xaU == (IData)(vlTOPp->Test__DOT__mvgen__DOT__value))));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_7__DOT___T_19 
 	= ((~ (IData)(vlTOPp->reset)) & ((IData)(vlTOPp->Test__DOT__mvcore__DOT___T_6016) 
 					 & (0xaU == (IData)(vlTOPp->Test__DOT__mvgen__DOT__value))));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_6__DOT___T_19 
 	= ((~ (IData)(vlTOPp->reset)) & ((IData)(vlTOPp->Test__DOT__mvcore__DOT___T_6016) 
 					 & (0xaU == (IData)(vlTOPp->Test__DOT__mvgen__DOT__value))));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_5__DOT___T_19 
 	= ((~ (IData)(vlTOPp->reset)) & ((IData)(vlTOPp->Test__DOT__mvcore__DOT___T_6016) 
 					 & (0xaU == (IData)(vlTOPp->Test__DOT__mvgen__DOT__value))));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_4__DOT___T_19 
 	= ((~ (IData)(vlTOPp->reset)) & ((IData)(vlTOPp->Test__DOT__mvcore__DOT___T_6016) 
 					 & (0xaU == (IData)(vlTOPp->Test__DOT__mvgen__DOT__value))));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_3__DOT___T_19 
 	= ((~ (IData)(vlTOPp->reset)) & ((IData)(vlTOPp->Test__DOT__mvcore__DOT___T_6016) 
 					 & (0xaU == (IData)(vlTOPp->Test__DOT__mvgen__DOT__value))));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_2__DOT___T_19 
 	= ((~ (IData)(vlTOPp->reset)) & ((IData)(vlTOPp->Test__DOT__mvcore__DOT___T_6016) 
 					 & (0xaU == (IData)(vlTOPp->Test__DOT__mvgen__DOT__value))));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_1__DOT___T_19 
 	= ((~ (IData)(vlTOPp->reset)) & ((IData)(vlTOPp->Test__DOT__mvcore__DOT___T_6016) 
 					 & (0xaU == (IData)(vlTOPp->Test__DOT__mvgen__DOT__value))));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5404
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:5462
     vlTOPp->Test__DOT__mvcore__DOT__acc_0__DOT___T_19 
 	= ((~ (IData)(vlTOPp->reset)) & ((IData)(vlTOPp->Test__DOT__mvcore__DOT___T_6016) 
 					 & (0xaU == (IData)(vlTOPp->Test__DOT__mvgen__DOT__value))));
-    // ALWAYS at /home/bentu/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:1201
+    // ALWAYS at /Users/benjamintu/Desktop/research/Bit_Serial_Dot_Product/gemm/sim/vout/Test.v:1201
     vlTOPp->Test__DOT__mvgen__DOT__value = ((IData)(vlTOPp->reset)
 					     ? 0U : (IData)(vlTOPp->Test__DOT__mvgen__DOT___T_3078));
     vlTOPp->Test__DOT__mvgen__DOT___T_3078 = (0xffU 

@@ -2146,521 +2146,521 @@ circuit Test :
   module MAC : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_1 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_2 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_3 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_4 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_5 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_6 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_7 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_8 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_9 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_10 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_11 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_12 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_13 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_14 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_15 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
-  module Adder : 
+  module PipeAdder : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_1 : 
+  module PipeAdder_1 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_2 : 
+  module PipeAdder_2 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_3 : 
+  module PipeAdder_3 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_4 : 
+  module PipeAdder_4 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_5 : 
+  module PipeAdder_5 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_6 : 
+  module PipeAdder_6 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_7 : 
+  module PipeAdder_7 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_8 : 
+  module PipeAdder_8 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_9 : 
+  module PipeAdder_9 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_10 : 
+  module PipeAdder_10 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_11 : 
+  module PipeAdder_11 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_12 : 
+  module PipeAdder_12 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_13 : 
+  module PipeAdder_13 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_14 : 
+  module PipeAdder_14 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<20>, flip b : SInt<20>, y : SInt<21>}
+    output io : {flip a : SInt<20>, flip b : SInt<12>, y : SInt<21>}
     
-    wire add : SInt<21> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<21> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
   module DotProduct : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>[16], flip b : SInt<8>[16], y : SInt<21>}
+    output io : {flip a : SInt<8>[16], flip b : SInt<16>[16], y : SInt<29>}
     
     inst m_0 of MAC @[Gemm.scala 55:32]
     m_0.clock <= clock
@@ -2710,49 +2710,49 @@ circuit Test :
     inst m_15 of MAC_15 @[Gemm.scala 55:32]
     m_15.clock <= clock
     m_15.reset <= reset
-    inst a_0_0 of Adder @[Gemm.scala 57:30]
+    inst a_0_0 of PipeAdder @[Gemm.scala 57:30]
     a_0_0.clock <= clock
     a_0_0.reset <= reset
-    inst a_0_1 of Adder_1 @[Gemm.scala 57:30]
+    inst a_0_1 of PipeAdder_1 @[Gemm.scala 57:30]
     a_0_1.clock <= clock
     a_0_1.reset <= reset
-    inst a_0_2 of Adder_2 @[Gemm.scala 57:30]
+    inst a_0_2 of PipeAdder_2 @[Gemm.scala 57:30]
     a_0_2.clock <= clock
     a_0_2.reset <= reset
-    inst a_0_3 of Adder_3 @[Gemm.scala 57:30]
+    inst a_0_3 of PipeAdder_3 @[Gemm.scala 57:30]
     a_0_3.clock <= clock
     a_0_3.reset <= reset
-    inst a_0_4 of Adder_4 @[Gemm.scala 57:30]
+    inst a_0_4 of PipeAdder_4 @[Gemm.scala 57:30]
     a_0_4.clock <= clock
     a_0_4.reset <= reset
-    inst a_0_5 of Adder_5 @[Gemm.scala 57:30]
+    inst a_0_5 of PipeAdder_5 @[Gemm.scala 57:30]
     a_0_5.clock <= clock
     a_0_5.reset <= reset
-    inst a_0_6 of Adder_6 @[Gemm.scala 57:30]
+    inst a_0_6 of PipeAdder_6 @[Gemm.scala 57:30]
     a_0_6.clock <= clock
     a_0_6.reset <= reset
-    inst a_0_7 of Adder_7 @[Gemm.scala 57:30]
+    inst a_0_7 of PipeAdder_7 @[Gemm.scala 57:30]
     a_0_7.clock <= clock
     a_0_7.reset <= reset
-    inst a_1_0 of Adder_8 @[Gemm.scala 57:30]
+    inst a_1_0 of PipeAdder_8 @[Gemm.scala 57:30]
     a_1_0.clock <= clock
     a_1_0.reset <= reset
-    inst a_1_1 of Adder_9 @[Gemm.scala 57:30]
+    inst a_1_1 of PipeAdder_9 @[Gemm.scala 57:30]
     a_1_1.clock <= clock
     a_1_1.reset <= reset
-    inst a_1_2 of Adder_10 @[Gemm.scala 57:30]
+    inst a_1_2 of PipeAdder_10 @[Gemm.scala 57:30]
     a_1_2.clock <= clock
     a_1_2.reset <= reset
-    inst a_1_3 of Adder_11 @[Gemm.scala 57:30]
+    inst a_1_3 of PipeAdder_11 @[Gemm.scala 57:30]
     a_1_3.clock <= clock
     a_1_3.reset <= reset
-    inst a_2_0 of Adder_12 @[Gemm.scala 57:30]
+    inst a_2_0 of PipeAdder_12 @[Gemm.scala 57:30]
     a_2_0.clock <= clock
     a_2_0.reset <= reset
-    inst a_2_1 of Adder_13 @[Gemm.scala 57:30]
+    inst a_2_1 of PipeAdder_13 @[Gemm.scala 57:30]
     a_2_1.clock <= clock
     a_2_1.reset <= reset
-    inst a_3_0 of Adder_14 @[Gemm.scala 57:30]
+    inst a_3_0 of PipeAdder_14 @[Gemm.scala 57:30]
     a_3_0.clock <= clock
     a_3_0.reset <= reset
     m_0.io.a <= io.a[0] @[Gemm.scala 62:15]
@@ -2838,521 +2838,521 @@ circuit Test :
   module MAC_16 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_17 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_18 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_19 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_20 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_21 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_22 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_23 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_24 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_25 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_26 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_27 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_28 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_29 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_30 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_31 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
-  module Adder_15 : 
+  module PipeAdder_15 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_16 : 
+  module PipeAdder_16 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_17 : 
+  module PipeAdder_17 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_18 : 
+  module PipeAdder_18 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_19 : 
+  module PipeAdder_19 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_20 : 
+  module PipeAdder_20 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_21 : 
+  module PipeAdder_21 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_22 : 
+  module PipeAdder_22 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_23 : 
+  module PipeAdder_23 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_24 : 
+  module PipeAdder_24 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_25 : 
+  module PipeAdder_25 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_26 : 
+  module PipeAdder_26 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_27 : 
+  module PipeAdder_27 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_28 : 
+  module PipeAdder_28 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_29 : 
+  module PipeAdder_29 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<20>, flip b : SInt<20>, y : SInt<21>}
+    output io : {flip a : SInt<20>, flip b : SInt<12>, y : SInt<21>}
     
-    wire add : SInt<21> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<21> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
   module DotProduct_1 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>[16], flip b : SInt<8>[16], y : SInt<21>}
+    output io : {flip a : SInt<8>[16], flip b : SInt<16>[16], y : SInt<29>}
     
     inst m_0 of MAC_16 @[Gemm.scala 55:32]
     m_0.clock <= clock
@@ -3402,49 +3402,49 @@ circuit Test :
     inst m_15 of MAC_31 @[Gemm.scala 55:32]
     m_15.clock <= clock
     m_15.reset <= reset
-    inst a_0_0 of Adder_15 @[Gemm.scala 57:30]
+    inst a_0_0 of PipeAdder_15 @[Gemm.scala 57:30]
     a_0_0.clock <= clock
     a_0_0.reset <= reset
-    inst a_0_1 of Adder_16 @[Gemm.scala 57:30]
+    inst a_0_1 of PipeAdder_16 @[Gemm.scala 57:30]
     a_0_1.clock <= clock
     a_0_1.reset <= reset
-    inst a_0_2 of Adder_17 @[Gemm.scala 57:30]
+    inst a_0_2 of PipeAdder_17 @[Gemm.scala 57:30]
     a_0_2.clock <= clock
     a_0_2.reset <= reset
-    inst a_0_3 of Adder_18 @[Gemm.scala 57:30]
+    inst a_0_3 of PipeAdder_18 @[Gemm.scala 57:30]
     a_0_3.clock <= clock
     a_0_3.reset <= reset
-    inst a_0_4 of Adder_19 @[Gemm.scala 57:30]
+    inst a_0_4 of PipeAdder_19 @[Gemm.scala 57:30]
     a_0_4.clock <= clock
     a_0_4.reset <= reset
-    inst a_0_5 of Adder_20 @[Gemm.scala 57:30]
+    inst a_0_5 of PipeAdder_20 @[Gemm.scala 57:30]
     a_0_5.clock <= clock
     a_0_5.reset <= reset
-    inst a_0_6 of Adder_21 @[Gemm.scala 57:30]
+    inst a_0_6 of PipeAdder_21 @[Gemm.scala 57:30]
     a_0_6.clock <= clock
     a_0_6.reset <= reset
-    inst a_0_7 of Adder_22 @[Gemm.scala 57:30]
+    inst a_0_7 of PipeAdder_22 @[Gemm.scala 57:30]
     a_0_7.clock <= clock
     a_0_7.reset <= reset
-    inst a_1_0 of Adder_23 @[Gemm.scala 57:30]
+    inst a_1_0 of PipeAdder_23 @[Gemm.scala 57:30]
     a_1_0.clock <= clock
     a_1_0.reset <= reset
-    inst a_1_1 of Adder_24 @[Gemm.scala 57:30]
+    inst a_1_1 of PipeAdder_24 @[Gemm.scala 57:30]
     a_1_1.clock <= clock
     a_1_1.reset <= reset
-    inst a_1_2 of Adder_25 @[Gemm.scala 57:30]
+    inst a_1_2 of PipeAdder_25 @[Gemm.scala 57:30]
     a_1_2.clock <= clock
     a_1_2.reset <= reset
-    inst a_1_3 of Adder_26 @[Gemm.scala 57:30]
+    inst a_1_3 of PipeAdder_26 @[Gemm.scala 57:30]
     a_1_3.clock <= clock
     a_1_3.reset <= reset
-    inst a_2_0 of Adder_27 @[Gemm.scala 57:30]
+    inst a_2_0 of PipeAdder_27 @[Gemm.scala 57:30]
     a_2_0.clock <= clock
     a_2_0.reset <= reset
-    inst a_2_1 of Adder_28 @[Gemm.scala 57:30]
+    inst a_2_1 of PipeAdder_28 @[Gemm.scala 57:30]
     a_2_1.clock <= clock
     a_2_1.reset <= reset
-    inst a_3_0 of Adder_29 @[Gemm.scala 57:30]
+    inst a_3_0 of PipeAdder_29 @[Gemm.scala 57:30]
     a_3_0.clock <= clock
     a_3_0.reset <= reset
     m_0.io.a <= io.a[0] @[Gemm.scala 62:15]
@@ -3530,521 +3530,521 @@ circuit Test :
   module MAC_32 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_33 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_34 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_35 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_36 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_37 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_38 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_39 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_40 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_41 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_42 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_43 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_44 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_45 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_46 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_47 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
-  module Adder_30 : 
+  module PipeAdder_30 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_31 : 
+  module PipeAdder_31 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_32 : 
+  module PipeAdder_32 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_33 : 
+  module PipeAdder_33 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_34 : 
+  module PipeAdder_34 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_35 : 
+  module PipeAdder_35 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_36 : 
+  module PipeAdder_36 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_37 : 
+  module PipeAdder_37 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_38 : 
+  module PipeAdder_38 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_39 : 
+  module PipeAdder_39 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_40 : 
+  module PipeAdder_40 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_41 : 
+  module PipeAdder_41 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_42 : 
+  module PipeAdder_42 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_43 : 
+  module PipeAdder_43 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_44 : 
+  module PipeAdder_44 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<20>, flip b : SInt<20>, y : SInt<21>}
+    output io : {flip a : SInt<20>, flip b : SInt<12>, y : SInt<21>}
     
-    wire add : SInt<21> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<21> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
   module DotProduct_2 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>[16], flip b : SInt<8>[16], y : SInt<21>}
+    output io : {flip a : SInt<8>[16], flip b : SInt<16>[16], y : SInt<29>}
     
     inst m_0 of MAC_32 @[Gemm.scala 55:32]
     m_0.clock <= clock
@@ -4094,49 +4094,49 @@ circuit Test :
     inst m_15 of MAC_47 @[Gemm.scala 55:32]
     m_15.clock <= clock
     m_15.reset <= reset
-    inst a_0_0 of Adder_30 @[Gemm.scala 57:30]
+    inst a_0_0 of PipeAdder_30 @[Gemm.scala 57:30]
     a_0_0.clock <= clock
     a_0_0.reset <= reset
-    inst a_0_1 of Adder_31 @[Gemm.scala 57:30]
+    inst a_0_1 of PipeAdder_31 @[Gemm.scala 57:30]
     a_0_1.clock <= clock
     a_0_1.reset <= reset
-    inst a_0_2 of Adder_32 @[Gemm.scala 57:30]
+    inst a_0_2 of PipeAdder_32 @[Gemm.scala 57:30]
     a_0_2.clock <= clock
     a_0_2.reset <= reset
-    inst a_0_3 of Adder_33 @[Gemm.scala 57:30]
+    inst a_0_3 of PipeAdder_33 @[Gemm.scala 57:30]
     a_0_3.clock <= clock
     a_0_3.reset <= reset
-    inst a_0_4 of Adder_34 @[Gemm.scala 57:30]
+    inst a_0_4 of PipeAdder_34 @[Gemm.scala 57:30]
     a_0_4.clock <= clock
     a_0_4.reset <= reset
-    inst a_0_5 of Adder_35 @[Gemm.scala 57:30]
+    inst a_0_5 of PipeAdder_35 @[Gemm.scala 57:30]
     a_0_5.clock <= clock
     a_0_5.reset <= reset
-    inst a_0_6 of Adder_36 @[Gemm.scala 57:30]
+    inst a_0_6 of PipeAdder_36 @[Gemm.scala 57:30]
     a_0_6.clock <= clock
     a_0_6.reset <= reset
-    inst a_0_7 of Adder_37 @[Gemm.scala 57:30]
+    inst a_0_7 of PipeAdder_37 @[Gemm.scala 57:30]
     a_0_7.clock <= clock
     a_0_7.reset <= reset
-    inst a_1_0 of Adder_38 @[Gemm.scala 57:30]
+    inst a_1_0 of PipeAdder_38 @[Gemm.scala 57:30]
     a_1_0.clock <= clock
     a_1_0.reset <= reset
-    inst a_1_1 of Adder_39 @[Gemm.scala 57:30]
+    inst a_1_1 of PipeAdder_39 @[Gemm.scala 57:30]
     a_1_1.clock <= clock
     a_1_1.reset <= reset
-    inst a_1_2 of Adder_40 @[Gemm.scala 57:30]
+    inst a_1_2 of PipeAdder_40 @[Gemm.scala 57:30]
     a_1_2.clock <= clock
     a_1_2.reset <= reset
-    inst a_1_3 of Adder_41 @[Gemm.scala 57:30]
+    inst a_1_3 of PipeAdder_41 @[Gemm.scala 57:30]
     a_1_3.clock <= clock
     a_1_3.reset <= reset
-    inst a_2_0 of Adder_42 @[Gemm.scala 57:30]
+    inst a_2_0 of PipeAdder_42 @[Gemm.scala 57:30]
     a_2_0.clock <= clock
     a_2_0.reset <= reset
-    inst a_2_1 of Adder_43 @[Gemm.scala 57:30]
+    inst a_2_1 of PipeAdder_43 @[Gemm.scala 57:30]
     a_2_1.clock <= clock
     a_2_1.reset <= reset
-    inst a_3_0 of Adder_44 @[Gemm.scala 57:30]
+    inst a_3_0 of PipeAdder_44 @[Gemm.scala 57:30]
     a_3_0.clock <= clock
     a_3_0.reset <= reset
     m_0.io.a <= io.a[0] @[Gemm.scala 62:15]
@@ -4222,521 +4222,521 @@ circuit Test :
   module MAC_48 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_49 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_50 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_51 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_52 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_53 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_54 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_55 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_56 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_57 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_58 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_59 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_60 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_61 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_62 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_63 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
-  module Adder_45 : 
+  module PipeAdder_45 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_46 : 
+  module PipeAdder_46 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_47 : 
+  module PipeAdder_47 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_48 : 
+  module PipeAdder_48 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_49 : 
+  module PipeAdder_49 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_50 : 
+  module PipeAdder_50 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_51 : 
+  module PipeAdder_51 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_52 : 
+  module PipeAdder_52 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_53 : 
+  module PipeAdder_53 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_54 : 
+  module PipeAdder_54 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_55 : 
+  module PipeAdder_55 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_56 : 
+  module PipeAdder_56 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_57 : 
+  module PipeAdder_57 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_58 : 
+  module PipeAdder_58 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_59 : 
+  module PipeAdder_59 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<20>, flip b : SInt<20>, y : SInt<21>}
+    output io : {flip a : SInt<20>, flip b : SInt<12>, y : SInt<21>}
     
-    wire add : SInt<21> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<21> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
   module DotProduct_3 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>[16], flip b : SInt<8>[16], y : SInt<21>}
+    output io : {flip a : SInt<8>[16], flip b : SInt<16>[16], y : SInt<29>}
     
     inst m_0 of MAC_48 @[Gemm.scala 55:32]
     m_0.clock <= clock
@@ -4786,49 +4786,49 @@ circuit Test :
     inst m_15 of MAC_63 @[Gemm.scala 55:32]
     m_15.clock <= clock
     m_15.reset <= reset
-    inst a_0_0 of Adder_45 @[Gemm.scala 57:30]
+    inst a_0_0 of PipeAdder_45 @[Gemm.scala 57:30]
     a_0_0.clock <= clock
     a_0_0.reset <= reset
-    inst a_0_1 of Adder_46 @[Gemm.scala 57:30]
+    inst a_0_1 of PipeAdder_46 @[Gemm.scala 57:30]
     a_0_1.clock <= clock
     a_0_1.reset <= reset
-    inst a_0_2 of Adder_47 @[Gemm.scala 57:30]
+    inst a_0_2 of PipeAdder_47 @[Gemm.scala 57:30]
     a_0_2.clock <= clock
     a_0_2.reset <= reset
-    inst a_0_3 of Adder_48 @[Gemm.scala 57:30]
+    inst a_0_3 of PipeAdder_48 @[Gemm.scala 57:30]
     a_0_3.clock <= clock
     a_0_3.reset <= reset
-    inst a_0_4 of Adder_49 @[Gemm.scala 57:30]
+    inst a_0_4 of PipeAdder_49 @[Gemm.scala 57:30]
     a_0_4.clock <= clock
     a_0_4.reset <= reset
-    inst a_0_5 of Adder_50 @[Gemm.scala 57:30]
+    inst a_0_5 of PipeAdder_50 @[Gemm.scala 57:30]
     a_0_5.clock <= clock
     a_0_5.reset <= reset
-    inst a_0_6 of Adder_51 @[Gemm.scala 57:30]
+    inst a_0_6 of PipeAdder_51 @[Gemm.scala 57:30]
     a_0_6.clock <= clock
     a_0_6.reset <= reset
-    inst a_0_7 of Adder_52 @[Gemm.scala 57:30]
+    inst a_0_7 of PipeAdder_52 @[Gemm.scala 57:30]
     a_0_7.clock <= clock
     a_0_7.reset <= reset
-    inst a_1_0 of Adder_53 @[Gemm.scala 57:30]
+    inst a_1_0 of PipeAdder_53 @[Gemm.scala 57:30]
     a_1_0.clock <= clock
     a_1_0.reset <= reset
-    inst a_1_1 of Adder_54 @[Gemm.scala 57:30]
+    inst a_1_1 of PipeAdder_54 @[Gemm.scala 57:30]
     a_1_1.clock <= clock
     a_1_1.reset <= reset
-    inst a_1_2 of Adder_55 @[Gemm.scala 57:30]
+    inst a_1_2 of PipeAdder_55 @[Gemm.scala 57:30]
     a_1_2.clock <= clock
     a_1_2.reset <= reset
-    inst a_1_3 of Adder_56 @[Gemm.scala 57:30]
+    inst a_1_3 of PipeAdder_56 @[Gemm.scala 57:30]
     a_1_3.clock <= clock
     a_1_3.reset <= reset
-    inst a_2_0 of Adder_57 @[Gemm.scala 57:30]
+    inst a_2_0 of PipeAdder_57 @[Gemm.scala 57:30]
     a_2_0.clock <= clock
     a_2_0.reset <= reset
-    inst a_2_1 of Adder_58 @[Gemm.scala 57:30]
+    inst a_2_1 of PipeAdder_58 @[Gemm.scala 57:30]
     a_2_1.clock <= clock
     a_2_1.reset <= reset
-    inst a_3_0 of Adder_59 @[Gemm.scala 57:30]
+    inst a_3_0 of PipeAdder_59 @[Gemm.scala 57:30]
     a_3_0.clock <= clock
     a_3_0.reset <= reset
     m_0.io.a <= io.a[0] @[Gemm.scala 62:15]
@@ -4914,521 +4914,521 @@ circuit Test :
   module MAC_64 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_65 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_66 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_67 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_68 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_69 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_70 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_71 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_72 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_73 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_74 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_75 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_76 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_77 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_78 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_79 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
-  module Adder_60 : 
+  module PipeAdder_60 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_61 : 
+  module PipeAdder_61 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_62 : 
+  module PipeAdder_62 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_63 : 
+  module PipeAdder_63 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_64 : 
+  module PipeAdder_64 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_65 : 
+  module PipeAdder_65 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_66 : 
+  module PipeAdder_66 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_67 : 
+  module PipeAdder_67 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_68 : 
+  module PipeAdder_68 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_69 : 
+  module PipeAdder_69 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_70 : 
+  module PipeAdder_70 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_71 : 
+  module PipeAdder_71 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_72 : 
+  module PipeAdder_72 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_73 : 
+  module PipeAdder_73 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_74 : 
+  module PipeAdder_74 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<20>, flip b : SInt<20>, y : SInt<21>}
+    output io : {flip a : SInt<20>, flip b : SInt<12>, y : SInt<21>}
     
-    wire add : SInt<21> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<21> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
   module DotProduct_4 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>[16], flip b : SInt<8>[16], y : SInt<21>}
+    output io : {flip a : SInt<8>[16], flip b : SInt<16>[16], y : SInt<29>}
     
     inst m_0 of MAC_64 @[Gemm.scala 55:32]
     m_0.clock <= clock
@@ -5478,49 +5478,49 @@ circuit Test :
     inst m_15 of MAC_79 @[Gemm.scala 55:32]
     m_15.clock <= clock
     m_15.reset <= reset
-    inst a_0_0 of Adder_60 @[Gemm.scala 57:30]
+    inst a_0_0 of PipeAdder_60 @[Gemm.scala 57:30]
     a_0_0.clock <= clock
     a_0_0.reset <= reset
-    inst a_0_1 of Adder_61 @[Gemm.scala 57:30]
+    inst a_0_1 of PipeAdder_61 @[Gemm.scala 57:30]
     a_0_1.clock <= clock
     a_0_1.reset <= reset
-    inst a_0_2 of Adder_62 @[Gemm.scala 57:30]
+    inst a_0_2 of PipeAdder_62 @[Gemm.scala 57:30]
     a_0_2.clock <= clock
     a_0_2.reset <= reset
-    inst a_0_3 of Adder_63 @[Gemm.scala 57:30]
+    inst a_0_3 of PipeAdder_63 @[Gemm.scala 57:30]
     a_0_3.clock <= clock
     a_0_3.reset <= reset
-    inst a_0_4 of Adder_64 @[Gemm.scala 57:30]
+    inst a_0_4 of PipeAdder_64 @[Gemm.scala 57:30]
     a_0_4.clock <= clock
     a_0_4.reset <= reset
-    inst a_0_5 of Adder_65 @[Gemm.scala 57:30]
+    inst a_0_5 of PipeAdder_65 @[Gemm.scala 57:30]
     a_0_5.clock <= clock
     a_0_5.reset <= reset
-    inst a_0_6 of Adder_66 @[Gemm.scala 57:30]
+    inst a_0_6 of PipeAdder_66 @[Gemm.scala 57:30]
     a_0_6.clock <= clock
     a_0_6.reset <= reset
-    inst a_0_7 of Adder_67 @[Gemm.scala 57:30]
+    inst a_0_7 of PipeAdder_67 @[Gemm.scala 57:30]
     a_0_7.clock <= clock
     a_0_7.reset <= reset
-    inst a_1_0 of Adder_68 @[Gemm.scala 57:30]
+    inst a_1_0 of PipeAdder_68 @[Gemm.scala 57:30]
     a_1_0.clock <= clock
     a_1_0.reset <= reset
-    inst a_1_1 of Adder_69 @[Gemm.scala 57:30]
+    inst a_1_1 of PipeAdder_69 @[Gemm.scala 57:30]
     a_1_1.clock <= clock
     a_1_1.reset <= reset
-    inst a_1_2 of Adder_70 @[Gemm.scala 57:30]
+    inst a_1_2 of PipeAdder_70 @[Gemm.scala 57:30]
     a_1_2.clock <= clock
     a_1_2.reset <= reset
-    inst a_1_3 of Adder_71 @[Gemm.scala 57:30]
+    inst a_1_3 of PipeAdder_71 @[Gemm.scala 57:30]
     a_1_3.clock <= clock
     a_1_3.reset <= reset
-    inst a_2_0 of Adder_72 @[Gemm.scala 57:30]
+    inst a_2_0 of PipeAdder_72 @[Gemm.scala 57:30]
     a_2_0.clock <= clock
     a_2_0.reset <= reset
-    inst a_2_1 of Adder_73 @[Gemm.scala 57:30]
+    inst a_2_1 of PipeAdder_73 @[Gemm.scala 57:30]
     a_2_1.clock <= clock
     a_2_1.reset <= reset
-    inst a_3_0 of Adder_74 @[Gemm.scala 57:30]
+    inst a_3_0 of PipeAdder_74 @[Gemm.scala 57:30]
     a_3_0.clock <= clock
     a_3_0.reset <= reset
     m_0.io.a <= io.a[0] @[Gemm.scala 62:15]
@@ -5606,521 +5606,521 @@ circuit Test :
   module MAC_80 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_81 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_82 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_83 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_84 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_85 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_86 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_87 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_88 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_89 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_90 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_91 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_92 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_93 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_94 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_95 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
-  module Adder_75 : 
+  module PipeAdder_75 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_76 : 
+  module PipeAdder_76 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_77 : 
+  module PipeAdder_77 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_78 : 
+  module PipeAdder_78 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_79 : 
+  module PipeAdder_79 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_80 : 
+  module PipeAdder_80 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_81 : 
+  module PipeAdder_81 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_82 : 
+  module PipeAdder_82 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_83 : 
+  module PipeAdder_83 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_84 : 
+  module PipeAdder_84 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_85 : 
+  module PipeAdder_85 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_86 : 
+  module PipeAdder_86 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_87 : 
+  module PipeAdder_87 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_88 : 
+  module PipeAdder_88 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_89 : 
+  module PipeAdder_89 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<20>, flip b : SInt<20>, y : SInt<21>}
+    output io : {flip a : SInt<20>, flip b : SInt<12>, y : SInt<21>}
     
-    wire add : SInt<21> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<21> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
   module DotProduct_5 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>[16], flip b : SInt<8>[16], y : SInt<21>}
+    output io : {flip a : SInt<8>[16], flip b : SInt<16>[16], y : SInt<29>}
     
     inst m_0 of MAC_80 @[Gemm.scala 55:32]
     m_0.clock <= clock
@@ -6170,49 +6170,49 @@ circuit Test :
     inst m_15 of MAC_95 @[Gemm.scala 55:32]
     m_15.clock <= clock
     m_15.reset <= reset
-    inst a_0_0 of Adder_75 @[Gemm.scala 57:30]
+    inst a_0_0 of PipeAdder_75 @[Gemm.scala 57:30]
     a_0_0.clock <= clock
     a_0_0.reset <= reset
-    inst a_0_1 of Adder_76 @[Gemm.scala 57:30]
+    inst a_0_1 of PipeAdder_76 @[Gemm.scala 57:30]
     a_0_1.clock <= clock
     a_0_1.reset <= reset
-    inst a_0_2 of Adder_77 @[Gemm.scala 57:30]
+    inst a_0_2 of PipeAdder_77 @[Gemm.scala 57:30]
     a_0_2.clock <= clock
     a_0_2.reset <= reset
-    inst a_0_3 of Adder_78 @[Gemm.scala 57:30]
+    inst a_0_3 of PipeAdder_78 @[Gemm.scala 57:30]
     a_0_3.clock <= clock
     a_0_3.reset <= reset
-    inst a_0_4 of Adder_79 @[Gemm.scala 57:30]
+    inst a_0_4 of PipeAdder_79 @[Gemm.scala 57:30]
     a_0_4.clock <= clock
     a_0_4.reset <= reset
-    inst a_0_5 of Adder_80 @[Gemm.scala 57:30]
+    inst a_0_5 of PipeAdder_80 @[Gemm.scala 57:30]
     a_0_5.clock <= clock
     a_0_5.reset <= reset
-    inst a_0_6 of Adder_81 @[Gemm.scala 57:30]
+    inst a_0_6 of PipeAdder_81 @[Gemm.scala 57:30]
     a_0_6.clock <= clock
     a_0_6.reset <= reset
-    inst a_0_7 of Adder_82 @[Gemm.scala 57:30]
+    inst a_0_7 of PipeAdder_82 @[Gemm.scala 57:30]
     a_0_7.clock <= clock
     a_0_7.reset <= reset
-    inst a_1_0 of Adder_83 @[Gemm.scala 57:30]
+    inst a_1_0 of PipeAdder_83 @[Gemm.scala 57:30]
     a_1_0.clock <= clock
     a_1_0.reset <= reset
-    inst a_1_1 of Adder_84 @[Gemm.scala 57:30]
+    inst a_1_1 of PipeAdder_84 @[Gemm.scala 57:30]
     a_1_1.clock <= clock
     a_1_1.reset <= reset
-    inst a_1_2 of Adder_85 @[Gemm.scala 57:30]
+    inst a_1_2 of PipeAdder_85 @[Gemm.scala 57:30]
     a_1_2.clock <= clock
     a_1_2.reset <= reset
-    inst a_1_3 of Adder_86 @[Gemm.scala 57:30]
+    inst a_1_3 of PipeAdder_86 @[Gemm.scala 57:30]
     a_1_3.clock <= clock
     a_1_3.reset <= reset
-    inst a_2_0 of Adder_87 @[Gemm.scala 57:30]
+    inst a_2_0 of PipeAdder_87 @[Gemm.scala 57:30]
     a_2_0.clock <= clock
     a_2_0.reset <= reset
-    inst a_2_1 of Adder_88 @[Gemm.scala 57:30]
+    inst a_2_1 of PipeAdder_88 @[Gemm.scala 57:30]
     a_2_1.clock <= clock
     a_2_1.reset <= reset
-    inst a_3_0 of Adder_89 @[Gemm.scala 57:30]
+    inst a_3_0 of PipeAdder_89 @[Gemm.scala 57:30]
     a_3_0.clock <= clock
     a_3_0.reset <= reset
     m_0.io.a <= io.a[0] @[Gemm.scala 62:15]
@@ -6298,521 +6298,521 @@ circuit Test :
   module MAC_96 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_97 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_98 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_99 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_100 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_101 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_102 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_103 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_104 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_105 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_106 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_107 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_108 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_109 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_110 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_111 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
-  module Adder_90 : 
+  module PipeAdder_90 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_91 : 
+  module PipeAdder_91 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_92 : 
+  module PipeAdder_92 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_93 : 
+  module PipeAdder_93 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_94 : 
+  module PipeAdder_94 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_95 : 
+  module PipeAdder_95 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_96 : 
+  module PipeAdder_96 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_97 : 
+  module PipeAdder_97 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_98 : 
+  module PipeAdder_98 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_99 : 
+  module PipeAdder_99 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_100 : 
+  module PipeAdder_100 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_101 : 
+  module PipeAdder_101 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_102 : 
+  module PipeAdder_102 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_103 : 
+  module PipeAdder_103 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_104 : 
+  module PipeAdder_104 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<20>, flip b : SInt<20>, y : SInt<21>}
+    output io : {flip a : SInt<20>, flip b : SInt<12>, y : SInt<21>}
     
-    wire add : SInt<21> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<21> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
   module DotProduct_6 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>[16], flip b : SInt<8>[16], y : SInt<21>}
+    output io : {flip a : SInt<8>[16], flip b : SInt<16>[16], y : SInt<29>}
     
     inst m_0 of MAC_96 @[Gemm.scala 55:32]
     m_0.clock <= clock
@@ -6862,49 +6862,49 @@ circuit Test :
     inst m_15 of MAC_111 @[Gemm.scala 55:32]
     m_15.clock <= clock
     m_15.reset <= reset
-    inst a_0_0 of Adder_90 @[Gemm.scala 57:30]
+    inst a_0_0 of PipeAdder_90 @[Gemm.scala 57:30]
     a_0_0.clock <= clock
     a_0_0.reset <= reset
-    inst a_0_1 of Adder_91 @[Gemm.scala 57:30]
+    inst a_0_1 of PipeAdder_91 @[Gemm.scala 57:30]
     a_0_1.clock <= clock
     a_0_1.reset <= reset
-    inst a_0_2 of Adder_92 @[Gemm.scala 57:30]
+    inst a_0_2 of PipeAdder_92 @[Gemm.scala 57:30]
     a_0_2.clock <= clock
     a_0_2.reset <= reset
-    inst a_0_3 of Adder_93 @[Gemm.scala 57:30]
+    inst a_0_3 of PipeAdder_93 @[Gemm.scala 57:30]
     a_0_3.clock <= clock
     a_0_3.reset <= reset
-    inst a_0_4 of Adder_94 @[Gemm.scala 57:30]
+    inst a_0_4 of PipeAdder_94 @[Gemm.scala 57:30]
     a_0_4.clock <= clock
     a_0_4.reset <= reset
-    inst a_0_5 of Adder_95 @[Gemm.scala 57:30]
+    inst a_0_5 of PipeAdder_95 @[Gemm.scala 57:30]
     a_0_5.clock <= clock
     a_0_5.reset <= reset
-    inst a_0_6 of Adder_96 @[Gemm.scala 57:30]
+    inst a_0_6 of PipeAdder_96 @[Gemm.scala 57:30]
     a_0_6.clock <= clock
     a_0_6.reset <= reset
-    inst a_0_7 of Adder_97 @[Gemm.scala 57:30]
+    inst a_0_7 of PipeAdder_97 @[Gemm.scala 57:30]
     a_0_7.clock <= clock
     a_0_7.reset <= reset
-    inst a_1_0 of Adder_98 @[Gemm.scala 57:30]
+    inst a_1_0 of PipeAdder_98 @[Gemm.scala 57:30]
     a_1_0.clock <= clock
     a_1_0.reset <= reset
-    inst a_1_1 of Adder_99 @[Gemm.scala 57:30]
+    inst a_1_1 of PipeAdder_99 @[Gemm.scala 57:30]
     a_1_1.clock <= clock
     a_1_1.reset <= reset
-    inst a_1_2 of Adder_100 @[Gemm.scala 57:30]
+    inst a_1_2 of PipeAdder_100 @[Gemm.scala 57:30]
     a_1_2.clock <= clock
     a_1_2.reset <= reset
-    inst a_1_3 of Adder_101 @[Gemm.scala 57:30]
+    inst a_1_3 of PipeAdder_101 @[Gemm.scala 57:30]
     a_1_3.clock <= clock
     a_1_3.reset <= reset
-    inst a_2_0 of Adder_102 @[Gemm.scala 57:30]
+    inst a_2_0 of PipeAdder_102 @[Gemm.scala 57:30]
     a_2_0.clock <= clock
     a_2_0.reset <= reset
-    inst a_2_1 of Adder_103 @[Gemm.scala 57:30]
+    inst a_2_1 of PipeAdder_103 @[Gemm.scala 57:30]
     a_2_1.clock <= clock
     a_2_1.reset <= reset
-    inst a_3_0 of Adder_104 @[Gemm.scala 57:30]
+    inst a_3_0 of PipeAdder_104 @[Gemm.scala 57:30]
     a_3_0.clock <= clock
     a_3_0.reset <= reset
     m_0.io.a <= io.a[0] @[Gemm.scala 62:15]
@@ -6990,521 +6990,521 @@ circuit Test :
   module MAC_112 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_113 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_114 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_115 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_116 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_117 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_118 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_119 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_120 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_121 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_122 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_123 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_124 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_125 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_126 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_127 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
-  module Adder_105 : 
+  module PipeAdder_105 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_106 : 
+  module PipeAdder_106 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_107 : 
+  module PipeAdder_107 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_108 : 
+  module PipeAdder_108 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_109 : 
+  module PipeAdder_109 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_110 : 
+  module PipeAdder_110 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_111 : 
+  module PipeAdder_111 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_112 : 
+  module PipeAdder_112 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_113 : 
+  module PipeAdder_113 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_114 : 
+  module PipeAdder_114 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_115 : 
+  module PipeAdder_115 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_116 : 
+  module PipeAdder_116 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_117 : 
+  module PipeAdder_117 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_118 : 
+  module PipeAdder_118 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_119 : 
+  module PipeAdder_119 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<20>, flip b : SInt<20>, y : SInt<21>}
+    output io : {flip a : SInt<20>, flip b : SInt<12>, y : SInt<21>}
     
-    wire add : SInt<21> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<21> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
   module DotProduct_7 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>[16], flip b : SInt<8>[16], y : SInt<21>}
+    output io : {flip a : SInt<8>[16], flip b : SInt<16>[16], y : SInt<29>}
     
     inst m_0 of MAC_112 @[Gemm.scala 55:32]
     m_0.clock <= clock
@@ -7554,49 +7554,49 @@ circuit Test :
     inst m_15 of MAC_127 @[Gemm.scala 55:32]
     m_15.clock <= clock
     m_15.reset <= reset
-    inst a_0_0 of Adder_105 @[Gemm.scala 57:30]
+    inst a_0_0 of PipeAdder_105 @[Gemm.scala 57:30]
     a_0_0.clock <= clock
     a_0_0.reset <= reset
-    inst a_0_1 of Adder_106 @[Gemm.scala 57:30]
+    inst a_0_1 of PipeAdder_106 @[Gemm.scala 57:30]
     a_0_1.clock <= clock
     a_0_1.reset <= reset
-    inst a_0_2 of Adder_107 @[Gemm.scala 57:30]
+    inst a_0_2 of PipeAdder_107 @[Gemm.scala 57:30]
     a_0_2.clock <= clock
     a_0_2.reset <= reset
-    inst a_0_3 of Adder_108 @[Gemm.scala 57:30]
+    inst a_0_3 of PipeAdder_108 @[Gemm.scala 57:30]
     a_0_3.clock <= clock
     a_0_3.reset <= reset
-    inst a_0_4 of Adder_109 @[Gemm.scala 57:30]
+    inst a_0_4 of PipeAdder_109 @[Gemm.scala 57:30]
     a_0_4.clock <= clock
     a_0_4.reset <= reset
-    inst a_0_5 of Adder_110 @[Gemm.scala 57:30]
+    inst a_0_5 of PipeAdder_110 @[Gemm.scala 57:30]
     a_0_5.clock <= clock
     a_0_5.reset <= reset
-    inst a_0_6 of Adder_111 @[Gemm.scala 57:30]
+    inst a_0_6 of PipeAdder_111 @[Gemm.scala 57:30]
     a_0_6.clock <= clock
     a_0_6.reset <= reset
-    inst a_0_7 of Adder_112 @[Gemm.scala 57:30]
+    inst a_0_7 of PipeAdder_112 @[Gemm.scala 57:30]
     a_0_7.clock <= clock
     a_0_7.reset <= reset
-    inst a_1_0 of Adder_113 @[Gemm.scala 57:30]
+    inst a_1_0 of PipeAdder_113 @[Gemm.scala 57:30]
     a_1_0.clock <= clock
     a_1_0.reset <= reset
-    inst a_1_1 of Adder_114 @[Gemm.scala 57:30]
+    inst a_1_1 of PipeAdder_114 @[Gemm.scala 57:30]
     a_1_1.clock <= clock
     a_1_1.reset <= reset
-    inst a_1_2 of Adder_115 @[Gemm.scala 57:30]
+    inst a_1_2 of PipeAdder_115 @[Gemm.scala 57:30]
     a_1_2.clock <= clock
     a_1_2.reset <= reset
-    inst a_1_3 of Adder_116 @[Gemm.scala 57:30]
+    inst a_1_3 of PipeAdder_116 @[Gemm.scala 57:30]
     a_1_3.clock <= clock
     a_1_3.reset <= reset
-    inst a_2_0 of Adder_117 @[Gemm.scala 57:30]
+    inst a_2_0 of PipeAdder_117 @[Gemm.scala 57:30]
     a_2_0.clock <= clock
     a_2_0.reset <= reset
-    inst a_2_1 of Adder_118 @[Gemm.scala 57:30]
+    inst a_2_1 of PipeAdder_118 @[Gemm.scala 57:30]
     a_2_1.clock <= clock
     a_2_1.reset <= reset
-    inst a_3_0 of Adder_119 @[Gemm.scala 57:30]
+    inst a_3_0 of PipeAdder_119 @[Gemm.scala 57:30]
     a_3_0.clock <= clock
     a_3_0.reset <= reset
     m_0.io.a <= io.a[0] @[Gemm.scala 62:15]
@@ -7682,521 +7682,521 @@ circuit Test :
   module MAC_128 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_129 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_130 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_131 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_132 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_133 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_134 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_135 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_136 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_137 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_138 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_139 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_140 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_141 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_142 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_143 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
-  module Adder_120 : 
+  module PipeAdder_120 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_121 : 
+  module PipeAdder_121 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_122 : 
+  module PipeAdder_122 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_123 : 
+  module PipeAdder_123 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_124 : 
+  module PipeAdder_124 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_125 : 
+  module PipeAdder_125 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_126 : 
+  module PipeAdder_126 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_127 : 
+  module PipeAdder_127 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_128 : 
+  module PipeAdder_128 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_129 : 
+  module PipeAdder_129 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_130 : 
+  module PipeAdder_130 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_131 : 
+  module PipeAdder_131 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_132 : 
+  module PipeAdder_132 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_133 : 
+  module PipeAdder_133 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_134 : 
+  module PipeAdder_134 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<20>, flip b : SInt<20>, y : SInt<21>}
+    output io : {flip a : SInt<20>, flip b : SInt<12>, y : SInt<21>}
     
-    wire add : SInt<21> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<21> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
   module DotProduct_8 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>[16], flip b : SInt<8>[16], y : SInt<21>}
+    output io : {flip a : SInt<8>[16], flip b : SInt<16>[16], y : SInt<29>}
     
     inst m_0 of MAC_128 @[Gemm.scala 55:32]
     m_0.clock <= clock
@@ -8246,49 +8246,49 @@ circuit Test :
     inst m_15 of MAC_143 @[Gemm.scala 55:32]
     m_15.clock <= clock
     m_15.reset <= reset
-    inst a_0_0 of Adder_120 @[Gemm.scala 57:30]
+    inst a_0_0 of PipeAdder_120 @[Gemm.scala 57:30]
     a_0_0.clock <= clock
     a_0_0.reset <= reset
-    inst a_0_1 of Adder_121 @[Gemm.scala 57:30]
+    inst a_0_1 of PipeAdder_121 @[Gemm.scala 57:30]
     a_0_1.clock <= clock
     a_0_1.reset <= reset
-    inst a_0_2 of Adder_122 @[Gemm.scala 57:30]
+    inst a_0_2 of PipeAdder_122 @[Gemm.scala 57:30]
     a_0_2.clock <= clock
     a_0_2.reset <= reset
-    inst a_0_3 of Adder_123 @[Gemm.scala 57:30]
+    inst a_0_3 of PipeAdder_123 @[Gemm.scala 57:30]
     a_0_3.clock <= clock
     a_0_3.reset <= reset
-    inst a_0_4 of Adder_124 @[Gemm.scala 57:30]
+    inst a_0_4 of PipeAdder_124 @[Gemm.scala 57:30]
     a_0_4.clock <= clock
     a_0_4.reset <= reset
-    inst a_0_5 of Adder_125 @[Gemm.scala 57:30]
+    inst a_0_5 of PipeAdder_125 @[Gemm.scala 57:30]
     a_0_5.clock <= clock
     a_0_5.reset <= reset
-    inst a_0_6 of Adder_126 @[Gemm.scala 57:30]
+    inst a_0_6 of PipeAdder_126 @[Gemm.scala 57:30]
     a_0_6.clock <= clock
     a_0_6.reset <= reset
-    inst a_0_7 of Adder_127 @[Gemm.scala 57:30]
+    inst a_0_7 of PipeAdder_127 @[Gemm.scala 57:30]
     a_0_7.clock <= clock
     a_0_7.reset <= reset
-    inst a_1_0 of Adder_128 @[Gemm.scala 57:30]
+    inst a_1_0 of PipeAdder_128 @[Gemm.scala 57:30]
     a_1_0.clock <= clock
     a_1_0.reset <= reset
-    inst a_1_1 of Adder_129 @[Gemm.scala 57:30]
+    inst a_1_1 of PipeAdder_129 @[Gemm.scala 57:30]
     a_1_1.clock <= clock
     a_1_1.reset <= reset
-    inst a_1_2 of Adder_130 @[Gemm.scala 57:30]
+    inst a_1_2 of PipeAdder_130 @[Gemm.scala 57:30]
     a_1_2.clock <= clock
     a_1_2.reset <= reset
-    inst a_1_3 of Adder_131 @[Gemm.scala 57:30]
+    inst a_1_3 of PipeAdder_131 @[Gemm.scala 57:30]
     a_1_3.clock <= clock
     a_1_3.reset <= reset
-    inst a_2_0 of Adder_132 @[Gemm.scala 57:30]
+    inst a_2_0 of PipeAdder_132 @[Gemm.scala 57:30]
     a_2_0.clock <= clock
     a_2_0.reset <= reset
-    inst a_2_1 of Adder_133 @[Gemm.scala 57:30]
+    inst a_2_1 of PipeAdder_133 @[Gemm.scala 57:30]
     a_2_1.clock <= clock
     a_2_1.reset <= reset
-    inst a_3_0 of Adder_134 @[Gemm.scala 57:30]
+    inst a_3_0 of PipeAdder_134 @[Gemm.scala 57:30]
     a_3_0.clock <= clock
     a_3_0.reset <= reset
     m_0.io.a <= io.a[0] @[Gemm.scala 62:15]
@@ -8374,521 +8374,521 @@ circuit Test :
   module MAC_144 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_145 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_146 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_147 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_148 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_149 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_150 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_151 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_152 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_153 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_154 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_155 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_156 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_157 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_158 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_159 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
-  module Adder_135 : 
+  module PipeAdder_135 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_136 : 
+  module PipeAdder_136 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_137 : 
+  module PipeAdder_137 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_138 : 
+  module PipeAdder_138 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_139 : 
+  module PipeAdder_139 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_140 : 
+  module PipeAdder_140 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_141 : 
+  module PipeAdder_141 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_142 : 
+  module PipeAdder_142 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_143 : 
+  module PipeAdder_143 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_144 : 
+  module PipeAdder_144 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_145 : 
+  module PipeAdder_145 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_146 : 
+  module PipeAdder_146 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_147 : 
+  module PipeAdder_147 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_148 : 
+  module PipeAdder_148 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_149 : 
+  module PipeAdder_149 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<20>, flip b : SInt<20>, y : SInt<21>}
+    output io : {flip a : SInt<20>, flip b : SInt<12>, y : SInt<21>}
     
-    wire add : SInt<21> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<21> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
   module DotProduct_9 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>[16], flip b : SInt<8>[16], y : SInt<21>}
+    output io : {flip a : SInt<8>[16], flip b : SInt<16>[16], y : SInt<29>}
     
     inst m_0 of MAC_144 @[Gemm.scala 55:32]
     m_0.clock <= clock
@@ -8938,49 +8938,49 @@ circuit Test :
     inst m_15 of MAC_159 @[Gemm.scala 55:32]
     m_15.clock <= clock
     m_15.reset <= reset
-    inst a_0_0 of Adder_135 @[Gemm.scala 57:30]
+    inst a_0_0 of PipeAdder_135 @[Gemm.scala 57:30]
     a_0_0.clock <= clock
     a_0_0.reset <= reset
-    inst a_0_1 of Adder_136 @[Gemm.scala 57:30]
+    inst a_0_1 of PipeAdder_136 @[Gemm.scala 57:30]
     a_0_1.clock <= clock
     a_0_1.reset <= reset
-    inst a_0_2 of Adder_137 @[Gemm.scala 57:30]
+    inst a_0_2 of PipeAdder_137 @[Gemm.scala 57:30]
     a_0_2.clock <= clock
     a_0_2.reset <= reset
-    inst a_0_3 of Adder_138 @[Gemm.scala 57:30]
+    inst a_0_3 of PipeAdder_138 @[Gemm.scala 57:30]
     a_0_3.clock <= clock
     a_0_3.reset <= reset
-    inst a_0_4 of Adder_139 @[Gemm.scala 57:30]
+    inst a_0_4 of PipeAdder_139 @[Gemm.scala 57:30]
     a_0_4.clock <= clock
     a_0_4.reset <= reset
-    inst a_0_5 of Adder_140 @[Gemm.scala 57:30]
+    inst a_0_5 of PipeAdder_140 @[Gemm.scala 57:30]
     a_0_5.clock <= clock
     a_0_5.reset <= reset
-    inst a_0_6 of Adder_141 @[Gemm.scala 57:30]
+    inst a_0_6 of PipeAdder_141 @[Gemm.scala 57:30]
     a_0_6.clock <= clock
     a_0_6.reset <= reset
-    inst a_0_7 of Adder_142 @[Gemm.scala 57:30]
+    inst a_0_7 of PipeAdder_142 @[Gemm.scala 57:30]
     a_0_7.clock <= clock
     a_0_7.reset <= reset
-    inst a_1_0 of Adder_143 @[Gemm.scala 57:30]
+    inst a_1_0 of PipeAdder_143 @[Gemm.scala 57:30]
     a_1_0.clock <= clock
     a_1_0.reset <= reset
-    inst a_1_1 of Adder_144 @[Gemm.scala 57:30]
+    inst a_1_1 of PipeAdder_144 @[Gemm.scala 57:30]
     a_1_1.clock <= clock
     a_1_1.reset <= reset
-    inst a_1_2 of Adder_145 @[Gemm.scala 57:30]
+    inst a_1_2 of PipeAdder_145 @[Gemm.scala 57:30]
     a_1_2.clock <= clock
     a_1_2.reset <= reset
-    inst a_1_3 of Adder_146 @[Gemm.scala 57:30]
+    inst a_1_3 of PipeAdder_146 @[Gemm.scala 57:30]
     a_1_3.clock <= clock
     a_1_3.reset <= reset
-    inst a_2_0 of Adder_147 @[Gemm.scala 57:30]
+    inst a_2_0 of PipeAdder_147 @[Gemm.scala 57:30]
     a_2_0.clock <= clock
     a_2_0.reset <= reset
-    inst a_2_1 of Adder_148 @[Gemm.scala 57:30]
+    inst a_2_1 of PipeAdder_148 @[Gemm.scala 57:30]
     a_2_1.clock <= clock
     a_2_1.reset <= reset
-    inst a_3_0 of Adder_149 @[Gemm.scala 57:30]
+    inst a_3_0 of PipeAdder_149 @[Gemm.scala 57:30]
     a_3_0.clock <= clock
     a_3_0.reset <= reset
     m_0.io.a <= io.a[0] @[Gemm.scala 62:15]
@@ -9066,521 +9066,521 @@ circuit Test :
   module MAC_160 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_161 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_162 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_163 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_164 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_165 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_166 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_167 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_168 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_169 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_170 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_171 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_172 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_173 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_174 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_175 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
-  module Adder_150 : 
+  module PipeAdder_150 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_151 : 
+  module PipeAdder_151 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_152 : 
+  module PipeAdder_152 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_153 : 
+  module PipeAdder_153 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_154 : 
+  module PipeAdder_154 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_155 : 
+  module PipeAdder_155 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_156 : 
+  module PipeAdder_156 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_157 : 
+  module PipeAdder_157 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_158 : 
+  module PipeAdder_158 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_159 : 
+  module PipeAdder_159 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_160 : 
+  module PipeAdder_160 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_161 : 
+  module PipeAdder_161 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_162 : 
+  module PipeAdder_162 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_163 : 
+  module PipeAdder_163 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_164 : 
+  module PipeAdder_164 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<20>, flip b : SInt<20>, y : SInt<21>}
+    output io : {flip a : SInt<20>, flip b : SInt<12>, y : SInt<21>}
     
-    wire add : SInt<21> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<21> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
   module DotProduct_10 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>[16], flip b : SInt<8>[16], y : SInt<21>}
+    output io : {flip a : SInt<8>[16], flip b : SInt<16>[16], y : SInt<29>}
     
     inst m_0 of MAC_160 @[Gemm.scala 55:32]
     m_0.clock <= clock
@@ -9630,49 +9630,49 @@ circuit Test :
     inst m_15 of MAC_175 @[Gemm.scala 55:32]
     m_15.clock <= clock
     m_15.reset <= reset
-    inst a_0_0 of Adder_150 @[Gemm.scala 57:30]
+    inst a_0_0 of PipeAdder_150 @[Gemm.scala 57:30]
     a_0_0.clock <= clock
     a_0_0.reset <= reset
-    inst a_0_1 of Adder_151 @[Gemm.scala 57:30]
+    inst a_0_1 of PipeAdder_151 @[Gemm.scala 57:30]
     a_0_1.clock <= clock
     a_0_1.reset <= reset
-    inst a_0_2 of Adder_152 @[Gemm.scala 57:30]
+    inst a_0_2 of PipeAdder_152 @[Gemm.scala 57:30]
     a_0_2.clock <= clock
     a_0_2.reset <= reset
-    inst a_0_3 of Adder_153 @[Gemm.scala 57:30]
+    inst a_0_3 of PipeAdder_153 @[Gemm.scala 57:30]
     a_0_3.clock <= clock
     a_0_3.reset <= reset
-    inst a_0_4 of Adder_154 @[Gemm.scala 57:30]
+    inst a_0_4 of PipeAdder_154 @[Gemm.scala 57:30]
     a_0_4.clock <= clock
     a_0_4.reset <= reset
-    inst a_0_5 of Adder_155 @[Gemm.scala 57:30]
+    inst a_0_5 of PipeAdder_155 @[Gemm.scala 57:30]
     a_0_5.clock <= clock
     a_0_5.reset <= reset
-    inst a_0_6 of Adder_156 @[Gemm.scala 57:30]
+    inst a_0_6 of PipeAdder_156 @[Gemm.scala 57:30]
     a_0_6.clock <= clock
     a_0_6.reset <= reset
-    inst a_0_7 of Adder_157 @[Gemm.scala 57:30]
+    inst a_0_7 of PipeAdder_157 @[Gemm.scala 57:30]
     a_0_7.clock <= clock
     a_0_7.reset <= reset
-    inst a_1_0 of Adder_158 @[Gemm.scala 57:30]
+    inst a_1_0 of PipeAdder_158 @[Gemm.scala 57:30]
     a_1_0.clock <= clock
     a_1_0.reset <= reset
-    inst a_1_1 of Adder_159 @[Gemm.scala 57:30]
+    inst a_1_1 of PipeAdder_159 @[Gemm.scala 57:30]
     a_1_1.clock <= clock
     a_1_1.reset <= reset
-    inst a_1_2 of Adder_160 @[Gemm.scala 57:30]
+    inst a_1_2 of PipeAdder_160 @[Gemm.scala 57:30]
     a_1_2.clock <= clock
     a_1_2.reset <= reset
-    inst a_1_3 of Adder_161 @[Gemm.scala 57:30]
+    inst a_1_3 of PipeAdder_161 @[Gemm.scala 57:30]
     a_1_3.clock <= clock
     a_1_3.reset <= reset
-    inst a_2_0 of Adder_162 @[Gemm.scala 57:30]
+    inst a_2_0 of PipeAdder_162 @[Gemm.scala 57:30]
     a_2_0.clock <= clock
     a_2_0.reset <= reset
-    inst a_2_1 of Adder_163 @[Gemm.scala 57:30]
+    inst a_2_1 of PipeAdder_163 @[Gemm.scala 57:30]
     a_2_1.clock <= clock
     a_2_1.reset <= reset
-    inst a_3_0 of Adder_164 @[Gemm.scala 57:30]
+    inst a_3_0 of PipeAdder_164 @[Gemm.scala 57:30]
     a_3_0.clock <= clock
     a_3_0.reset <= reset
     m_0.io.a <= io.a[0] @[Gemm.scala 62:15]
@@ -9758,521 +9758,521 @@ circuit Test :
   module MAC_176 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_177 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_178 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_179 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_180 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_181 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_182 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_183 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_184 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_185 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_186 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_187 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_188 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_189 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_190 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_191 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
-  module Adder_165 : 
+  module PipeAdder_165 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_166 : 
+  module PipeAdder_166 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_167 : 
+  module PipeAdder_167 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_168 : 
+  module PipeAdder_168 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_169 : 
+  module PipeAdder_169 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_170 : 
+  module PipeAdder_170 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_171 : 
+  module PipeAdder_171 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_172 : 
+  module PipeAdder_172 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_173 : 
+  module PipeAdder_173 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_174 : 
+  module PipeAdder_174 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_175 : 
+  module PipeAdder_175 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_176 : 
+  module PipeAdder_176 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_177 : 
+  module PipeAdder_177 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_178 : 
+  module PipeAdder_178 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_179 : 
+  module PipeAdder_179 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<20>, flip b : SInt<20>, y : SInt<21>}
+    output io : {flip a : SInt<20>, flip b : SInt<12>, y : SInt<21>}
     
-    wire add : SInt<21> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<21> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
   module DotProduct_11 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>[16], flip b : SInt<8>[16], y : SInt<21>}
+    output io : {flip a : SInt<8>[16], flip b : SInt<16>[16], y : SInt<29>}
     
     inst m_0 of MAC_176 @[Gemm.scala 55:32]
     m_0.clock <= clock
@@ -10322,49 +10322,49 @@ circuit Test :
     inst m_15 of MAC_191 @[Gemm.scala 55:32]
     m_15.clock <= clock
     m_15.reset <= reset
-    inst a_0_0 of Adder_165 @[Gemm.scala 57:30]
+    inst a_0_0 of PipeAdder_165 @[Gemm.scala 57:30]
     a_0_0.clock <= clock
     a_0_0.reset <= reset
-    inst a_0_1 of Adder_166 @[Gemm.scala 57:30]
+    inst a_0_1 of PipeAdder_166 @[Gemm.scala 57:30]
     a_0_1.clock <= clock
     a_0_1.reset <= reset
-    inst a_0_2 of Adder_167 @[Gemm.scala 57:30]
+    inst a_0_2 of PipeAdder_167 @[Gemm.scala 57:30]
     a_0_2.clock <= clock
     a_0_2.reset <= reset
-    inst a_0_3 of Adder_168 @[Gemm.scala 57:30]
+    inst a_0_3 of PipeAdder_168 @[Gemm.scala 57:30]
     a_0_3.clock <= clock
     a_0_3.reset <= reset
-    inst a_0_4 of Adder_169 @[Gemm.scala 57:30]
+    inst a_0_4 of PipeAdder_169 @[Gemm.scala 57:30]
     a_0_4.clock <= clock
     a_0_4.reset <= reset
-    inst a_0_5 of Adder_170 @[Gemm.scala 57:30]
+    inst a_0_5 of PipeAdder_170 @[Gemm.scala 57:30]
     a_0_5.clock <= clock
     a_0_5.reset <= reset
-    inst a_0_6 of Adder_171 @[Gemm.scala 57:30]
+    inst a_0_6 of PipeAdder_171 @[Gemm.scala 57:30]
     a_0_6.clock <= clock
     a_0_6.reset <= reset
-    inst a_0_7 of Adder_172 @[Gemm.scala 57:30]
+    inst a_0_7 of PipeAdder_172 @[Gemm.scala 57:30]
     a_0_7.clock <= clock
     a_0_7.reset <= reset
-    inst a_1_0 of Adder_173 @[Gemm.scala 57:30]
+    inst a_1_0 of PipeAdder_173 @[Gemm.scala 57:30]
     a_1_0.clock <= clock
     a_1_0.reset <= reset
-    inst a_1_1 of Adder_174 @[Gemm.scala 57:30]
+    inst a_1_1 of PipeAdder_174 @[Gemm.scala 57:30]
     a_1_1.clock <= clock
     a_1_1.reset <= reset
-    inst a_1_2 of Adder_175 @[Gemm.scala 57:30]
+    inst a_1_2 of PipeAdder_175 @[Gemm.scala 57:30]
     a_1_2.clock <= clock
     a_1_2.reset <= reset
-    inst a_1_3 of Adder_176 @[Gemm.scala 57:30]
+    inst a_1_3 of PipeAdder_176 @[Gemm.scala 57:30]
     a_1_3.clock <= clock
     a_1_3.reset <= reset
-    inst a_2_0 of Adder_177 @[Gemm.scala 57:30]
+    inst a_2_0 of PipeAdder_177 @[Gemm.scala 57:30]
     a_2_0.clock <= clock
     a_2_0.reset <= reset
-    inst a_2_1 of Adder_178 @[Gemm.scala 57:30]
+    inst a_2_1 of PipeAdder_178 @[Gemm.scala 57:30]
     a_2_1.clock <= clock
     a_2_1.reset <= reset
-    inst a_3_0 of Adder_179 @[Gemm.scala 57:30]
+    inst a_3_0 of PipeAdder_179 @[Gemm.scala 57:30]
     a_3_0.clock <= clock
     a_3_0.reset <= reset
     m_0.io.a <= io.a[0] @[Gemm.scala 62:15]
@@ -10450,521 +10450,521 @@ circuit Test :
   module MAC_192 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_193 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_194 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_195 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_196 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_197 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_198 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_199 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_200 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_201 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_202 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_203 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_204 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_205 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_206 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_207 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
-  module Adder_180 : 
+  module PipeAdder_180 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_181 : 
+  module PipeAdder_181 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_182 : 
+  module PipeAdder_182 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_183 : 
+  module PipeAdder_183 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_184 : 
+  module PipeAdder_184 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_185 : 
+  module PipeAdder_185 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_186 : 
+  module PipeAdder_186 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_187 : 
+  module PipeAdder_187 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_188 : 
+  module PipeAdder_188 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_189 : 
+  module PipeAdder_189 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_190 : 
+  module PipeAdder_190 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_191 : 
+  module PipeAdder_191 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_192 : 
+  module PipeAdder_192 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_193 : 
+  module PipeAdder_193 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_194 : 
+  module PipeAdder_194 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<20>, flip b : SInt<20>, y : SInt<21>}
+    output io : {flip a : SInt<20>, flip b : SInt<12>, y : SInt<21>}
     
-    wire add : SInt<21> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<21> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
   module DotProduct_12 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>[16], flip b : SInt<8>[16], y : SInt<21>}
+    output io : {flip a : SInt<8>[16], flip b : SInt<16>[16], y : SInt<29>}
     
     inst m_0 of MAC_192 @[Gemm.scala 55:32]
     m_0.clock <= clock
@@ -11014,49 +11014,49 @@ circuit Test :
     inst m_15 of MAC_207 @[Gemm.scala 55:32]
     m_15.clock <= clock
     m_15.reset <= reset
-    inst a_0_0 of Adder_180 @[Gemm.scala 57:30]
+    inst a_0_0 of PipeAdder_180 @[Gemm.scala 57:30]
     a_0_0.clock <= clock
     a_0_0.reset <= reset
-    inst a_0_1 of Adder_181 @[Gemm.scala 57:30]
+    inst a_0_1 of PipeAdder_181 @[Gemm.scala 57:30]
     a_0_1.clock <= clock
     a_0_1.reset <= reset
-    inst a_0_2 of Adder_182 @[Gemm.scala 57:30]
+    inst a_0_2 of PipeAdder_182 @[Gemm.scala 57:30]
     a_0_2.clock <= clock
     a_0_2.reset <= reset
-    inst a_0_3 of Adder_183 @[Gemm.scala 57:30]
+    inst a_0_3 of PipeAdder_183 @[Gemm.scala 57:30]
     a_0_3.clock <= clock
     a_0_3.reset <= reset
-    inst a_0_4 of Adder_184 @[Gemm.scala 57:30]
+    inst a_0_4 of PipeAdder_184 @[Gemm.scala 57:30]
     a_0_4.clock <= clock
     a_0_4.reset <= reset
-    inst a_0_5 of Adder_185 @[Gemm.scala 57:30]
+    inst a_0_5 of PipeAdder_185 @[Gemm.scala 57:30]
     a_0_5.clock <= clock
     a_0_5.reset <= reset
-    inst a_0_6 of Adder_186 @[Gemm.scala 57:30]
+    inst a_0_6 of PipeAdder_186 @[Gemm.scala 57:30]
     a_0_6.clock <= clock
     a_0_6.reset <= reset
-    inst a_0_7 of Adder_187 @[Gemm.scala 57:30]
+    inst a_0_7 of PipeAdder_187 @[Gemm.scala 57:30]
     a_0_7.clock <= clock
     a_0_7.reset <= reset
-    inst a_1_0 of Adder_188 @[Gemm.scala 57:30]
+    inst a_1_0 of PipeAdder_188 @[Gemm.scala 57:30]
     a_1_0.clock <= clock
     a_1_0.reset <= reset
-    inst a_1_1 of Adder_189 @[Gemm.scala 57:30]
+    inst a_1_1 of PipeAdder_189 @[Gemm.scala 57:30]
     a_1_1.clock <= clock
     a_1_1.reset <= reset
-    inst a_1_2 of Adder_190 @[Gemm.scala 57:30]
+    inst a_1_2 of PipeAdder_190 @[Gemm.scala 57:30]
     a_1_2.clock <= clock
     a_1_2.reset <= reset
-    inst a_1_3 of Adder_191 @[Gemm.scala 57:30]
+    inst a_1_3 of PipeAdder_191 @[Gemm.scala 57:30]
     a_1_3.clock <= clock
     a_1_3.reset <= reset
-    inst a_2_0 of Adder_192 @[Gemm.scala 57:30]
+    inst a_2_0 of PipeAdder_192 @[Gemm.scala 57:30]
     a_2_0.clock <= clock
     a_2_0.reset <= reset
-    inst a_2_1 of Adder_193 @[Gemm.scala 57:30]
+    inst a_2_1 of PipeAdder_193 @[Gemm.scala 57:30]
     a_2_1.clock <= clock
     a_2_1.reset <= reset
-    inst a_3_0 of Adder_194 @[Gemm.scala 57:30]
+    inst a_3_0 of PipeAdder_194 @[Gemm.scala 57:30]
     a_3_0.clock <= clock
     a_3_0.reset <= reset
     m_0.io.a <= io.a[0] @[Gemm.scala 62:15]
@@ -11142,521 +11142,521 @@ circuit Test :
   module MAC_208 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_209 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_210 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_211 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_212 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_213 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_214 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_215 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_216 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_217 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_218 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_219 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_220 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_221 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_222 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_223 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
-  module Adder_195 : 
+  module PipeAdder_195 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_196 : 
+  module PipeAdder_196 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_197 : 
+  module PipeAdder_197 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_198 : 
+  module PipeAdder_198 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_199 : 
+  module PipeAdder_199 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_200 : 
+  module PipeAdder_200 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_201 : 
+  module PipeAdder_201 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_202 : 
+  module PipeAdder_202 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_203 : 
+  module PipeAdder_203 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_204 : 
+  module PipeAdder_204 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_205 : 
+  module PipeAdder_205 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_206 : 
+  module PipeAdder_206 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_207 : 
+  module PipeAdder_207 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_208 : 
+  module PipeAdder_208 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_209 : 
+  module PipeAdder_209 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<20>, flip b : SInt<20>, y : SInt<21>}
+    output io : {flip a : SInt<20>, flip b : SInt<12>, y : SInt<21>}
     
-    wire add : SInt<21> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<21> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
   module DotProduct_13 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>[16], flip b : SInt<8>[16], y : SInt<21>}
+    output io : {flip a : SInt<8>[16], flip b : SInt<16>[16], y : SInt<29>}
     
     inst m_0 of MAC_208 @[Gemm.scala 55:32]
     m_0.clock <= clock
@@ -11706,49 +11706,49 @@ circuit Test :
     inst m_15 of MAC_223 @[Gemm.scala 55:32]
     m_15.clock <= clock
     m_15.reset <= reset
-    inst a_0_0 of Adder_195 @[Gemm.scala 57:30]
+    inst a_0_0 of PipeAdder_195 @[Gemm.scala 57:30]
     a_0_0.clock <= clock
     a_0_0.reset <= reset
-    inst a_0_1 of Adder_196 @[Gemm.scala 57:30]
+    inst a_0_1 of PipeAdder_196 @[Gemm.scala 57:30]
     a_0_1.clock <= clock
     a_0_1.reset <= reset
-    inst a_0_2 of Adder_197 @[Gemm.scala 57:30]
+    inst a_0_2 of PipeAdder_197 @[Gemm.scala 57:30]
     a_0_2.clock <= clock
     a_0_2.reset <= reset
-    inst a_0_3 of Adder_198 @[Gemm.scala 57:30]
+    inst a_0_3 of PipeAdder_198 @[Gemm.scala 57:30]
     a_0_3.clock <= clock
     a_0_3.reset <= reset
-    inst a_0_4 of Adder_199 @[Gemm.scala 57:30]
+    inst a_0_4 of PipeAdder_199 @[Gemm.scala 57:30]
     a_0_4.clock <= clock
     a_0_4.reset <= reset
-    inst a_0_5 of Adder_200 @[Gemm.scala 57:30]
+    inst a_0_5 of PipeAdder_200 @[Gemm.scala 57:30]
     a_0_5.clock <= clock
     a_0_5.reset <= reset
-    inst a_0_6 of Adder_201 @[Gemm.scala 57:30]
+    inst a_0_6 of PipeAdder_201 @[Gemm.scala 57:30]
     a_0_6.clock <= clock
     a_0_6.reset <= reset
-    inst a_0_7 of Adder_202 @[Gemm.scala 57:30]
+    inst a_0_7 of PipeAdder_202 @[Gemm.scala 57:30]
     a_0_7.clock <= clock
     a_0_7.reset <= reset
-    inst a_1_0 of Adder_203 @[Gemm.scala 57:30]
+    inst a_1_0 of PipeAdder_203 @[Gemm.scala 57:30]
     a_1_0.clock <= clock
     a_1_0.reset <= reset
-    inst a_1_1 of Adder_204 @[Gemm.scala 57:30]
+    inst a_1_1 of PipeAdder_204 @[Gemm.scala 57:30]
     a_1_1.clock <= clock
     a_1_1.reset <= reset
-    inst a_1_2 of Adder_205 @[Gemm.scala 57:30]
+    inst a_1_2 of PipeAdder_205 @[Gemm.scala 57:30]
     a_1_2.clock <= clock
     a_1_2.reset <= reset
-    inst a_1_3 of Adder_206 @[Gemm.scala 57:30]
+    inst a_1_3 of PipeAdder_206 @[Gemm.scala 57:30]
     a_1_3.clock <= clock
     a_1_3.reset <= reset
-    inst a_2_0 of Adder_207 @[Gemm.scala 57:30]
+    inst a_2_0 of PipeAdder_207 @[Gemm.scala 57:30]
     a_2_0.clock <= clock
     a_2_0.reset <= reset
-    inst a_2_1 of Adder_208 @[Gemm.scala 57:30]
+    inst a_2_1 of PipeAdder_208 @[Gemm.scala 57:30]
     a_2_1.clock <= clock
     a_2_1.reset <= reset
-    inst a_3_0 of Adder_209 @[Gemm.scala 57:30]
+    inst a_3_0 of PipeAdder_209 @[Gemm.scala 57:30]
     a_3_0.clock <= clock
     a_3_0.reset <= reset
     m_0.io.a <= io.a[0] @[Gemm.scala 62:15]
@@ -11834,521 +11834,521 @@ circuit Test :
   module MAC_224 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_225 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_226 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_227 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_228 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_229 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_230 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_231 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_232 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_233 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_234 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_235 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_236 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_237 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_238 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_239 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
-  module Adder_210 : 
+  module PipeAdder_210 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_211 : 
+  module PipeAdder_211 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_212 : 
+  module PipeAdder_212 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_213 : 
+  module PipeAdder_213 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_214 : 
+  module PipeAdder_214 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_215 : 
+  module PipeAdder_215 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_216 : 
+  module PipeAdder_216 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_217 : 
+  module PipeAdder_217 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_218 : 
+  module PipeAdder_218 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_219 : 
+  module PipeAdder_219 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_220 : 
+  module PipeAdder_220 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_221 : 
+  module PipeAdder_221 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_222 : 
+  module PipeAdder_222 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_223 : 
+  module PipeAdder_223 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_224 : 
+  module PipeAdder_224 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<20>, flip b : SInt<20>, y : SInt<21>}
+    output io : {flip a : SInt<20>, flip b : SInt<12>, y : SInt<21>}
     
-    wire add : SInt<21> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<21> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
   module DotProduct_14 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>[16], flip b : SInt<8>[16], y : SInt<21>}
+    output io : {flip a : SInt<8>[16], flip b : SInt<16>[16], y : SInt<29>}
     
     inst m_0 of MAC_224 @[Gemm.scala 55:32]
     m_0.clock <= clock
@@ -12398,49 +12398,49 @@ circuit Test :
     inst m_15 of MAC_239 @[Gemm.scala 55:32]
     m_15.clock <= clock
     m_15.reset <= reset
-    inst a_0_0 of Adder_210 @[Gemm.scala 57:30]
+    inst a_0_0 of PipeAdder_210 @[Gemm.scala 57:30]
     a_0_0.clock <= clock
     a_0_0.reset <= reset
-    inst a_0_1 of Adder_211 @[Gemm.scala 57:30]
+    inst a_0_1 of PipeAdder_211 @[Gemm.scala 57:30]
     a_0_1.clock <= clock
     a_0_1.reset <= reset
-    inst a_0_2 of Adder_212 @[Gemm.scala 57:30]
+    inst a_0_2 of PipeAdder_212 @[Gemm.scala 57:30]
     a_0_2.clock <= clock
     a_0_2.reset <= reset
-    inst a_0_3 of Adder_213 @[Gemm.scala 57:30]
+    inst a_0_3 of PipeAdder_213 @[Gemm.scala 57:30]
     a_0_3.clock <= clock
     a_0_3.reset <= reset
-    inst a_0_4 of Adder_214 @[Gemm.scala 57:30]
+    inst a_0_4 of PipeAdder_214 @[Gemm.scala 57:30]
     a_0_4.clock <= clock
     a_0_4.reset <= reset
-    inst a_0_5 of Adder_215 @[Gemm.scala 57:30]
+    inst a_0_5 of PipeAdder_215 @[Gemm.scala 57:30]
     a_0_5.clock <= clock
     a_0_5.reset <= reset
-    inst a_0_6 of Adder_216 @[Gemm.scala 57:30]
+    inst a_0_6 of PipeAdder_216 @[Gemm.scala 57:30]
     a_0_6.clock <= clock
     a_0_6.reset <= reset
-    inst a_0_7 of Adder_217 @[Gemm.scala 57:30]
+    inst a_0_7 of PipeAdder_217 @[Gemm.scala 57:30]
     a_0_7.clock <= clock
     a_0_7.reset <= reset
-    inst a_1_0 of Adder_218 @[Gemm.scala 57:30]
+    inst a_1_0 of PipeAdder_218 @[Gemm.scala 57:30]
     a_1_0.clock <= clock
     a_1_0.reset <= reset
-    inst a_1_1 of Adder_219 @[Gemm.scala 57:30]
+    inst a_1_1 of PipeAdder_219 @[Gemm.scala 57:30]
     a_1_1.clock <= clock
     a_1_1.reset <= reset
-    inst a_1_2 of Adder_220 @[Gemm.scala 57:30]
+    inst a_1_2 of PipeAdder_220 @[Gemm.scala 57:30]
     a_1_2.clock <= clock
     a_1_2.reset <= reset
-    inst a_1_3 of Adder_221 @[Gemm.scala 57:30]
+    inst a_1_3 of PipeAdder_221 @[Gemm.scala 57:30]
     a_1_3.clock <= clock
     a_1_3.reset <= reset
-    inst a_2_0 of Adder_222 @[Gemm.scala 57:30]
+    inst a_2_0 of PipeAdder_222 @[Gemm.scala 57:30]
     a_2_0.clock <= clock
     a_2_0.reset <= reset
-    inst a_2_1 of Adder_223 @[Gemm.scala 57:30]
+    inst a_2_1 of PipeAdder_223 @[Gemm.scala 57:30]
     a_2_1.clock <= clock
     a_2_1.reset <= reset
-    inst a_3_0 of Adder_224 @[Gemm.scala 57:30]
+    inst a_3_0 of PipeAdder_224 @[Gemm.scala 57:30]
     a_3_0.clock <= clock
     a_3_0.reset <= reset
     m_0.io.a <= io.a[0] @[Gemm.scala 62:15]
@@ -12526,521 +12526,521 @@ circuit Test :
   module MAC_240 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_241 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_242 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_243 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_244 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_245 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_246 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_247 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_248 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_249 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_250 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_251 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_252 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_253 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_254 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
   module MAC_255 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<16>, y : SInt<17>}
+    output io : {flip a : SInt<8>, flip b : SInt<16>, flip c : SInt<1>, y : SInt<25>}
     
-    wire mult : SInt<16> @[Gemm.scala 17:18]
-    wire add : SInt<17> @[Gemm.scala 18:17]
-    reg rA : SInt, clock @[Gemm.scala 19:19]
-    rA <= io.a @[Gemm.scala 19:19]
-    reg rB : SInt, clock @[Gemm.scala 20:19]
-    rB <= io.b @[Gemm.scala 20:19]
-    reg rC : SInt, clock @[Gemm.scala 21:19]
-    rC <= io.c @[Gemm.scala 21:19]
+    wire mult : SInt<24> @[Gemm.scala 16:18]
+    wire add : SInt<25> @[Gemm.scala 17:18]
+    reg rA : SInt, clock @[Gemm.scala 18:19]
+    rA <= io.a @[Gemm.scala 18:19]
+    reg rB : SInt, clock @[Gemm.scala 19:19]
+    rB <= io.b @[Gemm.scala 19:19]
+    reg rC : SInt, clock @[Gemm.scala 20:19]
+    rC <= io.c @[Gemm.scala 20:19]
     node _T_18 = mul(rA, rB) @[Gemm.scala 22:14]
     mult <= _T_18 @[Gemm.scala 22:8]
     node _T_19 = add(rC, mult) @[Gemm.scala 23:13]
     add <= _T_19 @[Gemm.scala 23:7]
-    io.y <= add @[Gemm.scala 24:8]
+    io.y <= add @[Gemm.scala 25:8]
     
-  module Adder_225 : 
+  module PipeAdder_225 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_226 : 
+  module PipeAdder_226 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_227 : 
+  module PipeAdder_227 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_228 : 
+  module PipeAdder_228 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_229 : 
+  module PipeAdder_229 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_230 : 
+  module PipeAdder_230 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_231 : 
+  module PipeAdder_231 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_232 : 
+  module PipeAdder_232 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
+    output io : {flip a : SInt<17>, flip b : SInt<9>, y : SInt<18>}
     
-    wire add : SInt<18> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<18> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_233 : 
+  module PipeAdder_233 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_234 : 
+  module PipeAdder_234 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_235 : 
+  module PipeAdder_235 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_236 : 
+  module PipeAdder_236 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
+    output io : {flip a : SInt<18>, flip b : SInt<10>, y : SInt<19>}
     
-    wire add : SInt<19> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<19> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_237 : 
+  module PipeAdder_237 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_238 : 
+  module PipeAdder_238 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
+    output io : {flip a : SInt<19>, flip b : SInt<11>, y : SInt<20>}
     
-    wire add : SInt<20> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<20> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
-  module Adder_239 : 
+  module PipeAdder_239 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<20>, flip b : SInt<20>, y : SInt<21>}
+    output io : {flip a : SInt<20>, flip b : SInt<12>, y : SInt<21>}
     
-    wire add : SInt<21> @[Gemm.scala 35:17]
-    reg rA : SInt, clock @[Gemm.scala 36:19]
-    rA <= io.a @[Gemm.scala 36:19]
-    reg rB : SInt, clock @[Gemm.scala 37:19]
-    rB <= io.b @[Gemm.scala 37:19]
-    node _T_14 = add(rA, rB) @[Gemm.scala 38:13]
-    add <= _T_14 @[Gemm.scala 38:7]
-    io.y <= add @[Gemm.scala 39:8]
+    wire add : SInt<21> @[Gemm.scala 36:17]
+    reg rA : SInt, clock @[Gemm.scala 37:19]
+    rA <= io.a @[Gemm.scala 37:19]
+    reg rB : SInt, clock @[Gemm.scala 38:19]
+    rB <= io.b @[Gemm.scala 38:19]
+    node _T_14 = add(rA, rB) @[Gemm.scala 39:13]
+    add <= _T_14 @[Gemm.scala 39:7]
+    io.y <= add @[Gemm.scala 40:8]
     
   module DotProduct_15 : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip a : SInt<8>[16], flip b : SInt<8>[16], y : SInt<21>}
+    output io : {flip a : SInt<8>[16], flip b : SInt<16>[16], y : SInt<29>}
     
     inst m_0 of MAC_240 @[Gemm.scala 55:32]
     m_0.clock <= clock
@@ -13090,49 +13090,49 @@ circuit Test :
     inst m_15 of MAC_255 @[Gemm.scala 55:32]
     m_15.clock <= clock
     m_15.reset <= reset
-    inst a_0_0 of Adder_225 @[Gemm.scala 57:30]
+    inst a_0_0 of PipeAdder_225 @[Gemm.scala 57:30]
     a_0_0.clock <= clock
     a_0_0.reset <= reset
-    inst a_0_1 of Adder_226 @[Gemm.scala 57:30]
+    inst a_0_1 of PipeAdder_226 @[Gemm.scala 57:30]
     a_0_1.clock <= clock
     a_0_1.reset <= reset
-    inst a_0_2 of Adder_227 @[Gemm.scala 57:30]
+    inst a_0_2 of PipeAdder_227 @[Gemm.scala 57:30]
     a_0_2.clock <= clock
     a_0_2.reset <= reset
-    inst a_0_3 of Adder_228 @[Gemm.scala 57:30]
+    inst a_0_3 of PipeAdder_228 @[Gemm.scala 57:30]
     a_0_3.clock <= clock
     a_0_3.reset <= reset
-    inst a_0_4 of Adder_229 @[Gemm.scala 57:30]
+    inst a_0_4 of PipeAdder_229 @[Gemm.scala 57:30]
     a_0_4.clock <= clock
     a_0_4.reset <= reset
-    inst a_0_5 of Adder_230 @[Gemm.scala 57:30]
+    inst a_0_5 of PipeAdder_230 @[Gemm.scala 57:30]
     a_0_5.clock <= clock
     a_0_5.reset <= reset
-    inst a_0_6 of Adder_231 @[Gemm.scala 57:30]
+    inst a_0_6 of PipeAdder_231 @[Gemm.scala 57:30]
     a_0_6.clock <= clock
     a_0_6.reset <= reset
-    inst a_0_7 of Adder_232 @[Gemm.scala 57:30]
+    inst a_0_7 of PipeAdder_232 @[Gemm.scala 57:30]
     a_0_7.clock <= clock
     a_0_7.reset <= reset
-    inst a_1_0 of Adder_233 @[Gemm.scala 57:30]
+    inst a_1_0 of PipeAdder_233 @[Gemm.scala 57:30]
     a_1_0.clock <= clock
     a_1_0.reset <= reset
-    inst a_1_1 of Adder_234 @[Gemm.scala 57:30]
+    inst a_1_1 of PipeAdder_234 @[Gemm.scala 57:30]
     a_1_1.clock <= clock
     a_1_1.reset <= reset
-    inst a_1_2 of Adder_235 @[Gemm.scala 57:30]
+    inst a_1_2 of PipeAdder_235 @[Gemm.scala 57:30]
     a_1_2.clock <= clock
     a_1_2.reset <= reset
-    inst a_1_3 of Adder_236 @[Gemm.scala 57:30]
+    inst a_1_3 of PipeAdder_236 @[Gemm.scala 57:30]
     a_1_3.clock <= clock
     a_1_3.reset <= reset
-    inst a_2_0 of Adder_237 @[Gemm.scala 57:30]
+    inst a_2_0 of PipeAdder_237 @[Gemm.scala 57:30]
     a_2_0.clock <= clock
     a_2_0.reset <= reset
-    inst a_2_1 of Adder_238 @[Gemm.scala 57:30]
+    inst a_2_1 of PipeAdder_238 @[Gemm.scala 57:30]
     a_2_1.clock <= clock
     a_2_1.reset <= reset
-    inst a_3_0 of Adder_239 @[Gemm.scala 57:30]
+    inst a_3_0 of PipeAdder_239 @[Gemm.scala 57:30]
     a_3_0.clock <= clock
     a_3_0.reset <= reset
     m_0.io.a <= io.a[0] @[Gemm.scala 62:15]
@@ -13874,1454 +13874,1454 @@ circuit Test :
   module MatrixVectorCore : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip reset : UInt<1>, flip inp : {valid : UInt<1>, bits : UInt<8>[16][1]}, flip wgt : {valid : UInt<1>, bits : UInt<8>[16][16]}, flip acc_i : {valid : UInt<1>, bits : UInt<32>[16][1]}, acc_o : {valid : UInt<1>, bits : UInt<32>[16][1]}, out : {valid : UInt<1>, bits : UInt<8>[16][1]}}
+    output io : {flip reset : UInt<1>, flip inp : {valid : UInt<1>, bits : UInt<8>[16][1]}, flip wgt : {valid : UInt<1>, bits : UInt<16>[16][16]}, flip acc_i : {valid : UInt<1>, bits : UInt<32>[16][1]}, acc_o : {valid : UInt<1>, bits : UInt<32>[16][1]}, out : {valid : UInt<1>, bits : UInt<8>[16][1]}}
     
-    inst dot_0 of DotProduct @[Gemm.scala 110:34]
+    inst dot_0 of DotProduct @[Gemm.scala 96:34]
     dot_0.clock <= clock
     dot_0.reset <= reset
-    inst dot_1 of DotProduct_1 @[Gemm.scala 110:34]
+    inst dot_1 of DotProduct_1 @[Gemm.scala 96:34]
     dot_1.clock <= clock
     dot_1.reset <= reset
-    inst dot_2 of DotProduct_2 @[Gemm.scala 110:34]
+    inst dot_2 of DotProduct_2 @[Gemm.scala 96:34]
     dot_2.clock <= clock
     dot_2.reset <= reset
-    inst dot_3 of DotProduct_3 @[Gemm.scala 110:34]
+    inst dot_3 of DotProduct_3 @[Gemm.scala 96:34]
     dot_3.clock <= clock
     dot_3.reset <= reset
-    inst dot_4 of DotProduct_4 @[Gemm.scala 110:34]
+    inst dot_4 of DotProduct_4 @[Gemm.scala 96:34]
     dot_4.clock <= clock
     dot_4.reset <= reset
-    inst dot_5 of DotProduct_5 @[Gemm.scala 110:34]
+    inst dot_5 of DotProduct_5 @[Gemm.scala 96:34]
     dot_5.clock <= clock
     dot_5.reset <= reset
-    inst dot_6 of DotProduct_6 @[Gemm.scala 110:34]
+    inst dot_6 of DotProduct_6 @[Gemm.scala 96:34]
     dot_6.clock <= clock
     dot_6.reset <= reset
-    inst dot_7 of DotProduct_7 @[Gemm.scala 110:34]
+    inst dot_7 of DotProduct_7 @[Gemm.scala 96:34]
     dot_7.clock <= clock
     dot_7.reset <= reset
-    inst dot_8 of DotProduct_8 @[Gemm.scala 110:34]
+    inst dot_8 of DotProduct_8 @[Gemm.scala 96:34]
     dot_8.clock <= clock
     dot_8.reset <= reset
-    inst dot_9 of DotProduct_9 @[Gemm.scala 110:34]
+    inst dot_9 of DotProduct_9 @[Gemm.scala 96:34]
     dot_9.clock <= clock
     dot_9.reset <= reset
-    inst dot_10 of DotProduct_10 @[Gemm.scala 110:34]
+    inst dot_10 of DotProduct_10 @[Gemm.scala 96:34]
     dot_10.clock <= clock
     dot_10.reset <= reset
-    inst dot_11 of DotProduct_11 @[Gemm.scala 110:34]
+    inst dot_11 of DotProduct_11 @[Gemm.scala 96:34]
     dot_11.clock <= clock
     dot_11.reset <= reset
-    inst dot_12 of DotProduct_12 @[Gemm.scala 110:34]
+    inst dot_12 of DotProduct_12 @[Gemm.scala 96:34]
     dot_12.clock <= clock
     dot_12.reset <= reset
-    inst dot_13 of DotProduct_13 @[Gemm.scala 110:34]
+    inst dot_13 of DotProduct_13 @[Gemm.scala 96:34]
     dot_13.clock <= clock
     dot_13.reset <= reset
-    inst dot_14 of DotProduct_14 @[Gemm.scala 110:34]
+    inst dot_14 of DotProduct_14 @[Gemm.scala 96:34]
     dot_14.clock <= clock
     dot_14.reset <= reset
-    inst dot_15 of DotProduct_15 @[Gemm.scala 110:34]
+    inst dot_15 of DotProduct_15 @[Gemm.scala 96:34]
     dot_15.clock <= clock
     dot_15.reset <= reset
-    inst acc_0 of Pipe @[Gemm.scala 111:34]
+    inst acc_0 of Pipe @[Gemm.scala 97:34]
     acc_0.clock <= clock
     acc_0.reset <= reset
-    inst acc_1 of Pipe_1 @[Gemm.scala 111:34]
+    inst acc_1 of Pipe_1 @[Gemm.scala 97:34]
     acc_1.clock <= clock
     acc_1.reset <= reset
-    inst acc_2 of Pipe_2 @[Gemm.scala 111:34]
+    inst acc_2 of Pipe_2 @[Gemm.scala 97:34]
     acc_2.clock <= clock
     acc_2.reset <= reset
-    inst acc_3 of Pipe_3 @[Gemm.scala 111:34]
+    inst acc_3 of Pipe_3 @[Gemm.scala 97:34]
     acc_3.clock <= clock
     acc_3.reset <= reset
-    inst acc_4 of Pipe_4 @[Gemm.scala 111:34]
+    inst acc_4 of Pipe_4 @[Gemm.scala 97:34]
     acc_4.clock <= clock
     acc_4.reset <= reset
-    inst acc_5 of Pipe_5 @[Gemm.scala 111:34]
+    inst acc_5 of Pipe_5 @[Gemm.scala 97:34]
     acc_5.clock <= clock
     acc_5.reset <= reset
-    inst acc_6 of Pipe_6 @[Gemm.scala 111:34]
+    inst acc_6 of Pipe_6 @[Gemm.scala 97:34]
     acc_6.clock <= clock
     acc_6.reset <= reset
-    inst acc_7 of Pipe_7 @[Gemm.scala 111:34]
+    inst acc_7 of Pipe_7 @[Gemm.scala 97:34]
     acc_7.clock <= clock
     acc_7.reset <= reset
-    inst acc_8 of Pipe_8 @[Gemm.scala 111:34]
+    inst acc_8 of Pipe_8 @[Gemm.scala 97:34]
     acc_8.clock <= clock
     acc_8.reset <= reset
-    inst acc_9 of Pipe_9 @[Gemm.scala 111:34]
+    inst acc_9 of Pipe_9 @[Gemm.scala 97:34]
     acc_9.clock <= clock
     acc_9.reset <= reset
-    inst acc_10 of Pipe_10 @[Gemm.scala 111:34]
+    inst acc_10 of Pipe_10 @[Gemm.scala 97:34]
     acc_10.clock <= clock
     acc_10.reset <= reset
-    inst acc_11 of Pipe_11 @[Gemm.scala 111:34]
+    inst acc_11 of Pipe_11 @[Gemm.scala 97:34]
     acc_11.clock <= clock
     acc_11.reset <= reset
-    inst acc_12 of Pipe_12 @[Gemm.scala 111:34]
+    inst acc_12 of Pipe_12 @[Gemm.scala 97:34]
     acc_12.clock <= clock
     acc_12.reset <= reset
-    inst acc_13 of Pipe_13 @[Gemm.scala 111:34]
+    inst acc_13 of Pipe_13 @[Gemm.scala 97:34]
     acc_13.clock <= clock
     acc_13.reset <= reset
-    inst acc_14 of Pipe_14 @[Gemm.scala 111:34]
+    inst acc_14 of Pipe_14 @[Gemm.scala 97:34]
     acc_14.clock <= clock
     acc_14.reset <= reset
-    inst acc_15 of Pipe_15 @[Gemm.scala 111:34]
+    inst acc_15 of Pipe_15 @[Gemm.scala 97:34]
     acc_15.clock <= clock
     acc_15.reset <= reset
-    wire add_0 : SInt<32> @[Gemm.scala 112:32]
-    wire add_1 : SInt<32> @[Gemm.scala 112:32]
-    wire add_2 : SInt<32> @[Gemm.scala 112:32]
-    wire add_3 : SInt<32> @[Gemm.scala 112:32]
-    wire add_4 : SInt<32> @[Gemm.scala 112:32]
-    wire add_5 : SInt<32> @[Gemm.scala 112:32]
-    wire add_6 : SInt<32> @[Gemm.scala 112:32]
-    wire add_7 : SInt<32> @[Gemm.scala 112:32]
-    wire add_8 : SInt<32> @[Gemm.scala 112:32]
-    wire add_9 : SInt<32> @[Gemm.scala 112:32]
-    wire add_10 : SInt<32> @[Gemm.scala 112:32]
-    wire add_11 : SInt<32> @[Gemm.scala 112:32]
-    wire add_12 : SInt<32> @[Gemm.scala 112:32]
-    wire add_13 : SInt<32> @[Gemm.scala 112:32]
-    wire add_14 : SInt<32> @[Gemm.scala 112:32]
-    wire add_15 : SInt<32> @[Gemm.scala 112:32]
-    wire vld : UInt<1>[16] @[Gemm.scala 113:17]
-    node _T_6016 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 116:41]
-    node _T_6017 = and(_T_6016, io.acc_i.valid) @[Gemm.scala 116:56]
-    node _T_6018 = not(io.reset) @[Gemm.scala 116:75]
-    node _T_6019 = and(_T_6017, _T_6018) @[Gemm.scala 116:73]
-    acc_0.io.enq.valid <= _T_6019 @[Gemm.scala 116:25]
-    acc_0.io.enq.bits <= io.acc_i.bits[0][0] @[Gemm.scala 117:24]
-    node _T_6020 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 119:43]
-    dot_0.io.a[0] <= _T_6020 @[Gemm.scala 119:22]
-    node _T_6021 = asSInt(io.wgt.bits[0][0]) @[Gemm.scala 120:43]
-    dot_0.io.b[0] <= _T_6021 @[Gemm.scala 120:22]
-    node _T_6022 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 119:43]
-    dot_0.io.a[1] <= _T_6022 @[Gemm.scala 119:22]
-    node _T_6023 = asSInt(io.wgt.bits[0][1]) @[Gemm.scala 120:43]
-    dot_0.io.b[1] <= _T_6023 @[Gemm.scala 120:22]
-    node _T_6024 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 119:43]
-    dot_0.io.a[2] <= _T_6024 @[Gemm.scala 119:22]
-    node _T_6025 = asSInt(io.wgt.bits[0][2]) @[Gemm.scala 120:43]
-    dot_0.io.b[2] <= _T_6025 @[Gemm.scala 120:22]
-    node _T_6026 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 119:43]
-    dot_0.io.a[3] <= _T_6026 @[Gemm.scala 119:22]
-    node _T_6027 = asSInt(io.wgt.bits[0][3]) @[Gemm.scala 120:43]
-    dot_0.io.b[3] <= _T_6027 @[Gemm.scala 120:22]
-    node _T_6028 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 119:43]
-    dot_0.io.a[4] <= _T_6028 @[Gemm.scala 119:22]
-    node _T_6029 = asSInt(io.wgt.bits[0][4]) @[Gemm.scala 120:43]
-    dot_0.io.b[4] <= _T_6029 @[Gemm.scala 120:22]
-    node _T_6030 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 119:43]
-    dot_0.io.a[5] <= _T_6030 @[Gemm.scala 119:22]
-    node _T_6031 = asSInt(io.wgt.bits[0][5]) @[Gemm.scala 120:43]
-    dot_0.io.b[5] <= _T_6031 @[Gemm.scala 120:22]
-    node _T_6032 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 119:43]
-    dot_0.io.a[6] <= _T_6032 @[Gemm.scala 119:22]
-    node _T_6033 = asSInt(io.wgt.bits[0][6]) @[Gemm.scala 120:43]
-    dot_0.io.b[6] <= _T_6033 @[Gemm.scala 120:22]
-    node _T_6034 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 119:43]
-    dot_0.io.a[7] <= _T_6034 @[Gemm.scala 119:22]
-    node _T_6035 = asSInt(io.wgt.bits[0][7]) @[Gemm.scala 120:43]
-    dot_0.io.b[7] <= _T_6035 @[Gemm.scala 120:22]
-    node _T_6036 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 119:43]
-    dot_0.io.a[8] <= _T_6036 @[Gemm.scala 119:22]
-    node _T_6037 = asSInt(io.wgt.bits[0][8]) @[Gemm.scala 120:43]
-    dot_0.io.b[8] <= _T_6037 @[Gemm.scala 120:22]
-    node _T_6038 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 119:43]
-    dot_0.io.a[9] <= _T_6038 @[Gemm.scala 119:22]
-    node _T_6039 = asSInt(io.wgt.bits[0][9]) @[Gemm.scala 120:43]
-    dot_0.io.b[9] <= _T_6039 @[Gemm.scala 120:22]
-    node _T_6040 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 119:43]
-    dot_0.io.a[10] <= _T_6040 @[Gemm.scala 119:22]
-    node _T_6041 = asSInt(io.wgt.bits[0][10]) @[Gemm.scala 120:43]
-    dot_0.io.b[10] <= _T_6041 @[Gemm.scala 120:22]
-    node _T_6042 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 119:43]
-    dot_0.io.a[11] <= _T_6042 @[Gemm.scala 119:22]
-    node _T_6043 = asSInt(io.wgt.bits[0][11]) @[Gemm.scala 120:43]
-    dot_0.io.b[11] <= _T_6043 @[Gemm.scala 120:22]
-    node _T_6044 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 119:43]
-    dot_0.io.a[12] <= _T_6044 @[Gemm.scala 119:22]
-    node _T_6045 = asSInt(io.wgt.bits[0][12]) @[Gemm.scala 120:43]
-    dot_0.io.b[12] <= _T_6045 @[Gemm.scala 120:22]
-    node _T_6046 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 119:43]
-    dot_0.io.a[13] <= _T_6046 @[Gemm.scala 119:22]
-    node _T_6047 = asSInt(io.wgt.bits[0][13]) @[Gemm.scala 120:43]
-    dot_0.io.b[13] <= _T_6047 @[Gemm.scala 120:22]
-    node _T_6048 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 119:43]
-    dot_0.io.a[14] <= _T_6048 @[Gemm.scala 119:22]
-    node _T_6049 = asSInt(io.wgt.bits[0][14]) @[Gemm.scala 120:43]
-    dot_0.io.b[14] <= _T_6049 @[Gemm.scala 120:22]
-    node _T_6050 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 119:43]
-    dot_0.io.a[15] <= _T_6050 @[Gemm.scala 119:22]
-    node _T_6051 = asSInt(io.wgt.bits[0][15]) @[Gemm.scala 120:43]
-    dot_0.io.b[15] <= _T_6051 @[Gemm.scala 120:22]
-    node _T_6052 = asSInt(acc_0.io.deq.bits) @[Gemm.scala 122:34]
-    node _T_6053 = add(_T_6052, dot_0.io.y) @[Gemm.scala 122:41]
-    node _T_6054 = tail(_T_6053, 1) @[Gemm.scala 122:41]
-    node _T_6055 = asSInt(_T_6054) @[Gemm.scala 122:41]
-    add_0 <= _T_6055 @[Gemm.scala 122:12]
-    node _T_6057 = asUInt(add_0) @[Gemm.scala 123:54]
-    node _T_6058 = mux(io.reset, UInt<1>("h00"), _T_6057) @[Gemm.scala 123:31]
-    io.acc_o.bits[0][0] <= _T_6058 @[Gemm.scala 123:25]
-    node _T_6059 = asUInt(add_0) @[Gemm.scala 124:33]
-    io.out.bits[0][0] <= _T_6059 @[Gemm.scala 124:23]
-    vld[0] <= acc_0.io.deq.valid @[Gemm.scala 125:12]
-    node _T_6060 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 116:41]
-    node _T_6061 = and(_T_6060, io.acc_i.valid) @[Gemm.scala 116:56]
-    node _T_6062 = not(io.reset) @[Gemm.scala 116:75]
-    node _T_6063 = and(_T_6061, _T_6062) @[Gemm.scala 116:73]
-    acc_1.io.enq.valid <= _T_6063 @[Gemm.scala 116:25]
-    acc_1.io.enq.bits <= io.acc_i.bits[0][1] @[Gemm.scala 117:24]
-    node _T_6064 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 119:43]
-    dot_1.io.a[0] <= _T_6064 @[Gemm.scala 119:22]
-    node _T_6065 = asSInt(io.wgt.bits[1][0]) @[Gemm.scala 120:43]
-    dot_1.io.b[0] <= _T_6065 @[Gemm.scala 120:22]
-    node _T_6066 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 119:43]
-    dot_1.io.a[1] <= _T_6066 @[Gemm.scala 119:22]
-    node _T_6067 = asSInt(io.wgt.bits[1][1]) @[Gemm.scala 120:43]
-    dot_1.io.b[1] <= _T_6067 @[Gemm.scala 120:22]
-    node _T_6068 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 119:43]
-    dot_1.io.a[2] <= _T_6068 @[Gemm.scala 119:22]
-    node _T_6069 = asSInt(io.wgt.bits[1][2]) @[Gemm.scala 120:43]
-    dot_1.io.b[2] <= _T_6069 @[Gemm.scala 120:22]
-    node _T_6070 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 119:43]
-    dot_1.io.a[3] <= _T_6070 @[Gemm.scala 119:22]
-    node _T_6071 = asSInt(io.wgt.bits[1][3]) @[Gemm.scala 120:43]
-    dot_1.io.b[3] <= _T_6071 @[Gemm.scala 120:22]
-    node _T_6072 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 119:43]
-    dot_1.io.a[4] <= _T_6072 @[Gemm.scala 119:22]
-    node _T_6073 = asSInt(io.wgt.bits[1][4]) @[Gemm.scala 120:43]
-    dot_1.io.b[4] <= _T_6073 @[Gemm.scala 120:22]
-    node _T_6074 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 119:43]
-    dot_1.io.a[5] <= _T_6074 @[Gemm.scala 119:22]
-    node _T_6075 = asSInt(io.wgt.bits[1][5]) @[Gemm.scala 120:43]
-    dot_1.io.b[5] <= _T_6075 @[Gemm.scala 120:22]
-    node _T_6076 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 119:43]
-    dot_1.io.a[6] <= _T_6076 @[Gemm.scala 119:22]
-    node _T_6077 = asSInt(io.wgt.bits[1][6]) @[Gemm.scala 120:43]
-    dot_1.io.b[6] <= _T_6077 @[Gemm.scala 120:22]
-    node _T_6078 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 119:43]
-    dot_1.io.a[7] <= _T_6078 @[Gemm.scala 119:22]
-    node _T_6079 = asSInt(io.wgt.bits[1][7]) @[Gemm.scala 120:43]
-    dot_1.io.b[7] <= _T_6079 @[Gemm.scala 120:22]
-    node _T_6080 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 119:43]
-    dot_1.io.a[8] <= _T_6080 @[Gemm.scala 119:22]
-    node _T_6081 = asSInt(io.wgt.bits[1][8]) @[Gemm.scala 120:43]
-    dot_1.io.b[8] <= _T_6081 @[Gemm.scala 120:22]
-    node _T_6082 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 119:43]
-    dot_1.io.a[9] <= _T_6082 @[Gemm.scala 119:22]
-    node _T_6083 = asSInt(io.wgt.bits[1][9]) @[Gemm.scala 120:43]
-    dot_1.io.b[9] <= _T_6083 @[Gemm.scala 120:22]
-    node _T_6084 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 119:43]
-    dot_1.io.a[10] <= _T_6084 @[Gemm.scala 119:22]
-    node _T_6085 = asSInt(io.wgt.bits[1][10]) @[Gemm.scala 120:43]
-    dot_1.io.b[10] <= _T_6085 @[Gemm.scala 120:22]
-    node _T_6086 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 119:43]
-    dot_1.io.a[11] <= _T_6086 @[Gemm.scala 119:22]
-    node _T_6087 = asSInt(io.wgt.bits[1][11]) @[Gemm.scala 120:43]
-    dot_1.io.b[11] <= _T_6087 @[Gemm.scala 120:22]
-    node _T_6088 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 119:43]
-    dot_1.io.a[12] <= _T_6088 @[Gemm.scala 119:22]
-    node _T_6089 = asSInt(io.wgt.bits[1][12]) @[Gemm.scala 120:43]
-    dot_1.io.b[12] <= _T_6089 @[Gemm.scala 120:22]
-    node _T_6090 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 119:43]
-    dot_1.io.a[13] <= _T_6090 @[Gemm.scala 119:22]
-    node _T_6091 = asSInt(io.wgt.bits[1][13]) @[Gemm.scala 120:43]
-    dot_1.io.b[13] <= _T_6091 @[Gemm.scala 120:22]
-    node _T_6092 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 119:43]
-    dot_1.io.a[14] <= _T_6092 @[Gemm.scala 119:22]
-    node _T_6093 = asSInt(io.wgt.bits[1][14]) @[Gemm.scala 120:43]
-    dot_1.io.b[14] <= _T_6093 @[Gemm.scala 120:22]
-    node _T_6094 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 119:43]
-    dot_1.io.a[15] <= _T_6094 @[Gemm.scala 119:22]
-    node _T_6095 = asSInt(io.wgt.bits[1][15]) @[Gemm.scala 120:43]
-    dot_1.io.b[15] <= _T_6095 @[Gemm.scala 120:22]
-    node _T_6096 = asSInt(acc_1.io.deq.bits) @[Gemm.scala 122:34]
-    node _T_6097 = add(_T_6096, dot_1.io.y) @[Gemm.scala 122:41]
-    node _T_6098 = tail(_T_6097, 1) @[Gemm.scala 122:41]
-    node _T_6099 = asSInt(_T_6098) @[Gemm.scala 122:41]
-    add_1 <= _T_6099 @[Gemm.scala 122:12]
-    node _T_6101 = asUInt(add_1) @[Gemm.scala 123:54]
-    node _T_6102 = mux(io.reset, UInt<1>("h00"), _T_6101) @[Gemm.scala 123:31]
-    io.acc_o.bits[0][1] <= _T_6102 @[Gemm.scala 123:25]
-    node _T_6103 = asUInt(add_1) @[Gemm.scala 124:33]
-    io.out.bits[0][1] <= _T_6103 @[Gemm.scala 124:23]
-    vld[1] <= acc_1.io.deq.valid @[Gemm.scala 125:12]
-    node _T_6104 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 116:41]
-    node _T_6105 = and(_T_6104, io.acc_i.valid) @[Gemm.scala 116:56]
-    node _T_6106 = not(io.reset) @[Gemm.scala 116:75]
-    node _T_6107 = and(_T_6105, _T_6106) @[Gemm.scala 116:73]
-    acc_2.io.enq.valid <= _T_6107 @[Gemm.scala 116:25]
-    acc_2.io.enq.bits <= io.acc_i.bits[0][2] @[Gemm.scala 117:24]
-    node _T_6108 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 119:43]
-    dot_2.io.a[0] <= _T_6108 @[Gemm.scala 119:22]
-    node _T_6109 = asSInt(io.wgt.bits[2][0]) @[Gemm.scala 120:43]
-    dot_2.io.b[0] <= _T_6109 @[Gemm.scala 120:22]
-    node _T_6110 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 119:43]
-    dot_2.io.a[1] <= _T_6110 @[Gemm.scala 119:22]
-    node _T_6111 = asSInt(io.wgt.bits[2][1]) @[Gemm.scala 120:43]
-    dot_2.io.b[1] <= _T_6111 @[Gemm.scala 120:22]
-    node _T_6112 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 119:43]
-    dot_2.io.a[2] <= _T_6112 @[Gemm.scala 119:22]
-    node _T_6113 = asSInt(io.wgt.bits[2][2]) @[Gemm.scala 120:43]
-    dot_2.io.b[2] <= _T_6113 @[Gemm.scala 120:22]
-    node _T_6114 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 119:43]
-    dot_2.io.a[3] <= _T_6114 @[Gemm.scala 119:22]
-    node _T_6115 = asSInt(io.wgt.bits[2][3]) @[Gemm.scala 120:43]
-    dot_2.io.b[3] <= _T_6115 @[Gemm.scala 120:22]
-    node _T_6116 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 119:43]
-    dot_2.io.a[4] <= _T_6116 @[Gemm.scala 119:22]
-    node _T_6117 = asSInt(io.wgt.bits[2][4]) @[Gemm.scala 120:43]
-    dot_2.io.b[4] <= _T_6117 @[Gemm.scala 120:22]
-    node _T_6118 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 119:43]
-    dot_2.io.a[5] <= _T_6118 @[Gemm.scala 119:22]
-    node _T_6119 = asSInt(io.wgt.bits[2][5]) @[Gemm.scala 120:43]
-    dot_2.io.b[5] <= _T_6119 @[Gemm.scala 120:22]
-    node _T_6120 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 119:43]
-    dot_2.io.a[6] <= _T_6120 @[Gemm.scala 119:22]
-    node _T_6121 = asSInt(io.wgt.bits[2][6]) @[Gemm.scala 120:43]
-    dot_2.io.b[6] <= _T_6121 @[Gemm.scala 120:22]
-    node _T_6122 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 119:43]
-    dot_2.io.a[7] <= _T_6122 @[Gemm.scala 119:22]
-    node _T_6123 = asSInt(io.wgt.bits[2][7]) @[Gemm.scala 120:43]
-    dot_2.io.b[7] <= _T_6123 @[Gemm.scala 120:22]
-    node _T_6124 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 119:43]
-    dot_2.io.a[8] <= _T_6124 @[Gemm.scala 119:22]
-    node _T_6125 = asSInt(io.wgt.bits[2][8]) @[Gemm.scala 120:43]
-    dot_2.io.b[8] <= _T_6125 @[Gemm.scala 120:22]
-    node _T_6126 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 119:43]
-    dot_2.io.a[9] <= _T_6126 @[Gemm.scala 119:22]
-    node _T_6127 = asSInt(io.wgt.bits[2][9]) @[Gemm.scala 120:43]
-    dot_2.io.b[9] <= _T_6127 @[Gemm.scala 120:22]
-    node _T_6128 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 119:43]
-    dot_2.io.a[10] <= _T_6128 @[Gemm.scala 119:22]
-    node _T_6129 = asSInt(io.wgt.bits[2][10]) @[Gemm.scala 120:43]
-    dot_2.io.b[10] <= _T_6129 @[Gemm.scala 120:22]
-    node _T_6130 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 119:43]
-    dot_2.io.a[11] <= _T_6130 @[Gemm.scala 119:22]
-    node _T_6131 = asSInt(io.wgt.bits[2][11]) @[Gemm.scala 120:43]
-    dot_2.io.b[11] <= _T_6131 @[Gemm.scala 120:22]
-    node _T_6132 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 119:43]
-    dot_2.io.a[12] <= _T_6132 @[Gemm.scala 119:22]
-    node _T_6133 = asSInt(io.wgt.bits[2][12]) @[Gemm.scala 120:43]
-    dot_2.io.b[12] <= _T_6133 @[Gemm.scala 120:22]
-    node _T_6134 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 119:43]
-    dot_2.io.a[13] <= _T_6134 @[Gemm.scala 119:22]
-    node _T_6135 = asSInt(io.wgt.bits[2][13]) @[Gemm.scala 120:43]
-    dot_2.io.b[13] <= _T_6135 @[Gemm.scala 120:22]
-    node _T_6136 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 119:43]
-    dot_2.io.a[14] <= _T_6136 @[Gemm.scala 119:22]
-    node _T_6137 = asSInt(io.wgt.bits[2][14]) @[Gemm.scala 120:43]
-    dot_2.io.b[14] <= _T_6137 @[Gemm.scala 120:22]
-    node _T_6138 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 119:43]
-    dot_2.io.a[15] <= _T_6138 @[Gemm.scala 119:22]
-    node _T_6139 = asSInt(io.wgt.bits[2][15]) @[Gemm.scala 120:43]
-    dot_2.io.b[15] <= _T_6139 @[Gemm.scala 120:22]
-    node _T_6140 = asSInt(acc_2.io.deq.bits) @[Gemm.scala 122:34]
-    node _T_6141 = add(_T_6140, dot_2.io.y) @[Gemm.scala 122:41]
-    node _T_6142 = tail(_T_6141, 1) @[Gemm.scala 122:41]
-    node _T_6143 = asSInt(_T_6142) @[Gemm.scala 122:41]
-    add_2 <= _T_6143 @[Gemm.scala 122:12]
-    node _T_6145 = asUInt(add_2) @[Gemm.scala 123:54]
-    node _T_6146 = mux(io.reset, UInt<1>("h00"), _T_6145) @[Gemm.scala 123:31]
-    io.acc_o.bits[0][2] <= _T_6146 @[Gemm.scala 123:25]
-    node _T_6147 = asUInt(add_2) @[Gemm.scala 124:33]
-    io.out.bits[0][2] <= _T_6147 @[Gemm.scala 124:23]
-    vld[2] <= acc_2.io.deq.valid @[Gemm.scala 125:12]
-    node _T_6148 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 116:41]
-    node _T_6149 = and(_T_6148, io.acc_i.valid) @[Gemm.scala 116:56]
-    node _T_6150 = not(io.reset) @[Gemm.scala 116:75]
-    node _T_6151 = and(_T_6149, _T_6150) @[Gemm.scala 116:73]
-    acc_3.io.enq.valid <= _T_6151 @[Gemm.scala 116:25]
-    acc_3.io.enq.bits <= io.acc_i.bits[0][3] @[Gemm.scala 117:24]
-    node _T_6152 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 119:43]
-    dot_3.io.a[0] <= _T_6152 @[Gemm.scala 119:22]
-    node _T_6153 = asSInt(io.wgt.bits[3][0]) @[Gemm.scala 120:43]
-    dot_3.io.b[0] <= _T_6153 @[Gemm.scala 120:22]
-    node _T_6154 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 119:43]
-    dot_3.io.a[1] <= _T_6154 @[Gemm.scala 119:22]
-    node _T_6155 = asSInt(io.wgt.bits[3][1]) @[Gemm.scala 120:43]
-    dot_3.io.b[1] <= _T_6155 @[Gemm.scala 120:22]
-    node _T_6156 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 119:43]
-    dot_3.io.a[2] <= _T_6156 @[Gemm.scala 119:22]
-    node _T_6157 = asSInt(io.wgt.bits[3][2]) @[Gemm.scala 120:43]
-    dot_3.io.b[2] <= _T_6157 @[Gemm.scala 120:22]
-    node _T_6158 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 119:43]
-    dot_3.io.a[3] <= _T_6158 @[Gemm.scala 119:22]
-    node _T_6159 = asSInt(io.wgt.bits[3][3]) @[Gemm.scala 120:43]
-    dot_3.io.b[3] <= _T_6159 @[Gemm.scala 120:22]
-    node _T_6160 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 119:43]
-    dot_3.io.a[4] <= _T_6160 @[Gemm.scala 119:22]
-    node _T_6161 = asSInt(io.wgt.bits[3][4]) @[Gemm.scala 120:43]
-    dot_3.io.b[4] <= _T_6161 @[Gemm.scala 120:22]
-    node _T_6162 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 119:43]
-    dot_3.io.a[5] <= _T_6162 @[Gemm.scala 119:22]
-    node _T_6163 = asSInt(io.wgt.bits[3][5]) @[Gemm.scala 120:43]
-    dot_3.io.b[5] <= _T_6163 @[Gemm.scala 120:22]
-    node _T_6164 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 119:43]
-    dot_3.io.a[6] <= _T_6164 @[Gemm.scala 119:22]
-    node _T_6165 = asSInt(io.wgt.bits[3][6]) @[Gemm.scala 120:43]
-    dot_3.io.b[6] <= _T_6165 @[Gemm.scala 120:22]
-    node _T_6166 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 119:43]
-    dot_3.io.a[7] <= _T_6166 @[Gemm.scala 119:22]
-    node _T_6167 = asSInt(io.wgt.bits[3][7]) @[Gemm.scala 120:43]
-    dot_3.io.b[7] <= _T_6167 @[Gemm.scala 120:22]
-    node _T_6168 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 119:43]
-    dot_3.io.a[8] <= _T_6168 @[Gemm.scala 119:22]
-    node _T_6169 = asSInt(io.wgt.bits[3][8]) @[Gemm.scala 120:43]
-    dot_3.io.b[8] <= _T_6169 @[Gemm.scala 120:22]
-    node _T_6170 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 119:43]
-    dot_3.io.a[9] <= _T_6170 @[Gemm.scala 119:22]
-    node _T_6171 = asSInt(io.wgt.bits[3][9]) @[Gemm.scala 120:43]
-    dot_3.io.b[9] <= _T_6171 @[Gemm.scala 120:22]
-    node _T_6172 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 119:43]
-    dot_3.io.a[10] <= _T_6172 @[Gemm.scala 119:22]
-    node _T_6173 = asSInt(io.wgt.bits[3][10]) @[Gemm.scala 120:43]
-    dot_3.io.b[10] <= _T_6173 @[Gemm.scala 120:22]
-    node _T_6174 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 119:43]
-    dot_3.io.a[11] <= _T_6174 @[Gemm.scala 119:22]
-    node _T_6175 = asSInt(io.wgt.bits[3][11]) @[Gemm.scala 120:43]
-    dot_3.io.b[11] <= _T_6175 @[Gemm.scala 120:22]
-    node _T_6176 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 119:43]
-    dot_3.io.a[12] <= _T_6176 @[Gemm.scala 119:22]
-    node _T_6177 = asSInt(io.wgt.bits[3][12]) @[Gemm.scala 120:43]
-    dot_3.io.b[12] <= _T_6177 @[Gemm.scala 120:22]
-    node _T_6178 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 119:43]
-    dot_3.io.a[13] <= _T_6178 @[Gemm.scala 119:22]
-    node _T_6179 = asSInt(io.wgt.bits[3][13]) @[Gemm.scala 120:43]
-    dot_3.io.b[13] <= _T_6179 @[Gemm.scala 120:22]
-    node _T_6180 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 119:43]
-    dot_3.io.a[14] <= _T_6180 @[Gemm.scala 119:22]
-    node _T_6181 = asSInt(io.wgt.bits[3][14]) @[Gemm.scala 120:43]
-    dot_3.io.b[14] <= _T_6181 @[Gemm.scala 120:22]
-    node _T_6182 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 119:43]
-    dot_3.io.a[15] <= _T_6182 @[Gemm.scala 119:22]
-    node _T_6183 = asSInt(io.wgt.bits[3][15]) @[Gemm.scala 120:43]
-    dot_3.io.b[15] <= _T_6183 @[Gemm.scala 120:22]
-    node _T_6184 = asSInt(acc_3.io.deq.bits) @[Gemm.scala 122:34]
-    node _T_6185 = add(_T_6184, dot_3.io.y) @[Gemm.scala 122:41]
-    node _T_6186 = tail(_T_6185, 1) @[Gemm.scala 122:41]
-    node _T_6187 = asSInt(_T_6186) @[Gemm.scala 122:41]
-    add_3 <= _T_6187 @[Gemm.scala 122:12]
-    node _T_6189 = asUInt(add_3) @[Gemm.scala 123:54]
-    node _T_6190 = mux(io.reset, UInt<1>("h00"), _T_6189) @[Gemm.scala 123:31]
-    io.acc_o.bits[0][3] <= _T_6190 @[Gemm.scala 123:25]
-    node _T_6191 = asUInt(add_3) @[Gemm.scala 124:33]
-    io.out.bits[0][3] <= _T_6191 @[Gemm.scala 124:23]
-    vld[3] <= acc_3.io.deq.valid @[Gemm.scala 125:12]
-    node _T_6192 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 116:41]
-    node _T_6193 = and(_T_6192, io.acc_i.valid) @[Gemm.scala 116:56]
-    node _T_6194 = not(io.reset) @[Gemm.scala 116:75]
-    node _T_6195 = and(_T_6193, _T_6194) @[Gemm.scala 116:73]
-    acc_4.io.enq.valid <= _T_6195 @[Gemm.scala 116:25]
-    acc_4.io.enq.bits <= io.acc_i.bits[0][4] @[Gemm.scala 117:24]
-    node _T_6196 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 119:43]
-    dot_4.io.a[0] <= _T_6196 @[Gemm.scala 119:22]
-    node _T_6197 = asSInt(io.wgt.bits[4][0]) @[Gemm.scala 120:43]
-    dot_4.io.b[0] <= _T_6197 @[Gemm.scala 120:22]
-    node _T_6198 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 119:43]
-    dot_4.io.a[1] <= _T_6198 @[Gemm.scala 119:22]
-    node _T_6199 = asSInt(io.wgt.bits[4][1]) @[Gemm.scala 120:43]
-    dot_4.io.b[1] <= _T_6199 @[Gemm.scala 120:22]
-    node _T_6200 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 119:43]
-    dot_4.io.a[2] <= _T_6200 @[Gemm.scala 119:22]
-    node _T_6201 = asSInt(io.wgt.bits[4][2]) @[Gemm.scala 120:43]
-    dot_4.io.b[2] <= _T_6201 @[Gemm.scala 120:22]
-    node _T_6202 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 119:43]
-    dot_4.io.a[3] <= _T_6202 @[Gemm.scala 119:22]
-    node _T_6203 = asSInt(io.wgt.bits[4][3]) @[Gemm.scala 120:43]
-    dot_4.io.b[3] <= _T_6203 @[Gemm.scala 120:22]
-    node _T_6204 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 119:43]
-    dot_4.io.a[4] <= _T_6204 @[Gemm.scala 119:22]
-    node _T_6205 = asSInt(io.wgt.bits[4][4]) @[Gemm.scala 120:43]
-    dot_4.io.b[4] <= _T_6205 @[Gemm.scala 120:22]
-    node _T_6206 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 119:43]
-    dot_4.io.a[5] <= _T_6206 @[Gemm.scala 119:22]
-    node _T_6207 = asSInt(io.wgt.bits[4][5]) @[Gemm.scala 120:43]
-    dot_4.io.b[5] <= _T_6207 @[Gemm.scala 120:22]
-    node _T_6208 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 119:43]
-    dot_4.io.a[6] <= _T_6208 @[Gemm.scala 119:22]
-    node _T_6209 = asSInt(io.wgt.bits[4][6]) @[Gemm.scala 120:43]
-    dot_4.io.b[6] <= _T_6209 @[Gemm.scala 120:22]
-    node _T_6210 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 119:43]
-    dot_4.io.a[7] <= _T_6210 @[Gemm.scala 119:22]
-    node _T_6211 = asSInt(io.wgt.bits[4][7]) @[Gemm.scala 120:43]
-    dot_4.io.b[7] <= _T_6211 @[Gemm.scala 120:22]
-    node _T_6212 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 119:43]
-    dot_4.io.a[8] <= _T_6212 @[Gemm.scala 119:22]
-    node _T_6213 = asSInt(io.wgt.bits[4][8]) @[Gemm.scala 120:43]
-    dot_4.io.b[8] <= _T_6213 @[Gemm.scala 120:22]
-    node _T_6214 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 119:43]
-    dot_4.io.a[9] <= _T_6214 @[Gemm.scala 119:22]
-    node _T_6215 = asSInt(io.wgt.bits[4][9]) @[Gemm.scala 120:43]
-    dot_4.io.b[9] <= _T_6215 @[Gemm.scala 120:22]
-    node _T_6216 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 119:43]
-    dot_4.io.a[10] <= _T_6216 @[Gemm.scala 119:22]
-    node _T_6217 = asSInt(io.wgt.bits[4][10]) @[Gemm.scala 120:43]
-    dot_4.io.b[10] <= _T_6217 @[Gemm.scala 120:22]
-    node _T_6218 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 119:43]
-    dot_4.io.a[11] <= _T_6218 @[Gemm.scala 119:22]
-    node _T_6219 = asSInt(io.wgt.bits[4][11]) @[Gemm.scala 120:43]
-    dot_4.io.b[11] <= _T_6219 @[Gemm.scala 120:22]
-    node _T_6220 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 119:43]
-    dot_4.io.a[12] <= _T_6220 @[Gemm.scala 119:22]
-    node _T_6221 = asSInt(io.wgt.bits[4][12]) @[Gemm.scala 120:43]
-    dot_4.io.b[12] <= _T_6221 @[Gemm.scala 120:22]
-    node _T_6222 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 119:43]
-    dot_4.io.a[13] <= _T_6222 @[Gemm.scala 119:22]
-    node _T_6223 = asSInt(io.wgt.bits[4][13]) @[Gemm.scala 120:43]
-    dot_4.io.b[13] <= _T_6223 @[Gemm.scala 120:22]
-    node _T_6224 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 119:43]
-    dot_4.io.a[14] <= _T_6224 @[Gemm.scala 119:22]
-    node _T_6225 = asSInt(io.wgt.bits[4][14]) @[Gemm.scala 120:43]
-    dot_4.io.b[14] <= _T_6225 @[Gemm.scala 120:22]
-    node _T_6226 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 119:43]
-    dot_4.io.a[15] <= _T_6226 @[Gemm.scala 119:22]
-    node _T_6227 = asSInt(io.wgt.bits[4][15]) @[Gemm.scala 120:43]
-    dot_4.io.b[15] <= _T_6227 @[Gemm.scala 120:22]
-    node _T_6228 = asSInt(acc_4.io.deq.bits) @[Gemm.scala 122:34]
-    node _T_6229 = add(_T_6228, dot_4.io.y) @[Gemm.scala 122:41]
-    node _T_6230 = tail(_T_6229, 1) @[Gemm.scala 122:41]
-    node _T_6231 = asSInt(_T_6230) @[Gemm.scala 122:41]
-    add_4 <= _T_6231 @[Gemm.scala 122:12]
-    node _T_6233 = asUInt(add_4) @[Gemm.scala 123:54]
-    node _T_6234 = mux(io.reset, UInt<1>("h00"), _T_6233) @[Gemm.scala 123:31]
-    io.acc_o.bits[0][4] <= _T_6234 @[Gemm.scala 123:25]
-    node _T_6235 = asUInt(add_4) @[Gemm.scala 124:33]
-    io.out.bits[0][4] <= _T_6235 @[Gemm.scala 124:23]
-    vld[4] <= acc_4.io.deq.valid @[Gemm.scala 125:12]
-    node _T_6236 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 116:41]
-    node _T_6237 = and(_T_6236, io.acc_i.valid) @[Gemm.scala 116:56]
-    node _T_6238 = not(io.reset) @[Gemm.scala 116:75]
-    node _T_6239 = and(_T_6237, _T_6238) @[Gemm.scala 116:73]
-    acc_5.io.enq.valid <= _T_6239 @[Gemm.scala 116:25]
-    acc_5.io.enq.bits <= io.acc_i.bits[0][5] @[Gemm.scala 117:24]
-    node _T_6240 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 119:43]
-    dot_5.io.a[0] <= _T_6240 @[Gemm.scala 119:22]
-    node _T_6241 = asSInt(io.wgt.bits[5][0]) @[Gemm.scala 120:43]
-    dot_5.io.b[0] <= _T_6241 @[Gemm.scala 120:22]
-    node _T_6242 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 119:43]
-    dot_5.io.a[1] <= _T_6242 @[Gemm.scala 119:22]
-    node _T_6243 = asSInt(io.wgt.bits[5][1]) @[Gemm.scala 120:43]
-    dot_5.io.b[1] <= _T_6243 @[Gemm.scala 120:22]
-    node _T_6244 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 119:43]
-    dot_5.io.a[2] <= _T_6244 @[Gemm.scala 119:22]
-    node _T_6245 = asSInt(io.wgt.bits[5][2]) @[Gemm.scala 120:43]
-    dot_5.io.b[2] <= _T_6245 @[Gemm.scala 120:22]
-    node _T_6246 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 119:43]
-    dot_5.io.a[3] <= _T_6246 @[Gemm.scala 119:22]
-    node _T_6247 = asSInt(io.wgt.bits[5][3]) @[Gemm.scala 120:43]
-    dot_5.io.b[3] <= _T_6247 @[Gemm.scala 120:22]
-    node _T_6248 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 119:43]
-    dot_5.io.a[4] <= _T_6248 @[Gemm.scala 119:22]
-    node _T_6249 = asSInt(io.wgt.bits[5][4]) @[Gemm.scala 120:43]
-    dot_5.io.b[4] <= _T_6249 @[Gemm.scala 120:22]
-    node _T_6250 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 119:43]
-    dot_5.io.a[5] <= _T_6250 @[Gemm.scala 119:22]
-    node _T_6251 = asSInt(io.wgt.bits[5][5]) @[Gemm.scala 120:43]
-    dot_5.io.b[5] <= _T_6251 @[Gemm.scala 120:22]
-    node _T_6252 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 119:43]
-    dot_5.io.a[6] <= _T_6252 @[Gemm.scala 119:22]
-    node _T_6253 = asSInt(io.wgt.bits[5][6]) @[Gemm.scala 120:43]
-    dot_5.io.b[6] <= _T_6253 @[Gemm.scala 120:22]
-    node _T_6254 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 119:43]
-    dot_5.io.a[7] <= _T_6254 @[Gemm.scala 119:22]
-    node _T_6255 = asSInt(io.wgt.bits[5][7]) @[Gemm.scala 120:43]
-    dot_5.io.b[7] <= _T_6255 @[Gemm.scala 120:22]
-    node _T_6256 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 119:43]
-    dot_5.io.a[8] <= _T_6256 @[Gemm.scala 119:22]
-    node _T_6257 = asSInt(io.wgt.bits[5][8]) @[Gemm.scala 120:43]
-    dot_5.io.b[8] <= _T_6257 @[Gemm.scala 120:22]
-    node _T_6258 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 119:43]
-    dot_5.io.a[9] <= _T_6258 @[Gemm.scala 119:22]
-    node _T_6259 = asSInt(io.wgt.bits[5][9]) @[Gemm.scala 120:43]
-    dot_5.io.b[9] <= _T_6259 @[Gemm.scala 120:22]
-    node _T_6260 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 119:43]
-    dot_5.io.a[10] <= _T_6260 @[Gemm.scala 119:22]
-    node _T_6261 = asSInt(io.wgt.bits[5][10]) @[Gemm.scala 120:43]
-    dot_5.io.b[10] <= _T_6261 @[Gemm.scala 120:22]
-    node _T_6262 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 119:43]
-    dot_5.io.a[11] <= _T_6262 @[Gemm.scala 119:22]
-    node _T_6263 = asSInt(io.wgt.bits[5][11]) @[Gemm.scala 120:43]
-    dot_5.io.b[11] <= _T_6263 @[Gemm.scala 120:22]
-    node _T_6264 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 119:43]
-    dot_5.io.a[12] <= _T_6264 @[Gemm.scala 119:22]
-    node _T_6265 = asSInt(io.wgt.bits[5][12]) @[Gemm.scala 120:43]
-    dot_5.io.b[12] <= _T_6265 @[Gemm.scala 120:22]
-    node _T_6266 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 119:43]
-    dot_5.io.a[13] <= _T_6266 @[Gemm.scala 119:22]
-    node _T_6267 = asSInt(io.wgt.bits[5][13]) @[Gemm.scala 120:43]
-    dot_5.io.b[13] <= _T_6267 @[Gemm.scala 120:22]
-    node _T_6268 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 119:43]
-    dot_5.io.a[14] <= _T_6268 @[Gemm.scala 119:22]
-    node _T_6269 = asSInt(io.wgt.bits[5][14]) @[Gemm.scala 120:43]
-    dot_5.io.b[14] <= _T_6269 @[Gemm.scala 120:22]
-    node _T_6270 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 119:43]
-    dot_5.io.a[15] <= _T_6270 @[Gemm.scala 119:22]
-    node _T_6271 = asSInt(io.wgt.bits[5][15]) @[Gemm.scala 120:43]
-    dot_5.io.b[15] <= _T_6271 @[Gemm.scala 120:22]
-    node _T_6272 = asSInt(acc_5.io.deq.bits) @[Gemm.scala 122:34]
-    node _T_6273 = add(_T_6272, dot_5.io.y) @[Gemm.scala 122:41]
-    node _T_6274 = tail(_T_6273, 1) @[Gemm.scala 122:41]
-    node _T_6275 = asSInt(_T_6274) @[Gemm.scala 122:41]
-    add_5 <= _T_6275 @[Gemm.scala 122:12]
-    node _T_6277 = asUInt(add_5) @[Gemm.scala 123:54]
-    node _T_6278 = mux(io.reset, UInt<1>("h00"), _T_6277) @[Gemm.scala 123:31]
-    io.acc_o.bits[0][5] <= _T_6278 @[Gemm.scala 123:25]
-    node _T_6279 = asUInt(add_5) @[Gemm.scala 124:33]
-    io.out.bits[0][5] <= _T_6279 @[Gemm.scala 124:23]
-    vld[5] <= acc_5.io.deq.valid @[Gemm.scala 125:12]
-    node _T_6280 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 116:41]
-    node _T_6281 = and(_T_6280, io.acc_i.valid) @[Gemm.scala 116:56]
-    node _T_6282 = not(io.reset) @[Gemm.scala 116:75]
-    node _T_6283 = and(_T_6281, _T_6282) @[Gemm.scala 116:73]
-    acc_6.io.enq.valid <= _T_6283 @[Gemm.scala 116:25]
-    acc_6.io.enq.bits <= io.acc_i.bits[0][6] @[Gemm.scala 117:24]
-    node _T_6284 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 119:43]
-    dot_6.io.a[0] <= _T_6284 @[Gemm.scala 119:22]
-    node _T_6285 = asSInt(io.wgt.bits[6][0]) @[Gemm.scala 120:43]
-    dot_6.io.b[0] <= _T_6285 @[Gemm.scala 120:22]
-    node _T_6286 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 119:43]
-    dot_6.io.a[1] <= _T_6286 @[Gemm.scala 119:22]
-    node _T_6287 = asSInt(io.wgt.bits[6][1]) @[Gemm.scala 120:43]
-    dot_6.io.b[1] <= _T_6287 @[Gemm.scala 120:22]
-    node _T_6288 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 119:43]
-    dot_6.io.a[2] <= _T_6288 @[Gemm.scala 119:22]
-    node _T_6289 = asSInt(io.wgt.bits[6][2]) @[Gemm.scala 120:43]
-    dot_6.io.b[2] <= _T_6289 @[Gemm.scala 120:22]
-    node _T_6290 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 119:43]
-    dot_6.io.a[3] <= _T_6290 @[Gemm.scala 119:22]
-    node _T_6291 = asSInt(io.wgt.bits[6][3]) @[Gemm.scala 120:43]
-    dot_6.io.b[3] <= _T_6291 @[Gemm.scala 120:22]
-    node _T_6292 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 119:43]
-    dot_6.io.a[4] <= _T_6292 @[Gemm.scala 119:22]
-    node _T_6293 = asSInt(io.wgt.bits[6][4]) @[Gemm.scala 120:43]
-    dot_6.io.b[4] <= _T_6293 @[Gemm.scala 120:22]
-    node _T_6294 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 119:43]
-    dot_6.io.a[5] <= _T_6294 @[Gemm.scala 119:22]
-    node _T_6295 = asSInt(io.wgt.bits[6][5]) @[Gemm.scala 120:43]
-    dot_6.io.b[5] <= _T_6295 @[Gemm.scala 120:22]
-    node _T_6296 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 119:43]
-    dot_6.io.a[6] <= _T_6296 @[Gemm.scala 119:22]
-    node _T_6297 = asSInt(io.wgt.bits[6][6]) @[Gemm.scala 120:43]
-    dot_6.io.b[6] <= _T_6297 @[Gemm.scala 120:22]
-    node _T_6298 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 119:43]
-    dot_6.io.a[7] <= _T_6298 @[Gemm.scala 119:22]
-    node _T_6299 = asSInt(io.wgt.bits[6][7]) @[Gemm.scala 120:43]
-    dot_6.io.b[7] <= _T_6299 @[Gemm.scala 120:22]
-    node _T_6300 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 119:43]
-    dot_6.io.a[8] <= _T_6300 @[Gemm.scala 119:22]
-    node _T_6301 = asSInt(io.wgt.bits[6][8]) @[Gemm.scala 120:43]
-    dot_6.io.b[8] <= _T_6301 @[Gemm.scala 120:22]
-    node _T_6302 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 119:43]
-    dot_6.io.a[9] <= _T_6302 @[Gemm.scala 119:22]
-    node _T_6303 = asSInt(io.wgt.bits[6][9]) @[Gemm.scala 120:43]
-    dot_6.io.b[9] <= _T_6303 @[Gemm.scala 120:22]
-    node _T_6304 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 119:43]
-    dot_6.io.a[10] <= _T_6304 @[Gemm.scala 119:22]
-    node _T_6305 = asSInt(io.wgt.bits[6][10]) @[Gemm.scala 120:43]
-    dot_6.io.b[10] <= _T_6305 @[Gemm.scala 120:22]
-    node _T_6306 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 119:43]
-    dot_6.io.a[11] <= _T_6306 @[Gemm.scala 119:22]
-    node _T_6307 = asSInt(io.wgt.bits[6][11]) @[Gemm.scala 120:43]
-    dot_6.io.b[11] <= _T_6307 @[Gemm.scala 120:22]
-    node _T_6308 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 119:43]
-    dot_6.io.a[12] <= _T_6308 @[Gemm.scala 119:22]
-    node _T_6309 = asSInt(io.wgt.bits[6][12]) @[Gemm.scala 120:43]
-    dot_6.io.b[12] <= _T_6309 @[Gemm.scala 120:22]
-    node _T_6310 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 119:43]
-    dot_6.io.a[13] <= _T_6310 @[Gemm.scala 119:22]
-    node _T_6311 = asSInt(io.wgt.bits[6][13]) @[Gemm.scala 120:43]
-    dot_6.io.b[13] <= _T_6311 @[Gemm.scala 120:22]
-    node _T_6312 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 119:43]
-    dot_6.io.a[14] <= _T_6312 @[Gemm.scala 119:22]
-    node _T_6313 = asSInt(io.wgt.bits[6][14]) @[Gemm.scala 120:43]
-    dot_6.io.b[14] <= _T_6313 @[Gemm.scala 120:22]
-    node _T_6314 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 119:43]
-    dot_6.io.a[15] <= _T_6314 @[Gemm.scala 119:22]
-    node _T_6315 = asSInt(io.wgt.bits[6][15]) @[Gemm.scala 120:43]
-    dot_6.io.b[15] <= _T_6315 @[Gemm.scala 120:22]
-    node _T_6316 = asSInt(acc_6.io.deq.bits) @[Gemm.scala 122:34]
-    node _T_6317 = add(_T_6316, dot_6.io.y) @[Gemm.scala 122:41]
-    node _T_6318 = tail(_T_6317, 1) @[Gemm.scala 122:41]
-    node _T_6319 = asSInt(_T_6318) @[Gemm.scala 122:41]
-    add_6 <= _T_6319 @[Gemm.scala 122:12]
-    node _T_6321 = asUInt(add_6) @[Gemm.scala 123:54]
-    node _T_6322 = mux(io.reset, UInt<1>("h00"), _T_6321) @[Gemm.scala 123:31]
-    io.acc_o.bits[0][6] <= _T_6322 @[Gemm.scala 123:25]
-    node _T_6323 = asUInt(add_6) @[Gemm.scala 124:33]
-    io.out.bits[0][6] <= _T_6323 @[Gemm.scala 124:23]
-    vld[6] <= acc_6.io.deq.valid @[Gemm.scala 125:12]
-    node _T_6324 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 116:41]
-    node _T_6325 = and(_T_6324, io.acc_i.valid) @[Gemm.scala 116:56]
-    node _T_6326 = not(io.reset) @[Gemm.scala 116:75]
-    node _T_6327 = and(_T_6325, _T_6326) @[Gemm.scala 116:73]
-    acc_7.io.enq.valid <= _T_6327 @[Gemm.scala 116:25]
-    acc_7.io.enq.bits <= io.acc_i.bits[0][7] @[Gemm.scala 117:24]
-    node _T_6328 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 119:43]
-    dot_7.io.a[0] <= _T_6328 @[Gemm.scala 119:22]
-    node _T_6329 = asSInt(io.wgt.bits[7][0]) @[Gemm.scala 120:43]
-    dot_7.io.b[0] <= _T_6329 @[Gemm.scala 120:22]
-    node _T_6330 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 119:43]
-    dot_7.io.a[1] <= _T_6330 @[Gemm.scala 119:22]
-    node _T_6331 = asSInt(io.wgt.bits[7][1]) @[Gemm.scala 120:43]
-    dot_7.io.b[1] <= _T_6331 @[Gemm.scala 120:22]
-    node _T_6332 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 119:43]
-    dot_7.io.a[2] <= _T_6332 @[Gemm.scala 119:22]
-    node _T_6333 = asSInt(io.wgt.bits[7][2]) @[Gemm.scala 120:43]
-    dot_7.io.b[2] <= _T_6333 @[Gemm.scala 120:22]
-    node _T_6334 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 119:43]
-    dot_7.io.a[3] <= _T_6334 @[Gemm.scala 119:22]
-    node _T_6335 = asSInt(io.wgt.bits[7][3]) @[Gemm.scala 120:43]
-    dot_7.io.b[3] <= _T_6335 @[Gemm.scala 120:22]
-    node _T_6336 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 119:43]
-    dot_7.io.a[4] <= _T_6336 @[Gemm.scala 119:22]
-    node _T_6337 = asSInt(io.wgt.bits[7][4]) @[Gemm.scala 120:43]
-    dot_7.io.b[4] <= _T_6337 @[Gemm.scala 120:22]
-    node _T_6338 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 119:43]
-    dot_7.io.a[5] <= _T_6338 @[Gemm.scala 119:22]
-    node _T_6339 = asSInt(io.wgt.bits[7][5]) @[Gemm.scala 120:43]
-    dot_7.io.b[5] <= _T_6339 @[Gemm.scala 120:22]
-    node _T_6340 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 119:43]
-    dot_7.io.a[6] <= _T_6340 @[Gemm.scala 119:22]
-    node _T_6341 = asSInt(io.wgt.bits[7][6]) @[Gemm.scala 120:43]
-    dot_7.io.b[6] <= _T_6341 @[Gemm.scala 120:22]
-    node _T_6342 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 119:43]
-    dot_7.io.a[7] <= _T_6342 @[Gemm.scala 119:22]
-    node _T_6343 = asSInt(io.wgt.bits[7][7]) @[Gemm.scala 120:43]
-    dot_7.io.b[7] <= _T_6343 @[Gemm.scala 120:22]
-    node _T_6344 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 119:43]
-    dot_7.io.a[8] <= _T_6344 @[Gemm.scala 119:22]
-    node _T_6345 = asSInt(io.wgt.bits[7][8]) @[Gemm.scala 120:43]
-    dot_7.io.b[8] <= _T_6345 @[Gemm.scala 120:22]
-    node _T_6346 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 119:43]
-    dot_7.io.a[9] <= _T_6346 @[Gemm.scala 119:22]
-    node _T_6347 = asSInt(io.wgt.bits[7][9]) @[Gemm.scala 120:43]
-    dot_7.io.b[9] <= _T_6347 @[Gemm.scala 120:22]
-    node _T_6348 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 119:43]
-    dot_7.io.a[10] <= _T_6348 @[Gemm.scala 119:22]
-    node _T_6349 = asSInt(io.wgt.bits[7][10]) @[Gemm.scala 120:43]
-    dot_7.io.b[10] <= _T_6349 @[Gemm.scala 120:22]
-    node _T_6350 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 119:43]
-    dot_7.io.a[11] <= _T_6350 @[Gemm.scala 119:22]
-    node _T_6351 = asSInt(io.wgt.bits[7][11]) @[Gemm.scala 120:43]
-    dot_7.io.b[11] <= _T_6351 @[Gemm.scala 120:22]
-    node _T_6352 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 119:43]
-    dot_7.io.a[12] <= _T_6352 @[Gemm.scala 119:22]
-    node _T_6353 = asSInt(io.wgt.bits[7][12]) @[Gemm.scala 120:43]
-    dot_7.io.b[12] <= _T_6353 @[Gemm.scala 120:22]
-    node _T_6354 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 119:43]
-    dot_7.io.a[13] <= _T_6354 @[Gemm.scala 119:22]
-    node _T_6355 = asSInt(io.wgt.bits[7][13]) @[Gemm.scala 120:43]
-    dot_7.io.b[13] <= _T_6355 @[Gemm.scala 120:22]
-    node _T_6356 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 119:43]
-    dot_7.io.a[14] <= _T_6356 @[Gemm.scala 119:22]
-    node _T_6357 = asSInt(io.wgt.bits[7][14]) @[Gemm.scala 120:43]
-    dot_7.io.b[14] <= _T_6357 @[Gemm.scala 120:22]
-    node _T_6358 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 119:43]
-    dot_7.io.a[15] <= _T_6358 @[Gemm.scala 119:22]
-    node _T_6359 = asSInt(io.wgt.bits[7][15]) @[Gemm.scala 120:43]
-    dot_7.io.b[15] <= _T_6359 @[Gemm.scala 120:22]
-    node _T_6360 = asSInt(acc_7.io.deq.bits) @[Gemm.scala 122:34]
-    node _T_6361 = add(_T_6360, dot_7.io.y) @[Gemm.scala 122:41]
-    node _T_6362 = tail(_T_6361, 1) @[Gemm.scala 122:41]
-    node _T_6363 = asSInt(_T_6362) @[Gemm.scala 122:41]
-    add_7 <= _T_6363 @[Gemm.scala 122:12]
-    node _T_6365 = asUInt(add_7) @[Gemm.scala 123:54]
-    node _T_6366 = mux(io.reset, UInt<1>("h00"), _T_6365) @[Gemm.scala 123:31]
-    io.acc_o.bits[0][7] <= _T_6366 @[Gemm.scala 123:25]
-    node _T_6367 = asUInt(add_7) @[Gemm.scala 124:33]
-    io.out.bits[0][7] <= _T_6367 @[Gemm.scala 124:23]
-    vld[7] <= acc_7.io.deq.valid @[Gemm.scala 125:12]
-    node _T_6368 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 116:41]
-    node _T_6369 = and(_T_6368, io.acc_i.valid) @[Gemm.scala 116:56]
-    node _T_6370 = not(io.reset) @[Gemm.scala 116:75]
-    node _T_6371 = and(_T_6369, _T_6370) @[Gemm.scala 116:73]
-    acc_8.io.enq.valid <= _T_6371 @[Gemm.scala 116:25]
-    acc_8.io.enq.bits <= io.acc_i.bits[0][8] @[Gemm.scala 117:24]
-    node _T_6372 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 119:43]
-    dot_8.io.a[0] <= _T_6372 @[Gemm.scala 119:22]
-    node _T_6373 = asSInt(io.wgt.bits[8][0]) @[Gemm.scala 120:43]
-    dot_8.io.b[0] <= _T_6373 @[Gemm.scala 120:22]
-    node _T_6374 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 119:43]
-    dot_8.io.a[1] <= _T_6374 @[Gemm.scala 119:22]
-    node _T_6375 = asSInt(io.wgt.bits[8][1]) @[Gemm.scala 120:43]
-    dot_8.io.b[1] <= _T_6375 @[Gemm.scala 120:22]
-    node _T_6376 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 119:43]
-    dot_8.io.a[2] <= _T_6376 @[Gemm.scala 119:22]
-    node _T_6377 = asSInt(io.wgt.bits[8][2]) @[Gemm.scala 120:43]
-    dot_8.io.b[2] <= _T_6377 @[Gemm.scala 120:22]
-    node _T_6378 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 119:43]
-    dot_8.io.a[3] <= _T_6378 @[Gemm.scala 119:22]
-    node _T_6379 = asSInt(io.wgt.bits[8][3]) @[Gemm.scala 120:43]
-    dot_8.io.b[3] <= _T_6379 @[Gemm.scala 120:22]
-    node _T_6380 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 119:43]
-    dot_8.io.a[4] <= _T_6380 @[Gemm.scala 119:22]
-    node _T_6381 = asSInt(io.wgt.bits[8][4]) @[Gemm.scala 120:43]
-    dot_8.io.b[4] <= _T_6381 @[Gemm.scala 120:22]
-    node _T_6382 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 119:43]
-    dot_8.io.a[5] <= _T_6382 @[Gemm.scala 119:22]
-    node _T_6383 = asSInt(io.wgt.bits[8][5]) @[Gemm.scala 120:43]
-    dot_8.io.b[5] <= _T_6383 @[Gemm.scala 120:22]
-    node _T_6384 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 119:43]
-    dot_8.io.a[6] <= _T_6384 @[Gemm.scala 119:22]
-    node _T_6385 = asSInt(io.wgt.bits[8][6]) @[Gemm.scala 120:43]
-    dot_8.io.b[6] <= _T_6385 @[Gemm.scala 120:22]
-    node _T_6386 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 119:43]
-    dot_8.io.a[7] <= _T_6386 @[Gemm.scala 119:22]
-    node _T_6387 = asSInt(io.wgt.bits[8][7]) @[Gemm.scala 120:43]
-    dot_8.io.b[7] <= _T_6387 @[Gemm.scala 120:22]
-    node _T_6388 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 119:43]
-    dot_8.io.a[8] <= _T_6388 @[Gemm.scala 119:22]
-    node _T_6389 = asSInt(io.wgt.bits[8][8]) @[Gemm.scala 120:43]
-    dot_8.io.b[8] <= _T_6389 @[Gemm.scala 120:22]
-    node _T_6390 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 119:43]
-    dot_8.io.a[9] <= _T_6390 @[Gemm.scala 119:22]
-    node _T_6391 = asSInt(io.wgt.bits[8][9]) @[Gemm.scala 120:43]
-    dot_8.io.b[9] <= _T_6391 @[Gemm.scala 120:22]
-    node _T_6392 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 119:43]
-    dot_8.io.a[10] <= _T_6392 @[Gemm.scala 119:22]
-    node _T_6393 = asSInt(io.wgt.bits[8][10]) @[Gemm.scala 120:43]
-    dot_8.io.b[10] <= _T_6393 @[Gemm.scala 120:22]
-    node _T_6394 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 119:43]
-    dot_8.io.a[11] <= _T_6394 @[Gemm.scala 119:22]
-    node _T_6395 = asSInt(io.wgt.bits[8][11]) @[Gemm.scala 120:43]
-    dot_8.io.b[11] <= _T_6395 @[Gemm.scala 120:22]
-    node _T_6396 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 119:43]
-    dot_8.io.a[12] <= _T_6396 @[Gemm.scala 119:22]
-    node _T_6397 = asSInt(io.wgt.bits[8][12]) @[Gemm.scala 120:43]
-    dot_8.io.b[12] <= _T_6397 @[Gemm.scala 120:22]
-    node _T_6398 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 119:43]
-    dot_8.io.a[13] <= _T_6398 @[Gemm.scala 119:22]
-    node _T_6399 = asSInt(io.wgt.bits[8][13]) @[Gemm.scala 120:43]
-    dot_8.io.b[13] <= _T_6399 @[Gemm.scala 120:22]
-    node _T_6400 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 119:43]
-    dot_8.io.a[14] <= _T_6400 @[Gemm.scala 119:22]
-    node _T_6401 = asSInt(io.wgt.bits[8][14]) @[Gemm.scala 120:43]
-    dot_8.io.b[14] <= _T_6401 @[Gemm.scala 120:22]
-    node _T_6402 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 119:43]
-    dot_8.io.a[15] <= _T_6402 @[Gemm.scala 119:22]
-    node _T_6403 = asSInt(io.wgt.bits[8][15]) @[Gemm.scala 120:43]
-    dot_8.io.b[15] <= _T_6403 @[Gemm.scala 120:22]
-    node _T_6404 = asSInt(acc_8.io.deq.bits) @[Gemm.scala 122:34]
-    node _T_6405 = add(_T_6404, dot_8.io.y) @[Gemm.scala 122:41]
-    node _T_6406 = tail(_T_6405, 1) @[Gemm.scala 122:41]
-    node _T_6407 = asSInt(_T_6406) @[Gemm.scala 122:41]
-    add_8 <= _T_6407 @[Gemm.scala 122:12]
-    node _T_6409 = asUInt(add_8) @[Gemm.scala 123:54]
-    node _T_6410 = mux(io.reset, UInt<1>("h00"), _T_6409) @[Gemm.scala 123:31]
-    io.acc_o.bits[0][8] <= _T_6410 @[Gemm.scala 123:25]
-    node _T_6411 = asUInt(add_8) @[Gemm.scala 124:33]
-    io.out.bits[0][8] <= _T_6411 @[Gemm.scala 124:23]
-    vld[8] <= acc_8.io.deq.valid @[Gemm.scala 125:12]
-    node _T_6412 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 116:41]
-    node _T_6413 = and(_T_6412, io.acc_i.valid) @[Gemm.scala 116:56]
-    node _T_6414 = not(io.reset) @[Gemm.scala 116:75]
-    node _T_6415 = and(_T_6413, _T_6414) @[Gemm.scala 116:73]
-    acc_9.io.enq.valid <= _T_6415 @[Gemm.scala 116:25]
-    acc_9.io.enq.bits <= io.acc_i.bits[0][9] @[Gemm.scala 117:24]
-    node _T_6416 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 119:43]
-    dot_9.io.a[0] <= _T_6416 @[Gemm.scala 119:22]
-    node _T_6417 = asSInt(io.wgt.bits[9][0]) @[Gemm.scala 120:43]
-    dot_9.io.b[0] <= _T_6417 @[Gemm.scala 120:22]
-    node _T_6418 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 119:43]
-    dot_9.io.a[1] <= _T_6418 @[Gemm.scala 119:22]
-    node _T_6419 = asSInt(io.wgt.bits[9][1]) @[Gemm.scala 120:43]
-    dot_9.io.b[1] <= _T_6419 @[Gemm.scala 120:22]
-    node _T_6420 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 119:43]
-    dot_9.io.a[2] <= _T_6420 @[Gemm.scala 119:22]
-    node _T_6421 = asSInt(io.wgt.bits[9][2]) @[Gemm.scala 120:43]
-    dot_9.io.b[2] <= _T_6421 @[Gemm.scala 120:22]
-    node _T_6422 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 119:43]
-    dot_9.io.a[3] <= _T_6422 @[Gemm.scala 119:22]
-    node _T_6423 = asSInt(io.wgt.bits[9][3]) @[Gemm.scala 120:43]
-    dot_9.io.b[3] <= _T_6423 @[Gemm.scala 120:22]
-    node _T_6424 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 119:43]
-    dot_9.io.a[4] <= _T_6424 @[Gemm.scala 119:22]
-    node _T_6425 = asSInt(io.wgt.bits[9][4]) @[Gemm.scala 120:43]
-    dot_9.io.b[4] <= _T_6425 @[Gemm.scala 120:22]
-    node _T_6426 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 119:43]
-    dot_9.io.a[5] <= _T_6426 @[Gemm.scala 119:22]
-    node _T_6427 = asSInt(io.wgt.bits[9][5]) @[Gemm.scala 120:43]
-    dot_9.io.b[5] <= _T_6427 @[Gemm.scala 120:22]
-    node _T_6428 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 119:43]
-    dot_9.io.a[6] <= _T_6428 @[Gemm.scala 119:22]
-    node _T_6429 = asSInt(io.wgt.bits[9][6]) @[Gemm.scala 120:43]
-    dot_9.io.b[6] <= _T_6429 @[Gemm.scala 120:22]
-    node _T_6430 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 119:43]
-    dot_9.io.a[7] <= _T_6430 @[Gemm.scala 119:22]
-    node _T_6431 = asSInt(io.wgt.bits[9][7]) @[Gemm.scala 120:43]
-    dot_9.io.b[7] <= _T_6431 @[Gemm.scala 120:22]
-    node _T_6432 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 119:43]
-    dot_9.io.a[8] <= _T_6432 @[Gemm.scala 119:22]
-    node _T_6433 = asSInt(io.wgt.bits[9][8]) @[Gemm.scala 120:43]
-    dot_9.io.b[8] <= _T_6433 @[Gemm.scala 120:22]
-    node _T_6434 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 119:43]
-    dot_9.io.a[9] <= _T_6434 @[Gemm.scala 119:22]
-    node _T_6435 = asSInt(io.wgt.bits[9][9]) @[Gemm.scala 120:43]
-    dot_9.io.b[9] <= _T_6435 @[Gemm.scala 120:22]
-    node _T_6436 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 119:43]
-    dot_9.io.a[10] <= _T_6436 @[Gemm.scala 119:22]
-    node _T_6437 = asSInt(io.wgt.bits[9][10]) @[Gemm.scala 120:43]
-    dot_9.io.b[10] <= _T_6437 @[Gemm.scala 120:22]
-    node _T_6438 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 119:43]
-    dot_9.io.a[11] <= _T_6438 @[Gemm.scala 119:22]
-    node _T_6439 = asSInt(io.wgt.bits[9][11]) @[Gemm.scala 120:43]
-    dot_9.io.b[11] <= _T_6439 @[Gemm.scala 120:22]
-    node _T_6440 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 119:43]
-    dot_9.io.a[12] <= _T_6440 @[Gemm.scala 119:22]
-    node _T_6441 = asSInt(io.wgt.bits[9][12]) @[Gemm.scala 120:43]
-    dot_9.io.b[12] <= _T_6441 @[Gemm.scala 120:22]
-    node _T_6442 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 119:43]
-    dot_9.io.a[13] <= _T_6442 @[Gemm.scala 119:22]
-    node _T_6443 = asSInt(io.wgt.bits[9][13]) @[Gemm.scala 120:43]
-    dot_9.io.b[13] <= _T_6443 @[Gemm.scala 120:22]
-    node _T_6444 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 119:43]
-    dot_9.io.a[14] <= _T_6444 @[Gemm.scala 119:22]
-    node _T_6445 = asSInt(io.wgt.bits[9][14]) @[Gemm.scala 120:43]
-    dot_9.io.b[14] <= _T_6445 @[Gemm.scala 120:22]
-    node _T_6446 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 119:43]
-    dot_9.io.a[15] <= _T_6446 @[Gemm.scala 119:22]
-    node _T_6447 = asSInt(io.wgt.bits[9][15]) @[Gemm.scala 120:43]
-    dot_9.io.b[15] <= _T_6447 @[Gemm.scala 120:22]
-    node _T_6448 = asSInt(acc_9.io.deq.bits) @[Gemm.scala 122:34]
-    node _T_6449 = add(_T_6448, dot_9.io.y) @[Gemm.scala 122:41]
-    node _T_6450 = tail(_T_6449, 1) @[Gemm.scala 122:41]
-    node _T_6451 = asSInt(_T_6450) @[Gemm.scala 122:41]
-    add_9 <= _T_6451 @[Gemm.scala 122:12]
-    node _T_6453 = asUInt(add_9) @[Gemm.scala 123:54]
-    node _T_6454 = mux(io.reset, UInt<1>("h00"), _T_6453) @[Gemm.scala 123:31]
-    io.acc_o.bits[0][9] <= _T_6454 @[Gemm.scala 123:25]
-    node _T_6455 = asUInt(add_9) @[Gemm.scala 124:33]
-    io.out.bits[0][9] <= _T_6455 @[Gemm.scala 124:23]
-    vld[9] <= acc_9.io.deq.valid @[Gemm.scala 125:12]
-    node _T_6456 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 116:41]
-    node _T_6457 = and(_T_6456, io.acc_i.valid) @[Gemm.scala 116:56]
-    node _T_6458 = not(io.reset) @[Gemm.scala 116:75]
-    node _T_6459 = and(_T_6457, _T_6458) @[Gemm.scala 116:73]
-    acc_10.io.enq.valid <= _T_6459 @[Gemm.scala 116:25]
-    acc_10.io.enq.bits <= io.acc_i.bits[0][10] @[Gemm.scala 117:24]
-    node _T_6460 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 119:43]
-    dot_10.io.a[0] <= _T_6460 @[Gemm.scala 119:22]
-    node _T_6461 = asSInt(io.wgt.bits[10][0]) @[Gemm.scala 120:43]
-    dot_10.io.b[0] <= _T_6461 @[Gemm.scala 120:22]
-    node _T_6462 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 119:43]
-    dot_10.io.a[1] <= _T_6462 @[Gemm.scala 119:22]
-    node _T_6463 = asSInt(io.wgt.bits[10][1]) @[Gemm.scala 120:43]
-    dot_10.io.b[1] <= _T_6463 @[Gemm.scala 120:22]
-    node _T_6464 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 119:43]
-    dot_10.io.a[2] <= _T_6464 @[Gemm.scala 119:22]
-    node _T_6465 = asSInt(io.wgt.bits[10][2]) @[Gemm.scala 120:43]
-    dot_10.io.b[2] <= _T_6465 @[Gemm.scala 120:22]
-    node _T_6466 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 119:43]
-    dot_10.io.a[3] <= _T_6466 @[Gemm.scala 119:22]
-    node _T_6467 = asSInt(io.wgt.bits[10][3]) @[Gemm.scala 120:43]
-    dot_10.io.b[3] <= _T_6467 @[Gemm.scala 120:22]
-    node _T_6468 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 119:43]
-    dot_10.io.a[4] <= _T_6468 @[Gemm.scala 119:22]
-    node _T_6469 = asSInt(io.wgt.bits[10][4]) @[Gemm.scala 120:43]
-    dot_10.io.b[4] <= _T_6469 @[Gemm.scala 120:22]
-    node _T_6470 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 119:43]
-    dot_10.io.a[5] <= _T_6470 @[Gemm.scala 119:22]
-    node _T_6471 = asSInt(io.wgt.bits[10][5]) @[Gemm.scala 120:43]
-    dot_10.io.b[5] <= _T_6471 @[Gemm.scala 120:22]
-    node _T_6472 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 119:43]
-    dot_10.io.a[6] <= _T_6472 @[Gemm.scala 119:22]
-    node _T_6473 = asSInt(io.wgt.bits[10][6]) @[Gemm.scala 120:43]
-    dot_10.io.b[6] <= _T_6473 @[Gemm.scala 120:22]
-    node _T_6474 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 119:43]
-    dot_10.io.a[7] <= _T_6474 @[Gemm.scala 119:22]
-    node _T_6475 = asSInt(io.wgt.bits[10][7]) @[Gemm.scala 120:43]
-    dot_10.io.b[7] <= _T_6475 @[Gemm.scala 120:22]
-    node _T_6476 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 119:43]
-    dot_10.io.a[8] <= _T_6476 @[Gemm.scala 119:22]
-    node _T_6477 = asSInt(io.wgt.bits[10][8]) @[Gemm.scala 120:43]
-    dot_10.io.b[8] <= _T_6477 @[Gemm.scala 120:22]
-    node _T_6478 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 119:43]
-    dot_10.io.a[9] <= _T_6478 @[Gemm.scala 119:22]
-    node _T_6479 = asSInt(io.wgt.bits[10][9]) @[Gemm.scala 120:43]
-    dot_10.io.b[9] <= _T_6479 @[Gemm.scala 120:22]
-    node _T_6480 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 119:43]
-    dot_10.io.a[10] <= _T_6480 @[Gemm.scala 119:22]
-    node _T_6481 = asSInt(io.wgt.bits[10][10]) @[Gemm.scala 120:43]
-    dot_10.io.b[10] <= _T_6481 @[Gemm.scala 120:22]
-    node _T_6482 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 119:43]
-    dot_10.io.a[11] <= _T_6482 @[Gemm.scala 119:22]
-    node _T_6483 = asSInt(io.wgt.bits[10][11]) @[Gemm.scala 120:43]
-    dot_10.io.b[11] <= _T_6483 @[Gemm.scala 120:22]
-    node _T_6484 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 119:43]
-    dot_10.io.a[12] <= _T_6484 @[Gemm.scala 119:22]
-    node _T_6485 = asSInt(io.wgt.bits[10][12]) @[Gemm.scala 120:43]
-    dot_10.io.b[12] <= _T_6485 @[Gemm.scala 120:22]
-    node _T_6486 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 119:43]
-    dot_10.io.a[13] <= _T_6486 @[Gemm.scala 119:22]
-    node _T_6487 = asSInt(io.wgt.bits[10][13]) @[Gemm.scala 120:43]
-    dot_10.io.b[13] <= _T_6487 @[Gemm.scala 120:22]
-    node _T_6488 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 119:43]
-    dot_10.io.a[14] <= _T_6488 @[Gemm.scala 119:22]
-    node _T_6489 = asSInt(io.wgt.bits[10][14]) @[Gemm.scala 120:43]
-    dot_10.io.b[14] <= _T_6489 @[Gemm.scala 120:22]
-    node _T_6490 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 119:43]
-    dot_10.io.a[15] <= _T_6490 @[Gemm.scala 119:22]
-    node _T_6491 = asSInt(io.wgt.bits[10][15]) @[Gemm.scala 120:43]
-    dot_10.io.b[15] <= _T_6491 @[Gemm.scala 120:22]
-    node _T_6492 = asSInt(acc_10.io.deq.bits) @[Gemm.scala 122:34]
-    node _T_6493 = add(_T_6492, dot_10.io.y) @[Gemm.scala 122:41]
-    node _T_6494 = tail(_T_6493, 1) @[Gemm.scala 122:41]
-    node _T_6495 = asSInt(_T_6494) @[Gemm.scala 122:41]
-    add_10 <= _T_6495 @[Gemm.scala 122:12]
-    node _T_6497 = asUInt(add_10) @[Gemm.scala 123:54]
-    node _T_6498 = mux(io.reset, UInt<1>("h00"), _T_6497) @[Gemm.scala 123:31]
-    io.acc_o.bits[0][10] <= _T_6498 @[Gemm.scala 123:25]
-    node _T_6499 = asUInt(add_10) @[Gemm.scala 124:33]
-    io.out.bits[0][10] <= _T_6499 @[Gemm.scala 124:23]
-    vld[10] <= acc_10.io.deq.valid @[Gemm.scala 125:12]
-    node _T_6500 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 116:41]
-    node _T_6501 = and(_T_6500, io.acc_i.valid) @[Gemm.scala 116:56]
-    node _T_6502 = not(io.reset) @[Gemm.scala 116:75]
-    node _T_6503 = and(_T_6501, _T_6502) @[Gemm.scala 116:73]
-    acc_11.io.enq.valid <= _T_6503 @[Gemm.scala 116:25]
-    acc_11.io.enq.bits <= io.acc_i.bits[0][11] @[Gemm.scala 117:24]
-    node _T_6504 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 119:43]
-    dot_11.io.a[0] <= _T_6504 @[Gemm.scala 119:22]
-    node _T_6505 = asSInt(io.wgt.bits[11][0]) @[Gemm.scala 120:43]
-    dot_11.io.b[0] <= _T_6505 @[Gemm.scala 120:22]
-    node _T_6506 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 119:43]
-    dot_11.io.a[1] <= _T_6506 @[Gemm.scala 119:22]
-    node _T_6507 = asSInt(io.wgt.bits[11][1]) @[Gemm.scala 120:43]
-    dot_11.io.b[1] <= _T_6507 @[Gemm.scala 120:22]
-    node _T_6508 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 119:43]
-    dot_11.io.a[2] <= _T_6508 @[Gemm.scala 119:22]
-    node _T_6509 = asSInt(io.wgt.bits[11][2]) @[Gemm.scala 120:43]
-    dot_11.io.b[2] <= _T_6509 @[Gemm.scala 120:22]
-    node _T_6510 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 119:43]
-    dot_11.io.a[3] <= _T_6510 @[Gemm.scala 119:22]
-    node _T_6511 = asSInt(io.wgt.bits[11][3]) @[Gemm.scala 120:43]
-    dot_11.io.b[3] <= _T_6511 @[Gemm.scala 120:22]
-    node _T_6512 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 119:43]
-    dot_11.io.a[4] <= _T_6512 @[Gemm.scala 119:22]
-    node _T_6513 = asSInt(io.wgt.bits[11][4]) @[Gemm.scala 120:43]
-    dot_11.io.b[4] <= _T_6513 @[Gemm.scala 120:22]
-    node _T_6514 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 119:43]
-    dot_11.io.a[5] <= _T_6514 @[Gemm.scala 119:22]
-    node _T_6515 = asSInt(io.wgt.bits[11][5]) @[Gemm.scala 120:43]
-    dot_11.io.b[5] <= _T_6515 @[Gemm.scala 120:22]
-    node _T_6516 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 119:43]
-    dot_11.io.a[6] <= _T_6516 @[Gemm.scala 119:22]
-    node _T_6517 = asSInt(io.wgt.bits[11][6]) @[Gemm.scala 120:43]
-    dot_11.io.b[6] <= _T_6517 @[Gemm.scala 120:22]
-    node _T_6518 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 119:43]
-    dot_11.io.a[7] <= _T_6518 @[Gemm.scala 119:22]
-    node _T_6519 = asSInt(io.wgt.bits[11][7]) @[Gemm.scala 120:43]
-    dot_11.io.b[7] <= _T_6519 @[Gemm.scala 120:22]
-    node _T_6520 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 119:43]
-    dot_11.io.a[8] <= _T_6520 @[Gemm.scala 119:22]
-    node _T_6521 = asSInt(io.wgt.bits[11][8]) @[Gemm.scala 120:43]
-    dot_11.io.b[8] <= _T_6521 @[Gemm.scala 120:22]
-    node _T_6522 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 119:43]
-    dot_11.io.a[9] <= _T_6522 @[Gemm.scala 119:22]
-    node _T_6523 = asSInt(io.wgt.bits[11][9]) @[Gemm.scala 120:43]
-    dot_11.io.b[9] <= _T_6523 @[Gemm.scala 120:22]
-    node _T_6524 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 119:43]
-    dot_11.io.a[10] <= _T_6524 @[Gemm.scala 119:22]
-    node _T_6525 = asSInt(io.wgt.bits[11][10]) @[Gemm.scala 120:43]
-    dot_11.io.b[10] <= _T_6525 @[Gemm.scala 120:22]
-    node _T_6526 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 119:43]
-    dot_11.io.a[11] <= _T_6526 @[Gemm.scala 119:22]
-    node _T_6527 = asSInt(io.wgt.bits[11][11]) @[Gemm.scala 120:43]
-    dot_11.io.b[11] <= _T_6527 @[Gemm.scala 120:22]
-    node _T_6528 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 119:43]
-    dot_11.io.a[12] <= _T_6528 @[Gemm.scala 119:22]
-    node _T_6529 = asSInt(io.wgt.bits[11][12]) @[Gemm.scala 120:43]
-    dot_11.io.b[12] <= _T_6529 @[Gemm.scala 120:22]
-    node _T_6530 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 119:43]
-    dot_11.io.a[13] <= _T_6530 @[Gemm.scala 119:22]
-    node _T_6531 = asSInt(io.wgt.bits[11][13]) @[Gemm.scala 120:43]
-    dot_11.io.b[13] <= _T_6531 @[Gemm.scala 120:22]
-    node _T_6532 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 119:43]
-    dot_11.io.a[14] <= _T_6532 @[Gemm.scala 119:22]
-    node _T_6533 = asSInt(io.wgt.bits[11][14]) @[Gemm.scala 120:43]
-    dot_11.io.b[14] <= _T_6533 @[Gemm.scala 120:22]
-    node _T_6534 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 119:43]
-    dot_11.io.a[15] <= _T_6534 @[Gemm.scala 119:22]
-    node _T_6535 = asSInt(io.wgt.bits[11][15]) @[Gemm.scala 120:43]
-    dot_11.io.b[15] <= _T_6535 @[Gemm.scala 120:22]
-    node _T_6536 = asSInt(acc_11.io.deq.bits) @[Gemm.scala 122:34]
-    node _T_6537 = add(_T_6536, dot_11.io.y) @[Gemm.scala 122:41]
-    node _T_6538 = tail(_T_6537, 1) @[Gemm.scala 122:41]
-    node _T_6539 = asSInt(_T_6538) @[Gemm.scala 122:41]
-    add_11 <= _T_6539 @[Gemm.scala 122:12]
-    node _T_6541 = asUInt(add_11) @[Gemm.scala 123:54]
-    node _T_6542 = mux(io.reset, UInt<1>("h00"), _T_6541) @[Gemm.scala 123:31]
-    io.acc_o.bits[0][11] <= _T_6542 @[Gemm.scala 123:25]
-    node _T_6543 = asUInt(add_11) @[Gemm.scala 124:33]
-    io.out.bits[0][11] <= _T_6543 @[Gemm.scala 124:23]
-    vld[11] <= acc_11.io.deq.valid @[Gemm.scala 125:12]
-    node _T_6544 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 116:41]
-    node _T_6545 = and(_T_6544, io.acc_i.valid) @[Gemm.scala 116:56]
-    node _T_6546 = not(io.reset) @[Gemm.scala 116:75]
-    node _T_6547 = and(_T_6545, _T_6546) @[Gemm.scala 116:73]
-    acc_12.io.enq.valid <= _T_6547 @[Gemm.scala 116:25]
-    acc_12.io.enq.bits <= io.acc_i.bits[0][12] @[Gemm.scala 117:24]
-    node _T_6548 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 119:43]
-    dot_12.io.a[0] <= _T_6548 @[Gemm.scala 119:22]
-    node _T_6549 = asSInt(io.wgt.bits[12][0]) @[Gemm.scala 120:43]
-    dot_12.io.b[0] <= _T_6549 @[Gemm.scala 120:22]
-    node _T_6550 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 119:43]
-    dot_12.io.a[1] <= _T_6550 @[Gemm.scala 119:22]
-    node _T_6551 = asSInt(io.wgt.bits[12][1]) @[Gemm.scala 120:43]
-    dot_12.io.b[1] <= _T_6551 @[Gemm.scala 120:22]
-    node _T_6552 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 119:43]
-    dot_12.io.a[2] <= _T_6552 @[Gemm.scala 119:22]
-    node _T_6553 = asSInt(io.wgt.bits[12][2]) @[Gemm.scala 120:43]
-    dot_12.io.b[2] <= _T_6553 @[Gemm.scala 120:22]
-    node _T_6554 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 119:43]
-    dot_12.io.a[3] <= _T_6554 @[Gemm.scala 119:22]
-    node _T_6555 = asSInt(io.wgt.bits[12][3]) @[Gemm.scala 120:43]
-    dot_12.io.b[3] <= _T_6555 @[Gemm.scala 120:22]
-    node _T_6556 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 119:43]
-    dot_12.io.a[4] <= _T_6556 @[Gemm.scala 119:22]
-    node _T_6557 = asSInt(io.wgt.bits[12][4]) @[Gemm.scala 120:43]
-    dot_12.io.b[4] <= _T_6557 @[Gemm.scala 120:22]
-    node _T_6558 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 119:43]
-    dot_12.io.a[5] <= _T_6558 @[Gemm.scala 119:22]
-    node _T_6559 = asSInt(io.wgt.bits[12][5]) @[Gemm.scala 120:43]
-    dot_12.io.b[5] <= _T_6559 @[Gemm.scala 120:22]
-    node _T_6560 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 119:43]
-    dot_12.io.a[6] <= _T_6560 @[Gemm.scala 119:22]
-    node _T_6561 = asSInt(io.wgt.bits[12][6]) @[Gemm.scala 120:43]
-    dot_12.io.b[6] <= _T_6561 @[Gemm.scala 120:22]
-    node _T_6562 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 119:43]
-    dot_12.io.a[7] <= _T_6562 @[Gemm.scala 119:22]
-    node _T_6563 = asSInt(io.wgt.bits[12][7]) @[Gemm.scala 120:43]
-    dot_12.io.b[7] <= _T_6563 @[Gemm.scala 120:22]
-    node _T_6564 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 119:43]
-    dot_12.io.a[8] <= _T_6564 @[Gemm.scala 119:22]
-    node _T_6565 = asSInt(io.wgt.bits[12][8]) @[Gemm.scala 120:43]
-    dot_12.io.b[8] <= _T_6565 @[Gemm.scala 120:22]
-    node _T_6566 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 119:43]
-    dot_12.io.a[9] <= _T_6566 @[Gemm.scala 119:22]
-    node _T_6567 = asSInt(io.wgt.bits[12][9]) @[Gemm.scala 120:43]
-    dot_12.io.b[9] <= _T_6567 @[Gemm.scala 120:22]
-    node _T_6568 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 119:43]
-    dot_12.io.a[10] <= _T_6568 @[Gemm.scala 119:22]
-    node _T_6569 = asSInt(io.wgt.bits[12][10]) @[Gemm.scala 120:43]
-    dot_12.io.b[10] <= _T_6569 @[Gemm.scala 120:22]
-    node _T_6570 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 119:43]
-    dot_12.io.a[11] <= _T_6570 @[Gemm.scala 119:22]
-    node _T_6571 = asSInt(io.wgt.bits[12][11]) @[Gemm.scala 120:43]
-    dot_12.io.b[11] <= _T_6571 @[Gemm.scala 120:22]
-    node _T_6572 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 119:43]
-    dot_12.io.a[12] <= _T_6572 @[Gemm.scala 119:22]
-    node _T_6573 = asSInt(io.wgt.bits[12][12]) @[Gemm.scala 120:43]
-    dot_12.io.b[12] <= _T_6573 @[Gemm.scala 120:22]
-    node _T_6574 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 119:43]
-    dot_12.io.a[13] <= _T_6574 @[Gemm.scala 119:22]
-    node _T_6575 = asSInt(io.wgt.bits[12][13]) @[Gemm.scala 120:43]
-    dot_12.io.b[13] <= _T_6575 @[Gemm.scala 120:22]
-    node _T_6576 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 119:43]
-    dot_12.io.a[14] <= _T_6576 @[Gemm.scala 119:22]
-    node _T_6577 = asSInt(io.wgt.bits[12][14]) @[Gemm.scala 120:43]
-    dot_12.io.b[14] <= _T_6577 @[Gemm.scala 120:22]
-    node _T_6578 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 119:43]
-    dot_12.io.a[15] <= _T_6578 @[Gemm.scala 119:22]
-    node _T_6579 = asSInt(io.wgt.bits[12][15]) @[Gemm.scala 120:43]
-    dot_12.io.b[15] <= _T_6579 @[Gemm.scala 120:22]
-    node _T_6580 = asSInt(acc_12.io.deq.bits) @[Gemm.scala 122:34]
-    node _T_6581 = add(_T_6580, dot_12.io.y) @[Gemm.scala 122:41]
-    node _T_6582 = tail(_T_6581, 1) @[Gemm.scala 122:41]
-    node _T_6583 = asSInt(_T_6582) @[Gemm.scala 122:41]
-    add_12 <= _T_6583 @[Gemm.scala 122:12]
-    node _T_6585 = asUInt(add_12) @[Gemm.scala 123:54]
-    node _T_6586 = mux(io.reset, UInt<1>("h00"), _T_6585) @[Gemm.scala 123:31]
-    io.acc_o.bits[0][12] <= _T_6586 @[Gemm.scala 123:25]
-    node _T_6587 = asUInt(add_12) @[Gemm.scala 124:33]
-    io.out.bits[0][12] <= _T_6587 @[Gemm.scala 124:23]
-    vld[12] <= acc_12.io.deq.valid @[Gemm.scala 125:12]
-    node _T_6588 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 116:41]
-    node _T_6589 = and(_T_6588, io.acc_i.valid) @[Gemm.scala 116:56]
-    node _T_6590 = not(io.reset) @[Gemm.scala 116:75]
-    node _T_6591 = and(_T_6589, _T_6590) @[Gemm.scala 116:73]
-    acc_13.io.enq.valid <= _T_6591 @[Gemm.scala 116:25]
-    acc_13.io.enq.bits <= io.acc_i.bits[0][13] @[Gemm.scala 117:24]
-    node _T_6592 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 119:43]
-    dot_13.io.a[0] <= _T_6592 @[Gemm.scala 119:22]
-    node _T_6593 = asSInt(io.wgt.bits[13][0]) @[Gemm.scala 120:43]
-    dot_13.io.b[0] <= _T_6593 @[Gemm.scala 120:22]
-    node _T_6594 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 119:43]
-    dot_13.io.a[1] <= _T_6594 @[Gemm.scala 119:22]
-    node _T_6595 = asSInt(io.wgt.bits[13][1]) @[Gemm.scala 120:43]
-    dot_13.io.b[1] <= _T_6595 @[Gemm.scala 120:22]
-    node _T_6596 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 119:43]
-    dot_13.io.a[2] <= _T_6596 @[Gemm.scala 119:22]
-    node _T_6597 = asSInt(io.wgt.bits[13][2]) @[Gemm.scala 120:43]
-    dot_13.io.b[2] <= _T_6597 @[Gemm.scala 120:22]
-    node _T_6598 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 119:43]
-    dot_13.io.a[3] <= _T_6598 @[Gemm.scala 119:22]
-    node _T_6599 = asSInt(io.wgt.bits[13][3]) @[Gemm.scala 120:43]
-    dot_13.io.b[3] <= _T_6599 @[Gemm.scala 120:22]
-    node _T_6600 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 119:43]
-    dot_13.io.a[4] <= _T_6600 @[Gemm.scala 119:22]
-    node _T_6601 = asSInt(io.wgt.bits[13][4]) @[Gemm.scala 120:43]
-    dot_13.io.b[4] <= _T_6601 @[Gemm.scala 120:22]
-    node _T_6602 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 119:43]
-    dot_13.io.a[5] <= _T_6602 @[Gemm.scala 119:22]
-    node _T_6603 = asSInt(io.wgt.bits[13][5]) @[Gemm.scala 120:43]
-    dot_13.io.b[5] <= _T_6603 @[Gemm.scala 120:22]
-    node _T_6604 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 119:43]
-    dot_13.io.a[6] <= _T_6604 @[Gemm.scala 119:22]
-    node _T_6605 = asSInt(io.wgt.bits[13][6]) @[Gemm.scala 120:43]
-    dot_13.io.b[6] <= _T_6605 @[Gemm.scala 120:22]
-    node _T_6606 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 119:43]
-    dot_13.io.a[7] <= _T_6606 @[Gemm.scala 119:22]
-    node _T_6607 = asSInt(io.wgt.bits[13][7]) @[Gemm.scala 120:43]
-    dot_13.io.b[7] <= _T_6607 @[Gemm.scala 120:22]
-    node _T_6608 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 119:43]
-    dot_13.io.a[8] <= _T_6608 @[Gemm.scala 119:22]
-    node _T_6609 = asSInt(io.wgt.bits[13][8]) @[Gemm.scala 120:43]
-    dot_13.io.b[8] <= _T_6609 @[Gemm.scala 120:22]
-    node _T_6610 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 119:43]
-    dot_13.io.a[9] <= _T_6610 @[Gemm.scala 119:22]
-    node _T_6611 = asSInt(io.wgt.bits[13][9]) @[Gemm.scala 120:43]
-    dot_13.io.b[9] <= _T_6611 @[Gemm.scala 120:22]
-    node _T_6612 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 119:43]
-    dot_13.io.a[10] <= _T_6612 @[Gemm.scala 119:22]
-    node _T_6613 = asSInt(io.wgt.bits[13][10]) @[Gemm.scala 120:43]
-    dot_13.io.b[10] <= _T_6613 @[Gemm.scala 120:22]
-    node _T_6614 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 119:43]
-    dot_13.io.a[11] <= _T_6614 @[Gemm.scala 119:22]
-    node _T_6615 = asSInt(io.wgt.bits[13][11]) @[Gemm.scala 120:43]
-    dot_13.io.b[11] <= _T_6615 @[Gemm.scala 120:22]
-    node _T_6616 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 119:43]
-    dot_13.io.a[12] <= _T_6616 @[Gemm.scala 119:22]
-    node _T_6617 = asSInt(io.wgt.bits[13][12]) @[Gemm.scala 120:43]
-    dot_13.io.b[12] <= _T_6617 @[Gemm.scala 120:22]
-    node _T_6618 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 119:43]
-    dot_13.io.a[13] <= _T_6618 @[Gemm.scala 119:22]
-    node _T_6619 = asSInt(io.wgt.bits[13][13]) @[Gemm.scala 120:43]
-    dot_13.io.b[13] <= _T_6619 @[Gemm.scala 120:22]
-    node _T_6620 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 119:43]
-    dot_13.io.a[14] <= _T_6620 @[Gemm.scala 119:22]
-    node _T_6621 = asSInt(io.wgt.bits[13][14]) @[Gemm.scala 120:43]
-    dot_13.io.b[14] <= _T_6621 @[Gemm.scala 120:22]
-    node _T_6622 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 119:43]
-    dot_13.io.a[15] <= _T_6622 @[Gemm.scala 119:22]
-    node _T_6623 = asSInt(io.wgt.bits[13][15]) @[Gemm.scala 120:43]
-    dot_13.io.b[15] <= _T_6623 @[Gemm.scala 120:22]
-    node _T_6624 = asSInt(acc_13.io.deq.bits) @[Gemm.scala 122:34]
-    node _T_6625 = add(_T_6624, dot_13.io.y) @[Gemm.scala 122:41]
-    node _T_6626 = tail(_T_6625, 1) @[Gemm.scala 122:41]
-    node _T_6627 = asSInt(_T_6626) @[Gemm.scala 122:41]
-    add_13 <= _T_6627 @[Gemm.scala 122:12]
-    node _T_6629 = asUInt(add_13) @[Gemm.scala 123:54]
-    node _T_6630 = mux(io.reset, UInt<1>("h00"), _T_6629) @[Gemm.scala 123:31]
-    io.acc_o.bits[0][13] <= _T_6630 @[Gemm.scala 123:25]
-    node _T_6631 = asUInt(add_13) @[Gemm.scala 124:33]
-    io.out.bits[0][13] <= _T_6631 @[Gemm.scala 124:23]
-    vld[13] <= acc_13.io.deq.valid @[Gemm.scala 125:12]
-    node _T_6632 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 116:41]
-    node _T_6633 = and(_T_6632, io.acc_i.valid) @[Gemm.scala 116:56]
-    node _T_6634 = not(io.reset) @[Gemm.scala 116:75]
-    node _T_6635 = and(_T_6633, _T_6634) @[Gemm.scala 116:73]
-    acc_14.io.enq.valid <= _T_6635 @[Gemm.scala 116:25]
-    acc_14.io.enq.bits <= io.acc_i.bits[0][14] @[Gemm.scala 117:24]
-    node _T_6636 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 119:43]
-    dot_14.io.a[0] <= _T_6636 @[Gemm.scala 119:22]
-    node _T_6637 = asSInt(io.wgt.bits[14][0]) @[Gemm.scala 120:43]
-    dot_14.io.b[0] <= _T_6637 @[Gemm.scala 120:22]
-    node _T_6638 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 119:43]
-    dot_14.io.a[1] <= _T_6638 @[Gemm.scala 119:22]
-    node _T_6639 = asSInt(io.wgt.bits[14][1]) @[Gemm.scala 120:43]
-    dot_14.io.b[1] <= _T_6639 @[Gemm.scala 120:22]
-    node _T_6640 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 119:43]
-    dot_14.io.a[2] <= _T_6640 @[Gemm.scala 119:22]
-    node _T_6641 = asSInt(io.wgt.bits[14][2]) @[Gemm.scala 120:43]
-    dot_14.io.b[2] <= _T_6641 @[Gemm.scala 120:22]
-    node _T_6642 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 119:43]
-    dot_14.io.a[3] <= _T_6642 @[Gemm.scala 119:22]
-    node _T_6643 = asSInt(io.wgt.bits[14][3]) @[Gemm.scala 120:43]
-    dot_14.io.b[3] <= _T_6643 @[Gemm.scala 120:22]
-    node _T_6644 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 119:43]
-    dot_14.io.a[4] <= _T_6644 @[Gemm.scala 119:22]
-    node _T_6645 = asSInt(io.wgt.bits[14][4]) @[Gemm.scala 120:43]
-    dot_14.io.b[4] <= _T_6645 @[Gemm.scala 120:22]
-    node _T_6646 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 119:43]
-    dot_14.io.a[5] <= _T_6646 @[Gemm.scala 119:22]
-    node _T_6647 = asSInt(io.wgt.bits[14][5]) @[Gemm.scala 120:43]
-    dot_14.io.b[5] <= _T_6647 @[Gemm.scala 120:22]
-    node _T_6648 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 119:43]
-    dot_14.io.a[6] <= _T_6648 @[Gemm.scala 119:22]
-    node _T_6649 = asSInt(io.wgt.bits[14][6]) @[Gemm.scala 120:43]
-    dot_14.io.b[6] <= _T_6649 @[Gemm.scala 120:22]
-    node _T_6650 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 119:43]
-    dot_14.io.a[7] <= _T_6650 @[Gemm.scala 119:22]
-    node _T_6651 = asSInt(io.wgt.bits[14][7]) @[Gemm.scala 120:43]
-    dot_14.io.b[7] <= _T_6651 @[Gemm.scala 120:22]
-    node _T_6652 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 119:43]
-    dot_14.io.a[8] <= _T_6652 @[Gemm.scala 119:22]
-    node _T_6653 = asSInt(io.wgt.bits[14][8]) @[Gemm.scala 120:43]
-    dot_14.io.b[8] <= _T_6653 @[Gemm.scala 120:22]
-    node _T_6654 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 119:43]
-    dot_14.io.a[9] <= _T_6654 @[Gemm.scala 119:22]
-    node _T_6655 = asSInt(io.wgt.bits[14][9]) @[Gemm.scala 120:43]
-    dot_14.io.b[9] <= _T_6655 @[Gemm.scala 120:22]
-    node _T_6656 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 119:43]
-    dot_14.io.a[10] <= _T_6656 @[Gemm.scala 119:22]
-    node _T_6657 = asSInt(io.wgt.bits[14][10]) @[Gemm.scala 120:43]
-    dot_14.io.b[10] <= _T_6657 @[Gemm.scala 120:22]
-    node _T_6658 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 119:43]
-    dot_14.io.a[11] <= _T_6658 @[Gemm.scala 119:22]
-    node _T_6659 = asSInt(io.wgt.bits[14][11]) @[Gemm.scala 120:43]
-    dot_14.io.b[11] <= _T_6659 @[Gemm.scala 120:22]
-    node _T_6660 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 119:43]
-    dot_14.io.a[12] <= _T_6660 @[Gemm.scala 119:22]
-    node _T_6661 = asSInt(io.wgt.bits[14][12]) @[Gemm.scala 120:43]
-    dot_14.io.b[12] <= _T_6661 @[Gemm.scala 120:22]
-    node _T_6662 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 119:43]
-    dot_14.io.a[13] <= _T_6662 @[Gemm.scala 119:22]
-    node _T_6663 = asSInt(io.wgt.bits[14][13]) @[Gemm.scala 120:43]
-    dot_14.io.b[13] <= _T_6663 @[Gemm.scala 120:22]
-    node _T_6664 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 119:43]
-    dot_14.io.a[14] <= _T_6664 @[Gemm.scala 119:22]
-    node _T_6665 = asSInt(io.wgt.bits[14][14]) @[Gemm.scala 120:43]
-    dot_14.io.b[14] <= _T_6665 @[Gemm.scala 120:22]
-    node _T_6666 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 119:43]
-    dot_14.io.a[15] <= _T_6666 @[Gemm.scala 119:22]
-    node _T_6667 = asSInt(io.wgt.bits[14][15]) @[Gemm.scala 120:43]
-    dot_14.io.b[15] <= _T_6667 @[Gemm.scala 120:22]
-    node _T_6668 = asSInt(acc_14.io.deq.bits) @[Gemm.scala 122:34]
-    node _T_6669 = add(_T_6668, dot_14.io.y) @[Gemm.scala 122:41]
-    node _T_6670 = tail(_T_6669, 1) @[Gemm.scala 122:41]
-    node _T_6671 = asSInt(_T_6670) @[Gemm.scala 122:41]
-    add_14 <= _T_6671 @[Gemm.scala 122:12]
-    node _T_6673 = asUInt(add_14) @[Gemm.scala 123:54]
-    node _T_6674 = mux(io.reset, UInt<1>("h00"), _T_6673) @[Gemm.scala 123:31]
-    io.acc_o.bits[0][14] <= _T_6674 @[Gemm.scala 123:25]
-    node _T_6675 = asUInt(add_14) @[Gemm.scala 124:33]
-    io.out.bits[0][14] <= _T_6675 @[Gemm.scala 124:23]
-    vld[14] <= acc_14.io.deq.valid @[Gemm.scala 125:12]
-    node _T_6676 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 116:41]
-    node _T_6677 = and(_T_6676, io.acc_i.valid) @[Gemm.scala 116:56]
-    node _T_6678 = not(io.reset) @[Gemm.scala 116:75]
-    node _T_6679 = and(_T_6677, _T_6678) @[Gemm.scala 116:73]
-    acc_15.io.enq.valid <= _T_6679 @[Gemm.scala 116:25]
-    acc_15.io.enq.bits <= io.acc_i.bits[0][15] @[Gemm.scala 117:24]
-    node _T_6680 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 119:43]
-    dot_15.io.a[0] <= _T_6680 @[Gemm.scala 119:22]
-    node _T_6681 = asSInt(io.wgt.bits[15][0]) @[Gemm.scala 120:43]
-    dot_15.io.b[0] <= _T_6681 @[Gemm.scala 120:22]
-    node _T_6682 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 119:43]
-    dot_15.io.a[1] <= _T_6682 @[Gemm.scala 119:22]
-    node _T_6683 = asSInt(io.wgt.bits[15][1]) @[Gemm.scala 120:43]
-    dot_15.io.b[1] <= _T_6683 @[Gemm.scala 120:22]
-    node _T_6684 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 119:43]
-    dot_15.io.a[2] <= _T_6684 @[Gemm.scala 119:22]
-    node _T_6685 = asSInt(io.wgt.bits[15][2]) @[Gemm.scala 120:43]
-    dot_15.io.b[2] <= _T_6685 @[Gemm.scala 120:22]
-    node _T_6686 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 119:43]
-    dot_15.io.a[3] <= _T_6686 @[Gemm.scala 119:22]
-    node _T_6687 = asSInt(io.wgt.bits[15][3]) @[Gemm.scala 120:43]
-    dot_15.io.b[3] <= _T_6687 @[Gemm.scala 120:22]
-    node _T_6688 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 119:43]
-    dot_15.io.a[4] <= _T_6688 @[Gemm.scala 119:22]
-    node _T_6689 = asSInt(io.wgt.bits[15][4]) @[Gemm.scala 120:43]
-    dot_15.io.b[4] <= _T_6689 @[Gemm.scala 120:22]
-    node _T_6690 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 119:43]
-    dot_15.io.a[5] <= _T_6690 @[Gemm.scala 119:22]
-    node _T_6691 = asSInt(io.wgt.bits[15][5]) @[Gemm.scala 120:43]
-    dot_15.io.b[5] <= _T_6691 @[Gemm.scala 120:22]
-    node _T_6692 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 119:43]
-    dot_15.io.a[6] <= _T_6692 @[Gemm.scala 119:22]
-    node _T_6693 = asSInt(io.wgt.bits[15][6]) @[Gemm.scala 120:43]
-    dot_15.io.b[6] <= _T_6693 @[Gemm.scala 120:22]
-    node _T_6694 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 119:43]
-    dot_15.io.a[7] <= _T_6694 @[Gemm.scala 119:22]
-    node _T_6695 = asSInt(io.wgt.bits[15][7]) @[Gemm.scala 120:43]
-    dot_15.io.b[7] <= _T_6695 @[Gemm.scala 120:22]
-    node _T_6696 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 119:43]
-    dot_15.io.a[8] <= _T_6696 @[Gemm.scala 119:22]
-    node _T_6697 = asSInt(io.wgt.bits[15][8]) @[Gemm.scala 120:43]
-    dot_15.io.b[8] <= _T_6697 @[Gemm.scala 120:22]
-    node _T_6698 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 119:43]
-    dot_15.io.a[9] <= _T_6698 @[Gemm.scala 119:22]
-    node _T_6699 = asSInt(io.wgt.bits[15][9]) @[Gemm.scala 120:43]
-    dot_15.io.b[9] <= _T_6699 @[Gemm.scala 120:22]
-    node _T_6700 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 119:43]
-    dot_15.io.a[10] <= _T_6700 @[Gemm.scala 119:22]
-    node _T_6701 = asSInt(io.wgt.bits[15][10]) @[Gemm.scala 120:43]
-    dot_15.io.b[10] <= _T_6701 @[Gemm.scala 120:22]
-    node _T_6702 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 119:43]
-    dot_15.io.a[11] <= _T_6702 @[Gemm.scala 119:22]
-    node _T_6703 = asSInt(io.wgt.bits[15][11]) @[Gemm.scala 120:43]
-    dot_15.io.b[11] <= _T_6703 @[Gemm.scala 120:22]
-    node _T_6704 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 119:43]
-    dot_15.io.a[12] <= _T_6704 @[Gemm.scala 119:22]
-    node _T_6705 = asSInt(io.wgt.bits[15][12]) @[Gemm.scala 120:43]
-    dot_15.io.b[12] <= _T_6705 @[Gemm.scala 120:22]
-    node _T_6706 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 119:43]
-    dot_15.io.a[13] <= _T_6706 @[Gemm.scala 119:22]
-    node _T_6707 = asSInt(io.wgt.bits[15][13]) @[Gemm.scala 120:43]
-    dot_15.io.b[13] <= _T_6707 @[Gemm.scala 120:22]
-    node _T_6708 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 119:43]
-    dot_15.io.a[14] <= _T_6708 @[Gemm.scala 119:22]
-    node _T_6709 = asSInt(io.wgt.bits[15][14]) @[Gemm.scala 120:43]
-    dot_15.io.b[14] <= _T_6709 @[Gemm.scala 120:22]
-    node _T_6710 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 119:43]
-    dot_15.io.a[15] <= _T_6710 @[Gemm.scala 119:22]
-    node _T_6711 = asSInt(io.wgt.bits[15][15]) @[Gemm.scala 120:43]
-    dot_15.io.b[15] <= _T_6711 @[Gemm.scala 120:22]
-    node _T_6712 = asSInt(acc_15.io.deq.bits) @[Gemm.scala 122:34]
-    node _T_6713 = add(_T_6712, dot_15.io.y) @[Gemm.scala 122:41]
-    node _T_6714 = tail(_T_6713, 1) @[Gemm.scala 122:41]
-    node _T_6715 = asSInt(_T_6714) @[Gemm.scala 122:41]
-    add_15 <= _T_6715 @[Gemm.scala 122:12]
-    node _T_6717 = asUInt(add_15) @[Gemm.scala 123:54]
-    node _T_6718 = mux(io.reset, UInt<1>("h00"), _T_6717) @[Gemm.scala 123:31]
-    io.acc_o.bits[0][15] <= _T_6718 @[Gemm.scala 123:25]
-    node _T_6719 = asUInt(add_15) @[Gemm.scala 124:33]
-    io.out.bits[0][15] <= _T_6719 @[Gemm.scala 124:23]
-    vld[15] <= acc_15.io.deq.valid @[Gemm.scala 125:12]
-    node _T_6720 = cat(vld[1], vld[0]) @[Gemm.scala 127:25]
-    node _T_6721 = cat(vld[3], vld[2]) @[Gemm.scala 127:25]
-    node _T_6722 = cat(_T_6721, _T_6720) @[Gemm.scala 127:25]
-    node _T_6723 = cat(vld[5], vld[4]) @[Gemm.scala 127:25]
-    node _T_6724 = cat(vld[7], vld[6]) @[Gemm.scala 127:25]
-    node _T_6725 = cat(_T_6724, _T_6723) @[Gemm.scala 127:25]
-    node _T_6726 = cat(_T_6725, _T_6722) @[Gemm.scala 127:25]
-    node _T_6727 = cat(vld[9], vld[8]) @[Gemm.scala 127:25]
-    node _T_6728 = cat(vld[11], vld[10]) @[Gemm.scala 127:25]
-    node _T_6729 = cat(_T_6728, _T_6727) @[Gemm.scala 127:25]
-    node _T_6730 = cat(vld[13], vld[12]) @[Gemm.scala 127:25]
-    node _T_6731 = cat(vld[15], vld[14]) @[Gemm.scala 127:25]
-    node _T_6732 = cat(_T_6731, _T_6730) @[Gemm.scala 127:25]
-    node _T_6733 = cat(_T_6732, _T_6729) @[Gemm.scala 127:25]
-    node _T_6734 = cat(_T_6733, _T_6726) @[Gemm.scala 127:25]
-    node _T_6735 = not(_T_6734) @[Gemm.scala 127:32]
-    node _T_6737 = eq(_T_6735, UInt<1>("h00")) @[Gemm.scala 127:32]
-    node _T_6738 = or(_T_6737, io.reset) @[Gemm.scala 127:37]
-    io.acc_o.valid <= _T_6738 @[Gemm.scala 127:18]
-    node _T_6739 = cat(vld[1], vld[0]) @[Gemm.scala 128:23]
-    node _T_6740 = cat(vld[3], vld[2]) @[Gemm.scala 128:23]
-    node _T_6741 = cat(_T_6740, _T_6739) @[Gemm.scala 128:23]
-    node _T_6742 = cat(vld[5], vld[4]) @[Gemm.scala 128:23]
-    node _T_6743 = cat(vld[7], vld[6]) @[Gemm.scala 128:23]
-    node _T_6744 = cat(_T_6743, _T_6742) @[Gemm.scala 128:23]
-    node _T_6745 = cat(_T_6744, _T_6741) @[Gemm.scala 128:23]
-    node _T_6746 = cat(vld[9], vld[8]) @[Gemm.scala 128:23]
-    node _T_6747 = cat(vld[11], vld[10]) @[Gemm.scala 128:23]
-    node _T_6748 = cat(_T_6747, _T_6746) @[Gemm.scala 128:23]
-    node _T_6749 = cat(vld[13], vld[12]) @[Gemm.scala 128:23]
-    node _T_6750 = cat(vld[15], vld[14]) @[Gemm.scala 128:23]
-    node _T_6751 = cat(_T_6750, _T_6749) @[Gemm.scala 128:23]
-    node _T_6752 = cat(_T_6751, _T_6748) @[Gemm.scala 128:23]
-    node _T_6753 = cat(_T_6752, _T_6745) @[Gemm.scala 128:23]
-    node _T_6754 = not(_T_6753) @[Gemm.scala 128:30]
-    node _T_6756 = eq(_T_6754, UInt<1>("h00")) @[Gemm.scala 128:30]
-    io.out.valid <= _T_6756 @[Gemm.scala 128:16]
+    wire add_0 : SInt<32> @[Gemm.scala 98:32]
+    wire add_1 : SInt<32> @[Gemm.scala 98:32]
+    wire add_2 : SInt<32> @[Gemm.scala 98:32]
+    wire add_3 : SInt<32> @[Gemm.scala 98:32]
+    wire add_4 : SInt<32> @[Gemm.scala 98:32]
+    wire add_5 : SInt<32> @[Gemm.scala 98:32]
+    wire add_6 : SInt<32> @[Gemm.scala 98:32]
+    wire add_7 : SInt<32> @[Gemm.scala 98:32]
+    wire add_8 : SInt<32> @[Gemm.scala 98:32]
+    wire add_9 : SInt<32> @[Gemm.scala 98:32]
+    wire add_10 : SInt<32> @[Gemm.scala 98:32]
+    wire add_11 : SInt<32> @[Gemm.scala 98:32]
+    wire add_12 : SInt<32> @[Gemm.scala 98:32]
+    wire add_13 : SInt<32> @[Gemm.scala 98:32]
+    wire add_14 : SInt<32> @[Gemm.scala 98:32]
+    wire add_15 : SInt<32> @[Gemm.scala 98:32]
+    wire vld : UInt<1>[16] @[Gemm.scala 99:17]
+    node _T_6016 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 102:41]
+    node _T_6017 = and(_T_6016, io.acc_i.valid) @[Gemm.scala 102:56]
+    node _T_6018 = not(io.reset) @[Gemm.scala 102:75]
+    node _T_6019 = and(_T_6017, _T_6018) @[Gemm.scala 102:73]
+    acc_0.io.enq.valid <= _T_6019 @[Gemm.scala 102:25]
+    acc_0.io.enq.bits <= io.acc_i.bits[0][0] @[Gemm.scala 103:24]
+    node _T_6020 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 105:43]
+    dot_0.io.a[0] <= _T_6020 @[Gemm.scala 105:22]
+    node _T_6021 = asSInt(io.wgt.bits[0][0]) @[Gemm.scala 106:43]
+    dot_0.io.b[0] <= _T_6021 @[Gemm.scala 106:22]
+    node _T_6022 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 105:43]
+    dot_0.io.a[1] <= _T_6022 @[Gemm.scala 105:22]
+    node _T_6023 = asSInt(io.wgt.bits[0][1]) @[Gemm.scala 106:43]
+    dot_0.io.b[1] <= _T_6023 @[Gemm.scala 106:22]
+    node _T_6024 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 105:43]
+    dot_0.io.a[2] <= _T_6024 @[Gemm.scala 105:22]
+    node _T_6025 = asSInt(io.wgt.bits[0][2]) @[Gemm.scala 106:43]
+    dot_0.io.b[2] <= _T_6025 @[Gemm.scala 106:22]
+    node _T_6026 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 105:43]
+    dot_0.io.a[3] <= _T_6026 @[Gemm.scala 105:22]
+    node _T_6027 = asSInt(io.wgt.bits[0][3]) @[Gemm.scala 106:43]
+    dot_0.io.b[3] <= _T_6027 @[Gemm.scala 106:22]
+    node _T_6028 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 105:43]
+    dot_0.io.a[4] <= _T_6028 @[Gemm.scala 105:22]
+    node _T_6029 = asSInt(io.wgt.bits[0][4]) @[Gemm.scala 106:43]
+    dot_0.io.b[4] <= _T_6029 @[Gemm.scala 106:22]
+    node _T_6030 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 105:43]
+    dot_0.io.a[5] <= _T_6030 @[Gemm.scala 105:22]
+    node _T_6031 = asSInt(io.wgt.bits[0][5]) @[Gemm.scala 106:43]
+    dot_0.io.b[5] <= _T_6031 @[Gemm.scala 106:22]
+    node _T_6032 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 105:43]
+    dot_0.io.a[6] <= _T_6032 @[Gemm.scala 105:22]
+    node _T_6033 = asSInt(io.wgt.bits[0][6]) @[Gemm.scala 106:43]
+    dot_0.io.b[6] <= _T_6033 @[Gemm.scala 106:22]
+    node _T_6034 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 105:43]
+    dot_0.io.a[7] <= _T_6034 @[Gemm.scala 105:22]
+    node _T_6035 = asSInt(io.wgt.bits[0][7]) @[Gemm.scala 106:43]
+    dot_0.io.b[7] <= _T_6035 @[Gemm.scala 106:22]
+    node _T_6036 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 105:43]
+    dot_0.io.a[8] <= _T_6036 @[Gemm.scala 105:22]
+    node _T_6037 = asSInt(io.wgt.bits[0][8]) @[Gemm.scala 106:43]
+    dot_0.io.b[8] <= _T_6037 @[Gemm.scala 106:22]
+    node _T_6038 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 105:43]
+    dot_0.io.a[9] <= _T_6038 @[Gemm.scala 105:22]
+    node _T_6039 = asSInt(io.wgt.bits[0][9]) @[Gemm.scala 106:43]
+    dot_0.io.b[9] <= _T_6039 @[Gemm.scala 106:22]
+    node _T_6040 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 105:43]
+    dot_0.io.a[10] <= _T_6040 @[Gemm.scala 105:22]
+    node _T_6041 = asSInt(io.wgt.bits[0][10]) @[Gemm.scala 106:43]
+    dot_0.io.b[10] <= _T_6041 @[Gemm.scala 106:22]
+    node _T_6042 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 105:43]
+    dot_0.io.a[11] <= _T_6042 @[Gemm.scala 105:22]
+    node _T_6043 = asSInt(io.wgt.bits[0][11]) @[Gemm.scala 106:43]
+    dot_0.io.b[11] <= _T_6043 @[Gemm.scala 106:22]
+    node _T_6044 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 105:43]
+    dot_0.io.a[12] <= _T_6044 @[Gemm.scala 105:22]
+    node _T_6045 = asSInt(io.wgt.bits[0][12]) @[Gemm.scala 106:43]
+    dot_0.io.b[12] <= _T_6045 @[Gemm.scala 106:22]
+    node _T_6046 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 105:43]
+    dot_0.io.a[13] <= _T_6046 @[Gemm.scala 105:22]
+    node _T_6047 = asSInt(io.wgt.bits[0][13]) @[Gemm.scala 106:43]
+    dot_0.io.b[13] <= _T_6047 @[Gemm.scala 106:22]
+    node _T_6048 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 105:43]
+    dot_0.io.a[14] <= _T_6048 @[Gemm.scala 105:22]
+    node _T_6049 = asSInt(io.wgt.bits[0][14]) @[Gemm.scala 106:43]
+    dot_0.io.b[14] <= _T_6049 @[Gemm.scala 106:22]
+    node _T_6050 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 105:43]
+    dot_0.io.a[15] <= _T_6050 @[Gemm.scala 105:22]
+    node _T_6051 = asSInt(io.wgt.bits[0][15]) @[Gemm.scala 106:43]
+    dot_0.io.b[15] <= _T_6051 @[Gemm.scala 106:22]
+    node _T_6052 = asSInt(acc_0.io.deq.bits) @[Gemm.scala 108:34]
+    node _T_6053 = add(_T_6052, dot_0.io.y) @[Gemm.scala 108:41]
+    node _T_6054 = tail(_T_6053, 1) @[Gemm.scala 108:41]
+    node _T_6055 = asSInt(_T_6054) @[Gemm.scala 108:41]
+    add_0 <= _T_6055 @[Gemm.scala 108:12]
+    node _T_6057 = asUInt(add_0) @[Gemm.scala 109:54]
+    node _T_6058 = mux(io.reset, UInt<1>("h00"), _T_6057) @[Gemm.scala 109:31]
+    io.acc_o.bits[0][0] <= _T_6058 @[Gemm.scala 109:25]
+    node _T_6059 = asUInt(add_0) @[Gemm.scala 110:33]
+    io.out.bits[0][0] <= _T_6059 @[Gemm.scala 110:23]
+    vld[0] <= acc_0.io.deq.valid @[Gemm.scala 111:12]
+    node _T_6060 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 102:41]
+    node _T_6061 = and(_T_6060, io.acc_i.valid) @[Gemm.scala 102:56]
+    node _T_6062 = not(io.reset) @[Gemm.scala 102:75]
+    node _T_6063 = and(_T_6061, _T_6062) @[Gemm.scala 102:73]
+    acc_1.io.enq.valid <= _T_6063 @[Gemm.scala 102:25]
+    acc_1.io.enq.bits <= io.acc_i.bits[0][1] @[Gemm.scala 103:24]
+    node _T_6064 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 105:43]
+    dot_1.io.a[0] <= _T_6064 @[Gemm.scala 105:22]
+    node _T_6065 = asSInt(io.wgt.bits[1][0]) @[Gemm.scala 106:43]
+    dot_1.io.b[0] <= _T_6065 @[Gemm.scala 106:22]
+    node _T_6066 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 105:43]
+    dot_1.io.a[1] <= _T_6066 @[Gemm.scala 105:22]
+    node _T_6067 = asSInt(io.wgt.bits[1][1]) @[Gemm.scala 106:43]
+    dot_1.io.b[1] <= _T_6067 @[Gemm.scala 106:22]
+    node _T_6068 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 105:43]
+    dot_1.io.a[2] <= _T_6068 @[Gemm.scala 105:22]
+    node _T_6069 = asSInt(io.wgt.bits[1][2]) @[Gemm.scala 106:43]
+    dot_1.io.b[2] <= _T_6069 @[Gemm.scala 106:22]
+    node _T_6070 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 105:43]
+    dot_1.io.a[3] <= _T_6070 @[Gemm.scala 105:22]
+    node _T_6071 = asSInt(io.wgt.bits[1][3]) @[Gemm.scala 106:43]
+    dot_1.io.b[3] <= _T_6071 @[Gemm.scala 106:22]
+    node _T_6072 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 105:43]
+    dot_1.io.a[4] <= _T_6072 @[Gemm.scala 105:22]
+    node _T_6073 = asSInt(io.wgt.bits[1][4]) @[Gemm.scala 106:43]
+    dot_1.io.b[4] <= _T_6073 @[Gemm.scala 106:22]
+    node _T_6074 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 105:43]
+    dot_1.io.a[5] <= _T_6074 @[Gemm.scala 105:22]
+    node _T_6075 = asSInt(io.wgt.bits[1][5]) @[Gemm.scala 106:43]
+    dot_1.io.b[5] <= _T_6075 @[Gemm.scala 106:22]
+    node _T_6076 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 105:43]
+    dot_1.io.a[6] <= _T_6076 @[Gemm.scala 105:22]
+    node _T_6077 = asSInt(io.wgt.bits[1][6]) @[Gemm.scala 106:43]
+    dot_1.io.b[6] <= _T_6077 @[Gemm.scala 106:22]
+    node _T_6078 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 105:43]
+    dot_1.io.a[7] <= _T_6078 @[Gemm.scala 105:22]
+    node _T_6079 = asSInt(io.wgt.bits[1][7]) @[Gemm.scala 106:43]
+    dot_1.io.b[7] <= _T_6079 @[Gemm.scala 106:22]
+    node _T_6080 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 105:43]
+    dot_1.io.a[8] <= _T_6080 @[Gemm.scala 105:22]
+    node _T_6081 = asSInt(io.wgt.bits[1][8]) @[Gemm.scala 106:43]
+    dot_1.io.b[8] <= _T_6081 @[Gemm.scala 106:22]
+    node _T_6082 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 105:43]
+    dot_1.io.a[9] <= _T_6082 @[Gemm.scala 105:22]
+    node _T_6083 = asSInt(io.wgt.bits[1][9]) @[Gemm.scala 106:43]
+    dot_1.io.b[9] <= _T_6083 @[Gemm.scala 106:22]
+    node _T_6084 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 105:43]
+    dot_1.io.a[10] <= _T_6084 @[Gemm.scala 105:22]
+    node _T_6085 = asSInt(io.wgt.bits[1][10]) @[Gemm.scala 106:43]
+    dot_1.io.b[10] <= _T_6085 @[Gemm.scala 106:22]
+    node _T_6086 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 105:43]
+    dot_1.io.a[11] <= _T_6086 @[Gemm.scala 105:22]
+    node _T_6087 = asSInt(io.wgt.bits[1][11]) @[Gemm.scala 106:43]
+    dot_1.io.b[11] <= _T_6087 @[Gemm.scala 106:22]
+    node _T_6088 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 105:43]
+    dot_1.io.a[12] <= _T_6088 @[Gemm.scala 105:22]
+    node _T_6089 = asSInt(io.wgt.bits[1][12]) @[Gemm.scala 106:43]
+    dot_1.io.b[12] <= _T_6089 @[Gemm.scala 106:22]
+    node _T_6090 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 105:43]
+    dot_1.io.a[13] <= _T_6090 @[Gemm.scala 105:22]
+    node _T_6091 = asSInt(io.wgt.bits[1][13]) @[Gemm.scala 106:43]
+    dot_1.io.b[13] <= _T_6091 @[Gemm.scala 106:22]
+    node _T_6092 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 105:43]
+    dot_1.io.a[14] <= _T_6092 @[Gemm.scala 105:22]
+    node _T_6093 = asSInt(io.wgt.bits[1][14]) @[Gemm.scala 106:43]
+    dot_1.io.b[14] <= _T_6093 @[Gemm.scala 106:22]
+    node _T_6094 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 105:43]
+    dot_1.io.a[15] <= _T_6094 @[Gemm.scala 105:22]
+    node _T_6095 = asSInt(io.wgt.bits[1][15]) @[Gemm.scala 106:43]
+    dot_1.io.b[15] <= _T_6095 @[Gemm.scala 106:22]
+    node _T_6096 = asSInt(acc_1.io.deq.bits) @[Gemm.scala 108:34]
+    node _T_6097 = add(_T_6096, dot_1.io.y) @[Gemm.scala 108:41]
+    node _T_6098 = tail(_T_6097, 1) @[Gemm.scala 108:41]
+    node _T_6099 = asSInt(_T_6098) @[Gemm.scala 108:41]
+    add_1 <= _T_6099 @[Gemm.scala 108:12]
+    node _T_6101 = asUInt(add_1) @[Gemm.scala 109:54]
+    node _T_6102 = mux(io.reset, UInt<1>("h00"), _T_6101) @[Gemm.scala 109:31]
+    io.acc_o.bits[0][1] <= _T_6102 @[Gemm.scala 109:25]
+    node _T_6103 = asUInt(add_1) @[Gemm.scala 110:33]
+    io.out.bits[0][1] <= _T_6103 @[Gemm.scala 110:23]
+    vld[1] <= acc_1.io.deq.valid @[Gemm.scala 111:12]
+    node _T_6104 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 102:41]
+    node _T_6105 = and(_T_6104, io.acc_i.valid) @[Gemm.scala 102:56]
+    node _T_6106 = not(io.reset) @[Gemm.scala 102:75]
+    node _T_6107 = and(_T_6105, _T_6106) @[Gemm.scala 102:73]
+    acc_2.io.enq.valid <= _T_6107 @[Gemm.scala 102:25]
+    acc_2.io.enq.bits <= io.acc_i.bits[0][2] @[Gemm.scala 103:24]
+    node _T_6108 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 105:43]
+    dot_2.io.a[0] <= _T_6108 @[Gemm.scala 105:22]
+    node _T_6109 = asSInt(io.wgt.bits[2][0]) @[Gemm.scala 106:43]
+    dot_2.io.b[0] <= _T_6109 @[Gemm.scala 106:22]
+    node _T_6110 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 105:43]
+    dot_2.io.a[1] <= _T_6110 @[Gemm.scala 105:22]
+    node _T_6111 = asSInt(io.wgt.bits[2][1]) @[Gemm.scala 106:43]
+    dot_2.io.b[1] <= _T_6111 @[Gemm.scala 106:22]
+    node _T_6112 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 105:43]
+    dot_2.io.a[2] <= _T_6112 @[Gemm.scala 105:22]
+    node _T_6113 = asSInt(io.wgt.bits[2][2]) @[Gemm.scala 106:43]
+    dot_2.io.b[2] <= _T_6113 @[Gemm.scala 106:22]
+    node _T_6114 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 105:43]
+    dot_2.io.a[3] <= _T_6114 @[Gemm.scala 105:22]
+    node _T_6115 = asSInt(io.wgt.bits[2][3]) @[Gemm.scala 106:43]
+    dot_2.io.b[3] <= _T_6115 @[Gemm.scala 106:22]
+    node _T_6116 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 105:43]
+    dot_2.io.a[4] <= _T_6116 @[Gemm.scala 105:22]
+    node _T_6117 = asSInt(io.wgt.bits[2][4]) @[Gemm.scala 106:43]
+    dot_2.io.b[4] <= _T_6117 @[Gemm.scala 106:22]
+    node _T_6118 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 105:43]
+    dot_2.io.a[5] <= _T_6118 @[Gemm.scala 105:22]
+    node _T_6119 = asSInt(io.wgt.bits[2][5]) @[Gemm.scala 106:43]
+    dot_2.io.b[5] <= _T_6119 @[Gemm.scala 106:22]
+    node _T_6120 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 105:43]
+    dot_2.io.a[6] <= _T_6120 @[Gemm.scala 105:22]
+    node _T_6121 = asSInt(io.wgt.bits[2][6]) @[Gemm.scala 106:43]
+    dot_2.io.b[6] <= _T_6121 @[Gemm.scala 106:22]
+    node _T_6122 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 105:43]
+    dot_2.io.a[7] <= _T_6122 @[Gemm.scala 105:22]
+    node _T_6123 = asSInt(io.wgt.bits[2][7]) @[Gemm.scala 106:43]
+    dot_2.io.b[7] <= _T_6123 @[Gemm.scala 106:22]
+    node _T_6124 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 105:43]
+    dot_2.io.a[8] <= _T_6124 @[Gemm.scala 105:22]
+    node _T_6125 = asSInt(io.wgt.bits[2][8]) @[Gemm.scala 106:43]
+    dot_2.io.b[8] <= _T_6125 @[Gemm.scala 106:22]
+    node _T_6126 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 105:43]
+    dot_2.io.a[9] <= _T_6126 @[Gemm.scala 105:22]
+    node _T_6127 = asSInt(io.wgt.bits[2][9]) @[Gemm.scala 106:43]
+    dot_2.io.b[9] <= _T_6127 @[Gemm.scala 106:22]
+    node _T_6128 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 105:43]
+    dot_2.io.a[10] <= _T_6128 @[Gemm.scala 105:22]
+    node _T_6129 = asSInt(io.wgt.bits[2][10]) @[Gemm.scala 106:43]
+    dot_2.io.b[10] <= _T_6129 @[Gemm.scala 106:22]
+    node _T_6130 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 105:43]
+    dot_2.io.a[11] <= _T_6130 @[Gemm.scala 105:22]
+    node _T_6131 = asSInt(io.wgt.bits[2][11]) @[Gemm.scala 106:43]
+    dot_2.io.b[11] <= _T_6131 @[Gemm.scala 106:22]
+    node _T_6132 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 105:43]
+    dot_2.io.a[12] <= _T_6132 @[Gemm.scala 105:22]
+    node _T_6133 = asSInt(io.wgt.bits[2][12]) @[Gemm.scala 106:43]
+    dot_2.io.b[12] <= _T_6133 @[Gemm.scala 106:22]
+    node _T_6134 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 105:43]
+    dot_2.io.a[13] <= _T_6134 @[Gemm.scala 105:22]
+    node _T_6135 = asSInt(io.wgt.bits[2][13]) @[Gemm.scala 106:43]
+    dot_2.io.b[13] <= _T_6135 @[Gemm.scala 106:22]
+    node _T_6136 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 105:43]
+    dot_2.io.a[14] <= _T_6136 @[Gemm.scala 105:22]
+    node _T_6137 = asSInt(io.wgt.bits[2][14]) @[Gemm.scala 106:43]
+    dot_2.io.b[14] <= _T_6137 @[Gemm.scala 106:22]
+    node _T_6138 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 105:43]
+    dot_2.io.a[15] <= _T_6138 @[Gemm.scala 105:22]
+    node _T_6139 = asSInt(io.wgt.bits[2][15]) @[Gemm.scala 106:43]
+    dot_2.io.b[15] <= _T_6139 @[Gemm.scala 106:22]
+    node _T_6140 = asSInt(acc_2.io.deq.bits) @[Gemm.scala 108:34]
+    node _T_6141 = add(_T_6140, dot_2.io.y) @[Gemm.scala 108:41]
+    node _T_6142 = tail(_T_6141, 1) @[Gemm.scala 108:41]
+    node _T_6143 = asSInt(_T_6142) @[Gemm.scala 108:41]
+    add_2 <= _T_6143 @[Gemm.scala 108:12]
+    node _T_6145 = asUInt(add_2) @[Gemm.scala 109:54]
+    node _T_6146 = mux(io.reset, UInt<1>("h00"), _T_6145) @[Gemm.scala 109:31]
+    io.acc_o.bits[0][2] <= _T_6146 @[Gemm.scala 109:25]
+    node _T_6147 = asUInt(add_2) @[Gemm.scala 110:33]
+    io.out.bits[0][2] <= _T_6147 @[Gemm.scala 110:23]
+    vld[2] <= acc_2.io.deq.valid @[Gemm.scala 111:12]
+    node _T_6148 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 102:41]
+    node _T_6149 = and(_T_6148, io.acc_i.valid) @[Gemm.scala 102:56]
+    node _T_6150 = not(io.reset) @[Gemm.scala 102:75]
+    node _T_6151 = and(_T_6149, _T_6150) @[Gemm.scala 102:73]
+    acc_3.io.enq.valid <= _T_6151 @[Gemm.scala 102:25]
+    acc_3.io.enq.bits <= io.acc_i.bits[0][3] @[Gemm.scala 103:24]
+    node _T_6152 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 105:43]
+    dot_3.io.a[0] <= _T_6152 @[Gemm.scala 105:22]
+    node _T_6153 = asSInt(io.wgt.bits[3][0]) @[Gemm.scala 106:43]
+    dot_3.io.b[0] <= _T_6153 @[Gemm.scala 106:22]
+    node _T_6154 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 105:43]
+    dot_3.io.a[1] <= _T_6154 @[Gemm.scala 105:22]
+    node _T_6155 = asSInt(io.wgt.bits[3][1]) @[Gemm.scala 106:43]
+    dot_3.io.b[1] <= _T_6155 @[Gemm.scala 106:22]
+    node _T_6156 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 105:43]
+    dot_3.io.a[2] <= _T_6156 @[Gemm.scala 105:22]
+    node _T_6157 = asSInt(io.wgt.bits[3][2]) @[Gemm.scala 106:43]
+    dot_3.io.b[2] <= _T_6157 @[Gemm.scala 106:22]
+    node _T_6158 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 105:43]
+    dot_3.io.a[3] <= _T_6158 @[Gemm.scala 105:22]
+    node _T_6159 = asSInt(io.wgt.bits[3][3]) @[Gemm.scala 106:43]
+    dot_3.io.b[3] <= _T_6159 @[Gemm.scala 106:22]
+    node _T_6160 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 105:43]
+    dot_3.io.a[4] <= _T_6160 @[Gemm.scala 105:22]
+    node _T_6161 = asSInt(io.wgt.bits[3][4]) @[Gemm.scala 106:43]
+    dot_3.io.b[4] <= _T_6161 @[Gemm.scala 106:22]
+    node _T_6162 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 105:43]
+    dot_3.io.a[5] <= _T_6162 @[Gemm.scala 105:22]
+    node _T_6163 = asSInt(io.wgt.bits[3][5]) @[Gemm.scala 106:43]
+    dot_3.io.b[5] <= _T_6163 @[Gemm.scala 106:22]
+    node _T_6164 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 105:43]
+    dot_3.io.a[6] <= _T_6164 @[Gemm.scala 105:22]
+    node _T_6165 = asSInt(io.wgt.bits[3][6]) @[Gemm.scala 106:43]
+    dot_3.io.b[6] <= _T_6165 @[Gemm.scala 106:22]
+    node _T_6166 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 105:43]
+    dot_3.io.a[7] <= _T_6166 @[Gemm.scala 105:22]
+    node _T_6167 = asSInt(io.wgt.bits[3][7]) @[Gemm.scala 106:43]
+    dot_3.io.b[7] <= _T_6167 @[Gemm.scala 106:22]
+    node _T_6168 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 105:43]
+    dot_3.io.a[8] <= _T_6168 @[Gemm.scala 105:22]
+    node _T_6169 = asSInt(io.wgt.bits[3][8]) @[Gemm.scala 106:43]
+    dot_3.io.b[8] <= _T_6169 @[Gemm.scala 106:22]
+    node _T_6170 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 105:43]
+    dot_3.io.a[9] <= _T_6170 @[Gemm.scala 105:22]
+    node _T_6171 = asSInt(io.wgt.bits[3][9]) @[Gemm.scala 106:43]
+    dot_3.io.b[9] <= _T_6171 @[Gemm.scala 106:22]
+    node _T_6172 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 105:43]
+    dot_3.io.a[10] <= _T_6172 @[Gemm.scala 105:22]
+    node _T_6173 = asSInt(io.wgt.bits[3][10]) @[Gemm.scala 106:43]
+    dot_3.io.b[10] <= _T_6173 @[Gemm.scala 106:22]
+    node _T_6174 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 105:43]
+    dot_3.io.a[11] <= _T_6174 @[Gemm.scala 105:22]
+    node _T_6175 = asSInt(io.wgt.bits[3][11]) @[Gemm.scala 106:43]
+    dot_3.io.b[11] <= _T_6175 @[Gemm.scala 106:22]
+    node _T_6176 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 105:43]
+    dot_3.io.a[12] <= _T_6176 @[Gemm.scala 105:22]
+    node _T_6177 = asSInt(io.wgt.bits[3][12]) @[Gemm.scala 106:43]
+    dot_3.io.b[12] <= _T_6177 @[Gemm.scala 106:22]
+    node _T_6178 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 105:43]
+    dot_3.io.a[13] <= _T_6178 @[Gemm.scala 105:22]
+    node _T_6179 = asSInt(io.wgt.bits[3][13]) @[Gemm.scala 106:43]
+    dot_3.io.b[13] <= _T_6179 @[Gemm.scala 106:22]
+    node _T_6180 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 105:43]
+    dot_3.io.a[14] <= _T_6180 @[Gemm.scala 105:22]
+    node _T_6181 = asSInt(io.wgt.bits[3][14]) @[Gemm.scala 106:43]
+    dot_3.io.b[14] <= _T_6181 @[Gemm.scala 106:22]
+    node _T_6182 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 105:43]
+    dot_3.io.a[15] <= _T_6182 @[Gemm.scala 105:22]
+    node _T_6183 = asSInt(io.wgt.bits[3][15]) @[Gemm.scala 106:43]
+    dot_3.io.b[15] <= _T_6183 @[Gemm.scala 106:22]
+    node _T_6184 = asSInt(acc_3.io.deq.bits) @[Gemm.scala 108:34]
+    node _T_6185 = add(_T_6184, dot_3.io.y) @[Gemm.scala 108:41]
+    node _T_6186 = tail(_T_6185, 1) @[Gemm.scala 108:41]
+    node _T_6187 = asSInt(_T_6186) @[Gemm.scala 108:41]
+    add_3 <= _T_6187 @[Gemm.scala 108:12]
+    node _T_6189 = asUInt(add_3) @[Gemm.scala 109:54]
+    node _T_6190 = mux(io.reset, UInt<1>("h00"), _T_6189) @[Gemm.scala 109:31]
+    io.acc_o.bits[0][3] <= _T_6190 @[Gemm.scala 109:25]
+    node _T_6191 = asUInt(add_3) @[Gemm.scala 110:33]
+    io.out.bits[0][3] <= _T_6191 @[Gemm.scala 110:23]
+    vld[3] <= acc_3.io.deq.valid @[Gemm.scala 111:12]
+    node _T_6192 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 102:41]
+    node _T_6193 = and(_T_6192, io.acc_i.valid) @[Gemm.scala 102:56]
+    node _T_6194 = not(io.reset) @[Gemm.scala 102:75]
+    node _T_6195 = and(_T_6193, _T_6194) @[Gemm.scala 102:73]
+    acc_4.io.enq.valid <= _T_6195 @[Gemm.scala 102:25]
+    acc_4.io.enq.bits <= io.acc_i.bits[0][4] @[Gemm.scala 103:24]
+    node _T_6196 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 105:43]
+    dot_4.io.a[0] <= _T_6196 @[Gemm.scala 105:22]
+    node _T_6197 = asSInt(io.wgt.bits[4][0]) @[Gemm.scala 106:43]
+    dot_4.io.b[0] <= _T_6197 @[Gemm.scala 106:22]
+    node _T_6198 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 105:43]
+    dot_4.io.a[1] <= _T_6198 @[Gemm.scala 105:22]
+    node _T_6199 = asSInt(io.wgt.bits[4][1]) @[Gemm.scala 106:43]
+    dot_4.io.b[1] <= _T_6199 @[Gemm.scala 106:22]
+    node _T_6200 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 105:43]
+    dot_4.io.a[2] <= _T_6200 @[Gemm.scala 105:22]
+    node _T_6201 = asSInt(io.wgt.bits[4][2]) @[Gemm.scala 106:43]
+    dot_4.io.b[2] <= _T_6201 @[Gemm.scala 106:22]
+    node _T_6202 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 105:43]
+    dot_4.io.a[3] <= _T_6202 @[Gemm.scala 105:22]
+    node _T_6203 = asSInt(io.wgt.bits[4][3]) @[Gemm.scala 106:43]
+    dot_4.io.b[3] <= _T_6203 @[Gemm.scala 106:22]
+    node _T_6204 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 105:43]
+    dot_4.io.a[4] <= _T_6204 @[Gemm.scala 105:22]
+    node _T_6205 = asSInt(io.wgt.bits[4][4]) @[Gemm.scala 106:43]
+    dot_4.io.b[4] <= _T_6205 @[Gemm.scala 106:22]
+    node _T_6206 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 105:43]
+    dot_4.io.a[5] <= _T_6206 @[Gemm.scala 105:22]
+    node _T_6207 = asSInt(io.wgt.bits[4][5]) @[Gemm.scala 106:43]
+    dot_4.io.b[5] <= _T_6207 @[Gemm.scala 106:22]
+    node _T_6208 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 105:43]
+    dot_4.io.a[6] <= _T_6208 @[Gemm.scala 105:22]
+    node _T_6209 = asSInt(io.wgt.bits[4][6]) @[Gemm.scala 106:43]
+    dot_4.io.b[6] <= _T_6209 @[Gemm.scala 106:22]
+    node _T_6210 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 105:43]
+    dot_4.io.a[7] <= _T_6210 @[Gemm.scala 105:22]
+    node _T_6211 = asSInt(io.wgt.bits[4][7]) @[Gemm.scala 106:43]
+    dot_4.io.b[7] <= _T_6211 @[Gemm.scala 106:22]
+    node _T_6212 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 105:43]
+    dot_4.io.a[8] <= _T_6212 @[Gemm.scala 105:22]
+    node _T_6213 = asSInt(io.wgt.bits[4][8]) @[Gemm.scala 106:43]
+    dot_4.io.b[8] <= _T_6213 @[Gemm.scala 106:22]
+    node _T_6214 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 105:43]
+    dot_4.io.a[9] <= _T_6214 @[Gemm.scala 105:22]
+    node _T_6215 = asSInt(io.wgt.bits[4][9]) @[Gemm.scala 106:43]
+    dot_4.io.b[9] <= _T_6215 @[Gemm.scala 106:22]
+    node _T_6216 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 105:43]
+    dot_4.io.a[10] <= _T_6216 @[Gemm.scala 105:22]
+    node _T_6217 = asSInt(io.wgt.bits[4][10]) @[Gemm.scala 106:43]
+    dot_4.io.b[10] <= _T_6217 @[Gemm.scala 106:22]
+    node _T_6218 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 105:43]
+    dot_4.io.a[11] <= _T_6218 @[Gemm.scala 105:22]
+    node _T_6219 = asSInt(io.wgt.bits[4][11]) @[Gemm.scala 106:43]
+    dot_4.io.b[11] <= _T_6219 @[Gemm.scala 106:22]
+    node _T_6220 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 105:43]
+    dot_4.io.a[12] <= _T_6220 @[Gemm.scala 105:22]
+    node _T_6221 = asSInt(io.wgt.bits[4][12]) @[Gemm.scala 106:43]
+    dot_4.io.b[12] <= _T_6221 @[Gemm.scala 106:22]
+    node _T_6222 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 105:43]
+    dot_4.io.a[13] <= _T_6222 @[Gemm.scala 105:22]
+    node _T_6223 = asSInt(io.wgt.bits[4][13]) @[Gemm.scala 106:43]
+    dot_4.io.b[13] <= _T_6223 @[Gemm.scala 106:22]
+    node _T_6224 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 105:43]
+    dot_4.io.a[14] <= _T_6224 @[Gemm.scala 105:22]
+    node _T_6225 = asSInt(io.wgt.bits[4][14]) @[Gemm.scala 106:43]
+    dot_4.io.b[14] <= _T_6225 @[Gemm.scala 106:22]
+    node _T_6226 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 105:43]
+    dot_4.io.a[15] <= _T_6226 @[Gemm.scala 105:22]
+    node _T_6227 = asSInt(io.wgt.bits[4][15]) @[Gemm.scala 106:43]
+    dot_4.io.b[15] <= _T_6227 @[Gemm.scala 106:22]
+    node _T_6228 = asSInt(acc_4.io.deq.bits) @[Gemm.scala 108:34]
+    node _T_6229 = add(_T_6228, dot_4.io.y) @[Gemm.scala 108:41]
+    node _T_6230 = tail(_T_6229, 1) @[Gemm.scala 108:41]
+    node _T_6231 = asSInt(_T_6230) @[Gemm.scala 108:41]
+    add_4 <= _T_6231 @[Gemm.scala 108:12]
+    node _T_6233 = asUInt(add_4) @[Gemm.scala 109:54]
+    node _T_6234 = mux(io.reset, UInt<1>("h00"), _T_6233) @[Gemm.scala 109:31]
+    io.acc_o.bits[0][4] <= _T_6234 @[Gemm.scala 109:25]
+    node _T_6235 = asUInt(add_4) @[Gemm.scala 110:33]
+    io.out.bits[0][4] <= _T_6235 @[Gemm.scala 110:23]
+    vld[4] <= acc_4.io.deq.valid @[Gemm.scala 111:12]
+    node _T_6236 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 102:41]
+    node _T_6237 = and(_T_6236, io.acc_i.valid) @[Gemm.scala 102:56]
+    node _T_6238 = not(io.reset) @[Gemm.scala 102:75]
+    node _T_6239 = and(_T_6237, _T_6238) @[Gemm.scala 102:73]
+    acc_5.io.enq.valid <= _T_6239 @[Gemm.scala 102:25]
+    acc_5.io.enq.bits <= io.acc_i.bits[0][5] @[Gemm.scala 103:24]
+    node _T_6240 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 105:43]
+    dot_5.io.a[0] <= _T_6240 @[Gemm.scala 105:22]
+    node _T_6241 = asSInt(io.wgt.bits[5][0]) @[Gemm.scala 106:43]
+    dot_5.io.b[0] <= _T_6241 @[Gemm.scala 106:22]
+    node _T_6242 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 105:43]
+    dot_5.io.a[1] <= _T_6242 @[Gemm.scala 105:22]
+    node _T_6243 = asSInt(io.wgt.bits[5][1]) @[Gemm.scala 106:43]
+    dot_5.io.b[1] <= _T_6243 @[Gemm.scala 106:22]
+    node _T_6244 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 105:43]
+    dot_5.io.a[2] <= _T_6244 @[Gemm.scala 105:22]
+    node _T_6245 = asSInt(io.wgt.bits[5][2]) @[Gemm.scala 106:43]
+    dot_5.io.b[2] <= _T_6245 @[Gemm.scala 106:22]
+    node _T_6246 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 105:43]
+    dot_5.io.a[3] <= _T_6246 @[Gemm.scala 105:22]
+    node _T_6247 = asSInt(io.wgt.bits[5][3]) @[Gemm.scala 106:43]
+    dot_5.io.b[3] <= _T_6247 @[Gemm.scala 106:22]
+    node _T_6248 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 105:43]
+    dot_5.io.a[4] <= _T_6248 @[Gemm.scala 105:22]
+    node _T_6249 = asSInt(io.wgt.bits[5][4]) @[Gemm.scala 106:43]
+    dot_5.io.b[4] <= _T_6249 @[Gemm.scala 106:22]
+    node _T_6250 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 105:43]
+    dot_5.io.a[5] <= _T_6250 @[Gemm.scala 105:22]
+    node _T_6251 = asSInt(io.wgt.bits[5][5]) @[Gemm.scala 106:43]
+    dot_5.io.b[5] <= _T_6251 @[Gemm.scala 106:22]
+    node _T_6252 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 105:43]
+    dot_5.io.a[6] <= _T_6252 @[Gemm.scala 105:22]
+    node _T_6253 = asSInt(io.wgt.bits[5][6]) @[Gemm.scala 106:43]
+    dot_5.io.b[6] <= _T_6253 @[Gemm.scala 106:22]
+    node _T_6254 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 105:43]
+    dot_5.io.a[7] <= _T_6254 @[Gemm.scala 105:22]
+    node _T_6255 = asSInt(io.wgt.bits[5][7]) @[Gemm.scala 106:43]
+    dot_5.io.b[7] <= _T_6255 @[Gemm.scala 106:22]
+    node _T_6256 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 105:43]
+    dot_5.io.a[8] <= _T_6256 @[Gemm.scala 105:22]
+    node _T_6257 = asSInt(io.wgt.bits[5][8]) @[Gemm.scala 106:43]
+    dot_5.io.b[8] <= _T_6257 @[Gemm.scala 106:22]
+    node _T_6258 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 105:43]
+    dot_5.io.a[9] <= _T_6258 @[Gemm.scala 105:22]
+    node _T_6259 = asSInt(io.wgt.bits[5][9]) @[Gemm.scala 106:43]
+    dot_5.io.b[9] <= _T_6259 @[Gemm.scala 106:22]
+    node _T_6260 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 105:43]
+    dot_5.io.a[10] <= _T_6260 @[Gemm.scala 105:22]
+    node _T_6261 = asSInt(io.wgt.bits[5][10]) @[Gemm.scala 106:43]
+    dot_5.io.b[10] <= _T_6261 @[Gemm.scala 106:22]
+    node _T_6262 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 105:43]
+    dot_5.io.a[11] <= _T_6262 @[Gemm.scala 105:22]
+    node _T_6263 = asSInt(io.wgt.bits[5][11]) @[Gemm.scala 106:43]
+    dot_5.io.b[11] <= _T_6263 @[Gemm.scala 106:22]
+    node _T_6264 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 105:43]
+    dot_5.io.a[12] <= _T_6264 @[Gemm.scala 105:22]
+    node _T_6265 = asSInt(io.wgt.bits[5][12]) @[Gemm.scala 106:43]
+    dot_5.io.b[12] <= _T_6265 @[Gemm.scala 106:22]
+    node _T_6266 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 105:43]
+    dot_5.io.a[13] <= _T_6266 @[Gemm.scala 105:22]
+    node _T_6267 = asSInt(io.wgt.bits[5][13]) @[Gemm.scala 106:43]
+    dot_5.io.b[13] <= _T_6267 @[Gemm.scala 106:22]
+    node _T_6268 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 105:43]
+    dot_5.io.a[14] <= _T_6268 @[Gemm.scala 105:22]
+    node _T_6269 = asSInt(io.wgt.bits[5][14]) @[Gemm.scala 106:43]
+    dot_5.io.b[14] <= _T_6269 @[Gemm.scala 106:22]
+    node _T_6270 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 105:43]
+    dot_5.io.a[15] <= _T_6270 @[Gemm.scala 105:22]
+    node _T_6271 = asSInt(io.wgt.bits[5][15]) @[Gemm.scala 106:43]
+    dot_5.io.b[15] <= _T_6271 @[Gemm.scala 106:22]
+    node _T_6272 = asSInt(acc_5.io.deq.bits) @[Gemm.scala 108:34]
+    node _T_6273 = add(_T_6272, dot_5.io.y) @[Gemm.scala 108:41]
+    node _T_6274 = tail(_T_6273, 1) @[Gemm.scala 108:41]
+    node _T_6275 = asSInt(_T_6274) @[Gemm.scala 108:41]
+    add_5 <= _T_6275 @[Gemm.scala 108:12]
+    node _T_6277 = asUInt(add_5) @[Gemm.scala 109:54]
+    node _T_6278 = mux(io.reset, UInt<1>("h00"), _T_6277) @[Gemm.scala 109:31]
+    io.acc_o.bits[0][5] <= _T_6278 @[Gemm.scala 109:25]
+    node _T_6279 = asUInt(add_5) @[Gemm.scala 110:33]
+    io.out.bits[0][5] <= _T_6279 @[Gemm.scala 110:23]
+    vld[5] <= acc_5.io.deq.valid @[Gemm.scala 111:12]
+    node _T_6280 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 102:41]
+    node _T_6281 = and(_T_6280, io.acc_i.valid) @[Gemm.scala 102:56]
+    node _T_6282 = not(io.reset) @[Gemm.scala 102:75]
+    node _T_6283 = and(_T_6281, _T_6282) @[Gemm.scala 102:73]
+    acc_6.io.enq.valid <= _T_6283 @[Gemm.scala 102:25]
+    acc_6.io.enq.bits <= io.acc_i.bits[0][6] @[Gemm.scala 103:24]
+    node _T_6284 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 105:43]
+    dot_6.io.a[0] <= _T_6284 @[Gemm.scala 105:22]
+    node _T_6285 = asSInt(io.wgt.bits[6][0]) @[Gemm.scala 106:43]
+    dot_6.io.b[0] <= _T_6285 @[Gemm.scala 106:22]
+    node _T_6286 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 105:43]
+    dot_6.io.a[1] <= _T_6286 @[Gemm.scala 105:22]
+    node _T_6287 = asSInt(io.wgt.bits[6][1]) @[Gemm.scala 106:43]
+    dot_6.io.b[1] <= _T_6287 @[Gemm.scala 106:22]
+    node _T_6288 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 105:43]
+    dot_6.io.a[2] <= _T_6288 @[Gemm.scala 105:22]
+    node _T_6289 = asSInt(io.wgt.bits[6][2]) @[Gemm.scala 106:43]
+    dot_6.io.b[2] <= _T_6289 @[Gemm.scala 106:22]
+    node _T_6290 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 105:43]
+    dot_6.io.a[3] <= _T_6290 @[Gemm.scala 105:22]
+    node _T_6291 = asSInt(io.wgt.bits[6][3]) @[Gemm.scala 106:43]
+    dot_6.io.b[3] <= _T_6291 @[Gemm.scala 106:22]
+    node _T_6292 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 105:43]
+    dot_6.io.a[4] <= _T_6292 @[Gemm.scala 105:22]
+    node _T_6293 = asSInt(io.wgt.bits[6][4]) @[Gemm.scala 106:43]
+    dot_6.io.b[4] <= _T_6293 @[Gemm.scala 106:22]
+    node _T_6294 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 105:43]
+    dot_6.io.a[5] <= _T_6294 @[Gemm.scala 105:22]
+    node _T_6295 = asSInt(io.wgt.bits[6][5]) @[Gemm.scala 106:43]
+    dot_6.io.b[5] <= _T_6295 @[Gemm.scala 106:22]
+    node _T_6296 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 105:43]
+    dot_6.io.a[6] <= _T_6296 @[Gemm.scala 105:22]
+    node _T_6297 = asSInt(io.wgt.bits[6][6]) @[Gemm.scala 106:43]
+    dot_6.io.b[6] <= _T_6297 @[Gemm.scala 106:22]
+    node _T_6298 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 105:43]
+    dot_6.io.a[7] <= _T_6298 @[Gemm.scala 105:22]
+    node _T_6299 = asSInt(io.wgt.bits[6][7]) @[Gemm.scala 106:43]
+    dot_6.io.b[7] <= _T_6299 @[Gemm.scala 106:22]
+    node _T_6300 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 105:43]
+    dot_6.io.a[8] <= _T_6300 @[Gemm.scala 105:22]
+    node _T_6301 = asSInt(io.wgt.bits[6][8]) @[Gemm.scala 106:43]
+    dot_6.io.b[8] <= _T_6301 @[Gemm.scala 106:22]
+    node _T_6302 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 105:43]
+    dot_6.io.a[9] <= _T_6302 @[Gemm.scala 105:22]
+    node _T_6303 = asSInt(io.wgt.bits[6][9]) @[Gemm.scala 106:43]
+    dot_6.io.b[9] <= _T_6303 @[Gemm.scala 106:22]
+    node _T_6304 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 105:43]
+    dot_6.io.a[10] <= _T_6304 @[Gemm.scala 105:22]
+    node _T_6305 = asSInt(io.wgt.bits[6][10]) @[Gemm.scala 106:43]
+    dot_6.io.b[10] <= _T_6305 @[Gemm.scala 106:22]
+    node _T_6306 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 105:43]
+    dot_6.io.a[11] <= _T_6306 @[Gemm.scala 105:22]
+    node _T_6307 = asSInt(io.wgt.bits[6][11]) @[Gemm.scala 106:43]
+    dot_6.io.b[11] <= _T_6307 @[Gemm.scala 106:22]
+    node _T_6308 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 105:43]
+    dot_6.io.a[12] <= _T_6308 @[Gemm.scala 105:22]
+    node _T_6309 = asSInt(io.wgt.bits[6][12]) @[Gemm.scala 106:43]
+    dot_6.io.b[12] <= _T_6309 @[Gemm.scala 106:22]
+    node _T_6310 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 105:43]
+    dot_6.io.a[13] <= _T_6310 @[Gemm.scala 105:22]
+    node _T_6311 = asSInt(io.wgt.bits[6][13]) @[Gemm.scala 106:43]
+    dot_6.io.b[13] <= _T_6311 @[Gemm.scala 106:22]
+    node _T_6312 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 105:43]
+    dot_6.io.a[14] <= _T_6312 @[Gemm.scala 105:22]
+    node _T_6313 = asSInt(io.wgt.bits[6][14]) @[Gemm.scala 106:43]
+    dot_6.io.b[14] <= _T_6313 @[Gemm.scala 106:22]
+    node _T_6314 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 105:43]
+    dot_6.io.a[15] <= _T_6314 @[Gemm.scala 105:22]
+    node _T_6315 = asSInt(io.wgt.bits[6][15]) @[Gemm.scala 106:43]
+    dot_6.io.b[15] <= _T_6315 @[Gemm.scala 106:22]
+    node _T_6316 = asSInt(acc_6.io.deq.bits) @[Gemm.scala 108:34]
+    node _T_6317 = add(_T_6316, dot_6.io.y) @[Gemm.scala 108:41]
+    node _T_6318 = tail(_T_6317, 1) @[Gemm.scala 108:41]
+    node _T_6319 = asSInt(_T_6318) @[Gemm.scala 108:41]
+    add_6 <= _T_6319 @[Gemm.scala 108:12]
+    node _T_6321 = asUInt(add_6) @[Gemm.scala 109:54]
+    node _T_6322 = mux(io.reset, UInt<1>("h00"), _T_6321) @[Gemm.scala 109:31]
+    io.acc_o.bits[0][6] <= _T_6322 @[Gemm.scala 109:25]
+    node _T_6323 = asUInt(add_6) @[Gemm.scala 110:33]
+    io.out.bits[0][6] <= _T_6323 @[Gemm.scala 110:23]
+    vld[6] <= acc_6.io.deq.valid @[Gemm.scala 111:12]
+    node _T_6324 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 102:41]
+    node _T_6325 = and(_T_6324, io.acc_i.valid) @[Gemm.scala 102:56]
+    node _T_6326 = not(io.reset) @[Gemm.scala 102:75]
+    node _T_6327 = and(_T_6325, _T_6326) @[Gemm.scala 102:73]
+    acc_7.io.enq.valid <= _T_6327 @[Gemm.scala 102:25]
+    acc_7.io.enq.bits <= io.acc_i.bits[0][7] @[Gemm.scala 103:24]
+    node _T_6328 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 105:43]
+    dot_7.io.a[0] <= _T_6328 @[Gemm.scala 105:22]
+    node _T_6329 = asSInt(io.wgt.bits[7][0]) @[Gemm.scala 106:43]
+    dot_7.io.b[0] <= _T_6329 @[Gemm.scala 106:22]
+    node _T_6330 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 105:43]
+    dot_7.io.a[1] <= _T_6330 @[Gemm.scala 105:22]
+    node _T_6331 = asSInt(io.wgt.bits[7][1]) @[Gemm.scala 106:43]
+    dot_7.io.b[1] <= _T_6331 @[Gemm.scala 106:22]
+    node _T_6332 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 105:43]
+    dot_7.io.a[2] <= _T_6332 @[Gemm.scala 105:22]
+    node _T_6333 = asSInt(io.wgt.bits[7][2]) @[Gemm.scala 106:43]
+    dot_7.io.b[2] <= _T_6333 @[Gemm.scala 106:22]
+    node _T_6334 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 105:43]
+    dot_7.io.a[3] <= _T_6334 @[Gemm.scala 105:22]
+    node _T_6335 = asSInt(io.wgt.bits[7][3]) @[Gemm.scala 106:43]
+    dot_7.io.b[3] <= _T_6335 @[Gemm.scala 106:22]
+    node _T_6336 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 105:43]
+    dot_7.io.a[4] <= _T_6336 @[Gemm.scala 105:22]
+    node _T_6337 = asSInt(io.wgt.bits[7][4]) @[Gemm.scala 106:43]
+    dot_7.io.b[4] <= _T_6337 @[Gemm.scala 106:22]
+    node _T_6338 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 105:43]
+    dot_7.io.a[5] <= _T_6338 @[Gemm.scala 105:22]
+    node _T_6339 = asSInt(io.wgt.bits[7][5]) @[Gemm.scala 106:43]
+    dot_7.io.b[5] <= _T_6339 @[Gemm.scala 106:22]
+    node _T_6340 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 105:43]
+    dot_7.io.a[6] <= _T_6340 @[Gemm.scala 105:22]
+    node _T_6341 = asSInt(io.wgt.bits[7][6]) @[Gemm.scala 106:43]
+    dot_7.io.b[6] <= _T_6341 @[Gemm.scala 106:22]
+    node _T_6342 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 105:43]
+    dot_7.io.a[7] <= _T_6342 @[Gemm.scala 105:22]
+    node _T_6343 = asSInt(io.wgt.bits[7][7]) @[Gemm.scala 106:43]
+    dot_7.io.b[7] <= _T_6343 @[Gemm.scala 106:22]
+    node _T_6344 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 105:43]
+    dot_7.io.a[8] <= _T_6344 @[Gemm.scala 105:22]
+    node _T_6345 = asSInt(io.wgt.bits[7][8]) @[Gemm.scala 106:43]
+    dot_7.io.b[8] <= _T_6345 @[Gemm.scala 106:22]
+    node _T_6346 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 105:43]
+    dot_7.io.a[9] <= _T_6346 @[Gemm.scala 105:22]
+    node _T_6347 = asSInt(io.wgt.bits[7][9]) @[Gemm.scala 106:43]
+    dot_7.io.b[9] <= _T_6347 @[Gemm.scala 106:22]
+    node _T_6348 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 105:43]
+    dot_7.io.a[10] <= _T_6348 @[Gemm.scala 105:22]
+    node _T_6349 = asSInt(io.wgt.bits[7][10]) @[Gemm.scala 106:43]
+    dot_7.io.b[10] <= _T_6349 @[Gemm.scala 106:22]
+    node _T_6350 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 105:43]
+    dot_7.io.a[11] <= _T_6350 @[Gemm.scala 105:22]
+    node _T_6351 = asSInt(io.wgt.bits[7][11]) @[Gemm.scala 106:43]
+    dot_7.io.b[11] <= _T_6351 @[Gemm.scala 106:22]
+    node _T_6352 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 105:43]
+    dot_7.io.a[12] <= _T_6352 @[Gemm.scala 105:22]
+    node _T_6353 = asSInt(io.wgt.bits[7][12]) @[Gemm.scala 106:43]
+    dot_7.io.b[12] <= _T_6353 @[Gemm.scala 106:22]
+    node _T_6354 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 105:43]
+    dot_7.io.a[13] <= _T_6354 @[Gemm.scala 105:22]
+    node _T_6355 = asSInt(io.wgt.bits[7][13]) @[Gemm.scala 106:43]
+    dot_7.io.b[13] <= _T_6355 @[Gemm.scala 106:22]
+    node _T_6356 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 105:43]
+    dot_7.io.a[14] <= _T_6356 @[Gemm.scala 105:22]
+    node _T_6357 = asSInt(io.wgt.bits[7][14]) @[Gemm.scala 106:43]
+    dot_7.io.b[14] <= _T_6357 @[Gemm.scala 106:22]
+    node _T_6358 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 105:43]
+    dot_7.io.a[15] <= _T_6358 @[Gemm.scala 105:22]
+    node _T_6359 = asSInt(io.wgt.bits[7][15]) @[Gemm.scala 106:43]
+    dot_7.io.b[15] <= _T_6359 @[Gemm.scala 106:22]
+    node _T_6360 = asSInt(acc_7.io.deq.bits) @[Gemm.scala 108:34]
+    node _T_6361 = add(_T_6360, dot_7.io.y) @[Gemm.scala 108:41]
+    node _T_6362 = tail(_T_6361, 1) @[Gemm.scala 108:41]
+    node _T_6363 = asSInt(_T_6362) @[Gemm.scala 108:41]
+    add_7 <= _T_6363 @[Gemm.scala 108:12]
+    node _T_6365 = asUInt(add_7) @[Gemm.scala 109:54]
+    node _T_6366 = mux(io.reset, UInt<1>("h00"), _T_6365) @[Gemm.scala 109:31]
+    io.acc_o.bits[0][7] <= _T_6366 @[Gemm.scala 109:25]
+    node _T_6367 = asUInt(add_7) @[Gemm.scala 110:33]
+    io.out.bits[0][7] <= _T_6367 @[Gemm.scala 110:23]
+    vld[7] <= acc_7.io.deq.valid @[Gemm.scala 111:12]
+    node _T_6368 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 102:41]
+    node _T_6369 = and(_T_6368, io.acc_i.valid) @[Gemm.scala 102:56]
+    node _T_6370 = not(io.reset) @[Gemm.scala 102:75]
+    node _T_6371 = and(_T_6369, _T_6370) @[Gemm.scala 102:73]
+    acc_8.io.enq.valid <= _T_6371 @[Gemm.scala 102:25]
+    acc_8.io.enq.bits <= io.acc_i.bits[0][8] @[Gemm.scala 103:24]
+    node _T_6372 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 105:43]
+    dot_8.io.a[0] <= _T_6372 @[Gemm.scala 105:22]
+    node _T_6373 = asSInt(io.wgt.bits[8][0]) @[Gemm.scala 106:43]
+    dot_8.io.b[0] <= _T_6373 @[Gemm.scala 106:22]
+    node _T_6374 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 105:43]
+    dot_8.io.a[1] <= _T_6374 @[Gemm.scala 105:22]
+    node _T_6375 = asSInt(io.wgt.bits[8][1]) @[Gemm.scala 106:43]
+    dot_8.io.b[1] <= _T_6375 @[Gemm.scala 106:22]
+    node _T_6376 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 105:43]
+    dot_8.io.a[2] <= _T_6376 @[Gemm.scala 105:22]
+    node _T_6377 = asSInt(io.wgt.bits[8][2]) @[Gemm.scala 106:43]
+    dot_8.io.b[2] <= _T_6377 @[Gemm.scala 106:22]
+    node _T_6378 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 105:43]
+    dot_8.io.a[3] <= _T_6378 @[Gemm.scala 105:22]
+    node _T_6379 = asSInt(io.wgt.bits[8][3]) @[Gemm.scala 106:43]
+    dot_8.io.b[3] <= _T_6379 @[Gemm.scala 106:22]
+    node _T_6380 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 105:43]
+    dot_8.io.a[4] <= _T_6380 @[Gemm.scala 105:22]
+    node _T_6381 = asSInt(io.wgt.bits[8][4]) @[Gemm.scala 106:43]
+    dot_8.io.b[4] <= _T_6381 @[Gemm.scala 106:22]
+    node _T_6382 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 105:43]
+    dot_8.io.a[5] <= _T_6382 @[Gemm.scala 105:22]
+    node _T_6383 = asSInt(io.wgt.bits[8][5]) @[Gemm.scala 106:43]
+    dot_8.io.b[5] <= _T_6383 @[Gemm.scala 106:22]
+    node _T_6384 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 105:43]
+    dot_8.io.a[6] <= _T_6384 @[Gemm.scala 105:22]
+    node _T_6385 = asSInt(io.wgt.bits[8][6]) @[Gemm.scala 106:43]
+    dot_8.io.b[6] <= _T_6385 @[Gemm.scala 106:22]
+    node _T_6386 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 105:43]
+    dot_8.io.a[7] <= _T_6386 @[Gemm.scala 105:22]
+    node _T_6387 = asSInt(io.wgt.bits[8][7]) @[Gemm.scala 106:43]
+    dot_8.io.b[7] <= _T_6387 @[Gemm.scala 106:22]
+    node _T_6388 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 105:43]
+    dot_8.io.a[8] <= _T_6388 @[Gemm.scala 105:22]
+    node _T_6389 = asSInt(io.wgt.bits[8][8]) @[Gemm.scala 106:43]
+    dot_8.io.b[8] <= _T_6389 @[Gemm.scala 106:22]
+    node _T_6390 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 105:43]
+    dot_8.io.a[9] <= _T_6390 @[Gemm.scala 105:22]
+    node _T_6391 = asSInt(io.wgt.bits[8][9]) @[Gemm.scala 106:43]
+    dot_8.io.b[9] <= _T_6391 @[Gemm.scala 106:22]
+    node _T_6392 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 105:43]
+    dot_8.io.a[10] <= _T_6392 @[Gemm.scala 105:22]
+    node _T_6393 = asSInt(io.wgt.bits[8][10]) @[Gemm.scala 106:43]
+    dot_8.io.b[10] <= _T_6393 @[Gemm.scala 106:22]
+    node _T_6394 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 105:43]
+    dot_8.io.a[11] <= _T_6394 @[Gemm.scala 105:22]
+    node _T_6395 = asSInt(io.wgt.bits[8][11]) @[Gemm.scala 106:43]
+    dot_8.io.b[11] <= _T_6395 @[Gemm.scala 106:22]
+    node _T_6396 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 105:43]
+    dot_8.io.a[12] <= _T_6396 @[Gemm.scala 105:22]
+    node _T_6397 = asSInt(io.wgt.bits[8][12]) @[Gemm.scala 106:43]
+    dot_8.io.b[12] <= _T_6397 @[Gemm.scala 106:22]
+    node _T_6398 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 105:43]
+    dot_8.io.a[13] <= _T_6398 @[Gemm.scala 105:22]
+    node _T_6399 = asSInt(io.wgt.bits[8][13]) @[Gemm.scala 106:43]
+    dot_8.io.b[13] <= _T_6399 @[Gemm.scala 106:22]
+    node _T_6400 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 105:43]
+    dot_8.io.a[14] <= _T_6400 @[Gemm.scala 105:22]
+    node _T_6401 = asSInt(io.wgt.bits[8][14]) @[Gemm.scala 106:43]
+    dot_8.io.b[14] <= _T_6401 @[Gemm.scala 106:22]
+    node _T_6402 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 105:43]
+    dot_8.io.a[15] <= _T_6402 @[Gemm.scala 105:22]
+    node _T_6403 = asSInt(io.wgt.bits[8][15]) @[Gemm.scala 106:43]
+    dot_8.io.b[15] <= _T_6403 @[Gemm.scala 106:22]
+    node _T_6404 = asSInt(acc_8.io.deq.bits) @[Gemm.scala 108:34]
+    node _T_6405 = add(_T_6404, dot_8.io.y) @[Gemm.scala 108:41]
+    node _T_6406 = tail(_T_6405, 1) @[Gemm.scala 108:41]
+    node _T_6407 = asSInt(_T_6406) @[Gemm.scala 108:41]
+    add_8 <= _T_6407 @[Gemm.scala 108:12]
+    node _T_6409 = asUInt(add_8) @[Gemm.scala 109:54]
+    node _T_6410 = mux(io.reset, UInt<1>("h00"), _T_6409) @[Gemm.scala 109:31]
+    io.acc_o.bits[0][8] <= _T_6410 @[Gemm.scala 109:25]
+    node _T_6411 = asUInt(add_8) @[Gemm.scala 110:33]
+    io.out.bits[0][8] <= _T_6411 @[Gemm.scala 110:23]
+    vld[8] <= acc_8.io.deq.valid @[Gemm.scala 111:12]
+    node _T_6412 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 102:41]
+    node _T_6413 = and(_T_6412, io.acc_i.valid) @[Gemm.scala 102:56]
+    node _T_6414 = not(io.reset) @[Gemm.scala 102:75]
+    node _T_6415 = and(_T_6413, _T_6414) @[Gemm.scala 102:73]
+    acc_9.io.enq.valid <= _T_6415 @[Gemm.scala 102:25]
+    acc_9.io.enq.bits <= io.acc_i.bits[0][9] @[Gemm.scala 103:24]
+    node _T_6416 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 105:43]
+    dot_9.io.a[0] <= _T_6416 @[Gemm.scala 105:22]
+    node _T_6417 = asSInt(io.wgt.bits[9][0]) @[Gemm.scala 106:43]
+    dot_9.io.b[0] <= _T_6417 @[Gemm.scala 106:22]
+    node _T_6418 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 105:43]
+    dot_9.io.a[1] <= _T_6418 @[Gemm.scala 105:22]
+    node _T_6419 = asSInt(io.wgt.bits[9][1]) @[Gemm.scala 106:43]
+    dot_9.io.b[1] <= _T_6419 @[Gemm.scala 106:22]
+    node _T_6420 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 105:43]
+    dot_9.io.a[2] <= _T_6420 @[Gemm.scala 105:22]
+    node _T_6421 = asSInt(io.wgt.bits[9][2]) @[Gemm.scala 106:43]
+    dot_9.io.b[2] <= _T_6421 @[Gemm.scala 106:22]
+    node _T_6422 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 105:43]
+    dot_9.io.a[3] <= _T_6422 @[Gemm.scala 105:22]
+    node _T_6423 = asSInt(io.wgt.bits[9][3]) @[Gemm.scala 106:43]
+    dot_9.io.b[3] <= _T_6423 @[Gemm.scala 106:22]
+    node _T_6424 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 105:43]
+    dot_9.io.a[4] <= _T_6424 @[Gemm.scala 105:22]
+    node _T_6425 = asSInt(io.wgt.bits[9][4]) @[Gemm.scala 106:43]
+    dot_9.io.b[4] <= _T_6425 @[Gemm.scala 106:22]
+    node _T_6426 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 105:43]
+    dot_9.io.a[5] <= _T_6426 @[Gemm.scala 105:22]
+    node _T_6427 = asSInt(io.wgt.bits[9][5]) @[Gemm.scala 106:43]
+    dot_9.io.b[5] <= _T_6427 @[Gemm.scala 106:22]
+    node _T_6428 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 105:43]
+    dot_9.io.a[6] <= _T_6428 @[Gemm.scala 105:22]
+    node _T_6429 = asSInt(io.wgt.bits[9][6]) @[Gemm.scala 106:43]
+    dot_9.io.b[6] <= _T_6429 @[Gemm.scala 106:22]
+    node _T_6430 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 105:43]
+    dot_9.io.a[7] <= _T_6430 @[Gemm.scala 105:22]
+    node _T_6431 = asSInt(io.wgt.bits[9][7]) @[Gemm.scala 106:43]
+    dot_9.io.b[7] <= _T_6431 @[Gemm.scala 106:22]
+    node _T_6432 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 105:43]
+    dot_9.io.a[8] <= _T_6432 @[Gemm.scala 105:22]
+    node _T_6433 = asSInt(io.wgt.bits[9][8]) @[Gemm.scala 106:43]
+    dot_9.io.b[8] <= _T_6433 @[Gemm.scala 106:22]
+    node _T_6434 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 105:43]
+    dot_9.io.a[9] <= _T_6434 @[Gemm.scala 105:22]
+    node _T_6435 = asSInt(io.wgt.bits[9][9]) @[Gemm.scala 106:43]
+    dot_9.io.b[9] <= _T_6435 @[Gemm.scala 106:22]
+    node _T_6436 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 105:43]
+    dot_9.io.a[10] <= _T_6436 @[Gemm.scala 105:22]
+    node _T_6437 = asSInt(io.wgt.bits[9][10]) @[Gemm.scala 106:43]
+    dot_9.io.b[10] <= _T_6437 @[Gemm.scala 106:22]
+    node _T_6438 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 105:43]
+    dot_9.io.a[11] <= _T_6438 @[Gemm.scala 105:22]
+    node _T_6439 = asSInt(io.wgt.bits[9][11]) @[Gemm.scala 106:43]
+    dot_9.io.b[11] <= _T_6439 @[Gemm.scala 106:22]
+    node _T_6440 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 105:43]
+    dot_9.io.a[12] <= _T_6440 @[Gemm.scala 105:22]
+    node _T_6441 = asSInt(io.wgt.bits[9][12]) @[Gemm.scala 106:43]
+    dot_9.io.b[12] <= _T_6441 @[Gemm.scala 106:22]
+    node _T_6442 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 105:43]
+    dot_9.io.a[13] <= _T_6442 @[Gemm.scala 105:22]
+    node _T_6443 = asSInt(io.wgt.bits[9][13]) @[Gemm.scala 106:43]
+    dot_9.io.b[13] <= _T_6443 @[Gemm.scala 106:22]
+    node _T_6444 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 105:43]
+    dot_9.io.a[14] <= _T_6444 @[Gemm.scala 105:22]
+    node _T_6445 = asSInt(io.wgt.bits[9][14]) @[Gemm.scala 106:43]
+    dot_9.io.b[14] <= _T_6445 @[Gemm.scala 106:22]
+    node _T_6446 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 105:43]
+    dot_9.io.a[15] <= _T_6446 @[Gemm.scala 105:22]
+    node _T_6447 = asSInt(io.wgt.bits[9][15]) @[Gemm.scala 106:43]
+    dot_9.io.b[15] <= _T_6447 @[Gemm.scala 106:22]
+    node _T_6448 = asSInt(acc_9.io.deq.bits) @[Gemm.scala 108:34]
+    node _T_6449 = add(_T_6448, dot_9.io.y) @[Gemm.scala 108:41]
+    node _T_6450 = tail(_T_6449, 1) @[Gemm.scala 108:41]
+    node _T_6451 = asSInt(_T_6450) @[Gemm.scala 108:41]
+    add_9 <= _T_6451 @[Gemm.scala 108:12]
+    node _T_6453 = asUInt(add_9) @[Gemm.scala 109:54]
+    node _T_6454 = mux(io.reset, UInt<1>("h00"), _T_6453) @[Gemm.scala 109:31]
+    io.acc_o.bits[0][9] <= _T_6454 @[Gemm.scala 109:25]
+    node _T_6455 = asUInt(add_9) @[Gemm.scala 110:33]
+    io.out.bits[0][9] <= _T_6455 @[Gemm.scala 110:23]
+    vld[9] <= acc_9.io.deq.valid @[Gemm.scala 111:12]
+    node _T_6456 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 102:41]
+    node _T_6457 = and(_T_6456, io.acc_i.valid) @[Gemm.scala 102:56]
+    node _T_6458 = not(io.reset) @[Gemm.scala 102:75]
+    node _T_6459 = and(_T_6457, _T_6458) @[Gemm.scala 102:73]
+    acc_10.io.enq.valid <= _T_6459 @[Gemm.scala 102:25]
+    acc_10.io.enq.bits <= io.acc_i.bits[0][10] @[Gemm.scala 103:24]
+    node _T_6460 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 105:43]
+    dot_10.io.a[0] <= _T_6460 @[Gemm.scala 105:22]
+    node _T_6461 = asSInt(io.wgt.bits[10][0]) @[Gemm.scala 106:43]
+    dot_10.io.b[0] <= _T_6461 @[Gemm.scala 106:22]
+    node _T_6462 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 105:43]
+    dot_10.io.a[1] <= _T_6462 @[Gemm.scala 105:22]
+    node _T_6463 = asSInt(io.wgt.bits[10][1]) @[Gemm.scala 106:43]
+    dot_10.io.b[1] <= _T_6463 @[Gemm.scala 106:22]
+    node _T_6464 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 105:43]
+    dot_10.io.a[2] <= _T_6464 @[Gemm.scala 105:22]
+    node _T_6465 = asSInt(io.wgt.bits[10][2]) @[Gemm.scala 106:43]
+    dot_10.io.b[2] <= _T_6465 @[Gemm.scala 106:22]
+    node _T_6466 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 105:43]
+    dot_10.io.a[3] <= _T_6466 @[Gemm.scala 105:22]
+    node _T_6467 = asSInt(io.wgt.bits[10][3]) @[Gemm.scala 106:43]
+    dot_10.io.b[3] <= _T_6467 @[Gemm.scala 106:22]
+    node _T_6468 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 105:43]
+    dot_10.io.a[4] <= _T_6468 @[Gemm.scala 105:22]
+    node _T_6469 = asSInt(io.wgt.bits[10][4]) @[Gemm.scala 106:43]
+    dot_10.io.b[4] <= _T_6469 @[Gemm.scala 106:22]
+    node _T_6470 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 105:43]
+    dot_10.io.a[5] <= _T_6470 @[Gemm.scala 105:22]
+    node _T_6471 = asSInt(io.wgt.bits[10][5]) @[Gemm.scala 106:43]
+    dot_10.io.b[5] <= _T_6471 @[Gemm.scala 106:22]
+    node _T_6472 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 105:43]
+    dot_10.io.a[6] <= _T_6472 @[Gemm.scala 105:22]
+    node _T_6473 = asSInt(io.wgt.bits[10][6]) @[Gemm.scala 106:43]
+    dot_10.io.b[6] <= _T_6473 @[Gemm.scala 106:22]
+    node _T_6474 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 105:43]
+    dot_10.io.a[7] <= _T_6474 @[Gemm.scala 105:22]
+    node _T_6475 = asSInt(io.wgt.bits[10][7]) @[Gemm.scala 106:43]
+    dot_10.io.b[7] <= _T_6475 @[Gemm.scala 106:22]
+    node _T_6476 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 105:43]
+    dot_10.io.a[8] <= _T_6476 @[Gemm.scala 105:22]
+    node _T_6477 = asSInt(io.wgt.bits[10][8]) @[Gemm.scala 106:43]
+    dot_10.io.b[8] <= _T_6477 @[Gemm.scala 106:22]
+    node _T_6478 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 105:43]
+    dot_10.io.a[9] <= _T_6478 @[Gemm.scala 105:22]
+    node _T_6479 = asSInt(io.wgt.bits[10][9]) @[Gemm.scala 106:43]
+    dot_10.io.b[9] <= _T_6479 @[Gemm.scala 106:22]
+    node _T_6480 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 105:43]
+    dot_10.io.a[10] <= _T_6480 @[Gemm.scala 105:22]
+    node _T_6481 = asSInt(io.wgt.bits[10][10]) @[Gemm.scala 106:43]
+    dot_10.io.b[10] <= _T_6481 @[Gemm.scala 106:22]
+    node _T_6482 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 105:43]
+    dot_10.io.a[11] <= _T_6482 @[Gemm.scala 105:22]
+    node _T_6483 = asSInt(io.wgt.bits[10][11]) @[Gemm.scala 106:43]
+    dot_10.io.b[11] <= _T_6483 @[Gemm.scala 106:22]
+    node _T_6484 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 105:43]
+    dot_10.io.a[12] <= _T_6484 @[Gemm.scala 105:22]
+    node _T_6485 = asSInt(io.wgt.bits[10][12]) @[Gemm.scala 106:43]
+    dot_10.io.b[12] <= _T_6485 @[Gemm.scala 106:22]
+    node _T_6486 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 105:43]
+    dot_10.io.a[13] <= _T_6486 @[Gemm.scala 105:22]
+    node _T_6487 = asSInt(io.wgt.bits[10][13]) @[Gemm.scala 106:43]
+    dot_10.io.b[13] <= _T_6487 @[Gemm.scala 106:22]
+    node _T_6488 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 105:43]
+    dot_10.io.a[14] <= _T_6488 @[Gemm.scala 105:22]
+    node _T_6489 = asSInt(io.wgt.bits[10][14]) @[Gemm.scala 106:43]
+    dot_10.io.b[14] <= _T_6489 @[Gemm.scala 106:22]
+    node _T_6490 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 105:43]
+    dot_10.io.a[15] <= _T_6490 @[Gemm.scala 105:22]
+    node _T_6491 = asSInt(io.wgt.bits[10][15]) @[Gemm.scala 106:43]
+    dot_10.io.b[15] <= _T_6491 @[Gemm.scala 106:22]
+    node _T_6492 = asSInt(acc_10.io.deq.bits) @[Gemm.scala 108:34]
+    node _T_6493 = add(_T_6492, dot_10.io.y) @[Gemm.scala 108:41]
+    node _T_6494 = tail(_T_6493, 1) @[Gemm.scala 108:41]
+    node _T_6495 = asSInt(_T_6494) @[Gemm.scala 108:41]
+    add_10 <= _T_6495 @[Gemm.scala 108:12]
+    node _T_6497 = asUInt(add_10) @[Gemm.scala 109:54]
+    node _T_6498 = mux(io.reset, UInt<1>("h00"), _T_6497) @[Gemm.scala 109:31]
+    io.acc_o.bits[0][10] <= _T_6498 @[Gemm.scala 109:25]
+    node _T_6499 = asUInt(add_10) @[Gemm.scala 110:33]
+    io.out.bits[0][10] <= _T_6499 @[Gemm.scala 110:23]
+    vld[10] <= acc_10.io.deq.valid @[Gemm.scala 111:12]
+    node _T_6500 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 102:41]
+    node _T_6501 = and(_T_6500, io.acc_i.valid) @[Gemm.scala 102:56]
+    node _T_6502 = not(io.reset) @[Gemm.scala 102:75]
+    node _T_6503 = and(_T_6501, _T_6502) @[Gemm.scala 102:73]
+    acc_11.io.enq.valid <= _T_6503 @[Gemm.scala 102:25]
+    acc_11.io.enq.bits <= io.acc_i.bits[0][11] @[Gemm.scala 103:24]
+    node _T_6504 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 105:43]
+    dot_11.io.a[0] <= _T_6504 @[Gemm.scala 105:22]
+    node _T_6505 = asSInt(io.wgt.bits[11][0]) @[Gemm.scala 106:43]
+    dot_11.io.b[0] <= _T_6505 @[Gemm.scala 106:22]
+    node _T_6506 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 105:43]
+    dot_11.io.a[1] <= _T_6506 @[Gemm.scala 105:22]
+    node _T_6507 = asSInt(io.wgt.bits[11][1]) @[Gemm.scala 106:43]
+    dot_11.io.b[1] <= _T_6507 @[Gemm.scala 106:22]
+    node _T_6508 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 105:43]
+    dot_11.io.a[2] <= _T_6508 @[Gemm.scala 105:22]
+    node _T_6509 = asSInt(io.wgt.bits[11][2]) @[Gemm.scala 106:43]
+    dot_11.io.b[2] <= _T_6509 @[Gemm.scala 106:22]
+    node _T_6510 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 105:43]
+    dot_11.io.a[3] <= _T_6510 @[Gemm.scala 105:22]
+    node _T_6511 = asSInt(io.wgt.bits[11][3]) @[Gemm.scala 106:43]
+    dot_11.io.b[3] <= _T_6511 @[Gemm.scala 106:22]
+    node _T_6512 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 105:43]
+    dot_11.io.a[4] <= _T_6512 @[Gemm.scala 105:22]
+    node _T_6513 = asSInt(io.wgt.bits[11][4]) @[Gemm.scala 106:43]
+    dot_11.io.b[4] <= _T_6513 @[Gemm.scala 106:22]
+    node _T_6514 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 105:43]
+    dot_11.io.a[5] <= _T_6514 @[Gemm.scala 105:22]
+    node _T_6515 = asSInt(io.wgt.bits[11][5]) @[Gemm.scala 106:43]
+    dot_11.io.b[5] <= _T_6515 @[Gemm.scala 106:22]
+    node _T_6516 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 105:43]
+    dot_11.io.a[6] <= _T_6516 @[Gemm.scala 105:22]
+    node _T_6517 = asSInt(io.wgt.bits[11][6]) @[Gemm.scala 106:43]
+    dot_11.io.b[6] <= _T_6517 @[Gemm.scala 106:22]
+    node _T_6518 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 105:43]
+    dot_11.io.a[7] <= _T_6518 @[Gemm.scala 105:22]
+    node _T_6519 = asSInt(io.wgt.bits[11][7]) @[Gemm.scala 106:43]
+    dot_11.io.b[7] <= _T_6519 @[Gemm.scala 106:22]
+    node _T_6520 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 105:43]
+    dot_11.io.a[8] <= _T_6520 @[Gemm.scala 105:22]
+    node _T_6521 = asSInt(io.wgt.bits[11][8]) @[Gemm.scala 106:43]
+    dot_11.io.b[8] <= _T_6521 @[Gemm.scala 106:22]
+    node _T_6522 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 105:43]
+    dot_11.io.a[9] <= _T_6522 @[Gemm.scala 105:22]
+    node _T_6523 = asSInt(io.wgt.bits[11][9]) @[Gemm.scala 106:43]
+    dot_11.io.b[9] <= _T_6523 @[Gemm.scala 106:22]
+    node _T_6524 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 105:43]
+    dot_11.io.a[10] <= _T_6524 @[Gemm.scala 105:22]
+    node _T_6525 = asSInt(io.wgt.bits[11][10]) @[Gemm.scala 106:43]
+    dot_11.io.b[10] <= _T_6525 @[Gemm.scala 106:22]
+    node _T_6526 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 105:43]
+    dot_11.io.a[11] <= _T_6526 @[Gemm.scala 105:22]
+    node _T_6527 = asSInt(io.wgt.bits[11][11]) @[Gemm.scala 106:43]
+    dot_11.io.b[11] <= _T_6527 @[Gemm.scala 106:22]
+    node _T_6528 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 105:43]
+    dot_11.io.a[12] <= _T_6528 @[Gemm.scala 105:22]
+    node _T_6529 = asSInt(io.wgt.bits[11][12]) @[Gemm.scala 106:43]
+    dot_11.io.b[12] <= _T_6529 @[Gemm.scala 106:22]
+    node _T_6530 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 105:43]
+    dot_11.io.a[13] <= _T_6530 @[Gemm.scala 105:22]
+    node _T_6531 = asSInt(io.wgt.bits[11][13]) @[Gemm.scala 106:43]
+    dot_11.io.b[13] <= _T_6531 @[Gemm.scala 106:22]
+    node _T_6532 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 105:43]
+    dot_11.io.a[14] <= _T_6532 @[Gemm.scala 105:22]
+    node _T_6533 = asSInt(io.wgt.bits[11][14]) @[Gemm.scala 106:43]
+    dot_11.io.b[14] <= _T_6533 @[Gemm.scala 106:22]
+    node _T_6534 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 105:43]
+    dot_11.io.a[15] <= _T_6534 @[Gemm.scala 105:22]
+    node _T_6535 = asSInt(io.wgt.bits[11][15]) @[Gemm.scala 106:43]
+    dot_11.io.b[15] <= _T_6535 @[Gemm.scala 106:22]
+    node _T_6536 = asSInt(acc_11.io.deq.bits) @[Gemm.scala 108:34]
+    node _T_6537 = add(_T_6536, dot_11.io.y) @[Gemm.scala 108:41]
+    node _T_6538 = tail(_T_6537, 1) @[Gemm.scala 108:41]
+    node _T_6539 = asSInt(_T_6538) @[Gemm.scala 108:41]
+    add_11 <= _T_6539 @[Gemm.scala 108:12]
+    node _T_6541 = asUInt(add_11) @[Gemm.scala 109:54]
+    node _T_6542 = mux(io.reset, UInt<1>("h00"), _T_6541) @[Gemm.scala 109:31]
+    io.acc_o.bits[0][11] <= _T_6542 @[Gemm.scala 109:25]
+    node _T_6543 = asUInt(add_11) @[Gemm.scala 110:33]
+    io.out.bits[0][11] <= _T_6543 @[Gemm.scala 110:23]
+    vld[11] <= acc_11.io.deq.valid @[Gemm.scala 111:12]
+    node _T_6544 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 102:41]
+    node _T_6545 = and(_T_6544, io.acc_i.valid) @[Gemm.scala 102:56]
+    node _T_6546 = not(io.reset) @[Gemm.scala 102:75]
+    node _T_6547 = and(_T_6545, _T_6546) @[Gemm.scala 102:73]
+    acc_12.io.enq.valid <= _T_6547 @[Gemm.scala 102:25]
+    acc_12.io.enq.bits <= io.acc_i.bits[0][12] @[Gemm.scala 103:24]
+    node _T_6548 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 105:43]
+    dot_12.io.a[0] <= _T_6548 @[Gemm.scala 105:22]
+    node _T_6549 = asSInt(io.wgt.bits[12][0]) @[Gemm.scala 106:43]
+    dot_12.io.b[0] <= _T_6549 @[Gemm.scala 106:22]
+    node _T_6550 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 105:43]
+    dot_12.io.a[1] <= _T_6550 @[Gemm.scala 105:22]
+    node _T_6551 = asSInt(io.wgt.bits[12][1]) @[Gemm.scala 106:43]
+    dot_12.io.b[1] <= _T_6551 @[Gemm.scala 106:22]
+    node _T_6552 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 105:43]
+    dot_12.io.a[2] <= _T_6552 @[Gemm.scala 105:22]
+    node _T_6553 = asSInt(io.wgt.bits[12][2]) @[Gemm.scala 106:43]
+    dot_12.io.b[2] <= _T_6553 @[Gemm.scala 106:22]
+    node _T_6554 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 105:43]
+    dot_12.io.a[3] <= _T_6554 @[Gemm.scala 105:22]
+    node _T_6555 = asSInt(io.wgt.bits[12][3]) @[Gemm.scala 106:43]
+    dot_12.io.b[3] <= _T_6555 @[Gemm.scala 106:22]
+    node _T_6556 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 105:43]
+    dot_12.io.a[4] <= _T_6556 @[Gemm.scala 105:22]
+    node _T_6557 = asSInt(io.wgt.bits[12][4]) @[Gemm.scala 106:43]
+    dot_12.io.b[4] <= _T_6557 @[Gemm.scala 106:22]
+    node _T_6558 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 105:43]
+    dot_12.io.a[5] <= _T_6558 @[Gemm.scala 105:22]
+    node _T_6559 = asSInt(io.wgt.bits[12][5]) @[Gemm.scala 106:43]
+    dot_12.io.b[5] <= _T_6559 @[Gemm.scala 106:22]
+    node _T_6560 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 105:43]
+    dot_12.io.a[6] <= _T_6560 @[Gemm.scala 105:22]
+    node _T_6561 = asSInt(io.wgt.bits[12][6]) @[Gemm.scala 106:43]
+    dot_12.io.b[6] <= _T_6561 @[Gemm.scala 106:22]
+    node _T_6562 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 105:43]
+    dot_12.io.a[7] <= _T_6562 @[Gemm.scala 105:22]
+    node _T_6563 = asSInt(io.wgt.bits[12][7]) @[Gemm.scala 106:43]
+    dot_12.io.b[7] <= _T_6563 @[Gemm.scala 106:22]
+    node _T_6564 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 105:43]
+    dot_12.io.a[8] <= _T_6564 @[Gemm.scala 105:22]
+    node _T_6565 = asSInt(io.wgt.bits[12][8]) @[Gemm.scala 106:43]
+    dot_12.io.b[8] <= _T_6565 @[Gemm.scala 106:22]
+    node _T_6566 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 105:43]
+    dot_12.io.a[9] <= _T_6566 @[Gemm.scala 105:22]
+    node _T_6567 = asSInt(io.wgt.bits[12][9]) @[Gemm.scala 106:43]
+    dot_12.io.b[9] <= _T_6567 @[Gemm.scala 106:22]
+    node _T_6568 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 105:43]
+    dot_12.io.a[10] <= _T_6568 @[Gemm.scala 105:22]
+    node _T_6569 = asSInt(io.wgt.bits[12][10]) @[Gemm.scala 106:43]
+    dot_12.io.b[10] <= _T_6569 @[Gemm.scala 106:22]
+    node _T_6570 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 105:43]
+    dot_12.io.a[11] <= _T_6570 @[Gemm.scala 105:22]
+    node _T_6571 = asSInt(io.wgt.bits[12][11]) @[Gemm.scala 106:43]
+    dot_12.io.b[11] <= _T_6571 @[Gemm.scala 106:22]
+    node _T_6572 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 105:43]
+    dot_12.io.a[12] <= _T_6572 @[Gemm.scala 105:22]
+    node _T_6573 = asSInt(io.wgt.bits[12][12]) @[Gemm.scala 106:43]
+    dot_12.io.b[12] <= _T_6573 @[Gemm.scala 106:22]
+    node _T_6574 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 105:43]
+    dot_12.io.a[13] <= _T_6574 @[Gemm.scala 105:22]
+    node _T_6575 = asSInt(io.wgt.bits[12][13]) @[Gemm.scala 106:43]
+    dot_12.io.b[13] <= _T_6575 @[Gemm.scala 106:22]
+    node _T_6576 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 105:43]
+    dot_12.io.a[14] <= _T_6576 @[Gemm.scala 105:22]
+    node _T_6577 = asSInt(io.wgt.bits[12][14]) @[Gemm.scala 106:43]
+    dot_12.io.b[14] <= _T_6577 @[Gemm.scala 106:22]
+    node _T_6578 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 105:43]
+    dot_12.io.a[15] <= _T_6578 @[Gemm.scala 105:22]
+    node _T_6579 = asSInt(io.wgt.bits[12][15]) @[Gemm.scala 106:43]
+    dot_12.io.b[15] <= _T_6579 @[Gemm.scala 106:22]
+    node _T_6580 = asSInt(acc_12.io.deq.bits) @[Gemm.scala 108:34]
+    node _T_6581 = add(_T_6580, dot_12.io.y) @[Gemm.scala 108:41]
+    node _T_6582 = tail(_T_6581, 1) @[Gemm.scala 108:41]
+    node _T_6583 = asSInt(_T_6582) @[Gemm.scala 108:41]
+    add_12 <= _T_6583 @[Gemm.scala 108:12]
+    node _T_6585 = asUInt(add_12) @[Gemm.scala 109:54]
+    node _T_6586 = mux(io.reset, UInt<1>("h00"), _T_6585) @[Gemm.scala 109:31]
+    io.acc_o.bits[0][12] <= _T_6586 @[Gemm.scala 109:25]
+    node _T_6587 = asUInt(add_12) @[Gemm.scala 110:33]
+    io.out.bits[0][12] <= _T_6587 @[Gemm.scala 110:23]
+    vld[12] <= acc_12.io.deq.valid @[Gemm.scala 111:12]
+    node _T_6588 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 102:41]
+    node _T_6589 = and(_T_6588, io.acc_i.valid) @[Gemm.scala 102:56]
+    node _T_6590 = not(io.reset) @[Gemm.scala 102:75]
+    node _T_6591 = and(_T_6589, _T_6590) @[Gemm.scala 102:73]
+    acc_13.io.enq.valid <= _T_6591 @[Gemm.scala 102:25]
+    acc_13.io.enq.bits <= io.acc_i.bits[0][13] @[Gemm.scala 103:24]
+    node _T_6592 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 105:43]
+    dot_13.io.a[0] <= _T_6592 @[Gemm.scala 105:22]
+    node _T_6593 = asSInt(io.wgt.bits[13][0]) @[Gemm.scala 106:43]
+    dot_13.io.b[0] <= _T_6593 @[Gemm.scala 106:22]
+    node _T_6594 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 105:43]
+    dot_13.io.a[1] <= _T_6594 @[Gemm.scala 105:22]
+    node _T_6595 = asSInt(io.wgt.bits[13][1]) @[Gemm.scala 106:43]
+    dot_13.io.b[1] <= _T_6595 @[Gemm.scala 106:22]
+    node _T_6596 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 105:43]
+    dot_13.io.a[2] <= _T_6596 @[Gemm.scala 105:22]
+    node _T_6597 = asSInt(io.wgt.bits[13][2]) @[Gemm.scala 106:43]
+    dot_13.io.b[2] <= _T_6597 @[Gemm.scala 106:22]
+    node _T_6598 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 105:43]
+    dot_13.io.a[3] <= _T_6598 @[Gemm.scala 105:22]
+    node _T_6599 = asSInt(io.wgt.bits[13][3]) @[Gemm.scala 106:43]
+    dot_13.io.b[3] <= _T_6599 @[Gemm.scala 106:22]
+    node _T_6600 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 105:43]
+    dot_13.io.a[4] <= _T_6600 @[Gemm.scala 105:22]
+    node _T_6601 = asSInt(io.wgt.bits[13][4]) @[Gemm.scala 106:43]
+    dot_13.io.b[4] <= _T_6601 @[Gemm.scala 106:22]
+    node _T_6602 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 105:43]
+    dot_13.io.a[5] <= _T_6602 @[Gemm.scala 105:22]
+    node _T_6603 = asSInt(io.wgt.bits[13][5]) @[Gemm.scala 106:43]
+    dot_13.io.b[5] <= _T_6603 @[Gemm.scala 106:22]
+    node _T_6604 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 105:43]
+    dot_13.io.a[6] <= _T_6604 @[Gemm.scala 105:22]
+    node _T_6605 = asSInt(io.wgt.bits[13][6]) @[Gemm.scala 106:43]
+    dot_13.io.b[6] <= _T_6605 @[Gemm.scala 106:22]
+    node _T_6606 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 105:43]
+    dot_13.io.a[7] <= _T_6606 @[Gemm.scala 105:22]
+    node _T_6607 = asSInt(io.wgt.bits[13][7]) @[Gemm.scala 106:43]
+    dot_13.io.b[7] <= _T_6607 @[Gemm.scala 106:22]
+    node _T_6608 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 105:43]
+    dot_13.io.a[8] <= _T_6608 @[Gemm.scala 105:22]
+    node _T_6609 = asSInt(io.wgt.bits[13][8]) @[Gemm.scala 106:43]
+    dot_13.io.b[8] <= _T_6609 @[Gemm.scala 106:22]
+    node _T_6610 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 105:43]
+    dot_13.io.a[9] <= _T_6610 @[Gemm.scala 105:22]
+    node _T_6611 = asSInt(io.wgt.bits[13][9]) @[Gemm.scala 106:43]
+    dot_13.io.b[9] <= _T_6611 @[Gemm.scala 106:22]
+    node _T_6612 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 105:43]
+    dot_13.io.a[10] <= _T_6612 @[Gemm.scala 105:22]
+    node _T_6613 = asSInt(io.wgt.bits[13][10]) @[Gemm.scala 106:43]
+    dot_13.io.b[10] <= _T_6613 @[Gemm.scala 106:22]
+    node _T_6614 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 105:43]
+    dot_13.io.a[11] <= _T_6614 @[Gemm.scala 105:22]
+    node _T_6615 = asSInt(io.wgt.bits[13][11]) @[Gemm.scala 106:43]
+    dot_13.io.b[11] <= _T_6615 @[Gemm.scala 106:22]
+    node _T_6616 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 105:43]
+    dot_13.io.a[12] <= _T_6616 @[Gemm.scala 105:22]
+    node _T_6617 = asSInt(io.wgt.bits[13][12]) @[Gemm.scala 106:43]
+    dot_13.io.b[12] <= _T_6617 @[Gemm.scala 106:22]
+    node _T_6618 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 105:43]
+    dot_13.io.a[13] <= _T_6618 @[Gemm.scala 105:22]
+    node _T_6619 = asSInt(io.wgt.bits[13][13]) @[Gemm.scala 106:43]
+    dot_13.io.b[13] <= _T_6619 @[Gemm.scala 106:22]
+    node _T_6620 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 105:43]
+    dot_13.io.a[14] <= _T_6620 @[Gemm.scala 105:22]
+    node _T_6621 = asSInt(io.wgt.bits[13][14]) @[Gemm.scala 106:43]
+    dot_13.io.b[14] <= _T_6621 @[Gemm.scala 106:22]
+    node _T_6622 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 105:43]
+    dot_13.io.a[15] <= _T_6622 @[Gemm.scala 105:22]
+    node _T_6623 = asSInt(io.wgt.bits[13][15]) @[Gemm.scala 106:43]
+    dot_13.io.b[15] <= _T_6623 @[Gemm.scala 106:22]
+    node _T_6624 = asSInt(acc_13.io.deq.bits) @[Gemm.scala 108:34]
+    node _T_6625 = add(_T_6624, dot_13.io.y) @[Gemm.scala 108:41]
+    node _T_6626 = tail(_T_6625, 1) @[Gemm.scala 108:41]
+    node _T_6627 = asSInt(_T_6626) @[Gemm.scala 108:41]
+    add_13 <= _T_6627 @[Gemm.scala 108:12]
+    node _T_6629 = asUInt(add_13) @[Gemm.scala 109:54]
+    node _T_6630 = mux(io.reset, UInt<1>("h00"), _T_6629) @[Gemm.scala 109:31]
+    io.acc_o.bits[0][13] <= _T_6630 @[Gemm.scala 109:25]
+    node _T_6631 = asUInt(add_13) @[Gemm.scala 110:33]
+    io.out.bits[0][13] <= _T_6631 @[Gemm.scala 110:23]
+    vld[13] <= acc_13.io.deq.valid @[Gemm.scala 111:12]
+    node _T_6632 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 102:41]
+    node _T_6633 = and(_T_6632, io.acc_i.valid) @[Gemm.scala 102:56]
+    node _T_6634 = not(io.reset) @[Gemm.scala 102:75]
+    node _T_6635 = and(_T_6633, _T_6634) @[Gemm.scala 102:73]
+    acc_14.io.enq.valid <= _T_6635 @[Gemm.scala 102:25]
+    acc_14.io.enq.bits <= io.acc_i.bits[0][14] @[Gemm.scala 103:24]
+    node _T_6636 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 105:43]
+    dot_14.io.a[0] <= _T_6636 @[Gemm.scala 105:22]
+    node _T_6637 = asSInt(io.wgt.bits[14][0]) @[Gemm.scala 106:43]
+    dot_14.io.b[0] <= _T_6637 @[Gemm.scala 106:22]
+    node _T_6638 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 105:43]
+    dot_14.io.a[1] <= _T_6638 @[Gemm.scala 105:22]
+    node _T_6639 = asSInt(io.wgt.bits[14][1]) @[Gemm.scala 106:43]
+    dot_14.io.b[1] <= _T_6639 @[Gemm.scala 106:22]
+    node _T_6640 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 105:43]
+    dot_14.io.a[2] <= _T_6640 @[Gemm.scala 105:22]
+    node _T_6641 = asSInt(io.wgt.bits[14][2]) @[Gemm.scala 106:43]
+    dot_14.io.b[2] <= _T_6641 @[Gemm.scala 106:22]
+    node _T_6642 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 105:43]
+    dot_14.io.a[3] <= _T_6642 @[Gemm.scala 105:22]
+    node _T_6643 = asSInt(io.wgt.bits[14][3]) @[Gemm.scala 106:43]
+    dot_14.io.b[3] <= _T_6643 @[Gemm.scala 106:22]
+    node _T_6644 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 105:43]
+    dot_14.io.a[4] <= _T_6644 @[Gemm.scala 105:22]
+    node _T_6645 = asSInt(io.wgt.bits[14][4]) @[Gemm.scala 106:43]
+    dot_14.io.b[4] <= _T_6645 @[Gemm.scala 106:22]
+    node _T_6646 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 105:43]
+    dot_14.io.a[5] <= _T_6646 @[Gemm.scala 105:22]
+    node _T_6647 = asSInt(io.wgt.bits[14][5]) @[Gemm.scala 106:43]
+    dot_14.io.b[5] <= _T_6647 @[Gemm.scala 106:22]
+    node _T_6648 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 105:43]
+    dot_14.io.a[6] <= _T_6648 @[Gemm.scala 105:22]
+    node _T_6649 = asSInt(io.wgt.bits[14][6]) @[Gemm.scala 106:43]
+    dot_14.io.b[6] <= _T_6649 @[Gemm.scala 106:22]
+    node _T_6650 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 105:43]
+    dot_14.io.a[7] <= _T_6650 @[Gemm.scala 105:22]
+    node _T_6651 = asSInt(io.wgt.bits[14][7]) @[Gemm.scala 106:43]
+    dot_14.io.b[7] <= _T_6651 @[Gemm.scala 106:22]
+    node _T_6652 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 105:43]
+    dot_14.io.a[8] <= _T_6652 @[Gemm.scala 105:22]
+    node _T_6653 = asSInt(io.wgt.bits[14][8]) @[Gemm.scala 106:43]
+    dot_14.io.b[8] <= _T_6653 @[Gemm.scala 106:22]
+    node _T_6654 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 105:43]
+    dot_14.io.a[9] <= _T_6654 @[Gemm.scala 105:22]
+    node _T_6655 = asSInt(io.wgt.bits[14][9]) @[Gemm.scala 106:43]
+    dot_14.io.b[9] <= _T_6655 @[Gemm.scala 106:22]
+    node _T_6656 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 105:43]
+    dot_14.io.a[10] <= _T_6656 @[Gemm.scala 105:22]
+    node _T_6657 = asSInt(io.wgt.bits[14][10]) @[Gemm.scala 106:43]
+    dot_14.io.b[10] <= _T_6657 @[Gemm.scala 106:22]
+    node _T_6658 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 105:43]
+    dot_14.io.a[11] <= _T_6658 @[Gemm.scala 105:22]
+    node _T_6659 = asSInt(io.wgt.bits[14][11]) @[Gemm.scala 106:43]
+    dot_14.io.b[11] <= _T_6659 @[Gemm.scala 106:22]
+    node _T_6660 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 105:43]
+    dot_14.io.a[12] <= _T_6660 @[Gemm.scala 105:22]
+    node _T_6661 = asSInt(io.wgt.bits[14][12]) @[Gemm.scala 106:43]
+    dot_14.io.b[12] <= _T_6661 @[Gemm.scala 106:22]
+    node _T_6662 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 105:43]
+    dot_14.io.a[13] <= _T_6662 @[Gemm.scala 105:22]
+    node _T_6663 = asSInt(io.wgt.bits[14][13]) @[Gemm.scala 106:43]
+    dot_14.io.b[13] <= _T_6663 @[Gemm.scala 106:22]
+    node _T_6664 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 105:43]
+    dot_14.io.a[14] <= _T_6664 @[Gemm.scala 105:22]
+    node _T_6665 = asSInt(io.wgt.bits[14][14]) @[Gemm.scala 106:43]
+    dot_14.io.b[14] <= _T_6665 @[Gemm.scala 106:22]
+    node _T_6666 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 105:43]
+    dot_14.io.a[15] <= _T_6666 @[Gemm.scala 105:22]
+    node _T_6667 = asSInt(io.wgt.bits[14][15]) @[Gemm.scala 106:43]
+    dot_14.io.b[15] <= _T_6667 @[Gemm.scala 106:22]
+    node _T_6668 = asSInt(acc_14.io.deq.bits) @[Gemm.scala 108:34]
+    node _T_6669 = add(_T_6668, dot_14.io.y) @[Gemm.scala 108:41]
+    node _T_6670 = tail(_T_6669, 1) @[Gemm.scala 108:41]
+    node _T_6671 = asSInt(_T_6670) @[Gemm.scala 108:41]
+    add_14 <= _T_6671 @[Gemm.scala 108:12]
+    node _T_6673 = asUInt(add_14) @[Gemm.scala 109:54]
+    node _T_6674 = mux(io.reset, UInt<1>("h00"), _T_6673) @[Gemm.scala 109:31]
+    io.acc_o.bits[0][14] <= _T_6674 @[Gemm.scala 109:25]
+    node _T_6675 = asUInt(add_14) @[Gemm.scala 110:33]
+    io.out.bits[0][14] <= _T_6675 @[Gemm.scala 110:23]
+    vld[14] <= acc_14.io.deq.valid @[Gemm.scala 111:12]
+    node _T_6676 = and(io.inp.valid, io.wgt.valid) @[Gemm.scala 102:41]
+    node _T_6677 = and(_T_6676, io.acc_i.valid) @[Gemm.scala 102:56]
+    node _T_6678 = not(io.reset) @[Gemm.scala 102:75]
+    node _T_6679 = and(_T_6677, _T_6678) @[Gemm.scala 102:73]
+    acc_15.io.enq.valid <= _T_6679 @[Gemm.scala 102:25]
+    acc_15.io.enq.bits <= io.acc_i.bits[0][15] @[Gemm.scala 103:24]
+    node _T_6680 = asSInt(io.inp.bits[0][0]) @[Gemm.scala 105:43]
+    dot_15.io.a[0] <= _T_6680 @[Gemm.scala 105:22]
+    node _T_6681 = asSInt(io.wgt.bits[15][0]) @[Gemm.scala 106:43]
+    dot_15.io.b[0] <= _T_6681 @[Gemm.scala 106:22]
+    node _T_6682 = asSInt(io.inp.bits[0][1]) @[Gemm.scala 105:43]
+    dot_15.io.a[1] <= _T_6682 @[Gemm.scala 105:22]
+    node _T_6683 = asSInt(io.wgt.bits[15][1]) @[Gemm.scala 106:43]
+    dot_15.io.b[1] <= _T_6683 @[Gemm.scala 106:22]
+    node _T_6684 = asSInt(io.inp.bits[0][2]) @[Gemm.scala 105:43]
+    dot_15.io.a[2] <= _T_6684 @[Gemm.scala 105:22]
+    node _T_6685 = asSInt(io.wgt.bits[15][2]) @[Gemm.scala 106:43]
+    dot_15.io.b[2] <= _T_6685 @[Gemm.scala 106:22]
+    node _T_6686 = asSInt(io.inp.bits[0][3]) @[Gemm.scala 105:43]
+    dot_15.io.a[3] <= _T_6686 @[Gemm.scala 105:22]
+    node _T_6687 = asSInt(io.wgt.bits[15][3]) @[Gemm.scala 106:43]
+    dot_15.io.b[3] <= _T_6687 @[Gemm.scala 106:22]
+    node _T_6688 = asSInt(io.inp.bits[0][4]) @[Gemm.scala 105:43]
+    dot_15.io.a[4] <= _T_6688 @[Gemm.scala 105:22]
+    node _T_6689 = asSInt(io.wgt.bits[15][4]) @[Gemm.scala 106:43]
+    dot_15.io.b[4] <= _T_6689 @[Gemm.scala 106:22]
+    node _T_6690 = asSInt(io.inp.bits[0][5]) @[Gemm.scala 105:43]
+    dot_15.io.a[5] <= _T_6690 @[Gemm.scala 105:22]
+    node _T_6691 = asSInt(io.wgt.bits[15][5]) @[Gemm.scala 106:43]
+    dot_15.io.b[5] <= _T_6691 @[Gemm.scala 106:22]
+    node _T_6692 = asSInt(io.inp.bits[0][6]) @[Gemm.scala 105:43]
+    dot_15.io.a[6] <= _T_6692 @[Gemm.scala 105:22]
+    node _T_6693 = asSInt(io.wgt.bits[15][6]) @[Gemm.scala 106:43]
+    dot_15.io.b[6] <= _T_6693 @[Gemm.scala 106:22]
+    node _T_6694 = asSInt(io.inp.bits[0][7]) @[Gemm.scala 105:43]
+    dot_15.io.a[7] <= _T_6694 @[Gemm.scala 105:22]
+    node _T_6695 = asSInt(io.wgt.bits[15][7]) @[Gemm.scala 106:43]
+    dot_15.io.b[7] <= _T_6695 @[Gemm.scala 106:22]
+    node _T_6696 = asSInt(io.inp.bits[0][8]) @[Gemm.scala 105:43]
+    dot_15.io.a[8] <= _T_6696 @[Gemm.scala 105:22]
+    node _T_6697 = asSInt(io.wgt.bits[15][8]) @[Gemm.scala 106:43]
+    dot_15.io.b[8] <= _T_6697 @[Gemm.scala 106:22]
+    node _T_6698 = asSInt(io.inp.bits[0][9]) @[Gemm.scala 105:43]
+    dot_15.io.a[9] <= _T_6698 @[Gemm.scala 105:22]
+    node _T_6699 = asSInt(io.wgt.bits[15][9]) @[Gemm.scala 106:43]
+    dot_15.io.b[9] <= _T_6699 @[Gemm.scala 106:22]
+    node _T_6700 = asSInt(io.inp.bits[0][10]) @[Gemm.scala 105:43]
+    dot_15.io.a[10] <= _T_6700 @[Gemm.scala 105:22]
+    node _T_6701 = asSInt(io.wgt.bits[15][10]) @[Gemm.scala 106:43]
+    dot_15.io.b[10] <= _T_6701 @[Gemm.scala 106:22]
+    node _T_6702 = asSInt(io.inp.bits[0][11]) @[Gemm.scala 105:43]
+    dot_15.io.a[11] <= _T_6702 @[Gemm.scala 105:22]
+    node _T_6703 = asSInt(io.wgt.bits[15][11]) @[Gemm.scala 106:43]
+    dot_15.io.b[11] <= _T_6703 @[Gemm.scala 106:22]
+    node _T_6704 = asSInt(io.inp.bits[0][12]) @[Gemm.scala 105:43]
+    dot_15.io.a[12] <= _T_6704 @[Gemm.scala 105:22]
+    node _T_6705 = asSInt(io.wgt.bits[15][12]) @[Gemm.scala 106:43]
+    dot_15.io.b[12] <= _T_6705 @[Gemm.scala 106:22]
+    node _T_6706 = asSInt(io.inp.bits[0][13]) @[Gemm.scala 105:43]
+    dot_15.io.a[13] <= _T_6706 @[Gemm.scala 105:22]
+    node _T_6707 = asSInt(io.wgt.bits[15][13]) @[Gemm.scala 106:43]
+    dot_15.io.b[13] <= _T_6707 @[Gemm.scala 106:22]
+    node _T_6708 = asSInt(io.inp.bits[0][14]) @[Gemm.scala 105:43]
+    dot_15.io.a[14] <= _T_6708 @[Gemm.scala 105:22]
+    node _T_6709 = asSInt(io.wgt.bits[15][14]) @[Gemm.scala 106:43]
+    dot_15.io.b[14] <= _T_6709 @[Gemm.scala 106:22]
+    node _T_6710 = asSInt(io.inp.bits[0][15]) @[Gemm.scala 105:43]
+    dot_15.io.a[15] <= _T_6710 @[Gemm.scala 105:22]
+    node _T_6711 = asSInt(io.wgt.bits[15][15]) @[Gemm.scala 106:43]
+    dot_15.io.b[15] <= _T_6711 @[Gemm.scala 106:22]
+    node _T_6712 = asSInt(acc_15.io.deq.bits) @[Gemm.scala 108:34]
+    node _T_6713 = add(_T_6712, dot_15.io.y) @[Gemm.scala 108:41]
+    node _T_6714 = tail(_T_6713, 1) @[Gemm.scala 108:41]
+    node _T_6715 = asSInt(_T_6714) @[Gemm.scala 108:41]
+    add_15 <= _T_6715 @[Gemm.scala 108:12]
+    node _T_6717 = asUInt(add_15) @[Gemm.scala 109:54]
+    node _T_6718 = mux(io.reset, UInt<1>("h00"), _T_6717) @[Gemm.scala 109:31]
+    io.acc_o.bits[0][15] <= _T_6718 @[Gemm.scala 109:25]
+    node _T_6719 = asUInt(add_15) @[Gemm.scala 110:33]
+    io.out.bits[0][15] <= _T_6719 @[Gemm.scala 110:23]
+    vld[15] <= acc_15.io.deq.valid @[Gemm.scala 111:12]
+    node _T_6720 = cat(vld[1], vld[0]) @[Gemm.scala 113:25]
+    node _T_6721 = cat(vld[3], vld[2]) @[Gemm.scala 113:25]
+    node _T_6722 = cat(_T_6721, _T_6720) @[Gemm.scala 113:25]
+    node _T_6723 = cat(vld[5], vld[4]) @[Gemm.scala 113:25]
+    node _T_6724 = cat(vld[7], vld[6]) @[Gemm.scala 113:25]
+    node _T_6725 = cat(_T_6724, _T_6723) @[Gemm.scala 113:25]
+    node _T_6726 = cat(_T_6725, _T_6722) @[Gemm.scala 113:25]
+    node _T_6727 = cat(vld[9], vld[8]) @[Gemm.scala 113:25]
+    node _T_6728 = cat(vld[11], vld[10]) @[Gemm.scala 113:25]
+    node _T_6729 = cat(_T_6728, _T_6727) @[Gemm.scala 113:25]
+    node _T_6730 = cat(vld[13], vld[12]) @[Gemm.scala 113:25]
+    node _T_6731 = cat(vld[15], vld[14]) @[Gemm.scala 113:25]
+    node _T_6732 = cat(_T_6731, _T_6730) @[Gemm.scala 113:25]
+    node _T_6733 = cat(_T_6732, _T_6729) @[Gemm.scala 113:25]
+    node _T_6734 = cat(_T_6733, _T_6726) @[Gemm.scala 113:25]
+    node _T_6735 = not(_T_6734) @[Gemm.scala 113:32]
+    node _T_6737 = eq(_T_6735, UInt<1>("h00")) @[Gemm.scala 113:32]
+    node _T_6738 = or(_T_6737, io.reset) @[Gemm.scala 113:37]
+    io.acc_o.valid <= _T_6738 @[Gemm.scala 113:18]
+    node _T_6739 = cat(vld[1], vld[0]) @[Gemm.scala 114:23]
+    node _T_6740 = cat(vld[3], vld[2]) @[Gemm.scala 114:23]
+    node _T_6741 = cat(_T_6740, _T_6739) @[Gemm.scala 114:23]
+    node _T_6742 = cat(vld[5], vld[4]) @[Gemm.scala 114:23]
+    node _T_6743 = cat(vld[7], vld[6]) @[Gemm.scala 114:23]
+    node _T_6744 = cat(_T_6743, _T_6742) @[Gemm.scala 114:23]
+    node _T_6745 = cat(_T_6744, _T_6741) @[Gemm.scala 114:23]
+    node _T_6746 = cat(vld[9], vld[8]) @[Gemm.scala 114:23]
+    node _T_6747 = cat(vld[11], vld[10]) @[Gemm.scala 114:23]
+    node _T_6748 = cat(_T_6747, _T_6746) @[Gemm.scala 114:23]
+    node _T_6749 = cat(vld[13], vld[12]) @[Gemm.scala 114:23]
+    node _T_6750 = cat(vld[15], vld[14]) @[Gemm.scala 114:23]
+    node _T_6751 = cat(_T_6750, _T_6749) @[Gemm.scala 114:23]
+    node _T_6752 = cat(_T_6751, _T_6748) @[Gemm.scala 114:23]
+    node _T_6753 = cat(_T_6752, _T_6745) @[Gemm.scala 114:23]
+    node _T_6754 = not(_T_6753) @[Gemm.scala 114:30]
+    node _T_6756 = eq(_T_6754, UInt<1>("h00")) @[Gemm.scala 114:30]
+    io.out.valid <= _T_6756 @[Gemm.scala 114:16]
     
   module PrintVec : 
     input clock : Clock

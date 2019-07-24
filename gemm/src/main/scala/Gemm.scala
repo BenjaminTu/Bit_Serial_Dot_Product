@@ -5,31 +5,32 @@ import chisel3.util._
 import scala.math.pow
 
 /** Pipelined multiply and accumulate */
-class MAC(dataBits: Int = 8, cBits: Int = 16, outBits: Int = 17) extends Module {
-  require (cBits >= dataBits * 2)
-  require (outBits >= dataBits * 2)
+class MAC(aBits: Int = 8, bBits: Int = 8, cBits: Int = 16) extends Module {
+  val outBits = Math.max(aBits + bBits, cBits) + 1
   val io = IO(new Bundle {
-    val a = Input(SInt(dataBits.W))
-    val b = Input(SInt(dataBits.W))
+    val a = Input(SInt(aBits.W))
+    val b = Input(SInt(bBits.W))
     val c = Input(SInt(cBits.W))
     val y = Output(SInt(outBits.W))
   })
-  val mult = Wire(SInt(cBits.W))
-  val add = Wire(SInt(outBits.W))
+  val mult = Wire(SInt((aBits + bBits).W))  
+  val add  = Wire(SInt(outBits.W))
   val rA = RegNext(io.a)
   val rB = RegNext(io.b)
   val rC = RegNext(io.c)
+  
   mult := rA * rB
   add := rC +& mult
+  
   io.y := add
 }
 
 /** Pipelined adder */
-class Adder(dataBits: Int = 8, outBits: Int = 17) extends Module {
-  require (outBits >= dataBits)
+class PipeAdder(aBits: Int = 8, bBits: Int = 8) extends Module {
+  val outBits = Math.max(aBits, bBits) + 1
   val io = IO(new Bundle {
-    val a = Input(SInt(dataBits.W))
-    val b = Input(SInt(dataBits.W))
+    val a = Input(SInt(bBits.W))
+    val b = Input(SInt(aBits.W))
     val y = Output(SInt(outBits.W))
   })
   val add = Wire(SInt(outBits.W))
@@ -39,22 +40,21 @@ class Adder(dataBits: Int = 8, outBits: Int = 17) extends Module {
   io.y := add
 }
 
-/** Pipelined DotProduct based on MAC and Adder */
-class DotProduct(dataBits: Int = 8, size: Int = 16) extends Module {
+/** Pipelined DotProduct based on MAC and PipeAdder */
+class DotProduct(aBits: Int = 8, bBits: Int = 8, size: Int = 16) extends Module {
   val errMsg = s"\n\n[VTA] [DotProduct] size must be greater than 4 and a power of 2\n\n"
   require(size >= 4 && isPow2(size), errMsg)
-  val b = dataBits * 2
-  val outBits = b + log2Ceil(size) + 1
+  val outBits = aBits + bBits + log2Ceil(size) + 1
   val io = IO(new Bundle {
-    val a = Input(Vec(size, SInt(dataBits.W)))
-    val b = Input(Vec(size, SInt(dataBits.W)))
+    val a = Input(Vec(size, SInt(aBits.W)))
+    val b = Input(Vec(size, SInt(bBits.W)))
     val y = Output(SInt(outBits.W))
   })
-  val s = Seq.tabulate(log2Ceil(size+1))(i => pow(2, log2Ceil(size) - i).toInt) // # of total layers
-  val p = log2Ceil(size/2)+1 // # of adder layers
-  val m = Seq.fill(s(0))(Module(new MAC(dataBits = dataBits, cBits = b, outBits = b + 1))) // # of total vector pairs
+  val s = Seq.tabulate(log2Ceil(size + 1))(i => pow(2, log2Ceil(size) - i).toInt) // # of total layers
+  val p = log2Ceil(size/2) + 1 // # of adder layers
+  val m = Seq.fill(s(0))(Module(new MAC(aBits, bBits, cBits = 1))) // # of total vector pairs
   val a = Seq.tabulate(p)(i =>
-    Seq.fill(s(i + 1))(Module(new Adder(dataBits = b + i + 1, outBits = b + i + 2)))
+    Seq.fill(s(i + 1))(Module(new PipeAdder(aBits + i + 1, bBits + i + 1)))
   ) // # adders within each layer
 
   // Vector MACs
@@ -64,36 +64,22 @@ class DotProduct(dataBits: Int = 8, size: Int = 16) extends Module {
     m(i).io.c := 0.S
   }
 
-  // Adder Reduction
+  // PipeAdder Reduction
   for (i <- 0 until p) {
-    for (j <- 0 until s(i+1)) {
+    for (j <- 0 until s(i + 1)) {
       if (i == 0) {
-        // First layer of Adders
-        a(i)(j).io.a := m(2*j).io.y
-        a(i)(j).io.b := m(2*j + 1).io.y
+        // First layer of PipeAdders
+        a(i)(j).io.a := m(2 * j).io.y
+        a(i)(j).io.b := m(2 * j + 1).io.y
       } else {
-        a(i)(j).io.a := a(i - 1)(2*j).io.y
-        a(i)(j).io.b := a(i - 1)(2*j + 1).io.y
+        a(i)(j).io.a := a(i - 1)(2 * j).io.y
+        a(i)(j).io.b := a(i - 1)(2 * j + 1).io.y
       }
     }
   }
-  
+
   // last adder
   io.y := a(p-1)(0).io.y
-/*
-  when (true.B) {
-    printf("\na: ")
-    for (k <- 0 until size) {
-       printf("%d ,", io.a(k))
-    }
-    printf("\nb: ")
-    for (k <- 0 until size) {
-       printf("%d ,", io.b(k))
-    }
-    printf("\n")
-		printf("y: %d", io.y)
-  }
-*/
 }
 
 /** Perform matrix-vector-multiplication based on DotProduct */
@@ -107,7 +93,7 @@ class MatrixVectorCore(inpBits: Int = 8, wgtBits: Int = 8, outBits: Int = 8, siz
     val acc_o = ValidIO(Vec(1, Vec(size, UInt(accBits.W))))
     val out = ValidIO(Vec(1, Vec(size, UInt(outBits.W))))
   })
-  val dot = Seq.fill(size)(Module(new DotProduct(outBits, size)))
+  val dot = Seq.fill(size)(Module(new DotProduct(inpBits, wgtBits, size)))
   val acc = Seq.fill(size)(Module(new Pipe(UInt(accBits.W), latency = log2Ceil(size) + 1)))
   val add = Seq.fill(size)(Wire(SInt(accBits.W)))
   val vld = Wire(Vec(size, Bool()))

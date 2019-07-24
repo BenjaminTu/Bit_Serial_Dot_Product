@@ -11,12 +11,15 @@ VM_COVERAGE = 0
 VM_THREADS = 0
 # Tracing output mode?  0/1 (from --trace)
 VM_TRACE = 0
+# Tracing threadeds output mode?  0/1 (from --trace-fst-thread)
+VM_TRACE_THREADED = 0
 
 ### Object file lists...
 # Generated module classes, fast-path, compile with highest optimization
 VM_CLASSES_FAST += \
 	VTest \
 	VTest_DotProduct \
+	VTest_DotProduct__1 \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization
 VM_CLASSES_SLOW += \
