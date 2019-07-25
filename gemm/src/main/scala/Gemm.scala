@@ -114,6 +114,232 @@ class MatrixVectorCore(inpBits: Int = 8, wgtBits: Int = 8, outBits: Int = 8, siz
   io.out.valid := vld.asUInt.andR
 }
 
+/** TensorGemm.
+  *
+  * This unit instantiate the MatrixVectorCore and go over the
+  * micro-ops (uops) which are used to read inputs, weights and biases,
+  * and writes results back to the acc and out scratchpads.
+  *
+  * Also, the TensorGemm uses the reset field in the Gemm instruction to
+  * clear or zero-out the acc-scratchpad locations based on the micro-ops.
+  */
+class TensorGemm(debug: Boolean = false)(implicit p: Parameters) extends Module {
+  val io = IO(new Bundle {
+    val start = Input(Bool())
+    val done = Output(Bool())
+    val inst = Input(UInt(INST_BITS.W))
+    val uop = new UopMaster
+    val inp = new TensorMaster(tensorType = "inp")
+    val wgt = new TensorMaster(tensorType = "wgt")
+    val acc = new TensorMaster(tensorType = "acc")
+    val out = new TensorMaster(tensorType = "out")
+  })
+  val sIdle :: sReadUop :: sComputeIdx :: sReadTensor :: sExe :: sWait :: Nil = Enum(6)
+  val state = RegInit(sIdle)
+  val mvc = Module(new MatrixVectorCore)
+  val dec = io.inst.asTypeOf(new GemmDecode)
+  val uop_idx = Reg(chiselTypeOf(dec.uop_end))
+  val uop_end = dec.uop_end
+  val uop_acc = Reg(chiselTypeOf(dec.uop_end))
+  val uop_inp = Reg(chiselTypeOf(dec.uop_end))
+  val uop_wgt = Reg(chiselTypeOf(dec.uop_end))
+  val cnt_o = Reg(chiselTypeOf(dec.lp_0))
+  val acc_o = Reg(chiselTypeOf(dec.uop_end))
+  val inp_o = Reg(chiselTypeOf(dec.uop_end))
+  val wgt_o = Reg(chiselTypeOf(dec.uop_end))
+  val cnt_i = Reg(chiselTypeOf(dec.lp_1))
+  val acc_i = Reg(chiselTypeOf(dec.uop_end))
+  val inp_i = Reg(chiselTypeOf(dec.uop_end))
+  val wgt_i = Reg(chiselTypeOf(dec.uop_end))
+  val pBits = log2Ceil(p(CoreKey).blockOut) + 1
+  val inflight = Reg(UInt(pBits.W))
+  val wrpipe = Module(new Pipe(chiselTypeOf(dec.uop_end), latency = pBits))
+  val done = inflight === 0.U &
+             ((state === sExe &
+              cnt_o === dec.lp_0 - 1.U &
+        cnt_i === dec.lp_1 - 1.U &
+        uop_idx === uop_end - 1.U &
+        inflight === 0.U) |
+       state === sWait)
+
+  switch (state) {
+    is (sIdle) {
+      when (io.start) {
+        state := sReadUop
+      }
+    }
+    is (sReadUop) {
+      state := sComputeIdx
+    }
+    is (sComputeIdx) {
+      state := sReadTensor
+    }
+    is (sReadTensor) {
+      state := sExe
+    }
+    is (sExe) {
+      when ((cnt_o === dec.lp_0 - 1.U) &&
+            (cnt_i === dec.lp_1 - 1.U) &&
+            (uop_idx === uop_end - 1.U)) {
+  when (inflight =/= 0.U) {
+          state := sWait
+  } .otherwise {
+          state := sIdle
+  }
+      } .otherwise {
+        state := sReadUop
+      }
+    }
+    is (sWait) {
+      when (inflight === 0.U) {
+        state := sIdle
+      }
+    }
+  }
+
+  when (state === sIdle) {
+    inflight := 0.U
+  } .elsewhen (!dec.reset) {
+    when (state === sExe && inflight =/= ((1 << pBits) - 1).asUInt) { // overflow check
+      inflight := inflight + 1.U
+    } .elsewhen (mvc.io.acc_o.data.valid && inflight =/= 0.U) { // underflow check
+      inflight := inflight - 1.U
+    }
+  }
+
+  when (state === sIdle ||
+         (state === sExe &&
+    uop_idx === uop_end - 1.U)) {
+    uop_idx := dec.uop_begin
+  } .elsewhen (state === sExe) {
+    uop_idx := uop_idx + 1.U
+  }
+
+  when (state === sIdle) {
+    cnt_o := 0.U
+    acc_o := 0.U
+    inp_o := 0.U
+    wgt_o := 0.U
+  } .elsewhen (state === sExe &&
+         uop_idx === uop_end - 1.U &&
+         cnt_i === dec.lp_1 - 1.U) {
+    cnt_o := cnt_o + 1.U
+    acc_o := acc_o + dec.acc_0
+    inp_o := inp_o + dec.inp_0
+    wgt_o := wgt_o + dec.wgt_0
+  }
+
+  when (state === sIdle) {
+    cnt_i := 0.U
+    acc_i := 0.U
+    inp_i := 0.U
+    wgt_i := 0.U
+  } .elsewhen (state === sReadUop && cnt_i === dec.lp_1) {
+    cnt_i := 0.U
+    acc_i := acc_o
+    inp_i := inp_o
+    wgt_i := wgt_o
+  } .elsewhen (state === sExe &&
+         uop_idx === uop_end - 1.U) {
+    cnt_i := cnt_i + 1.U
+    acc_i := acc_i + dec.acc_1
+    inp_i := inp_i + dec.inp_1
+    wgt_i := wgt_i + dec.wgt_1
+  }
+
+  when (state === sComputeIdx && io.uop.data.valid) {
+    uop_acc := io.uop.data.bits.u0 + acc_i
+    uop_inp := io.uop.data.bits.u1 + inp_i
+    uop_wgt := io.uop.data.bits.u2 + wgt_i
+  }
+
+  wrpipe.io.enq.valid := state === sExe & ~dec.reset
+  wrpipe.io.enq.bits := uop_acc
+
+  // uop
+  io.uop.idx.valid := state === sReadUop
+  io.uop.idx.bits := uop_idx
+
+  // inp
+  io.inp.rd.idx.valid := state === sReadTensor
+  io.inp.rd.idx.bits := uop_inp
+  io.inp.tieoffWrite() // read-only
+
+  // wgt
+  io.wgt.rd.idx.valid := state === sReadTensor
+  io.wgt.rd.idx.bits := uop_wgt
+  io.wgt.tieoffWrite() // read-only
+
+  // acc_i
+  io.acc.rd.idx.valid := state === sReadTensor
+  io.acc.rd.idx.bits := uop_acc
+
+  // mvc
+  mvc.io.reset := dec.reset & state === sExe
+  mvc.io.inp.data <> io.inp.rd.data
+  mvc.io.wgt.data <> io.wgt.rd.data
+  mvc.io.acc_i.data <> io.acc.rd.data
+
+  // acc_o
+  io.acc.wr.valid := mvc.io.acc_o.data.valid & Mux(dec.reset, true.B, wrpipe.io.deq.valid)
+  io.acc.wr.bits.idx := Mux(dec.reset, uop_acc, wrpipe.io.deq.bits)
+  io.acc.wr.bits.data <> mvc.io.acc_o.data.bits
+
+  // out
+  io.out.wr.valid := mvc.io.out.data.valid & wrpipe.io.deq.valid
+  io.out.wr.bits.idx := wrpipe.io.deq.bits
+  io.out.wr.bits.data <> mvc.io.out.data.bits
+  io.out.tieoffRead() // write-only
+
+  io.done := done
+
+  if (debug) {
+    when (state === sReadUop && ~dec.reset) {
+      printf("[TensorGemm] [uop] idx:%x\n", uop_idx)
+    }
+
+    when (state === sReadTensor && ~dec.reset) {
+      printf("[TensorGemm] [uop] acc:%x inp:%x wgt:%x\n", uop_acc, uop_inp, uop_wgt)
+    }
+
+    io.inp.rd.data.bits.zipWithIndex.foreach { case(r, i) =>
+      when (io.inp.rd.data.valid && ~dec.reset) {
+        printf("[TensorGemm] [inp] i:%x val:%x\n", i.U, r.asUInt)
+      }
+    }
+
+    io.wgt.rd.data.bits.zipWithIndex.foreach { case(r, i) =>
+      when (io.wgt.rd.data.valid && ~dec.reset) {
+        printf("[TensorGemm] [wgt] i:%x val:%x\n", i.U, r.asUInt)
+      }
+    }
+
+    io.acc.rd.data.bits.foreach { tensor =>
+      tensor.zipWithIndex.foreach { case(elem, i) =>
+        when (io.acc.rd.data.valid && ~dec.reset) {
+          printf("[TensorGemm] [acc_i] i:%x val:%x\n", i.U, elem)
+        }
+      }
+    }
+
+    mvc.io.acc_o.data.bits.foreach { tensor =>
+      tensor.zipWithIndex.foreach { case(elem, i) =>
+        when (mvc.io.acc_o.data.valid && ~dec.reset) {
+          printf("[TensorGemm] [acc_o] i:%x val:%x\n", i.U, elem)
+        }
+      }
+    }
+
+    mvc.io.out.data.bits.foreach { tensor =>
+      tensor.zipWithIndex.foreach { case(elem, i) =>
+        when (mvc.io.out.data.valid && ~dec.reset) {
+          printf("[TensorGemm] [out] i:%x val:%x\n", i.U, elem)
+        }
+      }
+    }
+  }
+}
+
 object Elaborate extends App {
-  chisel3.Driver.execute(args, () => new MatrixVectorCore)
+  chisel3.Driver.execute(args, () => new TensorGemm)
 }
