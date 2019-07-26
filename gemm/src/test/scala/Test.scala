@@ -21,6 +21,22 @@ class VectorGen(inpBits: Int = 8, wgtBits: Int = 8, vectorLength: Int = 16) exte
 //	io.b := VecInit(Seq.fill(vectorLength)(rand.nextInt(max).S))
 }
 
+class NumGen(inpBits: Int = 8, wgtBits: Int = 8) extends Module {
+	val outBits = Math.max(wgtBits, inpBits) + 1
+  val io = IO(new Bundle {
+    val a = Output(SInt(inpBits.W))
+    val b = Output(SInt(wgtBits.W))
+    val y = Input(SInt(outBits.W))
+  })  
+
+  io.a := -2.S
+  io.b := -8.S
+
+  when (true.B) {
+    printf("a:%d b:%d y:%d\n", io.a, io.b, io.y)
+  }
+}
+
 class MVCoreGen(inpBits: Int = 8, wgtBits: Int = 8, accBits: Int = 32, 
 	 shiftBits: Int = 6, size: Int = 16) extends Module {
 	val io = IO(new Bundle {
@@ -30,7 +46,7 @@ class MVCoreGen(inpBits: Int = 8, wgtBits: Int = 8, accBits: Int = 32,
 		val shift = ValidIO(UInt(shiftBits.W))
 	})
 	val (cnt, _) = Counter(true.B, 256)
-/*
+
 	io.inp.bits(0)(0) := 1.U
 	io.inp.bits(0)(1) := 2.U
 	io.wgt.bits(0)(0) := 1.U
@@ -39,14 +55,17 @@ class MVCoreGen(inpBits: Int = 8, wgtBits: Int = 8, accBits: Int = 32,
 	io.wgt.bits(1)(1) := 2.U
  io.acc_i.bits(0)(1) := 0.U
  io.acc_i.bits(0)(0) := 0.U	
- */ for (i <- 0 until size) {
+  
+	/*
+	for (i <- 0 until size) {
     io.inp.bits(0)(i) := Mux(cnt <= 10.U, i.U, 2.U)
     io.acc_i.bits(0)(i) := 0.U
     for (j <- 0 until size) {
       io.wgt.bits(i)(j) := Mux(cnt <= 10.U, (i+j).U, 2.U)
     }
-  }*/
-	
+  }
+	*/
+
 	io.shift.bits := Mux(cnt <= 10.U, 0.U, 1.U)
 
 	val reg = RegNext(cnt % 10.U === 0.U)
@@ -104,8 +123,15 @@ class Test(inpBits: Int = 8, wgtBits: Int = 8, accBits: Int = 32,
 	dp.io.a := gen.io.a
   dp.io.b := gen.io.b
 	pn.io.num := dp.io.y
-	*/	
-	
+	*/
+	/*
+	val ngen = Module(new NumGen(inpBits, wgtBits))
+	val adder = Module(new PipeAdder(inpBits, wgtBits))
+	adder.io.a := ngen.io.a
+	adder.io.b := ngen.io.b
+	ngen.io.y := adder.io.y	
+	*/
+		
 	val mvgen = Module(new MVCoreGen(inpBits, wgtBits, accBits, shiftBits, vectorLength))
 	val mvcore = Module(new MatrixVectorCore(inpBits, wgtBits, outBits = inpBits, shiftBits, vectorLength))
 	val pv = Module(new PrintVec(accBits, vectorLength))	
@@ -120,5 +146,5 @@ class Test(inpBits: Int = 8, wgtBits: Int = 8, accBits: Int = 32,
 }
 
 object Elaborate extends App {
-  chisel3.Driver.execute(args, () => new Test(2, 2, 32, 6, 2))
+  chisel3.Driver.execute(args, () => new Test(2, 4, 32, 6, 2))
 }
