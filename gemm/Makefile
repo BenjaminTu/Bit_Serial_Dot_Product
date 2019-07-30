@@ -1,5 +1,5 @@
 work_dir = $(abspath .)
-test_name = I2W2S2
+test_name = gemv
 
 default: test
 
