@@ -4,7 +4,7 @@
 		module="gemm-build"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20190724213832"
+		publication="20190729104537"
 		e:sbtVersion="1.0" e:scalaVersion="2.12"
 	>
 		<description>

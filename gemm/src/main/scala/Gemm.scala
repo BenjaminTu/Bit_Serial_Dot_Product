@@ -38,6 +38,7 @@ class PipeAdder(aBits: Int = 8, bBits: Int = 8) extends Module {
   val rB = RegNext(io.b)
   add := rA +& rB
   io.y := add
+
 }
 
 /** Pipelined DotProduct based on MAC and PipeAdder */
@@ -84,9 +85,8 @@ class DotProduct(aBits: Int = 8, bBits: Int = 8, size: Int = 16) extends Module 
 }
 
 /** Perform matrix-vector-multiplication based on DotProduct */
-class MatrixVectorCore(inpBits: Int = 8, wgtBits: Int = 8, outBits: Int = 8, 
-	 shiftBits: Int = 6, size: Int = 16) extends Module {
-  val accBits = 32
+class MatrixVectorCore(val inpBits: Int = 8, val wgtBits: Int = 8, val outBits: Int = 8, 
+	 val accBits: Int = 32, val shiftBits: Int = 6, val size: Int = 16) extends Module {
   val io = IO(new Bundle{
     val reset = Input(Bool()) // FIXME: reset should be replaced by a load-acc instr
     val inp = Flipped(ValidIO(Vec(1, Vec(size, UInt(inpBits.W)))))
@@ -117,8 +117,4 @@ class MatrixVectorCore(inpBits: Int = 8, wgtBits: Int = 8, outBits: Int = 8,
   }
   io.acc_o.valid := vld.asUInt.andR | io.reset
   io.out.valid := vld.asUInt.andR
-}
-
-object Elaborate extends App {
-  chisel3.Driver.execute(args, () => new MatrixVectorCore)
 }

@@ -1,0 +1,18 @@
+"I2W2S2" -> { (manager: TesterOptionsManager) =>
+      Driver.execute(() => new MatrixVectorCore(2, 2, 2, 32, 6, 2), manager) {
+        (c) => new Tester(c)
+      }
+test:runMain example.Launcher I2W2S2
+clear
+test:runMain example.Launcher I2W2S2
+test:runMain example.Launcher Adder
+test:runMain example.Launcher I2W2S2
+test:runMain example.Launcher Adder
+test:runMain example.Launcher I2W2S4
+test:runMain example.Launcher I2W2S2
+test:runMain example.Launcher Adder
+test:runMain example.Launcher I2W2S2
+test:runMain example.Launcher Adder
+test:runMain example.Launcher I2W2S2
+test:runMain example.Launcher I4W8S4
+exit
