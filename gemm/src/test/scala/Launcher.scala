@@ -14,6 +14,11 @@ object Launcher {
       Driver.execute(() => new MatrixVectorCore, manager) {
         (c) => new Tester(c)
       }
+    }, 
+    "dot" -> { (manager: TesterOptionsManager) =>
+      Driver.execute(() => new CMAC(8, 8, 4, 4), manager) {
+        (c) => new DotTester(c)
+      }
     }
   )
 

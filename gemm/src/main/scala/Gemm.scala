@@ -52,6 +52,25 @@ class PipeAdder(aBits: Int = 8, bBits: Int = 8) extends Module {
 
 }
 
+class CMAC(val stages: Int = 8, val length: Int = 8, val aBits: Int = 8, val bBits: Int = 4) extends Module {
+  val mBits = aBits + bBits
+  val io = IO(new Bundle {
+    val a = Flipped(ValidIO(Vec(length, SInt(aBits.W))))
+    val b = Flipped(ValidIO(Vec(length, SInt(bBits.W))))
+    val y = ValidIO(SInt(32.W))
+  })
+  val m = VecInit(Seq.fill(length)(0.asSInt((mBits).W)))
+  for (i <- 0 until length) {
+    m(i) := io.a.bits(i) * io.b.bits(i)
+  }
+  val sum = m.reduce(_+&_)
+  io.y.valid := ShiftRegister(true.B, stages, io.a.valid & io.b.valid)
+  io.y.bits := ShiftRegister(sum, stages, io.a.valid & io.b.valid)
+  printf("a.valid: %d    b.valid: %d\n", io.a.valid.asUInt, io.b.valid.asUInt)
+  printf("delayed valid: %d \n", io.y.valid.asUInt)
+  printf("data: %d \n", sum)
+}
+
 /** Pipelined DotProduct based on MAC and PipeAdder */
 class DotProduct(stages: Int = 8, aBits: Int = 8, bBits: Int = 8, size: Int = 16) extends Module {
   val errMsg = s"\n\n[VTA] [DotProduct] size must be greater than 4 and a power of 2\n\n"
