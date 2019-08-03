@@ -4,13 +4,15 @@ import chisel3._
 import chisel3.util._
 import scala.math.pow
 
-case class Parameters() {
-  val inpBits = 2
-  val wgtBits = 2
+case class Parameters(
+  val inpBits: Int = 2,
+  val wgtBits: Int = 2,
+  val size: Int = 4
+) 
+{
   val outBits = 8
   val accBits  = 32
   val shiftBits  = 6
-  val size = 4
 }
 
 /** Pipelined multiply and accumulate */
@@ -51,7 +53,7 @@ class PipeAdder(aBits: Int = 8, bBits: Int = 8) extends Module {
 }
 
 /** Pipelined DotProduct based on MAC and PipeAdder */
-class DotProduct(aBits: Int = 8, bBits: Int = 8, size: Int = 16) extends Module {
+class DotProduct(stages: Int = 8, aBits: Int = 8, bBits: Int = 8, size: Int = 16) extends Module {
   val errMsg = s"\n\n[VTA] [DotProduct] size must be greater than 4 and a power of 2\n\n"
   require(size >= 2 && isPow2(size), errMsg)
 	val b = aBits + bBits
@@ -90,17 +92,18 @@ class DotProduct(aBits: Int = 8, bBits: Int = 8, size: Int = 16) extends Module 
   }
 
   // last adder
-  io.y := a(p - 1)(0).io.y
+  io.y := ShiftRegister(a(p - 1)(0).io.y, stages)
 }
 
 /** Perform matrix-vector-multiplication based on DotProduct */
-class MatrixVectorCore(p: Parameters) extends Module {
+class MatrixVectorCore(implicit p: Parameters) extends Module {
   val inpBits = p.inpBits
   val wgtBits = p.wgtBits
   val outBits = p.outBits
   val accBits = p.accBits
   val shiftBits = p.shiftBits
   val size = p.size
+  val stages = 8
   val io = IO(new Bundle{
     val reset = Input(Bool()) // FIXME: reset should be replaced by a load-acc instr
     val inp = Flipped(ValidIO(Vec(1, Vec(size, UInt(inpBits.W)))))
@@ -110,11 +113,11 @@ class MatrixVectorCore(p: Parameters) extends Module {
 	  val acc_o = ValidIO(Vec(1, Vec(size, UInt(accBits.W))))
     val out = ValidIO(Vec(1, Vec(size, UInt(outBits.W))))
   })
-  val dot = Seq.fill(size)(Module(new DotProduct(inpBits, wgtBits, size)))
-  val acc = Seq.fill(size)(Module(new Pipe(UInt(accBits.W), latency = log2Ceil(size) + 2)))
+  val dot = Seq.fill(size)(Module(new DotProduct(stages, inpBits, wgtBits, size)))
+  val acc = Seq.fill(size)(Module(new Pipe(UInt(accBits.W), latency = log2Ceil(size) + 2 + stages)))
   val add = Seq.fill(size)(Wire(SInt(accBits.W)))
   val vld = Wire(Vec(size, Bool()))
-	val shiftReg = RegInit(Vec(Seq.fill(size)(0.S(accBits.W))))
+	val shiftReg = RegInit(VecInit(Seq.fill(size)(0.S(accBits.W))))
 
   for (i <- 0 until size) {
     acc(i).io.enq.valid := io.inp.valid & io.wgt.valid & io.acc_i.valid & io.shift.valid & ~io.reset

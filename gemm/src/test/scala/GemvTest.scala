@@ -1,10 +1,11 @@
-package example
+package test.example
 
 import chisel3._
 import chisel3.util._
 import chisel3.iotesters.{ChiselFlatSpec, Driver, PeekPokeTester}
 import scala.util.Random
 import scala.math.pow
+import example._
 
 class Tester(c: MatrixVectorCore) extends PeekPokeTester(c) {
     
