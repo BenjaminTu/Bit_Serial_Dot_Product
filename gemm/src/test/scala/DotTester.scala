@@ -47,7 +47,7 @@ class DotTester(c: CMAC) extends PeekPokeTester(c) {
     poke(c.io.a.valid, 1)
     poke(c.io.b.valid, 1)
       
-    step(1) // valid for only 1 cycle
+    step(3) // valid for only 1 cycle
 
     poke(c.io.a.valid, 0)
     poke(c.io.b.valid, 0)

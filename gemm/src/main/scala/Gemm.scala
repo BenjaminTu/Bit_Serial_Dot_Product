@@ -64,11 +64,8 @@ class CMAC(val stages: Int = 8, val length: Int = 8, val aBits: Int = 8, val bBi
     m(i) := io.a.bits(i) * io.b.bits(i)
   }
   val sum = m.reduce(_+&_)
-  io.y.valid := ShiftRegister(true.B, stages, io.a.valid & io.b.valid)
-  io.y.bits := ShiftRegister(sum, stages, io.a.valid & io.b.valid)
-  printf("a.valid: %d    b.valid: %d\n", io.a.valid.asUInt, io.b.valid.asUInt)
-  printf("delayed valid: %d \n", io.y.valid.asUInt)
-  printf("data: %d \n", sum)
+  io.y.valid := ShiftRegister(io.a.valid & io.b.valid, stages)
+  io.y.bits := ShiftRegister(sum, stages)
 }
 
 /** Pipelined DotProduct based on MAC and PipeAdder */
