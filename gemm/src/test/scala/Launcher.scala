@@ -2,7 +2,7 @@ package test.example
 
 import chisel3._
 import chisel3.iotesters.{Driver, TesterOptionsManager}
-import utils.TutorialRunner
+import utils.TestRunner
 import example._
 
 
@@ -19,10 +19,15 @@ object Launcher {
       Driver.execute(() => new CMAC(8, 8, 4, 4), manager) {
         (c) => new DotTester(c)
       }
+    },
+    "mux2" -> { (manager: TesterOptionsManager) =>
+      Driver.execute(() => new Mux2, manager) {
+        (c) => new Mux2Tester(c)
+      }
     }
   )
 
   def main(args: Array[String]): Unit = {
-    TutorialRunner(tests, args)
+    TestRunner(tests, args)
   }
 }

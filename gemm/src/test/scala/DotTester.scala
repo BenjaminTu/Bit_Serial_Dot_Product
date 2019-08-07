@@ -18,7 +18,7 @@ class DotTester(c: CMAC) extends PeekPokeTester(c) {
     return dot
   }
 
-  val yBits = 32
+  val yBits = c.aBits + c.bBits + log2Ceil(c.length) + 1
   val cycles = 5
   for (i <- 0 until cycles) {
     val r = new Random
@@ -47,7 +47,7 @@ class DotTester(c: CMAC) extends PeekPokeTester(c) {
     poke(c.io.a.valid, 1)
     poke(c.io.b.valid, 1)
       
-    step(3) // valid for only 1 cycle
+    step(1) // valid for only 1 cycle
 
     poke(c.io.a.valid, 0)
     poke(c.io.b.valid, 0)

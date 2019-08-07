@@ -1,5 +1,5 @@
 work_dir = $(abspath .)
-test_name = gemv
+test_name = mux2
 
 default: test
 
